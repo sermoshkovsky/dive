@@ -1,0 +1,12 @@
+span {
+    font-weight: bold;
+}
+
+.ital {
+    font-weight: 400;
+    font-style: italic;
+}
+
+.blue {
+    color: blue;
+}

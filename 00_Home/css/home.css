@@ -1,0 +1,30 @@
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.header {
+    background: rgb(152, 149, 155);
+}
+
+.introduction {
+    background: aquamarine;
+}
+
+.junior {
+    background: rgb(159, 241, 65);
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.offer {
+    width: 350px;
+}
+
+.img {
+    width: 500px;
+}
