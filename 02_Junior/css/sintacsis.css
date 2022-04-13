@@ -1,3 +1,9 @@
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
 span {
     font-weight: bold;
 }
@@ -8,5 +14,9 @@ span {
 }
 
 .blue {
-    color: blue;
+    color: rgb(64, 64, 95);
+}
+
+.atr {
+    width: 700px;
 }
