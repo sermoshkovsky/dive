@@ -3,6 +3,11 @@
     margin: 0 auto;
 }
 
+.tags {
+    font-size: 35px;
+    margin: 0;
+}
+
 span {
     font-weight: bold;
 }
@@ -23,3 +28,21 @@ span {
 .orang {
     color: orange;
 }
+
+.normal, .violet, .red {
+    font-weight: 400;
+    text-decoration: underline;
+}  
+
+.normal {
+    color: blue;
+}
+
+.violet {
+    color: rebeccapurple;
+}
+
+.red {
+    color: red;
+}
+
