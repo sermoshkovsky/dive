@@ -8,6 +8,10 @@
     margin: 0;
 }
 
+.atr {
+    font-size: 30px;
+}
+
 span {
     font-weight: bold;
 }
@@ -45,4 +49,4 @@ span {
 .red {
     color: red;
 }
-
+ 
