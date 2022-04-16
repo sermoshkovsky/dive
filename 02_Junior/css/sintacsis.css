@@ -17,6 +17,12 @@ span {
     color: rgb(64, 64, 95);
 }
 
-.atr {
+.img-atr {
     width: 700px;
+}
+
+.tags {
+    font-size: 25px;
+    margin: 0;
+    color: rgb(64, 64, 95);
 }
