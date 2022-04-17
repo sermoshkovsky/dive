@@ -40,3 +40,9 @@ span {
     color: rgb(77, 77, 54);
     text-decoration: none;
 }
+
+.sapsan {
+    width: 75em;
+}
+
+/* <span class="blue">&lt;&gt;</span> */
