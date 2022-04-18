@@ -4,18 +4,383 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Блочные и строчные элементы</title>
-    <link rel="stylesheet" href="css/bloks.css">
+    <title>Контентная модель</title>
+    <link rel="stylesheet" href="./css/bloks.css">
 </head>
 <body>
     <header class="header" id="header">
-        <div class="container"></div>
+        <div class="container">
+            <nav>
+                <a href="../00_Home/index.html" target="_blank">Главная</a>
+                <a href="./html-junior.html" target="_blank">HTML-1</a>
+            </nav>
+            <div class="section top">
+                <h1>Контентная модель HTML5</h1>
+                <p>
+                    Язык разметки HTML формирует структуру веб-страницы, а HTML-элементы используются для идентификации типа содержимого на странице. Семантика HTML5 добавляет каждому элементу ещё больше смысла, помогая эффективно организовывать контент и использовать элементы по назначению.
+                </p>
+                <p>
+                    До появления HTML5 существовало две основные категории элементов — блочные и строчные. Такое разделение не совсем точно описывало различные типы содержимого, поэтому в спецификации HTML5 модель содержимого была расширена, благодаря чему каждый HTML-элемент может принадлежать ноль, одной или более категориям.
+                </p>
+            </div>
+        </div>
     </header>
     <main>
-        <div class="container"></div>
-        <p>
-            блочных и строчных элементов нет, но тем не менее элементф обладают блочнми и строчными свойствами и поведением по умолчанию. И это нужно учитывать при верстке
-        </p>
+        <div class="container">
+            <div class="section">
+                <h2>Модель содержимого HTML5</h2>
+                <p>
+                    Контентная модель <span>(content model)</span>, или модель содержимого, описывает, какой тип содержимого следует ожидать внутри элемента и какие элементы могут быть вложены в другие элементы. Большинство элементов принадлежат одной категории или нескольким категориям одновременно.
+                </p> 
+                <h2>Категории контента</h2>
+                <p>
+                    Каждый элемент HTML принадлежит некоторому количеству категорий контента, которые объединяют элементы с общим набором характеристик. Такая группировка является свободной, то есть не задаёт на самом деле отношение между элементами таких типов, но помогает определить и описать их поведение и правила, которым они должны следовать, особенно когда дело доходит до сложных деталей. Также возможна ситуация, когда элемент не входит ни в одну из этих категорий.
+                </p>
+                <p>
+                    Существует три типа категорий контента:
+                </p>
+                <ul>
+                    <li>
+                        Основные категории контента, описывающие общие для многих элементов правила;
+                    </li>
+                    <li>
+                        Категории контента для элементов форм, описывающие общие правила для элементов форм;
+                    </li>
+                    <li>
+                        Особые категории контента, описывающие редкие категории, актуальные только для нескольких элементов, возможно, лишь в особом контексте. Такие элементы имеют уникальные требования и не вписываются в какую-либо конкретную категорию.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Основные категории контента</h2>
+                <img src="./img/Content-model.png" alt="Content-model">
+                <ol>
+                    <li>
+                        <span>Метаданные:</span> данные для браузеров, поисковиков и так далее (всё, что в <span class="blue">&lt;head&gt;</span>).
+                    </li>
+                    <li>
+                        <span>Потоковые</span> элементы: контент (всё, что в <span class="blue">&lt;body&gt;</span>).
+                    </li>
+                    <li>
+                        <span>Структурные ( секционные )</span> элементы: крупные смысловые разделы документа.
+                    </li>
+                    <li>
+                        <span>Заголовочные</span> элементы: заголовки.
+                    </li>
+                    <li>
+                        <span>Фразовые</span> элементы: текст документа и мелкие текстовые элементы в абзацах.
+                    </li>
+                    <li>
+                        <span>Встраиваемые</span> элементы: изображения, видео, аудио и так далее.
+                    </li>
+                    <li>
+                        <span>Интерактивные</span> элементы: то, с чем взаимодействует пользователь.
+                    </li>
+                </ol>
+                <p>
+                    Секционные, заголовочные, фразовые, встроенные и интерактивные элементы относятся к потоковым элементам. Метаданные иногда могут относиться к потоковым элементам. Метаданные и интерактивные элементы иногда относятся к фразовым элементам. Встроенные элементы также относится к фразовым элементам, но часть элементов также является интерактивными.
+                </p>
+                <p>
+                    <span>Старые «блочные» и «строчные»</span>
+                </p>
+                <ul>
+                    <li>
+                        Строчные элементы из HTML4 - <span class="blue tgs"><code>a, b, big, br, em, i, img, small, span, strong, sub, sup</code></span>
+                    </li>
+                    <li>
+                        Блочные элементы из HTML4 - <span class="blue tgs"><code>blockquote, div, h1, h2, h3, h4, h5, h6, hr, p, pre</code></span>
+                    </li>
+                </ul>
+                <p>
+                    И, хотя, такая модель уже не используется и блочность-строчность задается при помощи стилей, все-таки следует помнить, что указанные элементы все-равно, по умолчанию, обладают блочными и строчными свойствами:
+                </p>
+                <ul>
+                    <li>
+                        Блочные элементы характеризуются тем, что занимают всю доступную ширину, высота элемента определяется его содержимым, и он всегда начинается с новой строки.
+                    </li>
+                    <li>
+                        Ширина строчных элементов равна их содержимому плюс значения отступов, полей и границ.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>Метаданные ( Metadata content )</h3>
+                <p>
+                    К мета содержимому относятся элементы, которые содержат информацию о HTML-документе, устанавливают взаимосвязь HTML-документа с другими документами (например, таблицами стилей css), отвечают за внешний вид или поведение контента на странице. Элементы из другого пространства имён, чей смысл связан с метаданными, также относятся к мета содержимому.
+                </p>
+                <p>
+                    <span class="blue tgs"><code>base, link, meta, noscript, script, style, template, title</code></span>
+                </p>
+                <h3>Потоковые элементы ( Flow content )</h3>
+                <p>
+                    К этому типу содержимого относится большинство элементов, используемых в теле документа или веб-приложения. Обычно содержат текст и встроенный контент.
+                </p>
+                <p>
+                    <span class="blue tgs"><code>a, abbr, address, article, aside, audio, b, bdi, bdo, blockquote, br, button, canvas, cite, code, data, datalist, del, details, dfn, div, dl, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, i, iframe, img, input, ins, kbd, label, main, map, mark, math, menu, meter, nav, noscript, object, ol, p, pre, progress, q, ruby, s, samp, script, section, select, small, span, strong, sub, sup, svg, table, template, textarea, time, ul, var, video, wbr</code></span> и Текст.
+                </p>
+                <p>
+                    Несколько других элементов, которые тоже принадлежат к этому типу, но требуют определённых условий:
+                </p>
+                <ul>
+                    <li>
+                        <span class="blue tgs"><code>area</code></span> только внутри элемента <span class="blue">&lt;map&gt;</span>
+                    </li>
+                    <li>
+                        <span class="blue tgs"><code>link</code></span> при наличии атрибута <span class="green">itemprop</span>
+                    </li>
+                    <li>
+                        <span class="blue tgs"><code>meta</code></span> при наличии атрибута <span class="green">itemprop</span>
+                    </li>
+                    <li>
+                        <span class="blue tgs"><code>style</code></span> при наличии атрибута <span class="green">&lt;scoped&gt;</span>
+                    </li>
+                </ul>
+                <h3>Структурные ( секционные ) элементы ( Sectioning content )</h3>
+                <p>
+                    Подобные элементы создают секции (блоки) в текущей структуре документа, определяющие область действия заголовочного контента и элементов <span class="blue">&lt;header&gt;</span> и <span class="blue">&lt;footer&gt;</span>. Каждый элемент секционного содержимого потенциально имеет заголовок и схему (outline).
+                </p>
+                <p>
+                    <span class="blue tgs"><code>article, aside, nav, section</code></span>
+                </p>
+                <h3>Заголовочные элементы ( Heading content )</h3>
+                <p>
+                    Заголовочный контент задаёт заголовок секции, явно отмеченной структурным элементом или неявно – самим заголовочным.
+                </p>
+                <p>
+                    <span class="blue tgs"><code>h1, h2, h3, h4, h5, h6</code></span>
+                </p>
+                <p>
+                    <span class="ital">Элемент <span class="blue">&lt;header&gt;</span> сам по себе не является заголовочным, хотя с большой вероятностью содержит контент такого типа.</span>
+                </p>
+                <h3>Фразовые элементы ( Phrasing content )</h3>
+                <p>
+                    Фразовые элементы представлены элементами для разметки текста внутри абзацев. Фразовый контент определяет текст и его формат. Серии фразового контента образуют параграфы. Большинство элементов, принадлежащих категории фразовых, могут содержать только элементы из своей категории, а не любые элементы из категории потокового содержимого.
+                </p>
+                <p>
+                    <span class="blue tgs"><code>abbr, audio, b, bdo, br, button, canvas, cite, code, data, datalist, dfn, em, embed, i, iframe, img, input, kbd, label, mark, math, meter, noscript, object, output, progress, q, ruby, samp, script, select, small, span, strong, sub, sup, svg, textarea, time, var, video, wbr, </code></span> и обычный текст (не только состоящий из символов пробелов). 
+                </p>
+                <p>
+                    Ещё несколько элементов входят в данную категорию при соблюдении особых условий:
+                </p>
+                <ul>
+                    <li>
+                        <span class="blue tgs"><code>a</code></span> если содержит в себе только фразовый контент
+                    </li>
+                    <li>
+                        <span class="blue tgs"><code>area</code></span> только внутри элемента <span class="blue">&lt;map&gt;</span>
+                    </li>
+                    <li>
+                        <span class="blue tgs"><code>del</code></span> если содержит в себе только фразовый контент
+                    </li>
+                    <li>
+                        <span class="blue tgs"><code>ins</code></span> если содержит в себе только фразовый контент
+                    </li>
+                    <li>
+                        <span class="blue tgs"><code>link</code></span> при наличии атрибута <span class="green">itemprop</span>
+                    </li>
+                    <li>
+                        <span class="blue tgs"><code>map</code></span> если содержит в себе только фразовый контент
+                    </li>
+                    <li>
+                        <span class="blue tgs"><code>meta</code></span> при наличии атрибута <span class="green">itemprop</span>
+                    </li>
+                </ul>
+                <h3>Встраиваемые элементы ( Embedded content )</h3>
+                <p>
+                    Встраиваемые элементы — элементы, которые импортируются в документ из других источников или вставляют содержимое на другом языке разметки или принадлежащее другому пространству имён.
+                </p>
+                <p>
+                    <span class="blue tgs"><code>audio, canvas, embed, iframe, img, math, object, svg, video</code></span>
+                </p>
+                <h3>Интерактивные элементы ( Interactive content )</h3>
+                <p>
+                    К интерактивнsv относятся элементы, которыt специально разработаны для взаимодействия с пользователем.
+                </p>
+                <p>
+                    <span class="blue tgs"><code>a, button, details, embed, iframe, label, select, textarea</code></span>
+                </p>
+                <p>
+                    Некоторые элементы считаются интерактивным контентом только при соблюдении определённых условий:
+                </p>
+                <ul>
+                    <li>
+                        <span class="blue tgs"><code>audio</code></span> если указан атрибут <span class="green">controls</span>
+                    </li>
+                    <li>
+                        <span class="blue tgs"><code>img</code></span> если указан атрибут <span class="green">usemap</span>
+                    </li>
+                    <li>
+                        <span class="blue tgs"><code>input</code></span> если атрибут <span class="green">type</span> не скрыт
+                    </li>
+                    <li>
+                        <span class="blue tgs"><code>menu</code></span> если атрибут <span class="green">type</span> имеет значение <span class="orang">toolbar</span>
+                    </li>
+                    <li>
+                        <span class="blue tgs"><code>object</code></span> если указан атрибут <span class="green">usemap</span>
+                    </li>
+                    <li>
+                        <span class="blue tgs"><code>video</code></span> если указан атрибут <span class="green">controls</span>
+                    </li>
+                </ul>
+                <p>
+                    Атрибут <span class="green">tabindex</span>, также может сделать любой элемент интерактивным.
+                </p>
+            </div>
+            <div class="section">
+                <h2>Контент форм</h2>
+                <p>
+                    Контент форм включает в себя элементы, у которых есть владелец формы, обозначенный атрибутом <span class="green">form</span>. Владельцем формы является либо элемент <span class="blue tgs"><code>form</code></span>, либо элемент, <span class="green">id</span> которого указан в атрибуте <span class="green">form</span>.
+                </p>
+                <p>
+                    <span class="blue tgs"><code>button, fieldset, input, label, meter, object, output, progress, select, textarea</code></span>
+                </p>
+                <p>
+                    Данная категория включает несколько подкатегорий:
+                </p>
+                <dl>
+                    <dt>
+                        <span>listed</span>
+                        <dd>
+                            Элементы, перечисленные в IDL коллекциях <span class="ital">form.elements</span> и <span class="ital">fieldset.elements</span>.
+                            <br>
+                            Включают <span class="blue tgs"><code>button, fieldset, input, object, output, select, textarea</code></span>.
+                        </dd>
+                    </dt>
+                    <dt>
+                        <span>labelable</span>
+                        <dd>
+                            Элементы, которые могут ассоциироваться с элементами <span class="blue tgs"><code>label</code></span>
+                            <br>
+                            Включают <span class="blue tgs"><code>button, input, meter, output, progress, select, textarea</code></span>.
+                        </dd>
+                    </dt>
+                    <dt>
+                        <span>submittable</span>
+                        <dd>
+                            Элементы, которые могут использоваться для построения набора данных формы при отправке на сервер.
+                            <br>
+                            Включают <span class="blue tgs"><code>button, input, object, select, textarea</code></span>.
+                        </dd>
+                    </dt>
+                    <dt>
+                        <span>resettable</span>
+                        <dd>
+                            Элементы, которые могут быть затронуты при сбросе данных формы.
+                            <br>
+                            Включают <span class="blue tgs"><code>input, output, select, textarea</code></span>.
+                        </dd>
+                    </dt>
+                </dl>
+            </div>
+            <div class="section">
+                <h2>Дополнительные категории содержимого</h2>
+                <h3>Явный контент</h3>
+                <p>
+                    Контент считается явным, когда он не скрыт и не является пустым, это контент, который отображён и предметен. У элементов потокового или фразового контента должен быть хотя бы один явный узел и для него не задан атрибут <span class="green">hidden</span>. Явное содержимое делает элемент непустым. Это обеспечивается тем, что элемент содержит потомка с текстом или каким-либо содержимым, которое пользователь может слышать (элемент <span class="blue tgs"><code>audio</code></span>), видеть (элемент <span class="blue tgs"><code>canvas</code></span>, <span class="blue tgs"><code>img</code></span> или <span class="blue tgs"><code>video</code></span>) или каким-либо образом взаимодействовать с ним (интерактивные элементы форм).
+                </p>
+                <p>
+                    Это требование не является жёстким, так как в некоторых случаях элемент может быть пустым по очевидным причинам (например, он в последствии будет наполняться с помощью скрипта).
+                </p>
+                <h3>Элементы поддержки скриптов</h3>
+                <p>
+                    Элементы поддержки скриптов – это элементы, которые напрямую не влияют на отрисовку документа. Вместо этого они служат для внедрения скриптов, путём либо содержания кода скрипта напрямую, либо указания данных, которые будут использованы скриптами.
+                </p>
+                <p>
+                    <span class="blue tgs"><code>script, template</code></span> 
+                </p>
+                <h3>Корень задания разделов</h3>
+                <p>
+                    Кроме секционного содержимого есть несколько элементов, являющихся коренем задания разделов. Они выделены из секционных элементов, но также могут иметь собственную структуру заголовков, а разделы и заголовки внутри этих элементов не взаимодействуют со структурой заголовков их родителей.
+                </p>
+                <p>
+                    <span class="blue tgs"><code>blockquote, body, details, dialog, fieldset, figure, td</code></span> 
+                </p>
+            </div>
+            <div class="section">
+                <h2>Прозрачная модель содержимого</h2>
+                <p>
+                    Некоторые элементы имеют прозрачную модель содержимого. Это означает, что тип ожидаемого содержимого наследуется от их родительского элемента. Дополнительно к собственному разрешенному контенту они могут содержать любой контент, который допустим для их родительского элемента.
+                </p>
+                <p>
+                    Если такой элемент не имеет родительского элемента, то его прозрачная модель контента должна рассматриваться как ожидающая любое содержимое из категории потокового содержимого.
+                </p>
+                <p>
+                    Если элемент обладает прозрачной моделью контента, его содержимое должно быть структурировано таким образом, чтобы оно оставалось валидным HTML5, даже при удалении прозрачного элемента или заменой его на дочерние элементы.
+                </p>
+                <p>
+                    Например, элементы <span class="blue">&lt;del&gt;</span> и <span class="blue">&lt;ins&gt;</span> являются прозрачными:
+                </p>
+                <p>
+                    <pre>&lt;p&gt;Мы почитаем следующие истины &lt;del&gt;&lt;em&gt;священными &#35amp; неоспоримыми&lt;/em&gt;&lt;/del&gt; &lt;ins&gt;само собой разумеющимися&lt;/ins&gt;.&lt;/p&gt;</pre>
+                </p>
+                <p>
+                    Если удалить эти элементы, данный фрагмент всё равно будет представлять собой валидный HTML.
+                </p>
+                <p>
+                    <pre>&lt;p&gt;Мы почитаем следующие истины &lt;em&gt;священными &#35amp; неоспоримыми&lt;/em&gt; само собой разумеющимися.&lt;/p&gt;</pre>
+                </p>
+            </div>
+            <div class="section">
+                <h2>HTML Standard</h2>
+                <p>
+                    Теперь, имея представление о модели содержимого, мы можем понимать описание каждого элемента в спецификации <a href="https://html.spec.whatwg.org/multipage/#toc-semantics"><span>HTML Standard</span></a> 
+                </p>
+                <p>
+                    Например, открыв раздел элемента <span class="blue tgs"><code>section</code></span>, получаем <span>метаданные</span>  элемента: 
+                </p>
+                <ul>
+                    <li>
+                        куда можно вкладывать тег
+                    </li>
+                    <li>
+                        что можно вкладывать в тег
+                    </li>
+                    <li>
+                        какие атрибуты есть у тега
+                    </li>
+                    <li>
+                        информация о доступности
+                    </li>
+                    <li>
+                        информация для программистов
+                    </li>
+                    <li>
+                        вспомогательные данные
+                    </li>
+                </ul>
+                <img src="./img/метаданные  элемента.png" alt="HTML Standard - метаданные элемента">
+                <p>
+                    А также, описание элемента: что обозначает этот тег и примеры использования. 
+                </p>
+                <img src="./img/Screenshot_8.png" alt="HTML Standard - примеры использования элемента">
+                <p>
+                    Уже сейчас нужно привыкать пользоваться этой спецификацией в рамках тех знаний, которые имеются. На что мы можем на данном уровне обращать внимание: 
+                </p>
+                <img src="./img/Screenshot_9.png" alt="HTML Standard - описание элемента">
+                <h2>Можно ли <span class="blue">&lt;x&gt;</span> вложить в <span class="blue">&lt;y&gt;</span>?</h2>
+                <p>
+                    Практика
+                </p>
+                <h3>Алгоритм работы</h3>
+                <ol>
+                    <li>
+                        Проверяем контентную модель родительского тега
+                    </li>
+                    <li>
+                        Проверяем категории дочернего тега
+                    </li>
+                    <li>
+                        Если категория и ограничения не запрещают, то вкладывать можно.
+                    </li>
+                </ol>
+                <img src="./img/Screenshot_10.png" alt="HTML Standard">
+                <img src="./img/Screenshot_11.png" alt="HTML Standard">
+                <img src="./img/Screenshot_12.png" alt="HTML Standard">
+                <img src="./img/Screenshot_13.png" alt="HTML Standard">
+                <img src="./img/Screenshot_14.png" alt="HTML Standard">
+                <img src="./img/Screenshot_15.png" alt="HTML Standard">
+            </div>
+        </div>
     </main>
     <footer>
         <div class="container">
