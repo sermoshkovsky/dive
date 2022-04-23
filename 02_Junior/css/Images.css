@@ -10,14 +10,15 @@
 .tags {
     font-size: 35px;
     margin: 0;
-}
-
-.tgs {
-    font-size: 16px;
+    color: rgb(64, 64, 95);
+    font-weight: 700;
 }
 
 .atr {
     font-size: 30px;
+    margin: 0;
+    color: green;
+    font-weight: 700;
 }
 
 span {
@@ -45,8 +46,9 @@ span {
     display: block;
     width: 120px;
     background: orange;
-    padding: 10px 0;
+    border-radius: 5px;
     color: rgb(77, 77, 77);
+    padding: 12px 0;
     text-align: center;
     text-decoration: none;
 }

@@ -23,12 +23,14 @@
                     До появления HTML5 существовало две основные категории элементов — блочные и строчные. Такое разделение не совсем точно описывало различные типы содержимого, поэтому в спецификации HTML5 модель содержимого была расширена, благодаря чему каждый HTML-элемент может принадлежать ноль, одной или более категориям.
                 </p>
             </div>
+            <hr>
         </div>
     </header>
     <main>
         <div class="container">
             <div class="section">
-                <h2>Модель содержимого HTML5</h2>
+                <h2 class="standard">Модель содержимого HTML5</h2>
+                <a href="https://html.spec.whatwg.org/multipage/dom.html#content-models" target="_blank">"Живой стандарт"</a>
                 <p>
                     Контентная модель <span>(content model)</span>, или модель содержимого, описывает, какой тип содержимого следует ожидать внутри элемента и какие элементы могут быть вложены в другие элементы. Большинство элементов принадлежат одной категории или нескольким категориям одновременно.
                 </p> 
@@ -50,9 +52,13 @@
                         Особые категории контента, описывающие редкие категории, актуальные только для нескольких элементов, возможно, лишь в особом контексте. Такие элементы имеют уникальные требования и не вписываются в какую-либо конкретную категорию.
                     </li>
                 </ul>
+                <hr>
             </div>
             <div class="section">
-                <h2>Основные категории контента</h2>
+                <div>
+                    <h2 class="standard">Основные категории контента</h2>
+                    <a href="https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content" target="_blank">"Живой стандарт"</a>
+                </div>
                 <img src="./img/Content-model.png" alt="Content-model">
                 <ol>
                     <li>
@@ -102,16 +108,20 @@
                         Ширина строчных элементов равна их содержимому плюс значения отступов, полей и границ.
                     </li>
                 </ul>
+                <hr>
             </div>
             <div class="section">
-                <h3>Метаданные ( Metadata content )</h3>
+                <h3 class="standard">Метаданные ( Metadata content )</h3>
+                <a href="https://html.spec.whatwg.org/multipage/dom.html#metadata-content" target="_blank"> "Живой стандарт"</a>
                 <p>
                     К мета содержимому относятся элементы, которые содержат информацию о HTML-документе, устанавливают взаимосвязь HTML-документа с другими документами (например, таблицами стилей css), отвечают за внешний вид или поведение контента на странице. Элементы из другого пространства имён, чей смысл связан с метаданными, также относятся к мета содержимому.
                 </p>
                 <p>
                     <span class="blue tgs"><code>base, link, meta, noscript, script, style, template, title</code></span>
                 </p>
-                <h3>Потоковые элементы ( Flow content )</h3>
+                <hr>
+                <h3 class="standard">Потоковые элементы ( Flow content )</h3>
+                <a href="https://html.spec.whatwg.org/multipage/dom.html#flow-content-2" target="_blank"> "Живой стандарт"</a>
                 <p>
                     К этому типу содержимого относится большинство элементов, используемых в теле документа или веб-приложения. Обычно содержат текст и встроенный контент.
                 </p>
@@ -135,14 +145,18 @@
                         <span class="blue tgs"><code>style</code></span> при наличии атрибута <span class="green">&lt;scoped&gt;</span>
                     </li>
                 </ul>
-                <h3>Структурные ( секционные ) элементы ( Sectioning content )</h3>
+                <hr>
+                <h3 class="standard">Структурные ( секционные ) элементы ( Sectioning content )</h3>
+                <a href="https://html.spec.whatwg.org/multipage/dom.html#sectioning-content-2" target="_blank"> "Живой стандарт"</a>
                 <p>
                     Подобные элементы создают секции (блоки) в текущей структуре документа, определяющие область действия заголовочного контента и элементов <span class="blue">&lt;header&gt;</span> и <span class="blue">&lt;footer&gt;</span>. Каждый элемент секционного содержимого потенциально имеет заголовок и схему (outline).
                 </p>
                 <p>
                     <span class="blue tgs"><code>article, aside, nav, section</code></span>
                 </p>
-                <h3>Заголовочные элементы ( Heading content )</h3>
+                <hr>
+                <h3 class="standard">Заголовочные элементы ( Heading content )</h3>
+                <a href="https://html.spec.whatwg.org/multipage/dom.html#heading-content-2" target="_blank"> "Живой стандарт"</a>
                 <p>
                     Заголовочный контент задаёт заголовок секции, явно отмеченной структурным элементом или неявно – самим заголовочным.
                 </p>
@@ -152,7 +166,9 @@
                 <p>
                     <span class="ital">Элемент <span class="blue">&lt;header&gt;</span> сам по себе не является заголовочным, хотя с большой вероятностью содержит контент такого типа.</span>
                 </p>
-                <h3>Фразовые элементы ( Phrasing content )</h3>
+                <hr>
+                <h3 class="standard">Фразовые элементы ( Phrasing content )</h3>
+                <a href="https://html.spec.whatwg.org/multipage/dom.html#phrasing-content-2" target="_blank"> "Живой стандарт"</a>
                 <p>
                     Фразовые элементы представлены элементами для разметки текста внутри абзацев. Фразовый контент определяет текст и его формат. Серии фразового контента образуют параграфы. Большинство элементов, принадлежащих категории фразовых, могут содержать только элементы из своей категории, а не любые элементы из категории потокового содержимого.
                 </p>
@@ -185,14 +201,18 @@
                         <span class="blue tgs"><code>meta</code></span> при наличии атрибута <span class="green">itemprop</span>
                     </li>
                 </ul>
-                <h3>Встраиваемые элементы ( Embedded content )</h3>
+                <hr>
+                <h3 class="standard">Встраиваемые элементы ( Embedded content )</h3>
+                <a href="https://html.spec.whatwg.org/multipage/dom.html#embedded-content-category" target="_blank"> "Живой стандарт"</a>
                 <p>
                     Встраиваемые элементы — элементы, которые импортируются в документ из других источников или вставляют содержимое на другом языке разметки или принадлежащее другому пространству имён.
                 </p>
                 <p>
                     <span class="blue tgs"><code>audio, canvas, embed, iframe, img, math, object, svg, video</code></span>
                 </p>
-                <h3>Интерактивные элементы ( Interactive content )</h3>
+                <hr>
+                <h3 class="standard">Интерактивные элементы ( Interactive content )</h3>
+                <a href="https://html.spec.whatwg.org/multipage/dom.html#interactive-content-2" target="_blank"> "Живой стандарт"</a>
                 <p>
                     К интерактивнsv относятся элементы, которыt специально разработаны для взаимодействия с пользователем.
                 </p>
@@ -225,6 +245,7 @@
                 <p>
                     Атрибут <span class="green">tabindex</span>, также может сделать любой элемент интерактивным.
                 </p>
+                <hr>
             </div>
             <div class="section">
                 <h2>Контент форм</h2>
@@ -271,17 +292,20 @@
                         </dd>
                     </dt>
                 </dl>
+                <hr>
             </div>
             <div class="section">
                 <h2>Дополнительные категории содержимого</h2>
-                <h3>Явный контент</h3>
+                <h3 class="standard">Явный контент</h3>
+                <a href="https://html.spec.whatwg.org/multipage/dom.html#palpable-content" target="_blank">"Живой стандарт"</a>
                 <p>
                     Контент считается явным, когда он не скрыт и не является пустым, это контент, который отображён и предметен. У элементов потокового или фразового контента должен быть хотя бы один явный узел и для него не задан атрибут <span class="green">hidden</span>. Явное содержимое делает элемент непустым. Это обеспечивается тем, что элемент содержит потомка с текстом или каким-либо содержимым, которое пользователь может слышать (элемент <span class="blue tgs"><code>audio</code></span>), видеть (элемент <span class="blue tgs"><code>canvas</code></span>, <span class="blue tgs"><code>img</code></span> или <span class="blue tgs"><code>video</code></span>) или каким-либо образом взаимодействовать с ним (интерактивные элементы форм).
                 </p>
                 <p>
                     Это требование не является жёстким, так как в некоторых случаях элемент может быть пустым по очевидным причинам (например, он в последствии будет наполняться с помощью скрипта).
                 </p>
-                <h3>Элементы поддержки скриптов</h3>
+                <h3 class="standard">Элементы поддержки скриптов</h3>
+                <a href="https://html.spec.whatwg.org/multipage/dom.html#script-supporting-elements" target="_blank">"Живой стандарт"</a>
                 <p>
                     Элементы поддержки скриптов – это элементы, которые напрямую не влияют на отрисовку документа. Вместо этого они служат для внедрения скриптов, путём либо содержания кода скрипта напрямую, либо указания данных, которые будут использованы скриптами.
                 </p>
@@ -295,9 +319,11 @@
                 <p>
                     <span class="blue tgs"><code>blockquote, body, details, dialog, fieldset, figure, td</code></span> 
                 </p>
+                <hr>
             </div>
             <div class="section">
-                <h2>Прозрачная модель содержимого</h2>
+                <h2 class="standard">Прозрачная модель содержимого</h2>
+                <a href="https://html.spec.whatwg.org/multipage/dom.html#transparent-content-models" target="_blank">"Живой стандарт"</a>
                 <p>
                     Некоторые элементы имеют прозрачную модель содержимого. Это означает, что тип ожидаемого содержимого наследуется от их родительского элемента. Дополнительно к собственному разрешенному контенту они могут содержать любой контент, который допустим для их родительского элемента.
                 </p>
@@ -319,6 +345,7 @@
                 <p>
                     <pre>&lt;p&gt;Мы почитаем следующие истины &lt;em&gt;священными &#35amp; неоспоримыми&lt;/em&gt; само собой разумеющимися.&lt;/p&gt;</pre>
                 </p>
+                <hr>
             </div>
             <div class="section">
                 <h2>HTML Standard</h2>

@@ -10,11 +10,10 @@
 <body>
     <header class="header" id="header">
         <div class="container">
-            <!-- <span class="blue">&lt;  &gt;</span> -->
-            <div class="nav">
-                <a href="/00_Home/index.html" target="_blank">Главная</a>
+            <nav>
+                <a href="../00_Home/index.html" target="_blank">Главная</a>
                 <a href="./html-junior.html" target="_blank">HTML-1</a>
-            </div>
+            </nav>
                 <h1>Семантика</h1>
         </div>
     </header>
@@ -51,6 +50,7 @@
                 <p>
                     <span> Семантическая вёрстка </span> — подход к разметке, который опирается не на содержание сайта, а на смысловое предназначение каждого блока и логическую структуру документа. Даже в этой статье есть заголовки разных уровней — это помогает читателю выстроить в голове структуру документа. Так и на странице сайта — только читатели будут немного другими.
                 </p>
+                <hr>
             </div>
             <div class="chapter">
                 <h3>Почему семантика важна</h3>
@@ -80,14 +80,12 @@
                     Или вот такой код. Смотрите и сразу понятно, что тут и зачем.
                 </p>
                 <img src="./img/Screenshot_18.png" alt="вот такой код">
+                <hr>
             </div>
             <div class="chapter">
                 <h2>Основные семантические теги HTML</h2>
                 <p>
-                    Среди «старых» тегов из ранних версий HTML тоже есть семантические — например, тег <span class="blue">&lt;p&gt;</span>, который обозначает параграф. При этом теги <span class="blue">&lt;i&gt;</span> или <span class="blue">&lt;b&gt;</span> не семантические, потому что они не добавляют смысла выделенному тексту, а просто определяют его внешний вид.
-                </p>
-                <p>
-                    Но в актуальной версии стандарта HTML Living Standard есть семантические теги почти для всех основных частей сайта, и лучше пользоваться ими. Вот несколько примеров семантических тегов.
+                    Долгое время структура веб-страницы была построена с помощью <span class="blue">&lt;div&gt;</span>. Проблема в том, что они не обеспечивают семантическое значение и было довольно трудно определить их смысл. Но в актуальной версии стандарта HTML Living Standard введены новые структурные базовые элементы, семантические теги почти для всех основных частей сайта: <span class="blue">&lt;header&gt;</span>, <span class="blue">&lt;nav&gt;</span>, <span class="blue">&lt;article&gt;</span>, <span class="blue">&lt;section&gt;</span>, <span class="blue">&lt;aside&gt;</span> и <span class="blue">&lt;footer&gt;</span>. И лучше пользоваться ими.
                 </p>
                 <dl>
                     <dt>
@@ -175,6 +173,7 @@
                         </dd>
                     </dt>
                 </dl>
+                <hr>
             </div>
             <div class="chapter">
                 <h2>Как разметить страницу с точки зрения семантики</h2>
@@ -199,39 +198,342 @@
                     </li>
                 </ol>
                 <p>
-                    Мы пока будем работать с тремя главными структурными тегами: HEADER, MAIN, FOOTER. Остальные блоки создаем с помощью DIV. 
-                </p>
-                <p>
-                    Только набрав некоторый опыт объединения элементов в блоки, придет правильное понимание семантики в истинном ее значении. А пока, наш основной инструмент по созданию смысловых блоков внутри главных контейнеров - это DIV и CLASS. И, исходя из этого урока, учимся правильно давать имя классу. 
-                </p>
-                <p>
-                    блочных и строчных элементов нет, но тем не менее элементф обладают блочнми и строчными свойствами и поведением по умолчанию. И это нужно учитывать при верстке
-                </p>
-                <p>
-                    Выделение смысла и создание структуры содержимого на странице с помощью главных стркутурных тегов:
+                    Также необходимо уметь правильно применять теги <span class="blue">&lt;div&gt;</span> и <span class="blue">&lt;span&gt;</span>, которые на деле не несут никакого семантического смысла. Они существуют только в целях стилизации.
                 </p>
                 <ul>
                     <li>
-                        HEADER
+                        DIV - для стилизации больших групп контента;
                     </li>
                     <li>
-                        FOOTER
-                    </li>
-                    <li>
-                        MAIN
+                        SPAN - для стилизации мелких групп.
                     </li>
                 </ul>
+                <hr>
+            </div>
+            <div class="chapter">
+                <h2>Крупные смысловые блоки страницы &lt;HEADER&gt; &lt;MAIN&gt; &lt;FOOTER&gt;</h2>
+                <h3 class="standard tags">&lt;header&gt;</h3>
+                <a href="https://html.spec.whatwg.org/multipage/sections.html#the-header-element" target="_blank">"Живой стандарт"</a>
                 <p>
-                    Уметь правильно применять теги
+                    Элемент  <span class="blue">&lt;header&gt;</span> (от англ. <span class="ital">header</span> — верхний колонтитул, шапка) задаёт «шапку» сайта или раздела веб-страницы. Внутри «шапки» сайта обычно располагается логотип, название сайта, поисковая форма, навигационные ссылки и др.
                 </p>
-                <ul>
-                    <li>
-                        DIV - для группирования страницы;
-                    </li>
-                    <li>
-                        SPAN - для стилизации страницы.
-                    </li>
-                </ul>
+                <p>
+                    Каждый раздел, созданный через <span class="blue">&lt;article&gt;</span>, <span class="blue">&lt;aside&gt;</span>, <span class="blue">&lt;nav&gt;</span>, <span class="blue">&lt;section&gt;</span>, также может содержать <span class="blue">&lt;header&gt;</span>. В этом случае элемент <span class="blue">&lt;header&gt;</span> уже будет задавать шапку раздела, а не сайта. Внутрь <span class="blue">&lt;header&gt;</span> можно добавить заголовок раздела с помощью элементов <span class="blue">&lt;h2&gt;</span>, <span class="blue">&lt;h3&gt;</span> и далее, а также другие элементы, вроде поисковой формы, оглавления, картинки. 
+                </p>
+                <p>
+                    <span class="blue">&lt;header&gt;</span> нельзя вкладывать внутрь другого <span class="blue">&lt;header&gt;</span>, а также внутрь элементов <span class="blue">&lt;address&gt;</span> и <span class="blue">&lt;footer&gt;</span>.
+                </p>
+                <p>
+                    Внутри <span class="blue">&lt;header&gt;</span> не должно быть элемента <span class="blue">&lt;main&gt;</span>.
+                </p>
+                <p>
+                    Если <span class="blue">&lt;header&gt;</span> содержит единственный заголовок, то обычно нет смысла использовать <span class="blue">&lt;header&gt;</span>, заголовок в раздел можно вставлять напрямую.
+                </p>
+                <h4>Синтаксис</h4>
+                <p>
+                    <pre>
+                        <span class="blue">&lt;header&gt;</span>
+                        <span class="blue">&lt;/header&gt;</span>
+                    </pre>
+                </p>
+                <p>
+                    <span>Закрывающий тег</span> Обязателен
+                </p>
+                <h4>Атрибуты</h4>
+                <p>
+                    Для этого элемента доступны универсальные атрибуты <span class="green">class</span>, <span class="green">id</span>.
+                </p>
+                <hr>
+                <h3 class="standard tags">&lt;main&gt;</h3>
+                <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-main-element" target="_blank">"Живой стандарт"</a>
+                <p>
+                    Элемент <span class="blue">&lt;main&gt;</span> (от англ. <span class="ital">main</span> — основной, главный) предназначен для основного содержимого документа, причём оно должно быть уникально. Таким образом, повторяющиеся фрагменты, вроде заголовка сайта, логотипа, навигации по сайту, поля для поиска, не рекомендуется добавлять в <span class="blue">&lt;main&gt;</span>. На странице может быть только один <span class="blue">&lt;main&gt;</span> и он не должен располагаться внутри элементов <span class="blue">&lt;article&gt;</span>, <span class="blue">&lt;aside&gt;</span>, <span class="blue">&lt;footer&gt;</span>, <span class="blue">&lt;header&gt;</span>, <span class="blue">&lt;nav&gt;</span> или <span class="blue">&lt;section&gt;</span>.
+                </p>
+                <h4>Синтаксис</h4>
+                <p>
+                    <pre>
+                        <span class="blue">&lt;main&gt;</span>
+                        <span class="blue">&lt;/main&gt;</span>
+                    </pre>
+                </p>
+                <p>
+                    <span>Закрывающий тег</span> Обязателен
+                </p>
+                <h4>Атрибуты</h4>
+                <p>
+                    Для этого элемента доступны универсальные атрибуты <span class="green">class</span>, <span class="green">id</span>.
+                </p>
+                <hr>
+                <h3 class="standard tags">&lt;footer&gt;</h3>
+                <a href="https://html.spec.whatwg.org/multipage/sections.html#the-footer-element" target="_blank"> "Живой стандарт"</a>
+                <p>
+                    Элемент <span class="blue">&lt;footer&gt;</span> (от англ. <span class="ital">footer</span> — нижний колонтитул, подвал) задаёт «подвал» сайта или раздела веб-страницы, в нём может располагаться имя автора, дата документа, контактная и правовая информация.
+                </p>
+                <p>
+                    <span class="blue">&lt;footer&gt;</span> нельзя вкладывать внутрь другого <span class="blue">&lt;footer&gt;</span>, а также внутрь элементов <span class="blue">&lt;address&gt;</span> и <span class="blue">&lt;header&gt;</span>.
+                </p>
+                <p>
+                    Внутри <span class="blue">&lt;footer&gt;</span> не должно быть элемента <span class="blue">&lt;main&gt;</span>.
+                </p>
+                <p>
+                    Кроме того, мы можем вставить <span class="blue">&lt;footer&gt;</span> внутрь статьи <span class="blue">&lt;article&gt;</span>, чтобы показать дату её публикации. 
+                </p>
+                <h4>Синтаксис</h4>
+                <p>
+                    <pre>
+                        <span class="blue">&lt;footer&gt;</span>
+                        <span class="blue">&lt;/footer&gt;</span>
+                    </pre>
+                </p>
+                <p>
+                    <span>Закрывающий тег</span> Обязателен
+                </p>
+                <h4>Атрибуты</h4>
+                <p>
+                    Для этого элемента доступны универсальные атрибуты <span class="green">class</span>, <span class="green">id</span>.
+                </p>
+                <hr>
+            </div>
+            <div class="chapter">
+                <h2>
+                    Крупные смысловые разделы в блоках &lt;NAV&gt; &lt;SECTION&gt; &lt;ARTICLE&gt; &lt;ASIDE&gt;
+                </h2>
+                <h3 class="standard tags">&lt;nav&gt;</h3>
+                <a href="https://html.spec.whatwg.org/multipage/sections.html#the-nav-element" target="_blank">"Живой стандарт"</a>
+                <p>
+                    Элемент <span class="blue">&lt;nav&gt;</span> (от англ. <span class="ital">navigation</span> — навигация) задаёт навигацию по сайту. Если на странице несколько блоков ссылок, то в <span class="blue">&lt;nav&gt;</span> обычно помещают приоритетные ссылки. Также допустимо использовать несколько <span class="blue">&lt;nav&gt;</span> в документе для главных разделов навигации, таких как глобальная навигация, оглавление, предыдущая/следующая ссылки или других заслуживающих внимания групп навигационных ссылок. 
+                </p>
+                <p>
+                    <span class="blue">&lt;nav&gt;</span> сообщает поисковым системам, где на веб-странице расположена основная навигация и помогает структурировать сайт в поисковой выдаче. Кроме того, речевые браузеры могут пропускать навигацию, переходя непосредственно к чтению текста статьи.
+                </p>
+                <p>
+                    Автор сайта сам определяет, какие ссылки он считает главными, а какие нет. При этом некоторые блоки ссылок никак не могут претендовать на звание главных. К примеру, ссылки в подвале на социальные сети или копирайты.
+                </p>
+                <p>
+                    Поскольку <span class="blue">&lt;nav&gt;</span> представляет собой раздел в первую очередь, а не просто набор ссылок, внутри <span class="blue">&lt;nav&gt;</span> допустимо размещать и другие элементы — заголовки <span class="blue">&lt;h2&gt;</span>-<span class="blue">&lt;h6&gt;</span>, абзацы <span class="blue">&lt;p&gt;</span>, <span class="blue">&lt;header&gt;</span>, <span class="blue">&lt;footer&gt;</span> и др. В общем, всё, что продиктовано содержанием и смыслом раздела.
+                </p>
+                <p>
+                    Внутри <span class="blue">&lt;nav&gt;</span> запрещено только размещать <span class="blue">&lt;main&gt;</span>.
+                </p>
+                <p>
+                    Запрещается вкладывать <span class="blue">&lt;nav&gt;</span> внутрь <span class="blue">&lt;address&gt;</span>.
+                </p>
+                <h4>Синтаксис</h4>
+                <p>
+                    <pre>
+                        <span class="blue">&lt;nav&gt;</span> ссылки <span class="blue">&lt;/nav&gt;</span>
+                    </pre>
+                </p>
+                <p>
+                    <span>Закрывающий тег</span> Обязателен
+                </p>
+                <p>
+                    <span>Атрибуты</span> Нет
+                </p>
+                <hr>
+                <h3 class="standard tags">&lt;section&gt;</h3>
+                <a href="https://html.spec.whatwg.org/multipage/sections.html#the-section-element" target="blank">"Живой стандарт"</a>
+                <p>
+                    Элемент <span class="blue">&lt;section&gt;</span> (от англ. <span class="ital">section</span> — раздел) определяет универсальный типовой раздел веб-страницы. Может применяться для блока новостей, контактной информации, глав текста, вкладок в диалоговом окне и др. В большинстве случаях, когда надо добавить раздел, но есть сомнения, какой элемент для этого использовать, подходит именно <span class="blue">&lt;section&gt;</span>.
+                </p>
+                <p>
+                    <span class="blue">&lt;section&gt;</span> позволяет сгруппировать разное содержимое, связанное друг с другом общим смыслом, и задать ему заголовок. Для заголовков обычно применяется элемент <span class="blue">&lt;h2&gt;</span>, <span class="blue">&lt;h3&gt;</span> и ниже, а для сложных случаев, когда кроме заголовка есть картинка, форма или что-то ещё, можно воспользоваться элементом <span class="blue">&lt;header&gt;</span>.
+                </p>
+                <p>
+                    <span class="blue">&lt;section&gt;</span> обычно используется для разделения страницы и обеспечения на ней иерархии. Подходит для одностраничных сайтов, чтобы отделить один раздел от другого, а также для содержимого вкладок.  Допускается вкладывать один элемент <span class="blue">&lt;section&gt;</span>  внутрь другого.
+                </p>
+                <p>
+                    Хотя <span class="blue">&lt;section&gt;</span>  представляет собой универсальный раздел, элементы <span class="blue">&lt;article&gt;</span>, <span class="blue">&lt;aside&gt;</span> и <span class="blue">&lt;nav&gt;</span> в некоторых случаях подходят больше. 
+                </p>
+                <h4>Синтаксис</h4>
+                <p>
+                    <pre>
+                        <span class="blue">&lt;section&gt;</span>
+                        <span class="blue">&lt;/section&gt;</span>
+                    </pre>
+                </p>
+                <p>
+                    <span>Закрывающий тег</span> Обязателен
+                </p>
+                <h4>Атрибуты</h4>
+                <p>
+                    Для этого элемента доступны универсальные атрибуты <span class="green">class</span>, <span class="green">id</span>.
+                </p>
+                <hr>
+                <h3 class="standard tags">&lt;article&gt;</h3>
+                <a href="https://html.spec.whatwg.org/multipage/sections.html#the-article-element" target="_blank">"Живой стандарт"</a>
+                <p>
+                    Элемент <span class="blue">&lt;article&gt;</span> (от англ. <span class="ital">article</span> — статья) представляет собой независимый фрагмент веб-страницы и, как правило, включает «шапку», основное содержимое и «подвал», в которых располагаются такие части, как заголовок, текст, имя автора, дата публикации, метки, рейтинг статьи и др. <span class="blue">&lt;article&gt;</span> обычно применяется для статей сайта, сообщений блога и форума, комментариев.
+                </p>
+                <p>
+                    Под независимостью подразумевается, что если убрать всё остальное на веб-странице, то содержимое <span class="blue">&lt;article&gt;</span> не потеряет свой смысл. Надо понимать, что речь не идёт о полной независимости — статьи могут ссылаться друг на друга, на форуме люди отвечают на ранее заданные вопросы, в комментариях делается цитирование. Подразумевается, что <span class="blue">&lt;article&gt;</span> хранит самодостаточное содержимое, наподобие статьи в бумажном журнале. Даже если вырезать такую статью из журнала, мы всё равно узнаем её название, автора и прочитаем текст самой статьи.
+                </p>
+                <p>
+                    Каждый элемент <span class="blue">&lt;article&gt;</span> обязательно должен содержать заголовок через <span class="blue">&lt;h2&gt;</span>-<span class="blue">&lt;h6&gt;</span>. Минимальная структура элементов также должна включать хоть один параграф <span class="blue">&lt;p&gt;</span>
+                </p>
+                <p>
+                    Внутри <span class="blue">&lt;article&gt;</span> допустимы и другие, уже необязательные элементы, вроде <span class="blue">&lt;header&gt;</span>, <span class="blue">&lt;footer&gt;</span>, <span class="blue">&lt;aside&gt;</span>, <span class="blue">&lt;section&gt;</span>. 
+                </p>
+                <h4>Синтаксис</h4>
+                <p>
+                    <pre>
+                        <span class="blue">&lt;article&gt;</span>
+                        <span class="blue">&lt;/article&gt;</span>
+                    </pre>
+                </p>
+                <p>
+                    <span>Закрывающий тег</span> Обязателен
+                </p>
+                <h4>Атрибуты</h4>
+                <p>
+                    Для этого элемента доступны универсальные атрибуты <span class="green">class</span>, <span class="green">id</span>.
+                </p>
+                <hr>
+                <h3 class="standard tags">&lt;aside&gt;</h3>
+                <a href="https://html.spec.whatwg.org/multipage/sections.html#the-aside-element" target="_blank">"Живой стандарт"</a>
+                <p>
+                    Элемент <span class="blue">&lt;aside&gt;</span> (от англ. <span class="ital">aside</span> — в стороне, отступление) представляет собой раздел страницы, который имеет косвенное отношение к содержимому страницы и может быть рассмотрен отдельно от этого содержимого. <span class="blue">&lt;aside&gt;</span> применяется для боковых панелей, рекламных блоков, ссылок на архив, меток и другой информации, которая отделена от основного содержимого страницы.
+                </p>
+                <p>
+                    Мы можем инстинктивно думать об элементе <span class="blue">&lt;aside&gt;</span> в качестве элемента, который отображается слева или справа на странице. Однако мы должны помнить, что все структурные элементы, включая <span class="blue">&lt;aside&gt;</span>, являются блочными и как таковые выводятся с новой строки и занимают всю доступную ширину страницы или элемента, в который они вложены, также известного как их родительский элемент.
+                </p>
+                <p>
+                    В случаях, если <span class="blue">&lt;aside&gt;</span> используется для боковой панели, которая располагаются слева или справа от основного материала обычно применяется комбинация элементов <span class="blue">&lt;main&gt;</span> и <span class="blue">&lt;aside&gt;</span>, где <span class="blue">&lt;main&gt;</span> определяет основную уникальную часть веб-страницы, а <span class="blue">&lt;aside&gt;</span> — вспомогательную. В коде HTML это выглядит следующим образом.
+                </p>
+                <p>
+                    <pre>
+                        <span class="blue">&lt;main&gt;</span>Основная часть<span class="blue">&lt;/main&gt;</span>
+                        <span class="blue">&lt;aside&gt;</span>Вспомогательная часть<span class="blue">&lt;/aside&gt;</span>
+                    </pre>
+                </p>
+                <p>
+                    Хотя <span class="blue">&lt;aside&gt;</span> определяет раздел и в нём допустимы любые элементы, в <span class="blue">&lt;aside&gt;</span> запрещено вставлять <span class="blue">&lt;main&gt;</span>.
+                </p>
+                <p>
+                    Если <span class="blue">&lt;aside&gt;</span> располагается внутри <span class="blue">&lt;article&gt;</span>, то содержимое <span class="blue">&lt;aside&gt;</span> должно иметь отношение к тексту статьи. Внутрь <span class="blue">&lt;aside&gt;</span> при этом можно вставить глоссарий, сноски, заметки, цитаты, иллюстрации. В примере в <span class="blue">&lt;aside&gt;</span> добавлен совет по приготовлению борща.
+                </p>
+                <p>
+                    <pre>
+                        <span class="blue">&lt;body&gt;</span>
+                            <span class="blue">&lt;article&gt;</span>
+                                <span class="blue">&lt;h1&gt;</span>Борщ<span class="blue">&lt;/h1&gt;</span>
+                                <span class="blue">&lt;p&gt;</span>Мясо отварить до готовности. Промыть свёклу, очистить, 
+                                 нарезать соломкой и тушить с помидорами до полуготовности.<span class="blue">&lt;/p&gt;</span>
+                                <span class="blue">&lt;p&gt;</span>Бульон процедить, мясо нарезать кусочками. В бульон добавить 
+                                нарезанный дольками картофель, довести до кипения, опустить нарезанную 
+                                соломкой свежую капусту и варить 10-15 минут, добавить пассерованные 
+                                овощи, болгарский перец, нашинкованный тонкой соломкой, 
+                                специи и довести до готовности.<span class="blue">&lt;/p&gt;</span>
+                                <span class="blue">&lt;p&gt;</span>Готовому борщу дать настояться в течение 20-25 минут. 
+                                При подаче к столу добавить сметану, мясо, зелень.<span class="blue">&lt;/p&gt;</span>
+                              <span class="blue">&lt;aside&gt;</span>
+                                <span class="blue">&lt;h2&gt;</span>Хозяйке на заметку<span class="blue">&lt;/h2&gt;</span>
+                                <span class="blue">&lt;p&gt;</span>Жёсткое мясо быстро станет мягким, если во время варки 
+                                добавить в воду одну чайную ложку спирта.<span class="blue">&lt;/p&gt;</span>
+                               <span class="blue">&lt;/aside&gt;</span>
+                            <span class="blue">&lt;/article&gt;</span>
+                        <span class="blue">&lt;/body&gt;</span>
+                    </pre>
+                </p>
+                    <article class="article">
+                        <h1>Борщ</h1>
+                        <p>Мясо отварить до готовности. Промыть свёклу, очистить, 
+                         нарезать соломкой и тушить с помидорами до полуготовности.</p>
+                        <p>Бульон процедить, мясо нарезать кусочками. В бульон добавить 
+                        нарезанный дольками картофель, довести до кипения, опустить нарезанную 
+                        соломкой свежую капусту и варить 10-15 минут, добавить пассерованные 
+                        овощи, болгарский перец, нашинкованный тонкой соломкой, 
+                        специи и довести до готовности.</p>
+                        <p>Готовому борщу дать настояться в течение 20-25 минут. 
+                        При подаче к столу добавить сметану, мясо, зелень.</p>
+                      <aside class="aside">
+                        <h2>Хозяйке на заметку</h2>
+                        <p>Жёсткое мясо быстро станет мягким, если во время варки 
+                        добавить в воду одну чайную ложку спирта.</p>
+                       </aside>
+                    </article>
+                    <h4>Синтаксис</h4>
+                    <p>
+                        <pre>
+                            <span class="blue">&lt;aside&gt;</span>
+                            <span class="blue">&lt;/aside&gt;</span>
+                        </pre>
+                    </p>
+                    <p>
+                        <span>Закрывающий тег</span> Обязателен
+                    </p>
+                    <h4>Атрибуты</h4>
+                    <p>
+                        Для этого элемента доступны универсальные атрибуты <span class="green">class</span>, <span class="green">id</span>.
+                    </p>
+                <hr>
+            </div>
+            <div class="chapter">
+                <h2>Стилизация контента &lt;DIV&gt; &lt;SPAN&gt;</h2>
+                <p>
+                    <span class="blue">&lt;div&gt;</span> и <span class="blue">&lt;span&gt;</span> — это элементы HTML, которые действуют как контейнеры исключительно для целей стилизации. В виде основных контейнеров они не несут какого-либо всеобъемлющего смысла или семантического значения. Абзацы семантически уже потому, что содержимое внутри элемента <span class="blue">&lt;p&gt;</span> известно и понятно как абзац. <span class="blue">&lt;div&gt;</span> и <span class="blue">&lt;span&gt;</span> не содержат какого-либо значения и являются просто контейнерами.
+                </p>
+                <p>
+                    И <span class="blue">&lt;div&gt;</span> и <span class="blue">&lt;span&gt;</span>, однако, являются чрезвычайно важными при создании сайта, потому что они дают нам возможность применять целевые стили к набору контента.
+                </p>
+                <h3 class="standard tags">&lt;div&gt;</h3>
+                <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element" target="_blank">"Живой стандарт"</a>
+                <p>
+                    Элементы разделов, такие как <span class="blue">&lt;article&gt;</span>, <span class="blue">&lt;aside&gt;</span>, <span class="blue">&lt;nav&gt;</span>, <span class="blue">&lt;section&gt;</span>, применяются для смыслового деления содержимого. Браузеры визуально никак не показывают эти элементы и не меняют вид их содержимого. Тем не менее, на веб-странице часто требуется стилизовать какой-то блок, изменив цвет текста, добавив к нему рамку, фон и др. Именно в этом случае правильным будет использовать элемент <span class="blue">&lt;div&gt;</span>.
+                </p>
+                <h3>
+                    Выбор между элементами <span class="blue">&lt;article&gt;</span>, <span class="blue">&lt;section&gt;</span> или <span class="blue">&lt;div&gt;</span>
+                </h3>
+                <p>
+                    Порой довольно трудно решить, какой из элементов <span class="blue">&lt;article&gt;</span>, <span class="blue">&lt;section&gt;</span> или <span class="blue">&lt;div&gt;</span> лучше подходит для работы, основываясь на его смысловом значении. Хитростью, как и с любым семантическим выбором, является просмотр содержимого.
+                </p>
+                <p>
+                    Оба элемента <span class="blue">&lt;article&gt;</span> и <span class="blue">&lt;section&gt;</span> организуют структуру документа и помогают наметить его схему. Если содержимое сгруппировано исключительно для стилизации и не несёт ценность для схемы документа, используйте элемент <span class="blue">&lt;div&gt;</span>.
+                </p>
+                <p>
+                    Если содержимое добавляется к схеме документа и может быть независимо повторено или перенесено, используйте элемент <span class="blue">&lt;article&gt;</span>.
+                </p>
+                <p>
+                    Если содержимое добавляется к схеме документа и представляет собой тематическую группу содержимого, используйте элемент <span class="blue">&lt;section&gt;</span>.
+                </p>
+                <p>
+                    Элемент <span class="blue">&lt;div&gt;</span> придуман именно для оформительских целей — изначально он никак не меняет вид своего содержимого и не несёт какого-либо смысла, в отличие от <span class="blue">&lt;nav&gt;</span>, к примеру. <span class="blue">&lt;div&gt;</span> используется, когда требуется изменить стиль блока, но сам блок нельзя отнести к элементам раздела. 
+                </p>
+                <p>
+                    Элемент <span class="blue">&lt;div&gt;</span> (от англ. <span class="ital">division</span> — раздел, секция) является универсальным  элементом и обладает блочными свойствами - он занимает всю доступную ширину и начинается с новой строки, после него также добавляется перенос строки. Предназначен для группирования элементов документа с целью изменения вида содержимого через стили. Для этого добавляется атрибут <span class="green">class</span> или <span class="green">id</span> с именем класса или идентификатора.
+                </p>
+                <h4>Синтаксис</h4>
+                <p>
+                    <pre>
+                        <span class="blue">&lt;div&gt;</span> ... <span class="blue">&lt;/div&gt;</span>
+                    </pre>
+                </p>
+                <p>
+                    <span>Закрывающий тег</span> Обязателен
+                </p>
+                <h4>Атрибуты</h4>
+                <p>
+                    Для этого элемента доступны универсальные атрибуты <span class="green">class</span>, <span class="green">id</span>.
+                </p>
+                <hr>
+                <h3 class="standard tags">&lt;span&gt;</h3>
+                <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-span-element" target="_blank">"Живой стандарт"</a>
+                <p>
+                    Универсальный элемент <span class="blue">&lt;span&gt;</span> (от англ. <span class="ital">span</span> — охватывать) со строчными свойствами. Предназначен для выделения отдельных строк, символов или других строчных элементов для дальнейшего изменения их оформления с помощью стилей. Например, внутри абзаца (<span class="blue">&lt;p&gt;</span>) можно изменить цвет и размер первого слова, если его выделить с помощью элемента <span class="blue">&lt;span&gt;</span> и задать для него желаемый стиль.
+                </p>
+                <h4>Синтаксис</h4>
+                <p>
+                    <pre>
+                        <span class="blue">&lt;span&gt;</span> ... <span class="blue">&lt;/span&gt;</span>
+                    </pre>
+                </p>
+                <p>
+                    <span>Закрывающий тег</span> Обязателен
+                </p>
+                <h4>Атрибуты</h4>
+                <p>
+                    Для этого элемента доступны универсальные атрибуты <span class="green">class</span>, <span class="green">id</span>.
+                </p>
             </div>
         </div>
     </main>

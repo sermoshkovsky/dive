@@ -3,9 +3,15 @@
     margin: 0 auto;
 }
 
+.standard {
+    display: inline;
+}
+
 .tags {
     font-size: 35px;
     margin: 0;
+    color: rgb(64, 64, 95);
+    font-weight: 700;
 }
 
 .atr {
@@ -45,4 +51,10 @@ span {
     width: 75em;
 }
 
-/* <span class="blue">&lt;&gt;</span> */
+.article {
+    background-color: antiquewhite;
+}
+
+.aside {
+    background-color: aquamarine;
+}

@@ -3,6 +3,10 @@
     margin: 0 auto;
 }
 
+.standard {
+    display: inline;
+}
+
 .tags {
     font-size: 35px;
     margin: 0;

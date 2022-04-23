@@ -11,8 +11,8 @@
     <header class="header" id="header">
         <div class="container">
             <nav>
-                <a href="/00_Home/index.html" target="_blank">Главная</a>
-                <a href="/02_Junior/html-junior.html" target="_blank">HTML-1</a>
+                <a href="../00_Home/index.html" target="_blank">Главная</a>
+                <a href="./html-junior.html" target="_blank">HTML-1</a>
             </nav>
             <div class="section top">
                 <div class="offer">
@@ -58,6 +58,7 @@
                 </div>
             <img src="https://zametkinapolyah.ru/wp-content/uploads/2016/06/html-structure.png" alt="Основная конструкция HTML-страницы">
         </div>
+        <hr>
         </div>
     </header>
     <main>
@@ -71,9 +72,8 @@
                 </p>
             </div>
             <div class="section" id="doctype">
-                <h2>
-                    <span class="blue">&lt;!DOCTYPE&gt;</span>
-                </h2>
+                <h2 class="standard"><span class="blue">&lt;!DOCTYPE&gt;</span></h2>
+                <a href="https://html.spec.whatwg.org/multipage/syntax.html#the-doctype" target="_blank">"Живой стандарт"</a>
                 <p>
                    Элемент <span class="blue">&lt;!DOCTYPE&gt;</span> ( <span class="ital" >доктайп</span>) предназначен для указания типа текущего документа — <span class="blue">DTD</span> (<span class="ital" >document type definition</span>, описание типа документа).  Это необходимо, чтобы браузер понимал, согласно какому стандарту отображать текущую веб-страницу, поскольку HTML существует в нескольких версиях.  
                    Запись <span class="blue">&lt;!DOCTYPE html&gt;</span> сообщает браузерам, что мы будем использовать последнюю версию HTML - это версия HTML5.
@@ -91,10 +91,10 @@
                     Не требуется.
                 </p>
             </div>
+            <hr>
             <div class="section" id="html">
-                <h2>
-                    <span class="blue">&lt;html&gt;</span>
-                </h2>
+                <h2 class="standard"><span class="blue">&lt;html&gt;</span></h2>
+                <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-html-element" target="_blank">"Живой стандарт"</a>
                 <p>
                     Элемент <span class="blue">&lt; html&gt;</span>. Этот элемент является контейнером, который заключает в себе всё содержимое веб-страницы, включая элементы <span class="blue">&lt; head&gt;</span>  и <span class="blue">&lt; body&gt;</span>. Как правило, <html> идёт в документе вторым, после определения типа документа (Document Type Definition, DTD), устанавливаемого через <span class="blue">&lt;!DOCTYPE html&gt;</span>. Закрывающий тег <span class="blue">&lt; /html&gt;</span> всегда стоит в документе последним.
                 </p>
@@ -137,10 +137,12 @@
                     <span class="blue">&lt;html<span class="green"> lang</span>=<span class="orang">"ru"</span>&gt;</span>
                 </p>
             </div>
+            <hr>
             <div class="section" id="head">
-                <h2>
+                <h2 class="standard">
                     <span class="blue">&lt;head&gt;</span>
                 </h2>
+                <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-head-element" target="_blank">"Живой стандарт"</a>
                 <p>
                     Элемент  <span class="blue">&lt;head&gt;</span> (от англ. <span class="ital">head</span> — голова) предназначен для хранения других элементов, цель которых — помочь браузеру в работе с данными. Также внутри контейнера <span class="blue">&lt;head&gt;</span> находятся метатеги, которые используются для хранения информации предназначенной для браузеров и поисковых систем. Например, механизмы поисковых систем обращаются к метатегам для получения описания сайта, ключевых слов и других данных.
                 </p>
@@ -162,21 +164,23 @@
                     Обязателен.
                 </p>
             </div>
+            <hr>
             <div class="section" id="meta">
-                <h2>
+                <h2 class="standard" >
                     <span class="blue">&lt;meta&gt;</span>
                 </h2>
+                <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-meta-element" target="_blank">"Живой стандарт"</a>
                 <p>
                     Элемент <span class="blue">&lt;meta&gt;</span> (от англ. <span class="ital">metadata</span> — метаданные) определяет данные (они называются ещё метатеги), которые используются для хранения информации, предназначенной для браузеров и поисковых систем. Например, механизмы поисковых систем обращаются к метатегам для получения описания сайта, ключевых слов и других данных. 
                 </p>
                 <p>
-                    Существует множество разновидностей <span class="blue">&lt;meta&gt;</span>. Все они размещаются в контейнере <span class="blue">&lt;head&gt;</span>. Не станем пытаться охватить их все сразу — так недолго и запутаться. Рассмотрим пока один. 
+                    Существует множество разновидностей <span class="blue">&lt;meta&gt;</span>. Все они размещаются в контейнере <span class="blue">&lt;head&gt;</span>.  Рассмотрим пока один. 
                 </p>
                 <p>
                     <span class="blue">&lt;meta <span class="green">charset</span>=<span class="orang">"utf-8"</span>&gt;</span> Задает кодировку документа, которая указывает набор символов, которые в нём можно использовать.
                 </p>
                 <p>
-                    <span class="orang">"utf-8"</span> — универсальный набор символов, который включает почти все символы со всех языков человечества. Страница в такой кодировке прекрасно отображает как английские, так и японские символы. 
+                    <span class="orang">"utf-8"</span> — универсальный набор символов, который включает почти все символы со всех языков человечества. Страница в такой кодировке прекрасно отображает, как английские, так и японские символы. 
                 </p>
                 <h3>
                     Синтаксис
@@ -193,10 +197,12 @@
                     Не требуется.
                 </p>
             </div>
+            <hr>
             <div class="section" id="title">
-                <h2>
+                <h2 class="standard" >
                     <span class="blue">&lt;title&gt;</span>
                 </h2>
+                <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-title-element" target="_blank">"Живой стандарт"</a>
                 <p>
                     Элемент <span class="blue">&lt;title&gt;</span> (от англ. <span class="ital">title</span> — название, заголовок) - определяет заголовок документа. Он не является частью документа и не показывается напрямую на веб-странице. Текст заголовка отображается, как правило, на вкладке браузера. Длина заголовка должна быть не более 60 символов, чтобы полностью поместиться в заголовке. Допускается использовать только один <span class="blue">&lt;title&gt;</span>  на документ и размещать его в контейнере <span class="blue">&lt;head&gt;</span>.
                 </p>
@@ -216,10 +222,12 @@
                     Обязателен.
                 </p>
             </div>
+            <hr>
             <div class="section" id="body">
-                <h2>
+                <h2  class="standard">
                     <span class="blue">&lt;body&gt;</span>
                 </h2>
+                <a href="https://html.spec.whatwg.org/multipage/sections.html#the-body-element" target="_blank">"Живой стандарт"</a>
                 <p>
                     Элемент <span class="blue">&lt;body&gt;</span> (от англ. <span class="ital">body</span> — тело) предназначен для хранения содержимого веб-страницы (контента), отображаемого в окне браузера. Информацию, которую следует выводить в документе, следует располагать именно внутри контейнера <span class="blue">&lt;body&gt;</span>. К такой информации относится текст, изображения, теги, скрипты JavaScript и т. д.
                 </p>
@@ -238,13 +246,14 @@
                     Обязателен.
                 </p>
             </div>
+            <hr>
             <div class="section" id="dom">
                 <h2>Объектная модель документа DOM</h2>
                 <p>
                     Язык HTML следует правилам, которые содержатся в файле объявления типа документа <span class="ital">(Document Type Definition, или DOCTYPE)</span>. <span class="blue">DOCTYPE</span> определяет версию HTML и отвечает за корректное отображение веб-страницы браузером.
                 </p>
                 <p>
-                    Элементы, находящиеся внутри элемента <span class="blue">&lt;html&gt;</span>, образуют дерево документа, так называемую <span>объектную модель документа, DOM (document object model)</span>. При этом элемент <html> является корневым элементом.
+                    Элементы, находящиеся внутри элемента <span class="blue">&lt;html&gt;</span>, образуют дерево документа, так называемую <span>объектную модель документа, DOM (document object model)</span>. При этом элемент <span class="blue">&lt;html&gt;</span> является корневым элементом.
                 </p>
                 <img src="./img/DOM.png" alt="DOM">
                 <p>
@@ -272,9 +281,11 @@
     </main>
     <footer class="footer">
         <div class="container">
-            <button>
-                <a href="#header">ВВЕРХ</a>
-            </button>
+            <p>
+                &#9650;
+                <a href="#header"><span>ВВЕРХ</span></a>
+                &#9650;
+            </p>
         </div>
     </footer>
 </body>

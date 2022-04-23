@@ -3,6 +3,10 @@
     margin: 0 auto;
 }
 
+.standard {
+    display: inline;
+}
+
 span {
     font-weight: bold;
 }

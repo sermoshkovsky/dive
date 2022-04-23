@@ -10,14 +10,458 @@
 <body>
     <header class="header" id="header">
         <div class="container">
-            <div class="nav">
-                <a href=""></a>
-            </div>
+            <nav>
+                <a href="../00_Home/index.html" target="_blank">Главная</a>
+                <a href="./html-junior.html" target="_blank
+                ">HTML-1</a>
+            </nav>
+            <h1>СПИСКИ</h1>
         </div>
     </header>
     <main>
         <div class="container">
-            
+            <section class="creation">
+                <h2>Создание списков</h2>
+                <p>
+                    Списки встречаются практически везде. Список дел определяет что сделано. Навигационные маршруты предлагают пошаговый список направлений. Для рецептов требуется список ингредиентов и список инструкций. Списки предоставляют возможность упорядочить и систематизировать разные данные и представить их в наглядном и удобном для пользователя виде.
+                </p>
+                <p>
+                    Когда мы хотим использовать список на сайте, HTML предлагает три разных типа на выбор: 
+                </p>
+                <ul>
+                    <li>
+                        <a href="#unordered">маркированный (неупорядоченный) список</a>
+                    </li>
+                    <li>
+                        <a href="#ordered">нумерованный (упорядоченный) список</a>
+                    </li>
+                    <li> 
+                        <a href="#description">список описаний</a>
+                    </li>
+                </ul>
+                <p>
+                    Списки, также, могут вкладываться один в один
+                </p>
+                <ul>
+                    <li>
+                        <a href="#nest">Вложенные списки</a>
+                    </li>
+                </ul>
+                <p>
+                    Какой тип списка выбрать для использования и применять ли список вообще — зависит от содержимого и семантически наиболее подходящего варианта для его отображения.
+                </p>
+                <hr>
+            </section>
+            <section class="unordered" id="unordered">
+                <h2>Маркированные списки</h2>
+                <p class="standard tags">
+                    &lt;ul&gt;  &lt;li&gt;
+                </p>
+                <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element" target="_blank">"Живой стандарт"</a>
+                <p>
+                    Маркированный или неупорядоченный список определяется тем, что перед каждым элементом списка добавляется небольшой маркер, обычно в виде закрашенного кружка. 
+                </p>
+                <p>
+                    Сам список формируется с помощью элемента <span class="blue">&lt;ul&gt;</span> (от англ. <span class="ital">unordered list</span> — неупорядоченный список)
+                </p>
+                <p>
+                    Каждый пункт списка должен начинаться с элемента <span class="blue">&lt;li&gt;</span> (от англ. <span class="ital">List Item</span> — пункт списка). Если к <span class="blue">&lt;ul&gt;</span> применяется таблица стилей, то элементы <span class="blue">&lt;li&gt;</span> наследуют эти свойства.
+                </p>
+                <p>
+                    С элементом <span class="blue">&lt;ul&gt;</span> связаны следующие особенности:
+                </p>
+                <ul>
+                    <li>
+                        в том месте, где встречается <span class="blue">&lt;ul&gt;</span>, браузер автоматически добавляет перенос строки;
+                    </li>
+                    <li>
+                        у списка имеются отступы сверху и снизу;
+                    </li>
+                    <li>
+                        маркеры по умолчанию отображаются в виде закрашенного кружка;
+                    </li>
+                    <li>
+                        каждый элемент списка сдвигается вправо по отношению к основному тексту.
+                    </li>
+                </ul>
+                <h3>Синтаксис</h3>
+                <p>
+                    <pre>
+                        <span class="blue">&lt;ul&gt;</span>
+                            <span class="blue">&lt;li&gt;</span>пункт маркированного списка<span class="blue">&lt;/li&gt;</span>
+                        <span class="blue">&lt;/ul&gt;</span>
+                    </pre>
+                    Внутри <span class="blue">&lt;li&gt;</span> не обязательно размещать только текст, это могут быть и другие элементы, вроде абзацев <span class="blue">&lt;p&gt;</span>.
+                </p>
+                <p>
+                    <span>Закрывающий тег</span>
+                </p>
+                <p>
+                    Обязателен
+                </p>
+                <h3>Атрибуты</h3>
+                <p>
+                    Для этого элемента доступны универсальные атрибуты
+                </p>
+                <p class="atr">
+                    class
+                </p>
+                <p>
+                    Определяет имя класса, которое позволяет связать элемент со стилевым оформлением.
+                </p>
+                <p class="atr">
+                    id
+                </p>
+                <p>
+                    Указывает имя стилевого идентификатора.
+                </p>
+                <hr>
+            </section>
+            <section class="ordered" id="ordered">
+                <div class="chapter">
+                    <h2>Нумерованные списки</h2>
+                    <p class="standard tags">
+                        &lt;ol&gt;  &lt;li&gt;
+                    </p>
+                    <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-ol-element" target="_blank">"Живой стандарт"</a>
+                    <p>
+                        Нумерованные или упорядоченные списки представляют собой набор пунктов с их порядковыми номерами.  
+                    </p>
+                    <p>
+                        Устанавливает нумерованный список элемент <span class="blue">&lt;ol&gt;</span> (от англ. <span class="ital">ordered list</span> — упорядоченный список)
+                    </p>
+                    <p>
+                        Каждый пункт списка должен начинаться с элемента <span class="blue">&lt;li&gt;</span> (от англ. <span class="ital">List Item</span> — пункт списка). Если к <span class="blue">&lt;ol&gt;</span> применяется таблица стилей, то элементы <span class="blue">&lt;li&gt;</span> наследуют эти свойства.
+                    </p>
+                    <ol>
+                        <li>
+                            в том месте, где встречается <span class="blue">&lt;ul&gt;</span>, браузер автоматически добавляет перенос строки;
+                        </li>
+                        <li>
+                            у списка имеются отступы сверху и снизу;
+                        </li>
+                        <li>
+                            по умолчанию применяется список с арабскими числами (1, 2, 3,…),;
+                        </li>
+                        <li>
+                            каждый элемент списка сдвигается вправо по отношению к основному тексту.
+                        </li>
+                    </ol>
+                    <h3>Синтаксис</h3>
+                    <p>
+                        <pre>
+                            <span class="blue">&lt;ol&gt;</span>
+                                <span class="blue">&lt;li&gt;</span>Первый пункт<span class="blue">&lt;/li&gt;</span>
+                                <span class="blue">&lt;li&gt;</span>Второй пункт<span class="blue">&lt;/li&gt;</span>
+                                <span class="blue">&lt;li&gt;</span>Третий пункт<span class="blue">&lt;/li&gt;</span>
+                            <span class="blue">&lt;/ol&gt;</span>
+                        </pre>
+                        Внутри <span class="blue">&lt;li&gt;</span> не обязательно размещать только текст, это могут быть и другие элементы, вроде абзацев <span class="blue">&lt;p&gt;</span>.
+                    </p>
+                    <p>
+                        <span>Закрывающий тег</span>
+                    </p>
+                    <p>
+                        Обязателен
+                    </p>
+                </div>
+                <div class="chapter">
+                    <h3>Атрибуты</h3>
+                    <dl>
+                        <dt>
+                            <span class="green">type</span>
+                            <dd>
+                                Устанавливает вид маркера списка.
+                            </dd>
+                        </dt>
+                        <dt>
+                            <span class="green">reversed</span>
+                            <dd>
+                                Нумерация в списке становится по убыванию (3,2,1).
+                            </dd>
+                        </dt>
+                        <dt>
+                            <span class="green">start</span>
+                            <dd>
+                                Задаёт число, с которого будет начинаться нумерованный список. 
+                            </dd>
+                        </dt>
+                        <dt>
+                            <span class="green">value</span>
+                            <dd>
+                                Число, с которого будет начинаться нумерованный список. Применяется только для элемента <span class="blue">&lt;li&gt;</span>  
+                            </dd>
+                        </dt>
+                    </dl>
+                    <p>
+                        Также для этого элемента доступны универсальные атрибуты  <span class="green">class</span> и <span class="green">id</span>
+                    </p>
+                </div>
+                <div class="chapter">
+                    <p class="atr">type</p>
+                    <p>
+                        Устанавливает вид нумерации в упорядоченном (нумерованном) списке.
+                    </p>
+                    <p>
+                        <span>Синтаксис</span>
+                    </p>
+                    <p>
+                        <span class="blue">&lt;ol <span class="green">type</span>=<span class="orang">"A | a | I | i | 1"</span>></span>...<span class="blue">&lt;/ol&gt;</span>
+                    </p>
+                    <p>
+                        <span>Значения</span>
+                    </p>
+                    <p>
+                        В качестве маркеров могут быть следующие значения:
+                    </p>
+                    <ul>
+                        <li>
+                            заглавные латинские буквы </span>=<span class="orang">" A "</span> 
+                        </li>
+                        <li>
+                            строчные латинские буквы </span>=<span class="orang">" a "</span>
+                        </li>
+                        <li>
+                            заглавные римские цифры </span>=<span class="orang">" I "</span>
+                        </li>
+                        <li>
+                            строчные римские цифры </span>=<span class="orang">" i "</span>
+                        </li>
+                        <li>
+                            арабские цифры </span>=<span class="orang">" 1"</span>
+                        </li>
+                    </ul>
+                    <table>
+                        <tr>
+                            <td>
+                                <span class="blue">&lt;ol <span class="green">type</span>=<span class="orang">"A"</span>></span>...<span class="blue">&lt;/ol&gt;</span>
+                            </td>
+                            <td>
+                                <ol type="A">
+                                    <li>Asus</li>
+                                    <li>Lenovo</li>
+                                    <li>Samsung</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="blue">&lt;ol <span class="green">type</span>=<span class="orang">"a"</span>></span>...<span class="blue">&lt;/ol&gt;</span>
+                            </td>
+                            <td>
+                                <ol type="a">
+                                    <li>Asus</li>
+                                    <li>Lenovo</li>
+                                    <li>Samsung</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="blue">&lt;ol <span class="green">type</span>=<span class="orang">"I"</span>></span>...<span class="blue">&lt;/ol&gt;</span>
+                            </td>
+                            <td>
+                                <ol type="I">
+                                    <li>Asus</li>
+                                    <li>Lenovo</li>
+                                    <li>Samsung</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="blue">&lt;ol <span class="green">type</span>=<span class="orang">"i"</span>></span>...<span class="blue">&lt;/ol&gt;</span>
+                            </td>
+                            <td>
+                                <ol type="i">
+                                    <li>Asus</li>
+                                    <li>Lenovo</li>
+                                    <li>Samsung</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="blue">&lt;ol <span class="green">type</span>=<span class="orang">"1"</span>></span>...<span class="blue">&lt;/ol&gt;</span>
+                            </td>
+                            <td>
+                                <ol type="1">
+                                    <li>Asus</li>
+                                    <li>Lenovo</li>
+                                    <li>Samsung</li>
+                                </ol>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>
+                        <span>Значение по умолчанию</span>
+                    </p>
+                    <p>
+                        арабские цифры </span>=<span class="orang">" 1"</span>
+                    </p>
+                </div>
+                <div class="chapter">
+                    <p class="atr">reversed</p>
+                    <p>
+                        Меняет нумерацию в списке на обратный порядок, вместо 1,2,3 будет выводиться 3,2,1.
+                    </p>
+                    <p><span>Синтаксис</span></p>
+                    <p>
+                        <span class="blue">&lt;ol <span class="green">reversed</span>></span>...<span class="blue">&lt;/ol&gt;</span>
+                    </p>
+                    <p>
+                        <span>Значения</span>
+                    </p>
+                    <p>
+                        Нет
+                    </p>
+                </div>
+                <div class="chapter">
+                    <p class="atr">start</p>
+                    <p>
+                        Устанавливает номер, с которого будет начинаться нумерованный список. При этом не имеет значения, какой тип списка установлен с помощью <span class="orang">type</span>, атрибут <span class="orang">start</span> одинаково работает и с римскими и с арабскими числами.
+                    </p>
+                    <p>
+                        <span>Синтаксис</span>
+                    </p>
+                    <p>
+                        <pre>
+                        <span class="blue">&lt;ol <span class="green">start</span>=<span class="orang">"число"</span>></span>
+                            <span class="blue">&lt;li&gt;</span>пункт  списка<span class="blue">&lt;/li&gt;</span>
+                        <span class="blue">&lt;/ol&gt;</span>
+                        </pre>
+                    </p>
+                    <p>
+                        <span>Значения</span>
+                    </p>
+                    <p>
+                        Нет
+                    </p>
+                </div>
+                <div class="chapter">
+                    <p class="atr">value</p>
+                    <p> 
+                        Атрибут устанавливает номер, с которого будет начинаться список. Применяется только для элемента <span class="blue">&lt;li&gt;</span> нумерованных списков. При этом не имеет значения, какой тип списка установлен с помощью <span class="orang">type</span>, атрибут <span class="orang">start</span> одинаково работает и с римскими и с арабскими числами.
+                    </p>
+                    <p>
+                        <span>Синтаксис</span>
+                    </p>
+                    <p>
+                        <pre>
+                        <span class="blue">&lt;li <span class="green">value</span>=<span class="orang">"число"</span>></span>...<span class="blue">&lt;/li&gt;</span>
+                        </pre>
+                    </p>
+                    <p><span>Значения</span></p>
+                    <p>
+                        В качестве значения указывается любое целое положительное число. При этом неважно, какой тип нумерации установлен, даже если в качестве списка используются латинские буквы. Если одновременно для списка применяются атрибуты <span class="green">start</span> и <span class="green">value</span>, то последний имеет большее преимущество, и нумерация отображается с числа, указанного <span class="green">value</span>,
+                    </p>
+                </div>
+                <hr>
+            </section>
+            <section class="description" id="description">
+                <h2>Списки описания</h2>
+                <p class="standard tags">
+                    &lt;dl&gt;  &lt;dt&gt;  &lt;dd&gt;
+                </p>
+                <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element" target="_blank">"Живой стандарт"</a>
+                <p>
+                    Такие списки применяются для обозначения нескольких терминов и их описаний, как в глоссарии, к примеру.
+                    Список описаний состоит из двух элементов — термина и его описания. 
+                </p>
+                <p>
+                    Создание списка описания в HTML происходит с помощью элемента <span class="blue">&lt;dl&gt;</span> (от англ. <span class="ital">description list</span> — список описаний)
+                </p>
+                <p>
+                    Термин - элементом <span class="blue">&lt;dt&gt;</span> (от англ. <span class="ital">description list term</span> — термин списка описаний)
+                </p>
+                <p>
+                    Описание термина — с помощью элемента <span class="blue">&lt;dd&gt;</span> (от англ. <span class="ital">description list description</span> — описание списка описаний)
+                </p>
+                <h3>Синтаксис</h3>
+                <p>
+                    <pre>
+                        <span class="blue">&lt;dl&gt;</span>
+                            <span class="blue">&lt;dt&gt;</span> Термин 1 <span class="blue">&lt;/dt&gt;</span>
+                                <span class="blue">&lt;dd&gt;</span> Описание термина 1 <span class="blue">&lt;dd&gt;</span> 
+                            <span class="blue">&lt;dt&gt;</span> Термин 2 <span class="blue">&lt;/dt&gt;</span>
+                                <span class="blue">&lt;dd&gt;</span> Описание термина 2 <span class="blue">&lt;dd&gt;</span>
+                        <span class="blue">&lt;/dl&gt;</span> 
+                    </pre>
+                </p>
+                <p>
+                    <span>Закрывающий тег</span>
+                </p>
+                <p>
+                    Обязателен
+                </p>
+                <h3>Атрибуты</h3>
+                <p>
+                    Для этого элемента доступны универсальные атрибуты
+                </p>
+                <p class="atr">
+                    class
+                </p>
+                <p>
+                    Определяет имя класса, которое позволяет связать элемент со стилевым оформлением.
+                </p>
+                <p class="atr">
+                    id
+                </p>
+                <p>
+                    Указывает имя стилевого идентификатора.
+                </p>
+                <hr>
+            </section>
+            <section class="nest" id="nest">
+                <h2>Вложенные списки</h2>
+                <p>
+                    Вложенные или многоуровневые списки предназначены для организации сложной иерархической структуры текста, обычно таких документов, как юридические или технические. Реально на веб-странице нельзя автоматически ввести многоуровневую нумерацию типа использования подпунктов 1.1 или 2.1.3. Поэтому приходится вводить числа отдельно или упрощать отображение списка.
+                </p>
+                <ol>
+                    <li>
+                        Украинская кухня
+                        <ul>
+                            <li>
+                                Борщ
+                            </li>
+                            <li>
+                                Холодец
+                            </li>
+                            <li>
+                                Галушки
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Кавказкая кухня
+                    </li>
+                    <li>
+                        Итальянская кухня
+                    </li>
+                </ol>
+                <h3>Синтаксис</h3>
+                <p>
+                    <pre>
+                        <span class="blue">&lt;ol&gt;</span>
+                            <span class="blue">&lt;li&gt;</span>Украинская кухня
+                                <span class="blue">&lt;ul&gt;</span>
+                                    <span class="blue">&lt;li&gt;</span>Борщ<span class="blue">&lt;/li&gt;</span>
+                                    <span class="blue">&lt;li&gt;</span>Холодец<span class="blue">&lt;/li&gt;</span>
+                                    <span class="blue">&lt;li&gt;</span>Галушки<span class="blue">&lt;/li&gt;</span>
+                                <span class="blue">&lt;/ul&gt;</span>
+                            <span class="blue">&lt;/li&gt;</span>
+                            <span class="blue">&lt;li&gt;</span>Кавказкая кухня<span class="blue">&lt;/li&gt;</span>
+                            <span class="blue">&lt;li&gt;</span>Кавказкая кухня<span class="blue">&lt;/li&gt;</span>
+                        <span class="blue">&lt;/ol&gt;</span>
+                    </pre>
+                </p>
+                <p>
+                    Поскольку вложенные списки могут немного запутать и отобразить нежелательные стили, если они сделаны неправильно — давайте быстро их просмотрим. Элементы <span class="blue">&lt;ul&gt;</span> и <span class="blue">&lt;ol&gt;</span> могут содержать только элементы <span class="blue">&lt;li&gt;</span>. Элемент <span class="blue">&lt;li&gt;</span> может содержать любой обычный элемент, какой пожелаете. Однако элемент <span class="blue">&lt;li&gt;</span> должен быть прямым потомком либо элемента <span class="blue">&lt;ul&gt;</span>, либо <span class="blue">&lt;ol&gt;</span>.
+                </p>
+                <p>
+                    Стоит также отметить, что когда списки вложены внутрь других списков, их маркеры будут меняться в зависимости от глубины вложения. В предыдущем примере маркированный список, вложенный в нумерованный, использует в качестве маркеров кружок вместо точки. Это изменение происходит потому, что маркированный список вложен на один уровень в нумерованном списке.
+                </p>
+            </section>
         </div>
     </main>
     <footer>
