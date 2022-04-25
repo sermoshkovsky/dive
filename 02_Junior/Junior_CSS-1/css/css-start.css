@@ -1,0 +1,13 @@
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.ital {
+    font-style: italic;
+}
+
+.menu {
+    font-size: 20px;
+    font-weight: 700;
+}

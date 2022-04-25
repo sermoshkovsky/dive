@@ -1,0 +1,58 @@
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.atr {
+    color: rgb(4, 140, 4);
+    font-weight:700;
+    font-size: 18px;
+}
+/* 
+<span class="atr"></span>
+ */
+
+
+.mean {
+    color: orange;
+    font-weight:700;
+    font-size: 18px; 
+}
+/* 
+<span class="mean"></span>
+ */
+
+.tag {
+    color: rgb(73, 73, 150);
+    font-weight:700;
+    font-size: 18px;
+}
+
+/* 
+&lt;&gt; 
+<span class="tag">&lt;&gt;</span>
+*/
+
+.slc {
+    color: brown;
+    font-weight:700;
+    font-size: 18px;
+}
+
+.img {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    color: rgba(2, 2, 2, 0.808);
+    font-size: 22px;
+}
