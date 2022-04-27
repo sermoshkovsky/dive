@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTools</title>
+    <link rel="stylesheet" href="./css/DevTools.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../../00_Home/index.html" target="_blank">Главная</a>
+            <a href="./css-1.html" target="_blank">CSS-1</a>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Chrome DevTools</h1>
+                <p>
+                    <strong>Chrome DevTools</strong> — это набор инструментов, встроенных в браузер <em>Google Chrome</em>, для создания и отладки сайтов. С их помощью можно:
+                </p>
+                <ul>
+                    <li>
+                        просматривать исходный код сайта,
+                    </li>
+                    <li>
+                        отлаживать работу <em>frontend</em>: HTML, CSS и JavaScript. 
+                    </li>
+                </ul>
+                <p>
+                    Инструменты разработчика  позволяют быстро отловить и исправить ошибки в разметке или в коде. С их помощью можно узнать, как построилось DOM-дерево, какие теги и атрибуты есть на странице, почему не подгрузились шрифты и многое другое.
+                </p>
+                <p>
+                    Также <strong>DevTools</strong> позволяет проверять: сетевой трафик, быстродействие сайта и многое другое. 
+                </p>
+                <section class="open">
+                    <h2>Как открыть инструменты разработчика</h2>
+                    <p>
+                        Открыть <strong>DevTools</strong> из браузера <em>Google Chrome</em> можно тремя способами:
+                    </p>
+                    <ol>
+                        <li>
+                            <strong>Сочетанием горячих клавиш:</strong>  <em>Ctrl</em> + <em>Shift</em> + <em>I</em>
+                        </li>
+                        <li>
+                            <strong>В контекстном меню:</strong> на странице в любом месте кликнуть правой кнопкой мыши и выбрать «<em>Просмотреть код</em>». <br>
+                            Главное — не путать с «<em>Просмотр кода страницы</em>», эта опция покажет исходный код вне <em>DevTools</em>.
+                        </li>
+                        <li>
+                            <strong>Через меню браузера:</strong> в правом верхнем углу нажать на три точки, в меню выбрать раздел «<em>Дополнительные инструменты</em>» и далее «<em>Инструменты разработчика</em>».
+                        </li>
+                    </ol>
+                </section>
+                <section class="settings"> 
+                    <h2>Настройки DevTools</h2>
+                    <p>
+                        Чтобы открыть <strong>Настройки DevTools</strong>, необходимо нажать <strong>шестеренку</strong> в правом верхнем углу <strong>Панели инструментов</strong> . 
+                    </p>
+                    <p>
+                        <img src="./img/DevTools-img/Screenshot_1.png" alt="Настройки DevTools">
+                    </p>
+                    <h3>Тема интерфейса</h3>
+                    <p>
+                        Можно настроить инструменты разработчика и изменить их внешний вид — например, выбрать тёмную или светлую <strong>тему</strong> интерфейса.
+                    </p>
+                    <h3>Горячие клавиши</h3>
+                    <p>    
+                        Также в настройках есть <strong>список горячих клавиш</strong>. 
+                        Советуем с ними ознакомиться - знание этих комбинаций очень ускорит работу. Если с английским языком проблемы, то как раз можно <strong>сменить язык</strong> на русский. Но, в целом, нужно привыкать работать с оригинальным интерфейсом на английском языке. 
+                    </p>
+                    <p>
+                        <img src="./img/DevTools-img/Screenshot_2.png" alt="Настройки DevTools">
+                    </p>
+                    <h3>Изменение места закрепления DevTools в браузере</h3>
+                    <p>
+                        Можно изменить место расположения <strong>DevTools</strong> в браузере. По умолчанию панель отладчика <strong>DevTools</strong> расположена <em>справа</em> от окна браузера. Можно также расположить панель  <em>снизу</em>, <em>слева</em> или <em>открепить</em> отладчик и работать с ним в отдельном окне.
+                    </p>
+                    <p>
+                        <strong>Изменение места, в котором размещены DevTools в окне браузера:</strong>
+                    </p>
+                    <ul>
+                        <li>
+                            Нажмите <em>три вертикальных точки</em> вверху справа от шестеренки "Настройка" и управление <strong>DevTools</strong>. Затем в выпавшем окне  выберите вариант макета:
+                            <Ul>
+                                <li>
+                                    Открепить в отдельное окно <img src="./img/DevTools-img/Screenshot_4.png" alt="места, в котором размещены DevTools">
+                                </li>
+                                <li>
+                                    Расположение слева <img src="./img/DevTools-img/Screenshot_5.png" alt="места, в котором размещены DevTools">
+                                </li>
+                                <li>
+                                    Расположение снизу <img src="./img/DevTools-img/Screenshot_6.png" alt="места, в котором размещены DevTools">
+                                </li>
+                                <li>
+                                    Расположение справа <img src="./img/DevTools-img/Screenshot_7.png" alt="места, в котором размещены DevTools">
+                                </li>
+                            </Ul>
+                        </li>
+                    </ul>
+                    <p>
+                        <img src="./img/DevTools-img/Screenshot_3.png" alt="места закрепления DevTools">
+                    </p>
+                </section>
+                <article>
+                    <h2>ВКЛАДКИ DevTools</h2> 
+                    <ul>
+                        <li><a href="#Elements">Elements</a></li>
+                        <li><a href="#Console">Console</a></li>
+                        <li><a href="#Sources">Sources</a></li>
+                        <li><a href="#Network">Network</a></li>
+                        <li><a href="#Performances">Performances</a></li>
+                        <li><a href="#Memory">Memory</a></li>
+                        <li><a href="#Application">Application</a></li>
+                        <li><a href="#Security">Security</a></li>
+                        <li><a href="#Lighthouse">Lighthouse</a></li>
+                    </ul>
+                    <section class="Elements" id="Elements">
+                        <h2>Elements</h2>
+                        <p>
+                            С помощью вкладки <strong>Elements</strong> можно отслеживать элементы и их свойства на странице, можно редактировать стили и проверять вёрстку на переполнение. Здесь отображается весь HTML- (слева) и CSS-код (справа) открытой страницы.
+                        </p>
+                        <p>
+                            <img src="./img/DevTools-img/Screenshot_8.png" alt="Elements">
+                        </p>
+                        <h3>Как получить информацию об элементе</h3>
+                        <p>
+                            Есть три способа получить информацию о любом элементе на странице:
+                        </p>
+                        <ul>
+                            <li>Через инспектор</li>
+                            <li>Поиск по элементам</li>
+                            <li>Визуальный поиск</li>
+                        </ul>
+                        <h4>Через инспектор</h4>
+                        <p>
+                            Способ удобен, если вы точно видите элемент и можете кликнуть по нему правой кнопкой мыши. Выберите <strong>Inspect</strong> или «<strong>Посмотреть код</strong>». Заодно сразу откроется панель разработчика. Нужный элемент будет подсвечен серой полосой. 
+                        </p>
+                        <p>
+                            <img src="./img/DevTools-img/Screenshot_9.png" alt="получить информацию об элементе">
+                        </p>
+                        <h4>Поиск по элементам</h4>
+                        <p>
+                            При открытом отладчике нажимаем <em>Ctrl</em>+<em>F</em>, и внизу появится окно поиска <strong>по тегу</strong>, <strong>атрибуту</strong>, <strong>классу</strong> или <strong>текстовому содержимому</strong> элемента.
+                        </p>
+                        <p>
+                            Введём, например, часть текста, и увидим нужный элемент в коде:
+                        </p>
+                        <p>
+                            <img src="./img/DevTools-img/Screenshot_10.png" alt="получить информацию об элементе">
+                        </p>
+                        <h4>Визуальный поиск</h4>
+                        <p>
+                            При открытом отладчике открываем режим визуального поиска (нажимаем квадратик со стрелкой в левом верхнем углу консоли). Затем находим нужный элемент и кликаем по нему.
+                        </p>
+                        <p>
+                            <img src="./img/DevTools-img/Screenshot_11.png" alt="получить информацию об элементе">
+                        </p>
+                    </section>
+                    <section class="Console" id="Console">
+                        <h2>Console</h2>
+                    </section>
+                    <section class="Sources" id="Sources">
+                        <h2>Sources</h2>
+                    </section>
+                    <section class="Network" id="Network">
+                        <h2>Network</h2>
+                    </section>
+                    <section class="Performances" id="Performances">
+                        <h2>Performances</h2>
+                    </section>
+                    <section class="Memory" id="Memory">
+                        <h2>Memory</h2>
+                    </section>
+                    <section class="Application" id="Application">
+                        <h2>Application</h2>
+                    </section>
+                    <section class="Security" id="Security">
+                        <h2>Security</h2>
+                    </section>
+                    <section class="Lighthouse" id="Lighthouse">
+                        <h2>Lighthouse</h2>
+                    </section>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>
+                &copy; Sergey Moshkovsky
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -41,7 +41,7 @@
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 34px;
 }
 
 h2 {
@@ -51,4 +51,23 @@ h2 {
 h3 {
     color: rgba(2, 2, 2, 0.808);
     font-size: 22px;
+}
+h4 {
+    font-size: 20px;
+    background-color:blanchedalmond;
+    padding: 5px;
+
+}
+
+.menu {
+    font-size: 20px;
+    font-weight: 700;
+}
+.sample {
+    background-color: rgb(233, 232, 232);
+    width: 50%;
+    padding-left: 15px;
+}
+.interest { 
+    font-size: 150%;
 }
