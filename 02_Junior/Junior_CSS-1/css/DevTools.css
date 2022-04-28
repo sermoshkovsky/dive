@@ -1,5 +1,5 @@
 body {
-    background-color: azure;
+    background-color: rgba(234, 240, 149, 0.301);
     margin: 0;
 }
 
@@ -23,4 +23,9 @@ body {
     color: aliceblue;
     text-align: center;
     padding: 7px;
+}
+
+code {
+    background-color: rgb(224, 146, 243);
+    padding: 2px;
 }
