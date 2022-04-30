@@ -37,7 +37,7 @@
                             <li><span class="slc">font-variant</span></li>
                             <li><span class="slc">font-weight</span></li>
                             <li><span class="slc">line-height</span></li>
-                            <li>Универсальное свойство <span class="slc">font</span></li>
+                            <li><span class="slc">font</span> ( Универсальное свойство )</li>
                         </ul>
                     </li>
                 </ul>
@@ -54,11 +54,6 @@
                             <li><span class="slc">letter-spacing</span></li>
                             <li><span class="slc">word-spacing</span></li>
                         </ul>
-                    </li>
-                </ul>
-                <ul class="menu">
-                    <li>
-                        <a href="#connection">Подключение шрифтов</a>
                     </li>
                 </ul>
             </section>
@@ -173,17 +168,21 @@
             </section>
             <section class="fonts" id="fonts">
                 <h2>Свойства шрифтов. </h2>
-                <section class="color" id="color">
-                    <h5>color</h5>
+                <section class="color">
+                    <div class="titles">
+                        <h5>color</h5>
+                        <p>
+                            <a href="https://webref.ru/css/color" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
                     <p>
-                        <a href="https://webref.ru/css/color" target="_blanr">Справочник CSS</a>
+                        <strong>Определяет цвет текста элемента.</strong>
                     </p>
-                    <p><strong>Определяет цвет текста элемента.</strong></p>
                     <p>
-                        Единственное свойство, которое нам требуется для установки цвета текста.  Свойство <span class="slc">color</span>  принимает одно значение цвета, но в разных форматах. 
+                          Свойство <span class="slc">color</span>  принимает одно значение цвета, но в разных форматах. 
                     </p>
                     <p>    
-                        Эти форматы включают: <strong> ключевые слова, шестнадцатеричные значения и значения RGB, RGBa, HSL и HSLa.</strong> Шестнадцатеричные значения являются наиболее распространёнными, поскольку они обеспечивают максимальный контроль с минимальными усилиями.
+                        Эти форматы включают: <em> ключевые слова, шестнадцатеричные значения и значения RGB, RGBa, HSL и HSLa.</em> Шестнадцатеричные значения являются наиболее распространёнными, поскольку они обеспечивают максимальный контроль с минимальными усилиями.
                     </p>
                     <p>
                         CSS, необходимый для изменения цвета всего текста в пределах элемента <span class="tag">&lt;html&gt;</span> на странице, будет выглядеть так:
@@ -191,13 +190,312 @@
                     <p>
                         <img src="./img/css-properties-img/Screenshot_5.png" alt="свойство color">
                     </p>
-                </section>   
+                </section> 
+                <section class="font-family">
+                    <div class="titles">
+                        <h5>font-family</h5>
+                        <p>
+                            <a href="https://webref.ru/css/font-family" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Определяет, какой шрифт использовать.</strong>
+                    </p>
+                    <p>
+                        Список шрифтов может включать одно или несколько названий, разделённых запятой.
+                        Первый указанный шрифт, начиная слева, является основным выбранным шрифта. Если первый шрифт недоступен, после него указываются альтернативные шрифты в порядке предпочтения слева направо.
+                    </p>
+                    <p> 
+                        Если в имени шрифта содержатся пробелы, например, <strong>Trebuchet MS</strong> , оно должно заключаться в одинарные или двойные кавычки. 
+                    </p>
+                    <p>
+                        Кроме того, последний шрифт должен быть ключевым словом, который обозначает системный шрифт по умолчанию для указанного типа, наиболее популярные это <em>sans-serif</em> и <em>serif</em>.
+                    </p>
+                    <p>
+                        Поскольку свойство <span class="slc">font-family</span> наследуется всеми дочерними элементами HTML, вы можете применить шрифт для всего HTML-документа, используя его для предка всех элементов HTML: элемента <span class="tag">&lt;body&gt;</span>.
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_6.png" alt="font-family">
+                    </p>
+                    <p>
+                        В данном случае <strong>Helvetica Neue</strong> является предпочтительным шрифтом для отображения. Если этот шрифт недоступен или не установлен на указанном устройстве, будет использоваться следующий шрифт в списке — <strong>Helvetica</strong> и так далее.
+                    </p>
+                </section> 
+                <section class="font-size">
+                    <div class="titles">
+                        <h5>font-size</h5>
+                        <p>
+                            <a href="https://webref.ru/css/font-size" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Определяет размер шрифта элемента.</strong>
+                    </p>
+                    <p>
+                        Свойство <span class="slc">font-size</span> даёт возможность установить размер текста, используя типовые значения размера, включая <em>пиксели, em, проценты, пункты</em> или <em>ключевые слова</em>.
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_7.png" alt="font-size">
+                    </p> 
+                    <p>
+                        Сам размер шрифта или, как он ещё называется в типографике — <em>кегль</em>, определяется как высота от базовой линии до верхней границы кегельной площадки
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_8.png" alt="font-size">
+                    </p>
+                    <p>
+                        Имейте в виду, что установка размера шрифта 16px не делает каждую букву высотой 16px. <em>Фактический</em> размер каждой буквы зависит от используемого <span class="slc">font-family</span>. Шрифт <strong>Arial</strong>  выглядит крупнее, чем шрифт <strong>Times</strong> того же размера, а шрифт <strong>Courier New</strong> чуть меньше шрифта <strong>Arial</strong>. Легко заметить, что при одинаковых заданных размерах текст различается как по высоте, так и по насыщенности. 
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_9.png" alt="font-size">
+                    </p>
+                    <p>
+                        Значение размера может быть задано несколькими способами: 
+                    </p> 
+                    <dl>
+                        <dt>
+                            Набор констант: <strong> хх-small, x-small, small, medium, large, x-large, xx-large</strong>
+                            <dd>
+                               - указывает размер, который называется <em>абсолютным</em>. По правде говоря, он не совсем абсолютный, поскольку зависит от настроек браузера и операционной системы.
+                            </dd>
+                        </dt>
+                        <dt>
+                            Набор констант: <strong>larger, smaller</strong>
+                            <dd>
+                                - устанавливает размеры шрифта <em>относительно</em> родителя.
+                            </dd>
+                        </dt>
+                    </dl>
+                    <p>
+                        На практике константы применяются редко, а в основном используются допустимые единицы CSS: em (высота шрифта элемента), пункты (pt), пиксели (рх) и др.
+                    </p>
+                    <p><strong>Пиксели</strong></p>
+                    <p>
+                        Пиксель — это элементарная точка устройства. Размеры элементов веб-страницы, вроде изображений и колонок преимущественно делаются именно в пикселях, поэтому имеет смысл задавать и шрифт в этих единицах.
+                    </p>
+                    <p><strong>Пункты</strong></p>
+                    <p>
+                        Пожалуй, самая распространённая единица для указания размера шрифта. Многие люди привыкли задавать размер текста в текстовых редакторах, например 12. А что это число означает, не понимают. Так это и есть <strong>пункты</strong>, пожалуй, единственная величина не из метрической системы измерения, которая используется у нас повсеместно. И все благодаря текстовым редакторам и издательским системам.
+                    </p>
+                    <p><strong>em</strong></p>
+                    <p>
+                        Эта единица показывает размер шрифта текущего элемента и он всегда равен <em>1em</em> независимо от реального размера текста. Зачем тогда использовать? <strong>Em</strong> связан с размером шрифта родительского элемента и мы можем легко изменять размер текста самого элемента в большую (<em>1.2em</em>) или меньшую сторону (<em>0.8em</em>) без дополнительных вычислений. В каком-то смысле это является синонимом процентной записи.
+                    </p>
+                    <p><strong>rem</strong></p>
+                    <p>
+                        При использовании множественных вложений одних элементов в другие, с <strong>em</strong> легко запутаться в вычислениях. Например, если уменьшить размер шрифта до <em>0.8em</em>, а потом у дочернего элемента увеличить до <em>1.2em</em>, то будет ли текст одного размера? Единица <strong>rem</strong> привязана только к корневому элементу и таким образом не зависит от уровня вложения элементов.
+                    </p>
+                </section> 
+                <section class="font-style">
+                    <div class="titles">
+                        <h5>font-style</h5>
+                        <p>
+                            <a href="https://webref.ru/css/font-style" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Определяет начертание шрифта — обычное, курсивное или наклонное. </strong>
+                    </p>
+                    <p>
+                        Это свойство принимает три ключевых слова:
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="mean">normal</span> - возвращает текст к своему обычному стилю
+                        </li>
+                        <li>
+                            <span class="mean">italic</span> - задаёт текст курсивным
+                        </li>
+                        <li>
+                            <span class="mean">oblique</span> - наклонное начертание.  Образуется путем наклона обычных знаков вправо (обычно не используется)
+                        </li>
+                    </ul> 
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_10.png" alt="font-style">
+                    </p>
+                </section> 
+                <section class="font-variant">
+                    <div class="titles">
+                        <h5>font-variant</h5>
+                        <p>
+                            <a href="https://webref.ru/css/font-variant" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Определяет представление строчных букв прописными уменьшенного размера.</strong>
+                    </p>
+                    <p>
+                        Это происходит не часто, но иногда текст необходимо установить небольшими заглавными буквами, также известными как <em>капитель</em>.
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_11.png" alt="font-variant">
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_12.png" alt="font-variant"> <img src="./img/css-properties-img/Screenshot_13.png" alt="font-variant">
+                    </p>
+                    <p>
+                        Принимает два значения: <span class="mean">normal</span> и <span class="mean">small-caps</span>, которые используются для переключения шрифтов между капителью и обычным текстом.
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="mean">normal</span> - Оставляет регистр символов исходным, заданным по умолчанию.
+                        </li>
+                        <li>
+                            <span class="mean">small-caps</span> - Модифицирует все строчные символы как заглавные уменьшенного размера. 
+                        </li>
+                    </ul>
+                    <p>
+                         <img src="./img/css-properties-img/Screenshot_14.png" alt="font-variant">
+                    </p>
+                </section> 
+                <section class="font-weight">
+                    <div class="titles">
+                        <h5>font-weight</h5>
+                        <p>
+                            <a href="https://webref.ru/css/font-weight" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Устанавливает насыщенность шрифта.</strong>
+                    </p>
+                    <p>
+                        В зависимости от используемого <span class="slc">font-family</span>, существует целый ряд насыщенности шрифта, доступных от 100 до 900:
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_15.png" alt="font-weight">
+                    </p>
+                    <p>
+                        Очень немногие шрифты предлагают все девять насыщенностей. Перед применением числового значения мы должны проверить и посмотреть, пойдёт ли используемый шрифт с указанной насыщенностью. Попытка использовать число, которое не доступно для данного шрифта, приведёт эти стили к ближайшему значению. 
+                    </p>
+                    <p>
+                        Например, шрифт <strong>Times New Roman</strong>  содержит две насыщенности: 400 (нормальная) и 700 (жирная). Попытка использовать 900 установит шрифт в ближайшую насыщенность, 700 в данном случае.
+                    </p>
+                    <p>
+                        В основном присутствуют 400 (нормальный) и 700 (жирный), а иногда 300 (лёгкий) и 500 (средний).
+                    </p>
+                    <p>
+                        Также допустимо использовать ключевые слова: <span class="mean">bold </span> — полужирное, <span class="mean">bolder </span> — жирное,  <span class="mean">lighter </span> — светлое, <span class="mean">normal </span> — нормальное начертание. Из этих ключевых слов рекомендуется в первую очередь задействовать <strong>normal </strong> и <strong>bold </strong>, чтобы изменить текст от обычного до жирного и наоборот. Вместо использования ключевых слов <strong>bolder </strong> или <strong>lighter </strong> лучше применять числовое значение для более точного управления.
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_16.png" alt="font-weight">
+                        <img src="./img/css-properties-img/Screenshot_17.png" alt="font-weight">
+                    </p>
+                </section> 
+                <section class="line-height">
+                    <div class="titles">
+                        <h5>line-height</h5>
+                        <p>
+                            <a href="https://webref.ru/css/line-height" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Определяет высоту каждой строки для блочных элементов</strong>
+                    </p>
+                    <p>
+                        Не следует путать с межстрочным расстоянием в большинстве графических программ (вроде Photoshop), которое определяет пространство между строками в абзаце. Несмотря на то, что они оба выполняют одну и ту же задачу (<em> интервал между строк текста</em>), делают они это по-разному.
+                    </p>
+                    <p>
+                        Для внедряемых строчных элементов (вроде <span class="tag">&lt;img&gt;</span>) свойство <span class="slc">line-height</span> не оказывает никакого эффекта. Для остальных строчных элементов <span class="slc">line-height</span> задаёт высоту, которая используется для расчёта высоты строки блока.
+                   </p>
+                   <p>
+                    Свойство <span class="slc">line-height</span> использует следующие единицы: <strong>px</strong>, <strong>em</strong>, <strong>%</strong> и <strong>безразмерные числа, вроде 1.5</strong>. 
+                   </p>
+                   <p>
+                    Эти безразмерные значения в основном действуют как проценты. Таким образом, 150% равно 1.5. Последнее является просто более компактным и читаемым.
+                   </p>
+                   <h4>Почему важно <span class="slc">line-height</span></h4>
+                   <p>
+                    Целью <span class="slc">line-height</span> является определение комфортного расстояния между строк для вашего текста. Поскольку удобочитаемость зависит от размера текста, рекомендуется использовать <strong>динамическое</strong>  значение связанное с размером текста. Использование <em>px</em> поэтому и не рекомендуется, так как <em>пиксели</em> определяют <strong>статическое</strong> значение.
+                   </p>
+                   <p>
+                       <em>В некоторых случаях использование пикселей действительно пригодится (если вы желаете выровнять текст по вертикали в соответствии с другим элементом, а не в зависимости от размера шрифта).</em>
+                    </p>
+                    <p>
+                        Поскольку применение <em>%</em> или <em>em</em> может дать неожиданный результат, <strong>рекомендуемый метод</strong> связан с <em>безразмерными числами</em>:
+                    </p>
+                    <ul>
+                        <li>
+                            для основного текста <span class="slc">line-height</span> рекомендуется, как 1.5 от размера текста;
+                        </li>
+                        <li>
+                            для заголовков <span class="slc">line-height</span> рекомендуется значение 1.2.
+                        </li>
+                    </ul>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_18.png" alt=" line-height">
+                    </p>
+                    <p>
+                        Вычисленная высота строки будет, таким образом, 16 * 1.5 = 24px.
+                    </p>
+                    <h4>Наследование <span class="slc">line-height</span></h4>
+                    <p>
+                        Поскольку свойство <span class="slc">line-height</span> наследуется дочерними элементами, оно будет оставаться постоянным, независимо от того, какой <span class="slc">font-size </span>впоследствии применяется.
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_19.png" alt="Наследование line-height">
+                    </p>
+                    <p>
+                        Элемент <span class="tag">&lt;blockquote&gt;</span> будет иметь высоту строки 27px.
+                    </p>
+                </section> 
+                <section class="font">
+                    <div class="titles">
+                        <h5>font</h5>
+                        <p>
+                            <a href="https://webref.ru/css/font" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Универсальное свойство - позволяет одновременно задать несколько характеристик шрифта и текста.</strong>
+                    </p>
+                    <p>
+                        Свойство <span class="slc">font</span> группирует следующие свойства:
+                    </p>
+                    <p>
+                        <span class="slc">font</span>: <b>font-style</b> <b>font-variant</b> <b>font-weight</b> <b>font-size</b> <b>line-height</b> <b>font-family</b>
+                    </p>
+                    <ul>
+                        <li>font-style</li>
+                        <li>font-variant</li>
+                        <li>font-weight</li>
+                        <li>font-size</li>
+                        <li>line-height</li>
+                        <li>font-family</li>
+                    </ul>
+                    <p>
+                        Таким образом, можно определить шесть свойств через одно единственное:
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_20.png" alt="font">
+                    </p>
+                    <p>
+                        Значения должны быть написаны именно в таком порядке: слева направо без применения запятых (кроме названий шрифтов, поскольку свойство <span class="slc">font-family</span> задействует запятые).  И должна быть косая черта (/) между <span class="slc">font-size</span> и <span class="slc">line-height</span>.
+                    </p>
+                    <p>
+                        В качестве обязательных значений свойства <span class="slc">font</span> указывается размер шрифта <span class="slc">font-size</span> и его семейство <span class="slc">font-family</span>. Остальные значения являются опциональными и задаются при желании.
+                    </p>
+                    <p>
+                        Таким образом, можно опустить определение других свойств, если вы намерены сохранить их значения по умолчанию:
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_21.png" alt="font">
+                    </p>
+                    <p>
+                        <em>Поскольку здесь <span class="slc">font-style</span> и <span class="slc">font-variant</span> не определены, они будут использовать значение по умолчанию <span class="mean">normal</span>.</em>
+                    </p>
+                    <p>
+                        Осторожно! Если вы ранее определили одно из свойств шрифта и используете впоследствии свойство <span class="slc">font</span>, то оно перепишет заданные ранее значения.
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_22.png" alt="font">
+                    </p>
+                    <p>
+                        <em>В этом свойстве <span class="slc">font</span>, <span class="slc">line-height</span> не было определено, поэтому потеряет значение своего предка <strong>1.5</strong>  и вернётся к своему значению по умолчанию (обычно <strong>1.2</strong>).</em>
+                    </p>
+                </section> 
             </section>
             <section class="text" id="text">
                 <h2>Свойства текста</h2>
-            </section>
-            <section class="connection" id="connection">
-                <h2>Подключение шрифтов</h2>
             </section>
         </div>
     </main>
