@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/css-properties.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <nav>
                 <a href="../../00_Home/index.html" target="_blank">Главная</a>
@@ -23,7 +23,7 @@
                 <h1>CSS-стили шрифта и текста</h1>
                 <ul class="menu">
                     <li>
-                        <a href="#typography">Типографика</a>
+                        <a href="#typography">Основные понятия</a>
                     </li>
                 </ul>
                 <ul class="menu">
@@ -58,30 +58,6 @@
                 </ul>
             </section>
             <section class="typography" id="typography">
-                <h2>Работа с типографикой</h2>
-                <p>
-                    Существуют тысячи шрифтов, которые предназначены для оформления текстов. При этом следует отметить, что число шрифтов, применяемых для набора текста на сайтах, существенно ниже. Конечно, ничто не мешает выбрать и задать, например, для заголовка, вычурный шрифт, установленный на локальном компьютере. Но если такого шрифта на компьютере пользователя нет, то текст будет отображаться шрифтом, установленным в браузере по умолчанию. Получается, что усилия разработчика пропадут даром.
-                </p>
-                <p>
-                    Есть три способа избежать этого:
-                </p>
-                <ul>
-                    <li>
-                        <strong> Создать надпись в графическом редакторе и вставить её на веб-страницу как изображение.</strong> <br> 
-                        Этот метод подключает всю мощь графических систем по управлению текстом, при этом допустимо включать любые шрифты. Из недостатков самый главный состоит в том, что рисунок так просто не изменишь, и придётся вновь обращаться к редактору. Так что рисунки в качестве текста применяются только для создания небольших и постоянных надписей вроде заголовков.
-                    </li>
-                    <li>
-                        <strong>Загрузить пользовательский шрифт.</strong><br>
-                        Действительно, если можно загружать по сети изображения, почему бы то же самое не проделать и со шрифтами?
-                    </li>
-                    <li>
-                        <strong>Воспользоваться стандартными шрифтами, встроенными в браузер и операционную систему.</strong><br>
-                         Этот способ является пока наиболее распространённым для указания шрифта на веб-странице.
-                    </li>
-                </ul> 
-                <p>
-                    Возможность встраивания шрифтов даёт нам доступ к бесчисленным новым шрифтам, но при этом также важно знать основные принципы типографики. 
-                </p>
                 <h3>Гарнитура и шрифт</h3>
                 <p>
                     Термины «<em>гарнитура</em>» и «<em>шрифт</em>» часто взаимозаменяемы, что приводит к путанице. Вот что означает каждый термин.
@@ -451,9 +427,6 @@
                     <p>
                         Свойство <span class="slc">font</span> группирует следующие свойства:
                     </p>
-                    <p>
-                        <span class="slc">font</span>: <b>font-style</b> <b>font-variant</b> <b>font-weight</b> <b>font-size</b> <b>line-height</b> <b>font-family</b>
-                    </p>
                     <ul>
                         <li>font-style</li>
                         <li>font-variant</li>
@@ -496,7 +469,377 @@
             </section>
             <section class="text" id="text">
                 <h2>Свойства текста</h2>
+                <p>
+                    Знать, как установить семейство, размер, стиль, начертание, насыщенность и межстрочный интервал это только полдела. Дополнительно мы можем решить, как выровнять, украсить, трансформировать текст, добавить красную строку и межбуквенное расстояние в текст. 
+                </p>
+                <section class="text-align">
+                    <div class="titles">
+                        <h5>text-align</h5>
+                        <p>
+                            <a href="" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Определяет горизонтальное выравнивание текста в пределах элемента.</strong>
+                    </p>
+                    <p>
+                        У этого свойства четыре основных значения: <span class="mean">left</span>, <span class="mean">right</span>, <span class="mean">center</span>, <span class="mean">justify</span>. Они выравнивают текст по левому краю, правому краю, по центру или по ширине.
+                    </p>
+                    <p>
+                        Дополнительные значения <span class="mean">start</span> и <span class="mean">end</span>.
+                    </p>
+                    <p>
+                        <span class="mean">start</span> Аналогично значению <span class="mean">left</span>, если текст идёт слева направо и <span class="mean">right</span>, когда текст идёт справа налево.
+                    </p>
+                    <p>
+                        <span class="mean">end</span> Аналогично значению <span class="mean">right</span>, если текст идёт слева направо и <span class="mean">left</span>, когда текст идёт справа налево.
+                    </p>
+                    <p>
+                        Направление текста зависит от заданного <span class="slc">direction</span> для HTML-документа.
+                    </p>
+                    <p>
+                        <span class="slc">direction</span> — это свойство CSS, которое может быть <span class="mean">ltr</span> (слева направо) или <span class="mean">rtl</span> (справа налево)
+                    </p>
+                    <p>
+                        Значение <span class="slc">text-align</span> по умолчанию равно <span class="mean">start</span>. 
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_23.png" alt="text-align">
+                    </p>
+                    <p>
+                        Свойство <span class="slc">text-align</span>, однако, не следует путать со свойством <span class="slc">float</span>. Значения <span class="slc">text-align</span> как <span class="mean">left</span> или <span class="mean">right</span> выравнивают текст внутри элемента влево или вправо, в то время как значения <span class="slc">float</span> как <span class="mean">left</span> или <span class="mean">right</span> двигают весь элемент. Иногда свойство <span class="slc">text-align</span> даст нам желаемый результат, в другой раз нам, возможно, потребуется использовать свойство <span class="slc">float</span>.
+                    </p>
+                </section>
+                <section class="text-decoration">
+                    <div class="titles">
+                        <h5>text-decoration</h5>
+                        <p>
+                            <a href="https://webref.ru/css/text-decoration" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Добавляет оформление текста в виде его подчёркивания, перечёркивания или линии над текстом.</strong>
+                    </p>
+                    <p>
+                        В качестве значений принимает ключевые слова:
+                    </p>
+                    <ul>
+                        <li class="decor">
+                            <span class="mean">line-through
+                            </span> <span class="line-through">Создает перечёркнутый текст</span>
+                        </li>
+                        <li class="decor">
+                            <span class="mean">overline
+                            </span> <span class="overline">Линия проходит над текстом</span>
+                        </li>
+                        <li class="decor">
+                            <span class="mean">underline
+                            </span> <span class="underline">Устанавливает подчёркнутый текст</span>
+                        </li>
+                        <li class="decor">
+                            <span class="mean">none
+                            </span> Отменяет все эффекты, в том числе и подчёркивание у ссылок, которое задано по умолчанию.
+                        </li>
+                    </ul>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_24.png" alt="text-decoration">
+                    </p>
+                    <p>
+                        К одному элементу можно применить несколько значений <span class="slc">text-decoration</span>, указывая значения ключевых слов через пробел.
+                    </p>
+                </section>
+                <section class="text-indent">
+                    <div class="titles">
+                        <h5>text-indent</h5>
+                        <p>
+                            <a href="https://webref.ru/css/text-indent" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Устанавливает величину отступа первой строки блока текста.</strong>
+                    </p>
+                    <p>
+                        Воздействия на все остальные строки не оказывает. Может быть использовано для создания красной строки внутри элемента, как это обычно наблюдается в печатных изданиях. 
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_25.png" alt="text-indent">
+                        <img src="./img/css-properties-img/Screenshot_26.png" alt="text-indent">
+                    </p>
+                    <p >
+                        Обратите внимание, что отступ есть только <strong>в первой строке</strong>. Если вы хотите сдвинуть весь блок текста, используйте <span class="slc">padding</span>.
+                    </p>
+                    <p>
+                        В качестве значений принимаются любые единицы длины, принятые в CSS — например, пиксели (<strong>px</strong>), дюймы (<strong>in</strong>), пункты (<strong>pt</strong>) и др. При задании значения в <strong>процентах</strong>, отступ первой строки вычисляется в зависимости от ширины блока. 
+                    </p>
+                    <p>
+                        Допускается отрицательное значение для создания выступа первой строки, но следует проверить, чтобы текст не выходил за пределы окна браузера.
+                    </p>
+                </section>
+                <section class="text-shadow">
+                    <div class="titles">
+                        <h5>text-shadow</h5>
+                        <p>
+                            <a href="https://webref.ru/css/text-shadow" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Добавляет тень к тексту. </strong>
+                    </p>
+                    <p>
+                        Также устанавливает её параметры: цвет тени, смещение относительно надписи и радиус размытия
+                        Свойство обычно принимает четыре значения, все они перечисляются друг за другом слева направо.
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="mean">х — горизонтальное смещение тени <strong> относительно текста</strong></span>. (<em>Обязательно</em> ) <br> 
+                            Положительное значение этого параметра задает сдвиг тени вправо, отрицательное — влево.;
+                        </li>
+                        <li>
+                            <span class="mean">у — вертикальное смещение тени <strong> относительно текста</strong></span>. (<em>Обязательно</em>) <br>
+                            Положительное значение этого параметра задает сдвиг тени вниз, отрицательное — вверх. ;
+                        </li>
+                        <li>
+                            <span class="mean">радиус размытия тени</span>. <br>
+                            Чем больше это значение, тем сильнее тень сглаживается, становится шире и светлее. Если этот параметр не задан, по умолчанию устанавливается равным 0, тень при этом будет чёткой, а не размытой.;
+                        </li>
+                        <li>
+                            <span class="mean">цвет тени</span> <br>
+                            Может быть любым значением, применяемым в свойстве <span class="slc">color</span>. 
+                            По умолчанию цвет тени совпадает с цветом текста.
+                        </li>
+                        <li>
+                            <span class="mean">none</span> <br>
+                            Отменяет добавление тени.
+                        </li>
+                    </ul>
+                    <p>
+                        Здесь для всего текста элемента <span class="tag">&lt;p&gt;</span> свойство <span class="slc">text-shadow</span> задаёт на 30% прозрачную чёрную тень, сдвинутую на 3 пикселя вправо, на 6 пикселей вниз и с размытием 2 пикселя:
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_27.png" alt="text-shadow">
+                    </p>
+                    <p class="txt-shadow">
+                        В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
+                    </p>
+                    <p>
+                        Использование отрицательных значений размера для горизонтальных и вертикальных смещений позволяет перемещать тени влево и вверх.
+                    </p>
+                    <p>
+                        Допускается указывать несколько параметров тени, разделяя их между собой запятой. В CSS3 учитывается следующий порядок: первая тень в списке размещается на самом верху, последняя в списке — в самом низу.
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_28.png" alt="text-shadow">
+                    </p>
+                    <p class="txt2-shadow">
+                        В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
+                    </p>
+                    <p>
+                        <em>Это свойство сложное, так что используйте его осторожно и не сходите с ума!</em>
+                    </p>
+                </section>
+                <section class="box-shadow">
+                    <div class="titles">
+                        <h5>box-shadow</h5>
+                        <p>
+                            <a href="https://webref.ru/css/box-shadow" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Добавляет тень к элементу в целом.</strong>
+                    </p>
+                    <p>
+                        Работает так же, как <span class="slc">text-shadow</span>, принимая значения для горизонтальных и вертикальных смещений, размытие и цвет.
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="mean">х — горизонтальное смещение тени <strong> относительно элемента</strong></span>. (<em>Обязательно</em> ) <br> 
+                            Положительное значение этого параметра задает сдвиг тени вправо, отрицательное — влево.;
+                        </li>
+                        <li>
+                            <span class="mean">у — вертикальное смещение тени <strong> относительно элемента</strong></span>. (<em>Обязательно</em>) <br>
+                            Положительное значение этого параметра задает сдвиг тени вниз, отрицательное — вверх. ;
+                        </li>
+                        <li>
+                            <span class="mean">радиус размытия тени</span>. <br>
+                            Чем больше это значение, тем сильнее тень сглаживается, становится шире и светлее. Если этот параметр не задан, по умолчанию устанавливается равным 0, тень при этом будет чёткой, а не размытой.;
+                        </li>
+                        <li>
+                            <span class="mean">цвет тени</span> <br>
+                            Может быть любым значением, применяемым в свойстве <span class="slc">color</span>. 
+                            По умолчанию цвет тени совпадает с цветом текста.
+                        </li>
+                        <li>
+                            <span class="mean">none</span> <br>
+                            Отменяет добавление тени.
+                        </li>
+                    </ul>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_29.png" alt="box-shadow">
+                    </p>
+                    <p class="bx-shadow">
+                        В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_33.png" alt="box-shadow">
+                    </p>
+                    <p class="bx5-shadow">
+                        В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
+                    </p>
+                    <p>
+                        <span class="slc">box-shadow</span> также принимает необязательное значение размера для растяжения тени ( устанавливается перед значением цвета). 
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="mean">растяжение</span> <br>
+                            Положительное значение растягивает тень, отрицательное, наоборот, её сжимает. Если этот параметр не задан, по умолчанию устанавливается 0, при этом тень будет того же размера, что и элемент. 
+                        </li>
+                    </ul>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_30.png" alt="box-shadow">
+                    </p>
+                    <p class="bx2-shadow">
+                        В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
+                    </p>
+                    <p>
+                        Кроме этого, свойство <span class="slc">box-shadow</span> может включать впереди необязательное значение <span class="mean">inset</span> для размещения тени внутри элемента, а не снаружи.
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="mean">inset</span> Тень выводится внутри элемента.
+                        </li>
+                    </ul>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_31.png" alt="box-shadow">
+                    </p>
+                    <p class="bx3-shadow">
+                        В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
+                    </p>
+                    <p>
+                        Допускается использовать несколько теней, указывая их параметры через запятую, при наложении теней первая тень в списке будет выше, последняя ниже.
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_32.png" alt="box-shadow">
+                    </p>
+                    <p>
+                        <p class="bx4-shadow">
+                            В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
+                        </p>
+                    </p>
+                    <p>
+                        Если для элемента задается радиус скругления через свойство <span class="slc">border-radius</span>, то тень также получится с закруглёнными уголками. Добавление тени увеличивает ширину элемента, поэтому возможно появление горизонтальной полосы прокрутки в браузере.
+                    </p>
+                </section>
+                <section class="text-transform">
+                    <div class="titles">
+                        <h5>text-transform</h5>
+                        <p>
+                            <a href="https://webref.ru/css/text-transform" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Управляет преобразованием текста элемента в заглавные или прописные символы.</strong>
+                    </p>
+                    <p>
+                        Принимает четыре значения:
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="mean">capitalize</span> <br>
+                            Первый символ каждого слова в предложении будет заглавным. Остальные символы свой вид не меняют.
+                        </li>
+                        <li>
+                            <span class="mean">lowercase</span><br>
+                            Все символы текста становятся строчными (нижний регистр).
+                        </li>
+                        <li>
+                            <span class="mean">uppercase</span><br>
+                            Все символы текста становятся прописными (верхний регистр).
+                        </li>
+                        <li>
+                            <span class="mean">none</span><br>
+                            Не меняет регистр символов (Значение по умолчанию).
+                        </li>
+                    </ul>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_34.png" alt="text-transform">
+                    </p>
+                    <p class="txt-transform">
+                        Винни-Пух был всегда не прочь немного подкрепиться. 
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_35.png" alt="text-transform">
+                    </p>
+                    <p class="txt2-transform">
+                        Винни-Пух был всегда не прочь немного подкрепиться. 
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_36.png" alt="text-transform">
+                    </p>
+                    <p class="txt3-transform">
+                        Винни-Пух был всегда не прочь немного подкрепиться. 
+                    </p>
+                    <p>
+                        С помощью <span class="mean">none</span> любые из этих унаследованных значений вернутся к исходному стилю текста.
+                    </p>
+                </section>
+                <section class="letter-spacing">
+                    <div class="titles">
+                        <h5>letter-spacing</h5>
+                        <p>
+                            <a href="https://webref.ru/css/letter-spacing" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Определяет интервал между символами в пределах элемента.</strong>
+                    </p>
+                    <p>
+                        Используя свойство <span class="slc">letter-spacing</span> мы можем регулировать (или отслеживать) расстояние между букв на странице. Положительное значение будет толкать буквы дальше друг от друга, а отрицательное значение будет тянуть буквы ближе друг к другу. Значение <span class="mean">none</span> вернёт пространство между букв к своей обычной величине.
+                    </p>
+                    <p>
+                        В качестве значений принимаются любые единицы длины, принятые в CSS: пиксели (<strong>px</strong>), дюймы (<strong>in</strong>), пункты (<strong>pt</strong>) и др. 
+                    </p>
+                    <p>
+                        Наилучший результат даёт использование относительных единиц, основанных на размере шрифта (<strong>em</strong> и <strong>ex</strong>). Использование относительного размера гарантирует, что мы поддерживаем правильное расстояние между буквами, когда меняется <span class="slc">font-size</span> для текста.
+                    </p>
+                    <p>
+                        Здесь с помощью CSS все буквы в пределах наших элементов <span class="tag">&lt;p&gt;</span> на <span class="mean">0.1 em</span> станут ближе друг к другу:
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_37.png" alt="letter-spacing">
+                    </p>
+                    <p class="ltr-spacing">
+                        Здесь с помощью CSS все буквы в пределах наших элементов <span class="tag">&lt;p&gt;</span> на <span class="mean">0.1 em</span> станут ближе друг к другу:
+                    </p>
+                </section>
+                <section class="word-spacing">
+                    <div class="titles">
+                        <h5>word-spacing</h5>
+                        <p>
+                            <a href="https://webref.ru/css/word-spacing" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Устанавливает интервал между словами.</strong>
+                    </p>
+                    <p>
+                        Это свойство принимает те же значения размера и ключевые слова, что и <span class="slc">letter-spacing</span>.
+                    </p>
+                    <p>
+                        Здесь каждое слово в элементе <span class="tag">&lt;p&gt;</span> будет на расстоянии <span class="mean">0.5 em</span> друг от друга.
+                    </p>
+                    <p>
+                        <img src="./img/css-properties-img/Screenshot_38.png" alt="word-spacing">
+                    </p>
+                    <p class="wrd-spacing">
+                        Здесь каждое слово в элементе <span class="tag">&lt;p&gt;</span> будет на расстоянии <span class="mean">0.5 em</span> друг от друга.
+                    </p>
+                    <p>
+                        Если для текста задано выравнивание через <span class="slc">text-align</span> со значением <span class="mean">justify</span> (выравнивание по ширине), то интервал между словами будет установлен принудительно, но не меньше значения, указанного через <span class="slc">word-spacing</span>.
+                    </p>
+                </section>
             </section>
+            <!-- КНОПКА -->
+            <a href="#header" class="btn">ВВЕРХ</a>
         </div>
     </main>
     <footer class="footer">

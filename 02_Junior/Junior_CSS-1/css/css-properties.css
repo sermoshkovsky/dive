@@ -1,33 +1,41 @@
 body {
     font-size: 16px;
     background-color: azure;
-    font-family:  Arial, sans-serif;
+    font-family: Garamond, 'Lucida Sans', Arial, sans-serif;
 }
 h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 250%;
     font-weight: 700;
+    color: gray;
 }
 h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 190%;
     font-weight: 700;
+    color: gray;
 }
 h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 140%;
     font-weight: 700;
-    color: rgba(2, 2, 2, 0.808);
+    color: gray;
 }
 h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 110%;
     font-weight: 700;
     background-color:blanchedalmond;
     padding: 5px;
 }
 h5 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 140%;
     color: brown;
     margin: 0;
 }
 h6 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 110%;
     font-weight: 700;
 }
@@ -57,16 +65,14 @@ code {
     font-weight: 700;
 }
 .atr {
-    color: rgb(4, 140, 4);
-    font-weight:400;
+    color: orange;
     font-size: 18px;
 }
 /* 
 <span class="atr"></span>
  */
 .mean {
-    color: orange;
-    font-weight:700;
+    color: rgb(4, 190, 4);
     font-size: 18px; 
 }
 /* 
@@ -74,7 +80,6 @@ code {
  */
 .tag {
     color: rgb(73, 73, 150);
-    font-weight:700;
     font-size: 18px;
 }
 /*  
@@ -84,10 +89,107 @@ code {
 <span class="slc"></span>
  */
 .slc {
-    color: brown;
-    font-weight:700;
+    color: rgb(206, 50, 50);
     font-size: 18px;
 }
 .titles {
     display: flex;
+}
+.btn {
+    background: brown;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    color: aliceblue;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    margin: 10px 0;
+}
+.line-through {
+    text-decoration: line-through;
+    background-color: pink;
+    padding: 5px;
+}
+.overline {
+    text-decoration: overline;
+    background-color: pink;
+    padding: 5px;
+}
+.underline {
+    text-decoration: underline;
+    background-color: pink;
+    padding: 5px;
+}
+.decor {
+    margin-bottom: 10px;
+}
+.txt-shadow {
+    text-shadow:  3px 6px 2px rgba(0, 0, 0, .3) ;
+    background-color: rgb(238, 217, 217);
+    padding: 15px;
+    font-size: 20px;
+    width: 55%;
+}
+.txt2-shadow {
+    text-shadow:  3px 6px 2px rgba(0, 0, 0, .3), -3px -6px rgba(0, 0, 0, .3);
+    background-color: rgb(238, 217, 217);
+    padding: 15px;
+    font-size: 20px;
+    width: 55%;
+}
+.bx-shadow {
+    box-shadow:  3px 6px 12px rgba(0, 0, 0, .3);
+    background-color: rgb(238, 217, 217);
+    padding: 15px;
+    font-size: 20px;
+    width: 55%;
+}
+.bx2-shadow {
+    box-shadow:  3px 6px 12px 12px rgba(0, 0, 0, .3);
+    background-color: rgb(238, 217, 217);
+    padding: 15px;
+    font-size: 20px;
+    width: 55%;
+}
+.bx3-shadow {
+    box-shadow: inset 3px 6px 12px rgba(0, 0, 0, .3);
+    background-color: rgb(238, 217, 217);
+    padding: 15px;
+    font-size: 20px;
+    width: 55%;
+}
+.bx4-shadow {
+    box-shadow: inset 3px 6px 12px rgba(0, 0, 0, .3), inset -3px -6px 12px rgba(0, 0, 0, .3);
+    background-color: rgb(238, 217, 217);
+    padding: 15px;
+    font-size: 20px;
+    width: 55%;
+}
+.bx5-shadow {
+    box-shadow:  3px 6px rgba(0, 0, 0, .3);
+    background-color: rgb(238, 217, 217);
+    padding: 15px;
+    font-size: 20px;
+    width: 55%;
+}
+
+.txt-transform {
+    text-transform: capitalize;
+}
+.txt2-transform {
+    text-transform: lowercase;
+}
+.txt3-transform {
+    text-transform: uppercase;
+}
+.ltr-spacing {
+    letter-spacing: -.1em;
+}
+.wrd-spacing {
+    word-spacing: .5em;
+}
+.subset {
+    width: 47%;
 }
