@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Размеры блока</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/blocks-model.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <a href="../../00_Home/index.html" target="_blank">Главная</a> | 
+                <a href="./css-1.html" target="_blank">CSS-1</a> | 
+                <a href="./css-properties.html" target="_blank">CSS-свойства</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <article>
+                <h1>Размеры блока</h1>
+                <p>
+                    Размеры блока — это комплексная величина и складывается из значений разных свойств. Чтобы получить реальную полную ширину элемента, мы должны сложить значения свойств <span class="atr">width</span>, <span class="atr">padding</span> и <span class="atr">border</span> вместе. Если вы установили для <span class="atr">width</span> 400 пикселей, затем добавили 20 пикселей <span class="atr">padding</span> и задали <span class="atr">border</span> 10 пикселей на каждой стороне, фактическая полная ширина элемента становится 460 пикселей. То же самое касается и высоты. 
+                </p>
+                <p>
+                    Однако, в процессе верстки, это не всегда бывает удобно и блочная модель, может быть изменена, чтобы вычисления происходили иначе. Прежде, чем двигаться дальше, рассмотрим подробнее особенности формирования ширины и высоты блока.
+                </p>
+                <ul>
+                    <li>
+                        <a href="#width-block"><strong>Формирование ширины и высоты блока</strong></a>
+                    </li>
+                    <li>
+                        <a href="#box-sizing"><strong>Алгоритм блочной модели: <span class="atr">box-sizing</span></strong></a>
+                    </li>
+                </ul>
+                <section class="width-block" id="width-block">
+                    <h2>Ширина блока</h2>
+                    <p>
+                        Ширина блока представляет собой сумму значений следующих свойств:
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="atr">width </span> — ширина содержимого; 
+                        </li>
+                        <li>
+                            <span class="atr">padding-left</span> и <span class="atr">padding-right </span> — поле слева и справа от содержимого; 
+                        </li>
+                        <li>
+                            <span class="atr">border-left</span> и <span class="atr">border-right </span>  — толщина границы слева и справа;
+                        </li>
+                        <li>
+                            <span class="atr">margin-left </span> и <span class="atr">margin-right</span> — отступ слева и справа. 
+                        </li>
+                    </ul>
+                    <p>
+                        На рис. схематично изображены свойства, влияющие на ширину блока. 
+                    </p>
+                    <p>
+                        При этом какие-то свойства могут отсутствовать и на размер влияние не оказывают.
+                    </p>
+                    <p>
+                        <img src="./img/blocks-model-img/Screenshot_65.png" alt="Ширина блока">
+                    </p>
+                    <p>
+                        Обратите внимание, что свойство <span class="atr">width</span> задаёт ширину <em>содержимого</em>, а не всего блока целиком.
+                    </p>
+                    <p>
+                        Если значение <span class="atr">width</span> не задано, то оно по умолчанию устанавливается как <span class="mean">auto</span>. В этом случае ширина блока будет занимать всю доступную ширину при сохранении значений <span class="atr">padding</span>, <span class="atr">border</span> и <span class="atr">margin</span>. Под доступной шириной в данном случае подразумевается ширина содержимого родительского блока, а если родителя нет, то ширина окна браузера.
+                    </p>
+                    <p>
+                        Если свойство <span class="atr">width</span> задано, то его значение добавляется к общей ширине блока. В качестве примера рассмотрим следующий стиль.
+                    </p>
+                    <p>
+                        <img src="./img/blocks-model-img/Screenshot_67.png" alt="Ширина блока">
+                    </p>
+                    <p>
+                        Ширина блока в данном случае будет равна 442 пикселя; эта величина получается складыванием значения ширины содержимого плюс поле слева, граница слева и отступ слева, плюс поле справа, граница справа и отступ справа. Суммируем все числа.
+                    </p>
+                    <p>
+                        <strong>
+                            Ширина = 400 + 10 + 10 + 4 + 4 + 7 + 7 = 442
+                        </strong>
+                    </p>
+                    <p>
+                        Ширину содержимого можно задавать в процентах, но в этом случае общая ширина блока может превысить ширину веб-страницы, что приведёт к появлению горизонтальной полосы прокрутки.
+                    </p>
+                </section>
+                <section class="height-block">
+                    <h2>Высота блока</h2>
+                    <p>
+                        Высота блока формируется по тем же правилам, что и ширина. А именно, высота складывается из значений следующих свойств:
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="atr">height</span> — высота содержимого;
+                        </li>
+                        <li>
+                            <span class="atr">padding-top</span> и <span class="atr">padding-bottom</span> — поле сверху и снизу от содержимого;
+                        </li>
+                        <li>
+                            <span class="atr">border-top</span> и <span class="atr">border-bottom</span> — толщина границы сверху и снизу;
+                        </li>
+                        <li>
+                            <span class="atr">margin-top</span> и <span class="atr">margin-bottom </span> — отступ сверху и снизу.
+                        </li>
+                    </ul>
+                    <p>
+                        Если свойство <span class="atr">height</span> не указано, то оно считается как <span class="mean">auto</span>, в этом случае высота содержимого вычисляется автоматически. 
+                    <p>
+                        На рис. показаны свойства, влияющие на высоту блока.
+                    </p>
+                    </p>
+                    <p>
+                        <img src="./img/blocks-model-img/Screenshot_66.png" alt="Высота блока">
+                    </p>
+                </section>
+                <section class="width-height">
+                    <h3>Различия формирования ширины и высоты блока</h3>
+                    <p>
+                         Несмотря на схожесть принципов построения ширины и высоты, у них есть некоторые различия.
+                    </p>
+                    <h6>Превышение размеров блока</h6>
+                    <p>
+                        Если содержимое превышает размер блока при заданном <span class="atr">height</span>, то содержимое отображается поверх блока
+                    </p>
+                    <p>
+                        <img src="./img/blocks-model-img/Screenshot_68.png" alt="Превышение размеров блока">
+                    </p>
+                    <p>
+                        Чтобы избежать подобного поведения, свойство <span class="atr">height</span> лучше не задавать, тогда высота блока будет вычисляться автоматически.
+                    </p>
+                    <p>
+                        Впрочем, бывают случаи, когда высота должна быть чётко указана.  тогда рекомендуется добавить свойство overflow — значение auto устанавливает полосы прокрутки при необходимости (пример 2), а значение hidden скрывает всё, что не помещается в заданные размеры.
+                    </p>
+                    <p>
+                        Тогда рекомендуется добавить свойство <span class="atr">overflow</span> — значение <span class="mean">auto</span> устанавливает полосы прокрутки при необходимости, а значение <span class="mean">hidden</span> скрывает всё, что не помещается в заданные размеры. 
+                    </p>
+                    <p>
+                        <img src="./img/blocks-model-img/Screenshot_69.png" alt="Полосы прокрутки в блоке">
+                        <img src="./img/blocks-model-img/Screenshot_70.png" alt="Полосы прокрутки в блоке">
+                    </p>
+                    <p>
+                        Высота блока задана явно и если содержимое не помещается в блок по высоте, то появляется вертикальная полоса прокрутки.
+                    </p>
+                    <div class="block">
+                        <p>Лев ревёт только в том случае, когда сообщает, что 
+                           территория принадлежит ему или провозглашает себя царём природы.</p>
+                        <p>
+                            Охотничий участок льва может иметь длину и ширину 
+                           до тридцати километров.</p>
+                       </div>
+                    <h6>Высота блока в процентах</h6>
+                    <p>
+                        Установка значения высоты в процентах обычно не приводит к каким-либо заметным результатам, поскольку высота родителя браузером не вычисляется. Чтобы проценты начали работать, высота родителя должна быть задана явно. 
+                    </p>
+                    <p>
+                        <img src="./img/blocks-model-img/Screenshot_71.png" alt="Высота блока в процентах">
+                        <img src="./img/blocks-model-img/Screenshot_72.png" alt="Высота блока в процентах">
+                    </p>
+                    <p>
+                        <img src="./img/blocks-model-img/Screenshot_73.png" alt="Высота блока в процентах">
+                    </p>
+                    <p>
+                        Здесь для <span class="tag">&lt;div&gt;</span> родителем выступает элемент <span class="tag">&lt;body&gt;</span>, поэтому для него устанавливаем значение <span class="atr">height</span> равным 100%. 
+                    </p>
+                    <p>
+                        В то же время на <span class="tag">&lt;body&gt;</span> действуют те же правила, что и на <span class="tag">&lt;div&gt;</span>. Поэтому для родителя <span class="tag">&lt;body&gt;</span>, которым является <span class="tag">&lt;html&gt;</span>, также требуется поставить значение height равным 100%. Только в этом случае высота блока в процентах будет зависеть от высоты веб-страницы.
+                    </p>
+                </section>
+                <section class="box-sizing" id="box-sizing">
+                    <h2>Алгоритм блочной модели: <em>box-sizing</em></h2>
+                    <p>
+                        Таким образом, мы выяснили, что когда речь заходит о размерах элементов, учитываются все части блочной модели. То есть, любые границы, отступы и поля вносят свой вклад в горизонтальный и вертикальный размер элемента. Считать итоговый размер становится  не удобно, особенно когда в качестве значений встречается комбинация пикселей и процентов.
+                    </p>
+                    <p>
+                        Есть способы обхода неудобства подсчёта ширины и высоты блока путем введения свойства <span class="atr">box-sizing</span>, которое изменяет алгоритм вычисления и  позволяет содержимому включать в себя границы. В итоге, всё содержимое подстроит свои размеры, чтобы уместиться в рамках одного общего размера.
+                    </p>
+                    <div class="titles">
+                        <h4>box-sizing</h4>
+                        <p>
+                            <a href="https://webref.ru/css/box-sizing" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Применяется для изменения алгоритма расчёта ширины и высоты элемента.</strong>
+                    </p>
+                    <p>
+                        Позволяет, чтобы свойства <span class="atr">width</span> и <span class="atr">height</span> задавали размеры не содержимого, а размеры блока.
+                    </p>
+                    <h6>Синтаксис </h6>
+                    <p>
+                        <img src="./img/blocks-model-img/Screenshot_74.png" alt="box-sizing">
+                    </p>
+                    <h6>Значения</h6>
+                    <ul>
+                        <li>
+                            <span class="mean">content-box</span><br>
+                            - Является значением по умолчанию, при этом свойства <span class="atr">width</span> и <span class="atr">height</span> задают ширину и высоту содержимого и не включают в себя значения <span class="atr">margin</span>, <span class="atr">padding</span> и <span class="atr">border</span>.
+                        </li>
+                        <li>
+                            <span class="mean">border-box</span><br>
+                            - Свойства <span class="atr">width</span> и <span class="atr">height </span> включают в себя значения <span class="atr">padding</span> и <span class="atr">border</span>, но не <span class="atr">margin</span>.
+                        </li>
+                    </ul>
+                    <p>
+                        <img src="./img/blocks-model-img/Screenshot_75.png" alt="border-box">
+                    </p>
+                    <p>
+                        Значение <span class="mean">border-box</span> намного упрощает нам математику. Если мы хотим, чтобы весь элемент был 400 пикселей в ширину, он останется 400 пикселей в ширину, независимо от того, какие значения <span class="atr">padding</span> или <span class="atr">border</span> мы к нему добавляем.
+                    </p>
+                    <p>
+                        Кроме того, мы можем легко смешивать значения длины. Скажем, мы хотим, чтобы наш блок занимал 40% в ширину. Добавление <span class="atr">padding</span> 20 пикселей и <span class="atr">border</span> 10 пикселей для всех сторон элемента не сложно и мы по-прежнему можем гарантировать, что фактическая ширина нашего блока останется 40%, несмотря на использование пикселей в другом месте.
+                    </p>
+                </section>
+            </article>
+          <a href="#header" class="btn">ВВЕРХ</a>  
+        </div>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+           <p>&copy; Sergey Moshkovsky </p> 
+        </div>
+    </footer>
+</body>
+</html>

@@ -6,7 +6,6 @@ body {
 p, ul, ol, div {
     margin: .5em 0;
 }
-
 h1, h2, h3, h4, h5, h6 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: gray;
@@ -118,44 +117,3 @@ dd {
 .titles p {
     padding-left: 20px;
 }
-
-/* CSS */
-blockquote {
-    background: yellow; 
-    height: 100px; 
-    width: 300px;
-}
-
-blockquote {
-    margin-bottom: 80px;
-}
-.hidden {
-    overflow: hidden;
-    margin: 0;
-}
-.scroll {
-    overflow: scroll;
-    margin: 0;
-}
-.example {
-    background-color: aqua;
-}
-.example1 {
-    background-color: aqua;
-    width: 300px;
-}
-.example2 {
-    background-color: aqua;
-    width: 300px;
-    height: 300px;
-}
-.brd-img {
-    padding-left: 20px;
-}
-.block {
-    background: #C5DF94; /* Цвет фона */
-    height: 50px; /* Высота */ 
-    padding: 10px; /* Поля вокруг текста */
-    overflow: auto; /* Добавляем полосы прокрутки */
-   }
-
