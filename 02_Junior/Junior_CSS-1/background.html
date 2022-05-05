@@ -22,6 +22,665 @@
         <div class="container">
             <article>
                 <h1>Фон</h1>
+                <p>
+                    Фон оказывает значительное воздействие на дизайн сайта. Он помогает создать впечатляюще выглядящий сайт, установить группирование и определить приоритет, фон также серьёзно влияет на юзабилити сайта.</p>
+                <p>
+                    Фон элемента HTML — это то, что появляется за текстом. В CSS фон элемента может быть сплошного цвета, изображением, градиентом или их комбинацией. Когда мы решаем, как реализовать такой фон, то должны понимать, что каждый фон влияет на общий вид нашего сайта.</p>
+                <p>
+                    Хотя CSS позволяет применять фон к элементу любого типа, он в основном используется для блочных элементов.</p>
+                <p>
+                    Фон применяется только к целевому элементу. Учитывая, что у большинства элементов HTML фон прозрачный, применение фона к <span class="tag">&lt;body&gt;</span> будет выглядеть так, словно он применяется ко всем элементам.</p>
+                <ul>
+                    <li>
+                        <a href="#background-color"><strong>Установка фонового цвета <span class="slc">background-color</span></strong></a>
+                    </li>
+                    <li>
+                        <a href="#background-image"><strong>Установка фонового изображения <span class="slc">background-image</span></strong></a>
+                    </li>
+                    <li>
+                        <a href="#background-repeat"><strong>Повторение фона <span class="slc">background-repeat</span></strong></a>
+                    </li>
+                    <li>
+                        <a href="#background-position"><strong>Положение фона <span class="slc">background-position</span></strong></a>
+                    </li>
+                    <li>
+                        <a href="#background-attachment"><strong>Фиксация фона <span class="slc">background-attachment</span></strong></a>
+                    </li>
+                    <li>
+                        <a href="#background-origin"><strong><span class="slc">background-origin</span></strong></a>
+                    </li>
+                    <li>
+                        <a href="#background-clip"><strong><span class="slc">background-clip</span></strong></a>
+                    </li>
+                    <li>
+                        <a href="#background-size"><strong>Масштабирование фона <span class="slc">background-size</span></strong></a>
+                    </li>
+                    <li>Добавление нескольких фоновых рисунков одновременно.</li>
+                    <li>Создание линейных градиентов.</li>
+                    <li>Создание радиальных градиентов.</li>
+                    <li>Создание повторяющегося узора без рисунков.</li>
+                    <li>Вывод иконок.</li>
+                    <li>Смена иконки при наведении на неё курсора мыши.</li>
+                    <li>
+                        <a href="#background"><strong>Универсальное свойство <span class="slc">background</span></strong></a>
+                    </li>
+                </ul>
+                <section class="background-color" id="background-color">
+                    <h2>Добавление цвета фона</h2>
+                    <p>
+                        Самый быстрый способ добавить фон к элементу — это установить однотонный фон с помощью свойства <span class="atr">background-color</span>. 
+                    </p>
+                    <p>
+                        Свойство  <span class="atr">background-color</span> используется строго для установки сплошной фоновой заливки.
+                        Весь элемент будет залит простым фоновым цветом. Имейте в виду, что всегда следует выбирать подходящий цвет текста, чтобы сохранить содержимое читабельным.
+                    </p>
+                    <div class="titles">
+                        <h4>background-color</h4>
+                        <p>
+                            <a href="https://webref.ru/css/background-color" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Определяет цвет фона элемента.</strong>
+                    </p>
+                    <p>
+                        Хотя это свойство не наследует свойства своего родителя, из-за того, что начальное значение устанавливается прозрачным, цвет фона дочерних элементов совпадает с цветом фона родительского элемента.
+                    </p>
+                    <h6>Синтаксис </h6>
+                    <p>
+                        <img src="./img/background-img/Screenshot_2.png" alt="background-color">
+                    </p>
+                    <h6>Значения</h6>
+                    <ul>
+                        <li>
+                            <strong>&lt;цвет&gt;</strong><br>
+                            При добавлении цвета фона у нас есть несколько вариантов значений, которые мы можем использовать. Подобно другим цветовым значениям мы можем выбрать из ключевых слов, шестнадцатеричных кодов и значений <em>RGB, RGBa, HSL</em> и <em>HSLa</em>.
+                        </li>
+                        <li>
+                            <span class="mean">transparent</span><br>
+                            Устанавливает прозрачный фон.
+                        </li>
+                    </ul>
+                    <p>
+                        <img src="./img/background-img/Screenshot_3.png" alt="background-color">
+                    </p>
+                    <p>
+                        <img src="./img/background-img/Screenshot_4.png" alt="background-color">
+                    </p>
+                    <h4>Прозрачный фон</h4>
+                    <p>
+                        При использовании значения <em>RGBa</em> или <em>HSLa</em> в качестве прозрачного цвета фона хорошей идеей будет обеспечить также запасной цвет, потому что не все браузеры понимают <em>RGBa</em> или <em>HSLa</em>. И когда браузер встречает значение, которое он не распознаёт, то игнорирует его.
+                    </p>
+                    <p>
+                        К счастью, есть простой способ обеспечить запасной вариант для фона. CSS каскадирует с верхней части файла до его низа, таким образом, мы можем использовать два свойства <span class="atr">background-color</span> в едином наборе правил. Первое свойство <span class="atr">background-color</span> будет включать «безопасный» цвет фона в виде шестнадцатеричного значения, а второе свойство <span class="atr">background-color</span> будет использовать <em>RGBa</em> или <em>HSLa</em>. 
+                    </p>
+                    <p>
+                        <img src="./img/background-img/Screenshot_5.png" alt="background-color">
+                    </p>
+                    <p>
+                        При этом, если браузер понимает значение <em>RGBa</em> или <em>HSLa</em>, то отобразит заданный полупрозрачный фон и сквозь него будет проступать фон веб-страницы. А если нет, то вернётся к шестнадцатеричному значению перед ним.
+                    </p>
+                    <p>
+                        <img src="./img/background-img/Screenshot_6.png" alt="background-color">
+                    </p>
+                </section>
+                <section class="background-image" id="background-image">
+                    <h2>Добавление фонового изображения</h2>
+                    <p>
+                        Поскольку простых цветов, как правило, недостаточно, CSS позволяет кроме цвета фона элемента применять к нему изображения в качестве фона.
+                        Такие изображения работают аналогично цвету фона, однако предлагают несколько дополнительных свойств для уточнения. 
+                    </p>
+                    <p>
+                        В качестве фона можно использовать любое подходящее для этого изображение в формате GIF, JPEG, PNG и даже SVG. Правильно подобранный фон не отвлекает внимание от текста, хорошо сочетается с цветовой гаммой веб-страницы. 
+                    </p> 
+                    <p>   
+                        При этом файл с фоном желательно должен быть небольшим по объёму, чтобы быстро загружаться.
+                    </p>
+                    <div class="titles">
+                        <h4>background-image</h4>
+                        <p>
+                            <a href="https://webref.ru/css/background-image" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Устанавливает фоновое изображение для элемента.</strong>
+                    </p>
+                    <p>
+                        Если одновременно для элемента задан цвет фона, он будет показан, пока фоновая картинка не загрузится полностью. То же произойдет, если изображения не доступны или их показ в браузере отключен. В случае наличия в рисунке прозрачных областей, через них будет проглядывать фоновый цвет. Допустимо указывать несколько фоновых изображений, перечисляя их параметры через запятую.
+                    </p>
+                    <h4>Синтаксис </h4>
+                    <p>
+                        <img src="./img/background-img/Screenshot_7.png" alt="background-image">
+                    </p>
+                    <h4>Значения</h4>
+                    <ul>
+                        <li>
+                            <span class="mean">url</span><br>
+                            В качестве значения используется путь к графическому файлу, который указывается внутри конструкции url(). Путь к файлу при этом можно писать как в кавычках (двойных или одинарных), так и без них.
+                        </li>
+                        <li>
+                            <span class="mean">none</span><br>
+                            Отменяет фоновое изображение для элемента.
+                        </li>
+                    </ul>
+                    <p>
+                        Поведение изображения (как оно повторяется, где расположено, какой у него размер) определяется другими свойствами фона. 
+                    </p>
+                    <p>
+                        <span class="atr">background-image</span> задаёт только, какое изображение использовать.
+                    </p>
+                    <p>
+                        Имейте в виду, что элемент HTML не принимает во внимание размеры фонового изображения. Даже если изображение больше, чем элемент, к которому оно применяется, элемент не изменит свои размеры, чтобы соответствовать изображению, поскольку изображение является чисто декоративным и оно здесь для поддержки элемента.
+                    </p>
+                    <h5>Разница между &lt;img&gt; и фоновыми изображениями</h5>
+                    <p>
+                        Элемент <span class="tag">&lt;img&gt;</span> предназначен для изображений, которые являются частью содержимого, в то время как фоновые изображения в CSS чисто декоративные.
+                    </p>
+                    <p>
+                        Логотип компании, эскизы галереи, изображение продукта и др. — всё это считается <strong>содержимым</strong> и для него следует использовать элемент <span class="tag">&lt;img&gt;</span>.
+                    </p>
+                    <p>
+                        Диагональный узор, красивый пейзаж, иконка корзины и др. — их можно рассматривать как декоративные, так как они поддерживают содержимое, но не являются его частью. Если бы они исчезли, у веб-страницы по-прежнему сохранится смысл.
+                    </p>
+                    <p>
+                        Что касается многочисленных двойных выборов, граница между содержимым и стилем размыта. Некоторые визуальные методы легче достичь с помощью фона CSS. Просто спросите себя, важно ли для страницы изображение, которое вы используете. Если да, то применяйте элемент <span class="tag">&lt;img&gt;</span>.
+                    </p>
+                </section>
+                <section class="background-repeat" id="background-repeat">
+                    <h2>Повторение фона</h2>
+                    <p>
+                        Добавление фонового изображения с одним лишь значением <span class="mean">url</span> может выдать нежелательные результаты, так как по умолчанию фоновое изображение будет повторяться по горизонтали и вертикали от левого верхнего угла данного элемента, чтобы заполнить фон элемента целиком. 
+                    </p>
+                    <p>
+                        Это поведение, как именно повторять картинки, может быть изменено с помощью свойства <span class="atr">background-repeat</span>.
+                    </p>
+                    <div class="titles">
+                        <h4>background-repeat</h4>
+                        <p>
+                            <a href="https://webref.ru/css/background-repeat" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Определяет, как будет повторяться фоновое изображение, установленное с помощью свойства <span class="atr">background-image</span>. </strong>
+                    </p>
+                    <p>
+                        <img src="./img/background-img/Screenshot_9.png" alt="background-repeat">
+                    </p>
+                    <p>
+                        Можно установить повторение рисунка только по горизонтали, по вертикали или в обе стороны. Допустимо указывать несколько значений для каждого фона, перечисляя значения через запятую.
+                    </p>
+                    <h6>Синтаксис </h6>
+                    <p>
+                        <img src="./img/background-img/Screenshot_8.png" alt="background-repeat">
+                    </p>
+                    <p>
+                        &#10059;
+                    </p>
+                    <p>
+                        <strong>&lt;повторение&gt;</strong> = <span class="mean">repeat-x</span> | <span class="mean">repeat-y</span> | [<span class="mean">repeat</span> | <span class="mean">space</span> | <span class="mean">round</span> | <span class="mean">no-repeat</span>]{1,2}
+                    </p>
+                    <p>
+                        Допустимо указывать два значения, первое ключевое слово задаёт повторение по горизонтали, второе по вертикали.
+                    </p>
+                    <h6>Значения</h6>
+                    <dl>
+                        <dt>
+                            <span class="mean">no-repeat
+                            </span>
+                            <dd>
+                                Фон не повторяется. Применяется для простого добавления единственной картинки;<br> 
+                                Устанавливает одно фоновое изображение в элементе без его повторений, положение которого определяется свойством <span class="atr">background-position</span> (по умолчанию в левом верхнем углу). <br>
+                                Аналогично <span class="mean">no-repeat
+                                </span> <span class="mean">no-repeat
+                                </span>.
+                            </dd>
+                        </dt>
+                        <dt>
+                            <span class="mean">repeat</span>
+                            <dd>
+                                Является значением по умолчанию. Фоновое изображение повторяется по горизонтали и вертикали.  <br>
+                                 Аналогично <span class="mean">repeat</span> <span class="mean">repeat</span>.
+                            </dd>
+                        </dt>
+                        <dt>
+                            <span class="mean">repeat-x
+                            </span>
+                            <dd>
+                                Фоновый рисунок повторяется только по горизонтали. <br>
+                                Аналогично <span class="mean">repeat</span> <span class="mean">no-repeat</span>.
+                            </dd>
+                        </dt>
+                        <dt>
+                            <span class="mean">repeat-y
+                            </span>
+                            <dd>
+                                Фоновый рисунок повторяется только по вертикали. <br> Аналогично <span class="mean">no-repeat</span> <span class="mean">repeat</span>.
+                            </dd>
+                        </dt>
+                    </dl>
+                    <p>
+                        <img src="./img/background-img/Screenshot_10.png" alt="background-repeat">
+                    </p>
+                    <dl>
+                        <dt>
+                            <span class="mean">space</span>
+                            <dd>
+                                Изображение повторяется столько раз, чтобы полностью заполнить область; если это не удаётся, между картинками добавляется пустое пространство.
+                            </dd>
+                        </dt>
+                        <dt>
+                            <span class="mean">round</span>
+                            <dd>
+                                Изображение повторяется так, чтобы в области поместилось целое число рисунков; если это не удаётся сделать, то фоновые рисунки масштабируются.
+                            </dd>
+                        </dt>
+                    </dl>
+                    <h5>Повторение по вертикали ( пример )</h5>
+                    <p>
+                        Рассмотрим вертикальный бесшовный фон — при повторении картинки по вертикали между отдельными фрагментами не заметно стыков и фоновый рисунок выглядит цельным. Предварительно следует подготовить фоновое изображение, которое должно удовлетворять ряду условий:
+                    </p>
+                    <ul>
+                        <li>
+                            занимать по высоте не меньше 20–30 пикселей;
+                        </li>
+                        <li>
+                            при стыковке с аналогичным фрагментом изображения по вертикали не должно быть видимых стыков.
+                        </li>
+                    </ul>
+                    <p>
+                        Поясним про высоту фоновой картинки. Если сделать изображение слишком узким (2–3 пикселя), то при отображении фона эффект его появления будет виден невооружённым глазом. Увеличение высоты позволяет замостить фон элемента быстро и незаметно.
+                    </p>
+                    <p>
+                        В качестве образца фона возьмём узор, показанный на рис. 
+                    </p>
+                    <p>
+                        <img src="./img/background-img/pattern-left.png" alt="background-repeat">
+                    </p>
+                    <p>
+                        В примере показано добавление фона на веб-странице с повторением его по вертикали. Чтобы текст не выводился поверх рисунка к селектору <span class="slc">body</span> добавлено поле слева.
+                    </p>
+                    <p>
+                        <img src="./img/background-img/Screenshot_11.png" alt="background-repeat">
+                        <img src="./img/background-img/Screenshot_12.png" alt="background-repeat">
+                    </p>
+                    <p>
+                        <img src="./img/background-img/Screenshot_13.png" alt="background-repeat">
+                    </p>
+                    <h5>Повторение по горизонтали ( пример )</h5>
+                    <p>
+                        Аналогично делается и повторение по горизонтали. Предварительно готовим подходящее изображение
+                    </p>
+                    <p>
+                        <img src="./img/background-img/strip.png" alt="background-repeat">
+                    </p>
+                    <p>
+                        Затем добавляем его фоном к элементу через <span class="atr">background-image</span> и включаем повторение <span class="atr">repeat-x</span>
+                    </p>
+                    <p>
+                        <img src="./img/background-img/Screenshot_14.png" alt="background-repeat">
+                        <img src="./img/background-img/Screenshot_15.png" alt="background-repeat">
+                    </p>
+                    <p>
+                        <img src="./img/background-img/Screenshot_16.png" alt="background-repeat">
+                    </p>
+                </section>
+                <section class="background-position" id="background-position">
+                    <h2>Положение фона</h2>
+                    <p>
+                        По умолчанию, фоновая картинка располагается в левом верхнем углу элемента. Для управления положением фонового рисунка на странице применяется стилевое свойство <span class="atr">background-position</span>
+                    </p>
+                    <p>
+                        С помощью свойства <span class="atr">background-position</span> мы можем указать <strong>исходное положение</strong>, где именно изображение размещается относительно этого угла.
+                    </p>
+                    <p>
+                        Поскольку мы двигаем фоновое изображение из левого верхнего угла элемента, значения размера будут непосредственно привязаны к этому углу.
+                    </p>
+                    <div class="titles">
+                        <h4>background-position</h4>
+                        <p>
+                            <a href="https://webref.ru/css/background-position" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Задаёт начальное положение фонового изображения, установленного с помощью свойства <span class="atr">background-image</span>. </strong>
+                    </p>
+                    <p>
+                        <img src="./img/background-img/Screenshot_19.png" alt="background-position">
+                    </p>
+                    <p>
+                        Допустимо указывать несколько значений для каждого фона, перечисляя значения через запятую.
+                    </p>
+                    <h6>Синтаксис </h6>
+                    <p>
+                        <img src="./img/background-img/Screenshot_18.png" alt="background-position">
+                    </p>
+                    <p>
+                        &#10059;
+                    </p>
+                    <p>
+                        <strong>&lt;позиция&gt;</strong> = [<span class="mean">left</span> | <span class="mean">center</span> | <span class="mean">right</span> | &lt;проценты&gt; | &lt;размер&gt;] || [<span class="mean">top</span> | <span class="mean">center</span> | <span class="mean">bottom</span> | &lt;проценты&gt; | &lt;размер&gt;]
+                    </p>
+                    <p>
+                        <img src="./img/background-img/Screenshot_21.png" alt="background-position">
+                        <img src="./img/background-img/Screenshot_22.png" alt="background-position">
+                    </p>
+                    <h6>Значения</h6>
+                    <p>
+                        Свойство <span class="atr">background-position</span> требует два значения: <em>горизонтальное смещение</em> (первое значение) и <em>вертикальное смещение</em> (второе значение). Если указано только одно значение, то оно применяется для горизонтального смещения, а вертикальное по умолчанию задаётся как 50%.
+                    </p>
+                    <p>
+                        Чтобы установить значение <span class="atr">background-position</span> мы можем использовать ключевые слова <span class="mean">top</span>, <span class="mean">right</span>, <span class="mean">bottom</span> и <span class="mean">left</span>, пиксели, проценты или любую единицу размера. Ключевые слова и проценты работают очень похоже. 
+                    </p>
+                    <ul>
+                        <li>
+                            положение по горизонтали (может быть — <span class="mean">left</span>, <span class="mean">center</span>, <span class="mean">right</span>)
+                        </li>
+                        <li>
+                            положение по вертикали (может быть — <span class="mean">top</span>, <span class="mean">center</span>, <span class="mean">bottom</span>)
+                        </li>
+                    </ul>
+                    <p>
+                        При процентной записи вначале задаётся положение рисунка по горизонтали, а затем, через пробел, положение по вертикали.
+                    </p>
+                    <p>
+                        Если применяются ключевые слова, то порядок их следования не имеет значения. 
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="mean">top left</span> = <span class="mean">left top</span> = <span class="mean">0% 0%</span> (в левом верхнем углу);
+                        </li>
+                        <li>
+                            <span class="mean">top</span> = <span class="mean">top center</span> = <span class="mean">center top</span> = <span class="mean">50% 0%</span> (по центру вверху);
+                        </li>
+                        <li>
+                            <span class="mean">right top</span> = <span class="mean">top right</span> = <span class="mean">100% 0%</span> (в правом верхнем углу)
+                        </li>
+                        <li>
+                            <span class="mean">left</span> = <span class="mean">left center</span> = <span class="mean">center left</span> = <span class="mean">0% 50%</span> (по левому краю и по центру)
+                        </li>
+                        <li>
+                            <span class="mean">center</span> = <span class="mean">center center</span> = <span class="mean">50% 50%</span> (по центру)
+                        </li>
+                        <li>
+                            <span class="mean">right</span> = <span class="mean">right center</span> = <span class="mean">center right</span> = <span class="mean">100% 50%</span> (по правому краю и по центру)
+                        </li>
+                        <li>
+                            <span class="mean">bottom left</span> = <span class="mean">left bottom</span> = <span class="mean">0% 100%</span> (в левом нижнем углу)
+                        </li>
+                        <li>
+                            <span class="mean">bottom</span> = <span class="mean">bottom center</span> = <span class="mean">center bottom</span> = <span class="mean">50% 100%</span> (по центру внизу)
+                        </li>
+                        <li>
+                            <span class="mean">bottom right</span> = <span class="mean">right bottom</span> = <span class="mean">100% 100%</span> (в правом нижнем углу)
+                        </li>
+                    </ul>
+                    <p>
+                        <em> В скобках указано, где располагается фоновый рисунок относительно контейнера.</em>
+                    </p>
+                    <p>
+                        Значение <span class="mean">left top</span> идентично процентному значению <span class="mean">0 0</span>, которое располагает изображение в <em>левом верхнем углу</em> элемента. 
+                    </p>
+                    <p>
+                        Значение <span class="mean">right bottom</span> идентично процентной записи <span class="mean">100% 100%</span> и будет позиционировать изображение в <em>правом нижнем углу</em> элемента.
+                    </p>
+                    <p>
+                        <img src="./img/background-img/Screenshot_20.png" alt="background-position">
+                    </p>
+                    <p>
+                        Одним из преимуществ процентов по сравнению с ключевыми словами является возможность центрирования фонового изображения с помощью значения <span class="mean">50%</span>. 
+                    </p>
+                    <p>
+                        Для размещения фонового изображения в верхней части элемента, мы можем использовать значение <span class="mean">50% 0</span>. 
+                    </p>
+                    <p>
+                        Применение пикселей в качестве значения <span class="atr">background-position</span> также распространено, так как пиксели дают нам точный контроль над положением фона.
+                    </p>
+                    <div class="titles">
+                        <h4>background-position-x</h4>
+                        <p>
+                            <a href="https://webref.ru/css/background-position-x" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Задаёт положение фонового изображения внутри элемента по горизонтали. </strong>
+                    </p>
+                    <p>
+                        Если для элемента установлено несколько фоновых изображений, то можно изменять положение каждого изображения, перечисляя значения через запятую.
+                    </p>
+                    <h6>Синтаксис </h6>
+                    <p>
+                        <img src="./img/background-img/Screenshot_24.png" alt="background-position-x">
+                    </p>
+                    <h6>Значения</h6>
+                    <ul>
+                        <li>
+                            <span class="mean">left</span><br>
+                            Выравнивает фон по левому краю. Эквивалент записи 0 или 0%. (Значение по умолчанию)
+                        </li>
+                        <li>
+                            <span class="mean">center</span><br>
+                            Выравнивает фон по центру горизонтали. Эквивалент записи 50%.
+                        </li>
+                        <li>
+                            <span class="mean">right</span><br>
+                            Выравнивает фон по правому краю. Эквивалент записи 100%.
+                        </li>
+                        <li>
+                            <span class="mean">&lt;проценты&gt;</span><br>
+                            Задаёт положение фона в процентах от ширины элемента.<br> Значение 0% или 0 выравнивает левый край фонового изображения по левому краю элемента.<br> 
+                            Значение 100% выравнивает правый край рисунка по правому краю элемента.
+                        </li>
+                        <li>
+                            <span class="mean">&lt;размер&gt;</span><br>
+                            Задаёт положение фона в любых доступных для CSS единицах — пиксели (<strong>px</strong>), сантиметры (<strong>cm</strong>), <strong>em</strong> и др. относительно левого края элемента.
+                        </li>
+                    </ul>
+                    <div class="titles">
+                        <h4>background-position-y</h4>
+                        <p>
+                            <a href="https://webref.ru/css/background-position-y" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Задаёт положение фонового изображения внутри элемента по вертикали.</strong>
+                    </p>
+                    <p>
+                        Если для элемента установлено несколько фоновых изображений, то можно изменять положение каждого изображения, перечисляя значения через запятую.
+                    </p>
+                    <h6>Синтаксис </h6>
+                    <p>
+                        <img src="./img/background-img/Screenshot_25.png" alt="background-position-y">
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="mean">top</span><br>
+                            Выравнивает фон по верхнему краю. Эквивалент записи 0 или 0%.(Значение по умолчанию)
+                        </li>
+                        <li>
+                            <span class="mean">center</span><br>
+                            Выравнивает фон по центру вертикали. Эквивалент записи 50%.
+                        </li>
+                        <li>
+                            <span class="mean">bottom</span><br>
+                            Выравнивает фон по нижнему краю. Эквивалент записи 100%.
+                        </li>
+                        <li>
+                            <span class="mean">&lt;проценты&gt;</span><br>
+                            Задаёт положение фона в процентах от высоты элемента. <br> Значение 0% или 0 выравнивает верхний край фонового изображения по верхнему краю элемента. <br> 
+                            Значение 100% выравнивает нижний край рисунка по нижнему краю элемента.
+                        </li>
+                        <li>
+                            <span class="mean">&lt;размер&gt;</span><br>
+                            Задаёт положение фона в любых доступных для CSS единицах — пиксели (<strong>px</strong>), сантиметры (<strong>cm</strong>), <strong>em</strong> и др. относительно верхнего края элемента.
+                        </li>
+                    </ul>
+                </section>
+                <section class="background-attachment" id="background-attachment">
+                    <h2>Фиксация фона</h2>
+                    <p>
+                        При прокрутке страницы фоновая картинка также прокручивается вместе с содержимым. Если применяется повторение фона, то это не вызовет никаких проблем, но при единственном изображении и большом объёме текста может оказаться так, что фон передвинется за верхний край. 
+                    </p>
+                    <p>
+                        Чтобы такого не происходило фоновое изображение фиксируется на месте и не перемещается вместе с остальным содержимым документа. Для этого применяется свойство <span class="atr">background-attachment</span> со значением <span class="mean">fixed</span>. 
+                    </p>
+                    <div class="titles">
+                        <h4>background-attachment</h4>
+                        <p>
+                            <a href="https://webref.ru/css/background-attachment" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Устанавливает, будет ли прокручиваться фоновое изображение вместе с содержимым элемента</span>. </strong>
+                    </p>
+                    <p>
+                        Изображение может быть зафиксировано и оставаться неподвижным, либо перемещаться совместно с документом. 
+                    </p>
+                    <p>
+                        Можно указать несколько значений для ряда фоновых изображений, перечисляя значения через запятую.
+                    </p>
+                    <h6>Синтаксис</h6>
+                    <p>
+                        <img src="./img/background-img/Screenshot_23.png" alt="background-attachment">
+                    </p>
+                    <h6>Значения</h6>
+                    <ul>
+                        <li>
+                            <span class="mean">scroll</span><br>
+                            Позволяет перемещаться фону вместе с содержимым. (Значение по умолчанию)
+                        </li>
+                        <li>
+                            <span class="mean">fixed</span><br>
+                            Делает фоновое изображение элемента неподвижным.
+                        </li>
+                        <li>
+                            <span class="mean">local</span><br>
+                            Фон фиксируется с учётом поведения элемента. Если элемент имеет прокрутку, то фон будет прокручиваться вместе с содержимым, но фон, выходящий за рамки элемента, остаётся на месте.
+                        </li>
+                    </ul>
+                    <p>
+                        У <span class="mean">fixed</span> есть ещё одна особенность.<br>
+                        Если мы добавляем картинку к селектору <span class="slc">body</span>, то она располагается не внизу окна браузера, а внизу блока с контентом.
+                    </p>
+                    <p> 
+                        Это особенно заметно при небольшом объёме текста или увеличении размеров окна браузера.
+                    </p>
+                    <p>  
+                        Фиксированный фон привязывается именно к окну и уже не зависит от объёма контента.
+                    </p>
+                </section>
+                <section class="background-origin" id="background-origin">
+                    <h2>background-origin</h2>
+                </section>
+                <section class="background-clip" id="background-clip">
+                    <h2>background-clip</h2>
+                </section>
+                <section class="background-size" id="background-size">
+                    <h2>Масштабирование фона</h2>
+                    <p>
+                        Разрешение мониторов постоянно растёт и при вёрстке веб-страниц приходится учитывать самый широкий диапазон разрешений. Это особенно важно при использовании фонового рисунка, который либо обрезается при низком разрешении монитора, либо, наоборот, целиком не помещается при высоком разрешении.
+                    </p>
+                    <p>
+                        Одним из решений подобной ситуации является масштабирование фона. Конечно, это сулит некоторые неприятности вроде появления искажений и артефактов в изображениях, но и расширяет арсенал средств вёрстки.
+                    </p>
+                    <p>
+                        Размером управляет свойство <span class="atr">background-size</span>
+                    </p>
+                    <div class="titles">
+                        <h4>background-size</h4>
+                        <p>
+                            <a href="https://webref.ru/css/background-size" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Масштабирует фоновое изображение, согласно заданным размерам.</span>. </strong>
+                    </p>
+                    <h6>Синтаксис </h6>
+                    <p>
+                        <img src="./img/background-img/Screenshot_26.png" alt="background-size">
+                    </p>
+                    <p>
+                        <span class="mean">&lt;bg-size&gt;</span> = [ <span class="mean">&lt;размер&gt;</span> | <span class="mean">&lt;проценты&gt;</span> | <span class="mean">auto</span> ]{1,2} | <span class="mean">cover</span> | <span class="mean">contain</span>
+                    </p>
+                    <h6>Значения</h6>
+                    <ul>
+                        <li>
+                            <span class="mean">&lt;размер&gt;</span><br>
+                            Задаёт размер в любых доступных для CSS единицах — пикселях (<em>px</em>), сантиметрах (<em>cm</em>), <em>em</em> и др.
+                        </li>
+                        <li>
+                            <span class="mean">&lt;проценты&gt;</span><br>
+                            Задаёт размер фоновой картинки в процентах от ширины или высоты элемента.
+                        </li>
+                        <li>
+                            <span class="mean">auto</span><br>
+                            Если задано одновременно для ширины и высоты (<span class="mean">auto auto</span>), размеры фона остаются исходными; если только для одной стороны картинки (<span class="mean">100px auto</span>), то размер вычисляется автоматически исходя из пропорций картинки. (<em>Значение по умолчанию</em>)
+                        </li>
+                        <li>
+                            <span class="mean">cover</span><br>
+                            Масштабирует изображение с сохранением пропорций так, чтобы его ширина или высота равнялась ширине или высоте блока.
+                        </li>
+                        <li>
+                            <span class="mean">contain</span><br>
+                            Масштабирует изображение с сохранением пропорций таким образом, чтобы картинка целиком поместилась внутрь блока.
+                        </li>
+                    </ul>
+                    <p>
+                        Если установлено одно значение, оно устанавливает ширину фона, второе значение принимается за <span class="mean">auto</span>. Пропорции картинки при этом сохраняются. Использование двух значений через пробел задаёт ширину и высоту фоновой картинки.
+                    </p>
+                    <p>
+                        Если указано два значения размера через пробел, то первое значение определяет ширину по горизонтали, а второе по вертикали. При этом пропорции игнорируются, что хорошо заметно по рис. 1г. 
+                    </p>
+                    <p>
+                        Вместо одного из размеров допустимо использовать ключевое слово <span class="mean">auto</span>, тогда браузер вычисляет его автоматически, исходя из пропорций картинки.
+                    </p>
+                    <p class="bcgr">
+                        <img src="./img/background-img/Screenshot_27.png" alt="background-size">
+                        <img src="./img/background-img/Screenshot_28.png" alt="background-size">
+                    </p>
+                    <p class="bcgr">
+                        <img src="./img/background-img/Screenshot_29.png" alt="background-size">
+                        <img src="./img/background-img/Screenshot_30.png" alt="background-size">
+                    </p>
+                    <p>
+                        <img src="./img/background-img/Screenshot_31.png" alt="background-size">
+                    </p>
+                </section>
+                <section class="background" id="background">
+                    <h2>Универсальное свойство <em>background</em></h2>
+                    <div class="titles">
+                        <h4>background</h4>
+                        <p>
+                            <a href="https://webref.ru/css/background" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Универсальное свойство - позволяет установить одновременно несколько характеристик фона.</strong></p>
+                    <p>
+                        Значения могут идти в любом порядке, браузер сам определит, какое из них соответствует нужному свойству. Для подробного ознакомления следует смотреть информацию о каждом свойстве отдельно. Допустимо, также, указывать параметры сразу нескольких фонов, перечисляя их через запятую.</p>
+                    <h6>Синтаксис </h6>
+                    <p>
+                        <img src="./img/background-img/Screenshot_1.png" alt="background">
+                    </p>
+                    <p>
+                        &#10059;
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>&lt;фон&gt;</strong><br>
+                            <span class="slc">background-image</span> || <span class="slc">background-position</span> [ / <span class="slc">background-size</span> ]? || <span class="slc">background-repeat</span> || <span class="slc">background-attachment</span> || <span class="slc">background-origin</span> || <span class="slc">background-clip</span>
+                        </li>
+                        <li>
+                            <strong>&lt;последний_фон&gt;</strong><br>
+                            <span class="slc">background-image</span> || <span class="slc">background-position</span> [ / <span class="slc">background-size</span> ]? || <span class="slc">background-repeat</span> || <span class="slc">background-attachment</span> || <span class="slc">background-origin</span> || <span class="slc">background-clip</span> || <span class="slc">background-color</span>
+                        </li>
+                    </ul>
+                    <p>
+                        Если наряду с фоновыми изображениями требуется задать цвет фона элемента, он указывается в последнюю очередь после перечисления.</p>
+                    <h6>Значения</h6>
+                    <p>
+                        Любые комбинации значений, разделяемых между собой пробелом, определяющих стиль фона, в произвольном порядке. Ни одно значение не является обязательным, поэтому неиспользуемые можно опустить.
+                    </p>
+                </section>
             </article>
             <a href="#header" class="btn">ВВЕРХ</a>
         </div>
