@@ -38,22 +38,25 @@
                         <a href="#background-image"><strong>Установка фонового изображения <span class="slc">background-image</span></strong></a>
                     </li>
                     <li>
-                        <a href="#background-repeat"><strong>Повторение фона <span class="slc">background-repeat</span></strong></a>
+                        <a href="#background-repeat"><strong>Повторение фонового изображения <span class="slc">background-repeat</span></strong></a>
                     </li>
                     <li>
-                        <a href="#background-position"><strong>Положение фона <span class="slc">background-position</span></strong></a>
+                        <a href="#background-position"><strong>Начальное положение фонового изображения <span class="slc">background-position</span></strong></a>
                     </li>
                     <li>
-                        <a href="#background-attachment"><strong>Фиксация фона <span class="slc">background-attachment</span></strong></a>
+                        <a href="#background-attachment"><strong>Фиксация фонового изображения <span class="slc">background-attachment</span></strong></a>
                     </li>
                     <li>
-                        <a href="#background-origin"><strong><span class="slc">background-origin</span></strong></a>
+                        <a href="#background-origin"><strong> Область позиционирования фонового изображения <span class="slc">background-origin</span></strong></a>
                     </li>
                     <li>
-                        <a href="#background-clip"><strong><span class="slc">background-clip</span></strong></a>
+                        <a href="#background-clip"><strong>Выведение фона под границами <span class="slc">background-clip</span></strong></a>
                     </li>
                     <li>
-                        <a href="#background-size"><strong>Масштабирование фона <span class="slc">background-size</span></strong></a>
+                        <a href="#background-size"><strong>Масштабирование фонового изображения <span class="slc">background-size</span></strong></a>
+                    </li>
+                    <li>
+                        <a href="#background"><strong>Универсальное свойство <span class="slc">background</span></strong></a>
                     </li>
                     <li>Добавление нескольких фоновых рисунков одновременно.</li>
                     <li>Создание линейных градиентов.</li>
@@ -61,9 +64,6 @@
                     <li>Создание повторяющегося узора без рисунков.</li>
                     <li>Вывод иконок.</li>
                     <li>Смена иконки при наведении на неё курсора мыши.</li>
-                    <li>
-                        <a href="#background"><strong>Универсальное свойство <span class="slc">background</span></strong></a>
-                    </li>
                 </ul>
                 <section class="background-color" id="background-color">
                     <h2>Добавление цвета фона</h2>
@@ -187,7 +187,7 @@
                     </p>
                 </section>
                 <section class="background-repeat" id="background-repeat">
-                    <h2>Повторение фона</h2>
+                    <h2>Повторение фонового изображения</h2>
                     <p>
                         Добавление фонового изображения с одним лишь значением <span class="mean">url</span> может выдать нежелательные результаты, так как по умолчанию фоновое изображение будет повторяться по горизонтали и вертикали от левого верхнего угла данного элемента, чтобы заполнить фон элемента целиком. 
                     </p>
@@ -325,7 +325,7 @@
                     </p>
                 </section>
                 <section class="background-position" id="background-position">
-                    <h2>Положение фона</h2>
+                    <h2>Начальное положение фонового изображения</h2>
                     <p>
                         По умолчанию, фоновая картинка располагается в левом верхнем углу элемента. Для управления положением фонового рисунка на странице применяется стилевое свойство <span class="atr">background-position</span>
                     </p>
@@ -516,7 +516,7 @@
                     </ul>
                 </section>
                 <section class="background-attachment" id="background-attachment">
-                    <h2>Фиксация фона</h2>
+                    <h2>Фиксация фонового изображения</h2>
                     <p>
                         При прокрутке страницы фоновая картинка также прокручивается вместе с содержимым. Если применяется повторение фона, то это не вызовет никаких проблем, но при единственном изображении и большом объёме текста может оказаться так, что фон передвинется за верхний край. 
                     </p>
@@ -530,7 +530,7 @@
                         </p>
                     </div>
                     <p>
-                        <strong>Устанавливает, будет ли прокручиваться фоновое изображение вместе с содержимым элемента</span>. </strong>
+                        <strong>Устанавливает, будет ли прокручиваться фоновое изображение вместе с содержимым элемента.</strong>
                     </p>
                     <p>
                         Изображение может быть зафиксировано и оставаться неподвижным, либо перемещаться совместно с документом. 
@@ -569,13 +569,141 @@
                     </p>
                 </section>
                 <section class="background-origin" id="background-origin">
-                    <h2>background-origin</h2>
+                    <h2>Область позиционирования фонового изображения</h2>
+                    <p>
+                        Если <span class="atr">background-position</span> позволяет задать <em>начальное положение</em>  фонового рисунка <em>относительно  левого верхнего угла</em>, то <br>
+                        <span class="atr">background-origin</span>  задает <em>область расположения</em> фонового рисунка <em>относительно границы</em> и самого содержимого элемента. 
+                    </p>
+                    <div class="titles">
+                        <h4>background-origin</h4>
+                        <p>
+                            <a href="webref.ru/css/background-origin" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Определяет область позиционирования фонового рисунка.</strong>
+                    </p>
+                    <p>
+                        Определяет, откуда должно начинаться <span class="atr">background-position</span>. 
+                    </p>
+                    <p>
+                        Это свойство не применяется, когда значение <span class="atr">background-attachment</span> задано, как <span class="mean">fixed</span>.
+                    </p>
+                    <h6>Синтаксис</h6>
+                    <p>
+                        <img src="./img/background-img/Screenshot_32.png" alt="background-origin">
+                    </p>
+                    <h6>Значения</h6>
+                    <ul>
+                        <li>
+                            <span class="mean">padding-box</span><br>
+                            Фон позиционируется относительно края элемента с учетом толщины границы. (Значение по умолчанию)
+                        </li>
+                        <li>
+                            <span class="mean">border-box</span><br>
+                            Фон позиционируется относительно границы, при этом линия границы может перекрывать изображение.
+                        </li>
+                        <li>
+                            <span class="mean">content-box</span><br>
+                            Фон позиционируется относительно содержимого элемента.
+                        </li>
+                    </ul>
+                    <p>
+                        Значений может быть несколько (для каждого из множественных фоновых рисунков), при этом значения разделяются между собой запятой.
+                    </p>
+                    <p>
+                        Результат использования значений свойства <span class="atr">background-origin</span> для элемента с рамкой толщиной 20 пикселей показан на рис. 
+                    </p>
+                    <p>
+                        <img src="./img/background-img/Screenshot_33.png" alt="background-origin">
+                    </p>
+                    <p>
+                        <img src="./img/background-img/Screenshot_36.png" alt="background-origin">
+                        <img src="./img/background-img/Screenshot_37.png" alt="background-origin">
+                    </p>
+                    <p>
+                        <img src="./img/background-img/Screenshot_38.png" alt="background-origin">
+                        <img src="./img/background-img/Screenshot_39.png" alt="background-origin">
+                    </p>
+                    <p>
+                        <img src="./img/background-img/Screenshot_34.png" alt="background-origin">
+                        <img src="./img/background-img/Screenshot_35.png" alt="background-origin">
+                    </p>
                 </section>
                 <section class="background-clip" id="background-clip">
-                    <h2>background-clip</h2>
+                    <h2>Выведение фона под границами</h2>
+                    <p>
+                        При задании прозрачных или пунктирных границах часто требуется, чтобы фон оставался видимым на заднем плане под границей или наоборот - занимал бы только область самого содержимого. 
+                    </p>
+                    <div class="titles">
+                        <h4>background-clip</h4>
+                        <p>
+                            <a href="https://webref.ru/css/background-clip" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Определяет, как цвет фона или фоновая картинка должна выводиться под границами.</strong>
+                    </p>
+                    <p>
+                        Определяет площадь поверхности, которую охватывает фоновое изображение
+                    </p>
+                    <p>
+                        Эффект заметен при прозрачных или пунктирных границах.
+                    </p>
+                    <h6>Синтаксис </h6>
+                    <p>
+                        <img src="./img/background-img/Screenshot_40.png" alt="background-clip">
+                    </p>
+                    <p>
+                        Внедрение этого нового свойств связано с внедрением трёх новых значений: <span class="mean">border-box</span>, <span class="mean">padding-box</span> и <span class="mean">content-box</span>. 
+                    </p>
+                    <h6>Значения</h6>
+                    <ul>
+                        <li>
+                            <span class="mean">border-box</span><br>
+                            Фон выводится под границами. (Значение по умолчанию)
+                            <p>
+                                Позволяет фоновому изображению расширяться в область границ.
+                            </p>
+                            <p>
+                                <img src="./img/background-img/Screenshot_44.png" alt="background-clip">
+                                <img src="./img/background-img/Screenshot_41.png" alt="background-clip">
+                            </p>
+                            <div class="playground-result">
+                                Акула
+                            </div>
+                            <p>. </p>
+                        </li>
+                        <li>
+                            <span class="mean">padding-box</span><br>
+                            Фон отображается внутри границ.
+                            <p>
+                                <img src="./img/background-img/Screenshot_45.png" alt="background-clip">
+                                <img src="./img/background-img/Screenshot_42.png" alt="background-clip">
+                            </p>
+                            <div class="playground-result2">
+                                Акула
+                            </div>
+                            <p>. </p>
+                        </li>
+                        <li>
+                            <span class="mean">content-box</span><br>
+                            Фон отображается только внутри контента.
+                            <p>
+                                <img src="./img/background-img/Screenshot_46.png" alt="background-clip">
+                                <img src="./img/background-img/Screenshot_43.png" alt="background-clip">
+                            </p>
+                            <div class="playground-result3">
+                                Акула
+                            </div>
+                        </li>
+                    </ul>
+                    <p>
+                        Значений может быть несколько (для каждого из множественных фоновых рисунков), при этом значения разделяются между собой запятой.
+                    </p>
                 </section>
                 <section class="background-size" id="background-size">
-                    <h2>Масштабирование фона</h2>
+                    <h2>Масштабирование фонового изображения</h2>
                     <p>
                         Разрешение мониторов постоянно растёт и при вёрстке веб-страниц приходится учитывать самый широкий диапазон разрешений. Это особенно важно при использовании фонового рисунка, который либо обрезается при низком разрешении монитора, либо, наоборот, целиком не помещается при высоком разрешении.
                     </p>
@@ -592,7 +720,10 @@
                         </p>
                     </div>
                     <p>
-                        <strong>Масштабирует фоновое изображение, согласно заданным размерам.</span>. </strong>
+                        <strong>Масштабирует фоновое изображение, согласно заданным размерам.</strong>
+                    </p>
+                    <p>
+                        Позволяет указать размер фонового изображения. 
                     </p>
                     <h6>Синтаксис </h6>
                     <p>
@@ -624,29 +755,115 @@
                             Масштабирует изображение с сохранением пропорций таким образом, чтобы картинка целиком поместилась внутрь блока.
                         </li>
                     </ul>
+                    <h5>Примеры использования</h5>
+                    <h4><em> Исходные изображения</em></h4>
                     <p>
-                        Если установлено одно значение, оно устанавливает ширину фона, второе значение принимается за <span class="mean">auto</span>. Пропорции картинки при этом сохраняются. Использование двух значений через пробел задаёт ширину и высоту фоновой картинки.
+                        <img src="./img/background-img/bg-size-img/Screenshot_1.png" alt="background-size Пример">
+                        <img src="./img/background-img/bg-size-img/Screenshot_2.png" alt="background-size Пример">
+                        <img src="./img/background-img/bg-size-img/Screenshot_3.png" alt="background-size Пример">
+                    </p>
+                    <div class="img1">
+                        </div>
+                    <div class="img2">
+                        </div>
+                    <p>. </p>
+                    <h4><em>250px</em></h4>
+                    <p>
+                        Если установлено одно значение, оно устанавливает ширину фона, второе значение принимается за <span class="mean">auto</span> - тогда браузер вычисляет его автоматически, исходя из пропорций картинки. Пропорции картинки при этом сохраняются.
                     </p>
                     <p>
-                        Если указано два значения размера через пробел, то первое значение определяет ширину по горизонтали, а второе по вертикали. При этом пропорции игнорируются, что хорошо заметно по рис. 1г. 
+                        <img src="./img/background-img/bg-size-img/Screenshot_4.png" alt="background-size Пример">
+                        <img src="./img/background-img/bg-size-img/Screenshot_5.png" alt="background-size Пример">
+                        <img src="./img/background-img/bg-size-img/Screenshot_6.png" alt="background-size Пример">
+                    </p>
+                    <div class="img11">
+                        </div>
+                    <div class="img21">
+                        </div>
+                    <p>
+                        При использовании размера мы можем указать ширину и высоту с помощью двух значений разделённых пробелом. <br>
+                            Первое значение установит ширину фонового изображения, а второе значение его высоту. 
+                    </p>
+                    <p>. </p>
+                    <h4><em>100% 100%</em></h4>
+                    <p>
+                        Важно отметить, что процентная запись связана с размером элемента, а не с исходным размером фоновой картинки.
                     </p>
                     <p>
-                        Вместо одного из размеров допустимо использовать ключевое слово <span class="mean">auto</span>, тогда браузер вычисляет его автоматически, исходя из пропорций картинки.
-                    </p>
-                    <p class="bcgr">
-                        <img src="./img/background-img/Screenshot_27.png" alt="background-size">
-                        <img src="./img/background-img/Screenshot_28.png" alt="background-size">
-                    </p>
-                    <p class="bcgr">
-                        <img src="./img/background-img/Screenshot_29.png" alt="background-size">
-                        <img src="./img/background-img/Screenshot_30.png" alt="background-size">
+                        При этом пропорции игнорируются, что хорошо заметно по примеру 
                     </p>
                     <p>
-                        <img src="./img/background-img/Screenshot_31.png" alt="background-size">
+                        <img src="./img/background-img/bg-size-img/Screenshot_7.png" alt="background-size Пример">
+                        <img src="./img/background-img/bg-size-img/Screenshot_8.png" alt="background-size Пример">
+                        <img src="./img/background-img/bg-size-img/Screenshot_9.png" alt="background-size Пример">
                     </p>
+                    <div class="img12">
+                        </div>
+                    <div class="img22">
+                        </div>
+                    <p>.</p>
+                    <p>
+                        Ключевое слово <span class="mean">auto</span> может быть задействовано в качестве значения ширины или высоты, чтобы сохранить пропорции фонового изображения. Так, если мы хотим установить высоту фоновой картинки на 75% от высоты элемента при сохранении её пропорций, то можем задать значение <span class="atr">background-size</span> как <span class="mean">auto 75%</span>.
+                    </p>
+                    <p>
+                        <img src="./img/background-img/bg-size-img/Screenshot_10.png" alt="background-size Пример">
+                        <img src="./img/background-img/bg-size-img/Screenshot_11.png" alt="background-size Пример">
+                        <img src="./img/background-img/bg-size-img/Screenshot_12.png" alt="background-size Пример">  
+                    </p>
+                    <div class="img13">
+                        </div>
+                    <div class="img23">
+                        </div>
+                    <p>.</p>
+                    <h4><em>cover</em></h4>
+                    <p>
+                        Значение <span class="mean">cover</span> указывает, что фоновое изображение будет изменено, чтобы полностью закрыть ширину и высоту элемента. 
+                    </p>
+                    <p>
+                        Исходное соотношение сторон фоновой картинки будет сохранено, пока изображение будет растягиваться или сжиматься по мере необходимости, чтобы охватить элемент целиком. 
+                    </p>
+                    <p>
+                        Часто при использовании значения <span class="mean">cover</span>  часть фонового изображения обрезается, чтобы изображение занимало всю доступную площадь элемента.
+                    </p>
+                    <p>
+                        <img src="./img/background-img/bg-size-img/Screenshot_13.png" alt="background-size Пример">
+                        <img src="./img/background-img/bg-size-img/Screenshot_14.png" alt="background-size Пример">
+                        <img src="./img/background-img/bg-size-img/Screenshot_15.png" alt="background-size Пример">
+                    </p>
+                    <div class="img14">
+                        </div>
+                    <div class="img24">
+                        </div>
+                    <p>.</p>
+                    <h4><em>contain</em></h4>
+                    <p>
+                        Ключевое слово <span class="mean">contain</span>, с другой стороны, указывает, что фоновое изображение будет изменено, чтобы целиком вписаться в ширину и высоту элемента. 
+                    </p>
+                    <p>
+                        При этом исходное соотношение сторон фоновое изображение будет сохранено, но картинка будет растягиваться или сжиматься по мере необходимости, чтобы остаться в пределах ширины и высоты элемента. 
+                    </p>
+                    <p>
+                        В отличие от <span class="mean">cover</span>, ключевое слово <span class="mean">contain</span> всегда показывает полное фоновое изображение, при этом зачастую оно не будет занимать всю доступную площадь элемента.
+                    </p>
+                    <p>
+                        <img src="./img/background-img/bg-size-img/Screenshot_16.png" alt="background-size Пример">
+                        <img src="./img/background-img/bg-size-img/Screenshot_17.png" alt="background-size Пример">
+                        <img src="./img/background-img/bg-size-img/Screenshot_18.png" alt="background-size Пример">
+                    </p>
+                    <div class="img15">
+                        </div>
+                    <div class="img25">
+                        </div>
+                    <p>
+                        Значения <span class="mean">cover</span> и <span class="mean">contain</span> могут привести к небольшим искажениям фоновых изображений, особенно, когда картинка растягивается за пределами своих исходных размеров. Мы должны следить за этим при использовании данных значений и убедиться, что стили в результате являются подходящими.
+                    </p>
+                    <p>.</p>
                 </section>
                 <section class="background" id="background">
                     <h2>Универсальное свойство <em>background</em></h2>
+                    <p>
+                        Свойства <em>background-color</em>, <em>background-image</em>, <em>background-repeat</em>, <em>background-position</em>, <em>background-attachment</em>, <em>background-origin</em>, <em>background-clip</em> и <em>background-size</em> могут выступать значением для единичного свойства <span class="atr">background</span>. 
+                    </p>
                     <div class="titles">
                         <h4>background</h4>
                         <p>

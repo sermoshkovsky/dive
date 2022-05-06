@@ -120,3 +120,147 @@ dd {
 .bcgr {
     width: 105%;
 }
+.playground-result {
+    height: 150px; /* Высота блока */
+    background-image: url(//webref.ru/example/image/shark.jpg); /* Фоновый рисунок */ 
+    background-size: cover; /* Масштабирование фона */
+    padding: 2rem 20px 20px; /* Поля */
+    border: 10px dashed rgb(194, 101, 88); /* Параметры рамки */
+    font-size: 3rem; /* Размер шрифта */ 
+    font-weight: bold; /* Толщина шрифта */
+    text-align: center; /* Расположение текста */
+    color: rgb(255, 255, 255); /* Цвет текста */
+    background-clip: border-box; /* Выведение фона */
+}
+.playground-result2 {
+    height: 150px; /* Высота блока */
+    background-image: url(//webref.ru/example/image/shark.jpg); /* Фоновый рисунок */ 
+    background-size: cover; /* Масштабирование фона */
+    padding: 2rem 20px 20px; /* Поля */
+    border: 10px dashed rgb(194, 101, 88); /* Параметры рамки */
+    font-size: 3rem; /* Размер шрифта */ 
+    font-weight: bold; /* Толщина шрифта */
+    text-align: center; /* Расположение текста */
+    color: rgb(255, 255, 255); /* Цвет текста */
+    background-clip: padding-box; /* Выведение фона */
+}
+.playground-result3 {
+    height: 150px; /* Высота блока */
+    background-image: url(//webref.ru/example/image/shark.jpg); /* Фоновый рисунок */ 
+    background-size: cover; /* Масштабирование фона */
+    padding: 2rem 20px 20px; /* Поля */
+    border: 10px dashed rgb(194, 101, 88); /* Параметры рамки */
+    font-size: 3rem; /* Размер шрифта */ 
+    font-weight: bold; /* Толщина шрифта */
+    text-align: center; /* Расположение текста */
+    color: rgb(255, 255, 255); /* Цвет текста */
+    background-clip: content-box; /* Выведение фона */
+}
+.img1 {
+    height: 280px;
+    width: 45%;
+    display: inline-block;
+    background-color: grey;
+    background-image: 
+        url(../img/background-img/bg-size-img/girl-images.jpg);
+    background-repeat: no-repeat;
+}
+.img2 {
+    height: 280px;
+    width: 45%;
+    display: inline-block;
+    background-color: grey;
+    background-image: 
+        url(../img/background-img/bg-size-img/cat-images.jpg);
+    background-repeat: no-repeat;    
+}
+.img11 {
+    height: 280px;
+    width: 45%;
+    display: inline-block;
+    background-color: grey;
+    background-image: url(../img/background-img/bg-size-img/girl-images.jpg);
+    background-repeat: no-repeat;
+    background-size: 250px;
+}
+.img21 {
+    height: 280px;
+    width: 45%;
+    display: inline-block;
+    background-color: grey;
+    background-image: url(../img/background-img/bg-size-img/cat-images.jpg);
+    background-repeat: no-repeat;
+    background-size: 250px;
+}
+.img12 {
+    height: 280px;
+    width: 45%;
+    display: inline-block;
+    background-color: grey;
+    background-image: url(../img/background-img/bg-size-img/girl-images.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.img22 {
+    height: 280px;
+    width: 45%;
+    display: inline-block;
+    background-color: grey;
+    background-image: url(../img/background-img/bg-size-img/cat-images.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.img13 {
+    height: 280px;
+    width: 45%;
+    display: inline-block;
+    background-color: grey;
+    background-image: url(../img/background-img/bg-size-img/girl-images.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 75%;
+}
+.img23 {
+    height: 280px;
+    width: 45%;
+    display: inline-block;
+    background-color: grey;
+    background-image: url(../img/background-img/bg-size-img/cat-images.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 75%;
+}
+.img14 {
+    height: 280px;
+    width: 45%;
+    display: inline-block;
+    background-color: grey;
+    background-image: url(../img/background-img/bg-size-img/girl-images.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img24 {
+    height: 280px;
+    width: 45%;
+    display: inline-block;
+    background-color: grey;
+    background-image: url(../img/background-img/bg-size-img/cat-images.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img15 {
+    height: 280px;
+    width: 45%;
+    display: inline-block;
+    background-color: grey;
+    background-image: url(../img/background-img/bg-size-img/girl-images.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.img25 {
+    height: 280px;
+    width: 45%;
+    display: inline-block;
+    background-color: grey;
+    background-image: url(../img/background-img/bg-size-img/cat-images.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
