@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Несколько фоновых картинок</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/background-multiple.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <a href="../../00_Home/index.html" target="_blank">Главная</a> | 
+                <a href="./css-1.html" target="_blank">CSS-1</a> | 
+                <a href="./css-properties.html" target="_blank">CSS-свойства</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="background-multiple" id="background-multiple">
+                <h1>Несколько фоновых картинок</h1>
+                <p>
+                    К одному элементу можно добавить сразу несколько фоновых изображений через единственное свойство <span class="atr">background</span>. Это позволяет обойтись одним элементом для создания сложного фона или одной картинкой, выводя её несколько раз с различными настройками.
+                </p>
+                <p>
+                    Все изображения со своими параметрами перечисляются через запятую, при этом вначале указывается картинка которая выводится поверх остальных изображений, а последней, соответственно, самая нижняя картинка.
+                </p>
+                <p>
+                    Если требуется отдельно задать какое-то стилевое свойство для фона, вроде <span class="atr">background-size</span>, то параметры для каждого фона перечисляются через запятую.
+                </p>
+                <h2>Создание фона с тремя изображениями</h2>
+                <p>
+                    <img src="./img/background-multiple-img/Screenshot_19.png" alt="background-multiple">
+                    <img src="./img/background-multiple-img/Screenshot_20.png" alt="background-multiple">
+                </p>
+                <div class="multiple">
+
+                    </div>
+                <p>.</p>
+                <p>
+                    Отдельные изображения для фона позволяют менять их положение, а также анимировать
+                </p>
+                <p>
+                    <img src="./img/background-multiple-img/Screenshot_21.png" alt="background-multiple">
+                    <img src="./img/background-multiple-img/Screenshot_22.png" alt="background-multiple">
+                </p>
+                <div class="multiple2">
+
+                    </div>
+                <section class="bg-multiblock">
+                    <h2>Одна картинка для создания блока с рамкой</h2>
+                    <p>
+                        Рассмотрим теперь как применять одну картинку для создания блока с рамкой. 
+                    </p>
+                    <p>
+                        Ширина блока фиксированная, а высота тянется в зависимости от объёма содержимого блока. 
+                    </p>
+                    <div>
+                        <img src="./img/background-multiple-img/Screenshot_1.png" alt="Одна картинка для создания блока с рамкой">
+                    </div>
+                    <p>
+                        На рисунке хорошо заметна верхняя и нижняя часть, которую требуется вырезать в графическом редакторе и расположить по горизонтали. 
+                    </p>
+                    <p>
+                        Средняя часть выбирается таким образом, чтобы она повторялась без швов по вертикали. Картинка имеет выраженный повторяющийся орнамент, так что трудностей с выделением быть не должно. 
+                    </p>
+                    <p>
+                        В итоге получится такое подготовленное изображение. Клетчатое поле обозначает прозрачность, оно позволяет задавать наряду с изображениями цветной фон и легко менять его через стили.
+                    </p>
+                     <div>
+                        <img src="./img/background-multiple-img/Screenshot_2.png" alt="Одна картинка для создания блока с рамкой">
+                    </div>
+                    <p>
+                        Сам фон выводится свойством <span class="atr">background</span>, оно же задаёт и координаты нужного фрагмента. Параметры каждого фона перечисляются через запятую и в данном случае имеет значение их порядок. 
+                    </p>
+                    <p>
+                        Нам требуется, чтобы верхняя и нижняя часть блока не перекрывались, поэтому ставим их первыми. Цвет фона указывается последним.
+                    </p>
+                    <p>
+                        Первый фон выводит верхнюю границу блока, второй фон — нижнюю, а третий вертикальные границы. Последним идёт цвет, который виден в прозрачной центральной части блока. 
+                    </p>
+                        <div>
+                            <img src="./img/background-multiple-img/Screenshot_3.png" alt="Одна картинка для создания блока с рамкой">
+                        </div>
+                        <div>
+                            <img src="./img/background-multiple-img/Screenshot_4.png" alt="Одна картинка для создания блока с рамкой">
+                        </div>
+                        <div class="aztec">
+                            <p>Уицилопочтли — «колдун колибри», бог войны и солнца.</p>
+                            <p>Тескатлипока — «дымящееся зеркало», главный бог ацтеков.</p> 
+                            <p>Обоим богам приносили человеческие жертвы.</p>
+                        </div>
+                </section>
+            </section>
+            <a href="#header" class="btn">ВВЕРХ</a>
+        </div>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p> 
+        </div>
+    </footer>
+</body>
+</html>
