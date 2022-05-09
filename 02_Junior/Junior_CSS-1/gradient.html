@@ -75,12 +75,14 @@
                         </p>
                         <h6>Синтаксис </h6>
                         <p>
-                            <img src="./img/gradient-img/Screenshot_1.png" alt="Линейный градиент">
+                            <pre>
+                            <span class="atr">background-image</span>: <span class="mean">linear-gradient</span>([<span class="mean">&lt;<i>угол</i>&gt;</span> | <span class="mean">to</span> <span class="mean">&lt;<i>позиция</i>&gt;</span>]?, <span class="mean">&lt;<i>цвет</i>&gt;</span> [, <span class="mean">&lt;<i>цвет</i>&gt;</span>]);
+                            </pre>
                         </p>
                         <h6>Значения</h6>
                         <dl>
                             <dt>
-                                <span class="mean">&lt;угол&gt;</span>
+                                <span class="mean">&lt;<i>угол</i>&gt;</span>
                                 <dd>
                                     Задаёт <strong>угол наклона</strong> градиентной линии, который показывает <strong>направление</strong> градиента. Вначале пишется <em>положительное</em> или <em>отрицательное</em> значение угла, затем к нему слитно добавляется <span class="mean">deg</span>.
                                     <p>
@@ -92,13 +94,13 @@
                                 </dd>
                             </dt>
                             <dt>
-                                <span class="mean">&lt;цвет&gt;</span>
+                                <span class="mean">&lt;<i>цвет</i>&gt;</span>
                                 <dd>
                                     Представляет собой <strong>значение цвета</strong>, за которым идёт необязательная позиция цвета относительно оси градиента, она задаётся в процентах от <span class="mean">0%</span> до <span class="mean">100%</span> или в любых других подходящих для CSS единицах.
                                 </dd>
                             </dt>
                             <dt>
-                                <span class="mean">&lt;позиция&gt;</span>
+                                <span class="mean">&lt;<i>позиция</i>&gt;</span>
                                 <dd>
                                     Для записи позиции вначале пишется <span class="mean">to</span>, а затем добавляются ключевые слова <span class="mean">top</span>, <span class="mean">bottom</span> и <span class="mean"></span>left, <span class="mean">right</span>, а также их сочетания. Порядок слов не важен, можно написать <span class="mean">to left top</span> или <span class="mean">to top left</span>.   
                                 </dd>
@@ -429,15 +431,339 @@
                 </section>
                 <section class="radial-gradient" id="radial-gradient">
                     <h2>Радиальный градиент</h2>
-                    <div class="titles">
-                        <h4>radial-gradient()</h4>
-                        <p>
-                            <a href="" target="_blank">Справочник CSS</a>
-                        </p>
-                    </div>
                     <p>
-                        <strong></strong>
+                        В то время как линейный градиент идеально подходит для градиентного перехода от одного направления к другому, часто возникает необходимость в радиальном градиенте.
                     </p>
+                    <p>
+                        Радиальные градиенты по своему принципу похожи на линейные, но один цвет переходит в другой не вдоль прямой линии, а распространяется во всех направлениях, словно круги по воде вокруг точки. <strong> Радиальные градиенты работают изнутри наружу элемента.</strong>
+                    </p>
+                    <p>
+                        На рис.  представлено для сравнения одновременно два разных градиента: радиальный (рис. а) и линейный (рис. б).
+                    </p>
+                    <p>
+                        <img src="./img/gradient-img/Screenshot_16.png" alt="Радиальный и линейный градиент">
+                    </p>
+                    <p>
+                        Их синтаксис очень похож на линейные градиенты, поскольку у тех и других есть точки цвета. Но вместо указания направления вам необходимо задать:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>форму:</strong> круг или эллипс;
+                        </li>
+                        <li>
+                            <strong>начальную точку:</strong> которая будет центром круга или эллипса;
+                        </li>
+                        <li>
+                            <strong>конечную точку:</strong> где будет край круга или эллипса.
+                        </li>
+                    </ul>
+                    <p>
+                        Радиальный градиент создаётся с помощью свойства <span class="atr">background</span> или <span class="atr">background-image</span> с функцией <span class="mean">radial-gradient()</span>. 
+                    </p>
+                    <section>
+                        <div class="titles">
+                            <h4>radial-gradient()</h4>
+                            <p>
+                                <a href="https://webref.ru/css/value/radial-gradient" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            <strong>Функция <span class="mean">radial-gradient()</span> добавляет радиальный градиент к фону элемента. </strong>
+                        </p>
+                        <h6>Синтаксис</h6>
+                        <p>
+                            <pre>
+                                <span class="slc">background-image</span>: <span class="mean">radial-gradient</span>([ <span class="mean">circle</span> || <span class="mean">&lt;<i>радиус</i>&gt;</span> ] [ <span class="mean">at</span> <span class="mean">&lt;<i>позиция</i>&gt;</span> ]? ,
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| [ <span class="mean">ellipse</span> || [<span class="mean">&lt;<i>радиус</i>&gt;</span> | <span class="mean">&lt;<i>проценты</i>&gt;</span> ]{2}] [ <span class="mean">at</span> <span class="mean">&lt;<i>позиция</i>&gt;</span> ]? ,
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| [ [ <span class="mean">circle</span> | <span class="mean">ellipse</span> ] || <span class="mean">&lt;<i>размер</i>&gt;</span> ] [ <span class="mean">at</span> <span class="mean">&lt;<i>позиция</i>&gt;</span> ]? ,
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="mean">at</span> <span class="mean">&lt;<i>позиция</i>&gt;</span> ,
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="mean">&lt;<i>цвет</i>&gt;</span> [ , <span class="mean">&lt;<i>цвет</i>&gt;</span> ])
+                            </pre>
+                        </p>
+                        <h6>Значения</h6>
+                        <dl>
+                            <dt>
+                                <span class="mean">circle</span>
+                                <dd>
+                                    Радиальный градиент круглой формы.
+                                </dd>
+                            </dt>
+                            <dt>
+                                <span class="mean">ellipse</span>
+                                <dd>
+                                    Создаёт градиент эллиптической формы. (Эта форма установлена по умолчанию)
+                                </dd>
+                            </dt>
+                            <dt>
+                                <span class="mean">&lt;<i>радиус</i>&gt;</span>
+                                <dd>
+                                    Радиус градиента в доступных для CSS единицах. <br>
+                                    Одно значение указывает <strong>радиус круга</strong>, два значения — <strong>радиус эллипса</strong> по оси <span class="mean">x</span> и его же радиус по оси <span class="mean">y</span>. <br>
+                                    Если радиус явно не указан, градиент будет заполнять собой весь фон элемента.
+                                </dd>
+                            </dt>
+                            <dt>
+                                <span class="mean">&lt;<i>позиция</i>&gt;</span>
+                                <dd>
+                                    Задаёт начальную точку откуда исходит градиент.<br>
+                                    Позиция точки пишется аналогично значениям свойства <span class="atr">background-position</span> с помощью ключевых слов или доступных единиц измерения вроде пикселей или процентов;
+                                </dd>
+                            </dt>
+                            <dt>
+                                <span class="mean">&lt;<i>цвет</i>&gt;</span>
+                                <dd>
+                                    Представляет собой значение цвета, за которым идёт необязательная позиция цвета относительно оси градиента. <br>
+                                    Она задаётся в процентах от 0% до 100% или в любых других подходящих для CSS единицах.
+                                </dd>
+                            </dt>
+                            <dt>
+                                <span class="mean">&lt;<i>размер</i>&gt;</span>
+                                <dd>
+                                    Устанавливает размер градиента. 
+                                </dd>
+                            </dt>
+                        </dl>
+                    </section>
+                    <section>
+                        <h3>Простой градиент из двух цветов</h3>
+                        <p>
+                            <strong>По умолчанию:</strong>
+                        </p>
+                        <ul>
+                            <li>
+                                градиент является <strong>эллипсом</strong>;
+                            </li>
+                            <li>
+                                первый цвет начинается в <strong>центре</strong>;
+                            </li>
+                            <li>
+                                последний цвет заканчивается в <strong>самом дальнем углу</strong>. 
+                            </li>
+                        </ul>
+                        <p>
+                            <img src="./img/gradient-img/Screenshot_1.png" alt="Радиальный градиент">
+                        </p>
+                        <div class="radial"></div>
+                    </section>
+                    <section>
+                        <h3>Начальная позиция</h3>
+                        <p>
+                            Начальную точку градиента можно задавать в любом месте элемента, для этого вначале указывается её позиция. 
+                        </p>
+                        <p>
+                            <strong>Начальная позиция</strong>  работает как <span class="atr">background-position</span> с помощью ключевых слов или доступных единиц измерения вроде пикселей или процентов. Вы можете установить её через ключевое слово <span class="mean">at</span>.
+                        </p>
+                        <p> Возможные сочетания:</p>
+                                    <ul>
+                                        <li>
+                                            <strong>top left</strong> = <strong>left top</strong> = <strong>0% 0%</strong> (<em>в левом верхнем углу</em>);
+                                        </li>
+                                        <li>
+                                            <strong>top</strong> = <strong>top center</strong> = <strong>center top</strong> = <strong>50% 0%</strong> (<em>по центру вверху</em>);
+                                        </li>
+                                        <li>
+                                            <strong>right top</strong> = <strong>top right</strong> = <strong>100% 0%</strong> (<em>в правом верхнем углу</em>);
+                                        </li>
+                                        <li>
+                                            <strong>left</strong> = <strong>left center</strong> = <strong>center left</strong> = <strong>0% 50%</strong> (<em>по левому краю и по центру</em>);
+                                        </li>
+                                        <li>
+                                            <strong>center</strong> = <strong>center center</strong> = <strong>50% 50%</strong> (<em>по центру</em>) — <em><strong>это значение по умолчанию</strong></em>;
+                                        </li>
+                                        <li>
+                                            <strong>right</strong> = <strong>right center</strong> = <strong>center right</strong> = <strong>100% 50%</strong> (<em>по правому краю и по центру</em>);
+                                        </li>
+                                        <li>
+                                            <strong>bottom left</strong> = <strong>left bottom</strong> = <strong>0% 100%</strong> (<em>в левом нижнем углу</em>);
+                                        </li>
+                                        <li>
+                                            <strong>bottom</strong> = <strong>bottom center</strong> = <strong>center bottom</strong> = <strong>50% 100%</strong> (<em>по центру внизу</em>);
+                                        </li>
+                                        <li><strong>bottom right</strong> = <strong>right bottom</strong> = <strong>100% 100%</strong> (<em>в правом нижнем углу</em>).</li>
+                                    </ul> 
+                        <p>
+                            <img src="./img/gradient-img/Screenshot_17.png" alt="Радиальный градиент - Начальная позиция">
+                        </p>
+                        <div class="radial1"></div>
+                    </section>
+                    <section>
+                        <h3>Эллипс и круг</h3>
+                        <p>
+                            Возможны две формы радиального градиента — круг (<span class="mean">circle</span>) и эллипс (<span class="mean">ellipse</span>), которые различаются своим видом.
+                        </p>
+                        <p>
+                            <img src="./img/gradient-img/Screenshot_18.png" alt="Радиальный градиент">
+                        </p>
+                        <p>
+                            <img src="./img/gradient-img/Screenshot_19.png" alt="Радиальный градиент">
+                            <img src="./img/gradient-img/Screenshot_20.png" alt="Радиальный градиент">
+                        </p>
+                        <p>
+                            По умолчанию устанавливается эллиптический градиент.
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Конечная позиция (размер градиента)</h3>
+                        <p>
+                            Наряду с типом градиента можно задавать и его размер, который зависит от конечной позиции градиента, задаваемой с помощью ключевых слов. 
+                        </p>
+                        <ul>
+                            <li>closest-side</li>
+                            <li>closest-corner</li>
+                            <li>farthest-side</li>
+                            <li>farthest-corner</li>
+                        </ul>
+                        <p>
+                            Размер пишется через пробел после типа градиента (<span class="mean">circle</span> или <span class="mean">ellipse</span>)
+                        </p>
+                        <p>
+                            <img src="./img/gradient-img/Screenshot_21.png" alt="Радиальный градиент">
+                        </p>
+                        <p>
+                            По умолчанию форма завершается <strong>в самом дальнем углу</strong>. 
+                        </p>
+                        <p>
+                            В табл. перечислены возможные значения размера с их описанием и результатом для белого и чёрного цвета. Код и вид дан для кругового и эллиптического градиента.
+                        </p>
+                        <table class="data2">
+                            <caption><strong>Ключевые слова для изменения размера градиента</strong></caption> 
+                            <tbody>
+                                <tr>
+                                    <th>Значение</th> 
+                                    <th>Код</th> 
+                                    <th>Описание</th> 
+                                    <th style="width: 160px;">Вид</th>
+                                </tr> 
+                                <tr>
+                                    <td class="sel">
+                                        closest-side
+                                    </td> 
+                                    <td>
+                                        <p>
+                                            background: radial-gradient(circle <span class="sel">closest-side at 30px 20px</span>, #fff, #000);
+                                        </p> 
+                                        <p>
+                                            background: radial-gradient(<span class="sel">closest-side at 30px 20px</span>, #fff, #000);
+                                        </p>
+                                    </td> 
+                                    <td>
+                                        Градиент совпадает с ближайшей к нему стороной блока (для круга) или одновременно совпадает с ближайшими горизонтальными и вертикальными сторонами (для эллипса).
+                                    </td> 
+                                    <td>
+                                        <img src="https://webref.ru/assets/images/css/rgradient1.png" alt="contain" height="121" width="160">
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td class="sel">
+                                        closest-corner
+                                    </td> 
+                                    <td>
+                                        <p>
+                                            background: radial-gradient(circle <span class="sel">closest-corner at 30px 20px</span>, #fff, #000);
+                                        </p> 
+                                        <p>
+                                            background: radial-gradient(<span class="sel">closest-corner at 30px 20px</span>, #fff, #000);
+                                        </p>
+                                    </td> 
+                                    <td>
+                                        Форма градиента вычисляется на основании информации о расстоянии до ближайшего угла блока.
+                                    </td> 
+                                    <td>
+                                        <img src="https://webref.ru/assets/images/css/rgradient2.png" alt="closest-corner" height="121" width="160">
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td class="sel">
+                                        farthest-side
+                                    </td> 
+                                    <td>
+                                        <p>
+                                            background: radial-gradient(circle <span class="sel">farthest-side at 30px 20px</span>, #fff, #000);
+                                        </p> 
+                                        <p>
+                                            background: radial-gradient(<span class="sel">farthest-side at 30px 20px</span>, #fff, #000);
+                                        </p>
+                                    </td> 
+                                    <td>
+                                        Похож по своему действию на<span class="sel"> closest-side</span>, но  градиент распространяется до дальней стороны блока.
+                                    </td> 
+                                    <td>
+                                        <img src="https://webref.ru/assets/images/css/rgradient3.png" alt="farthest-side" height="121" width="160">
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td class="sel">
+                                        farthest-corner
+                                    </td> 
+                                    <td>
+                                        <p>
+                                            background: radial-gradient(circle <span class="sel">farthest-corner at 30px 20px</span>, #fff, #000);
+                                        </p> 
+                                        <p>background: radial-gradient(<span class="sel">farthest-corner at 30px 20px</span>, #fff, #000);
+                                        </p>
+                                    </td> 
+                                    <td>
+                                        Форма градиента вычисляется на основании информации о расстоянии до дальнего угла блока,
+                                    </td> 
+                                    <td>
+                                        <img src="https://webref.ru/assets/images/css/rgradient4.png" alt="cover" height="121" width="160">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            Для центральной начальной точки градиенты вроде <span class="mean">closest-corner</span> и <span class="mean">farthest-side</span> совпадают. Но градиенты будут различаться, если установить начальную точку в углу. 
+                        </p>
+                        <h3>Фиксированный размер</h3>
+                        <p>
+                            Вместо установки начальной и конечной позиций, вы можете просто задать <strong>конкретные размеры</strong>:
+                        </p>
+                        <p>
+                            <img src="./img/gradient-img/Screenshot_22.png" alt="Радиальный градиент"> 
+                        </p>
+                        <div class="radial2"></div>
+                    </section>
+                    <section>
+                        <h3>Добавление нескольких цветов</h3>
+                        <p>
+                            Подобно линейному градиенту, можно:
+                        </p>
+                        <ul>
+                            <li>
+                                указывать несколько цветов
+                            </li>
+                            <li>
+                                устанавливать их позицию
+                            </li>
+                            <li>
+                                делать резкие переходы между цветами
+                            </li>
+                        </ul>
+                        <p>
+                            Для этого произвольное количество цветов перечисляется через запятую, а после значения цвета через пробел идёт его позиция, которая может быть задана в пикселях или процентах. Крайние значения 0% и 100% можно не писать, они подразумеваются автоматически.
+                        </p>
+                        <p>
+                            <img src="./img/gradient-img/Screenshot_23.png" alt="Радиальный градиент">
+                        </p>
+                        <p>
+                            <img src="./img/gradient-img/Screenshot_24.png" alt="Радиальный градиент">
+                        </p>
+                        <div class="radial3"></div>
+                        <h3>Резкие переходы</h3>
+                        <p>
+                            Резкие переходы получаются, когда позиция одного цвета совпадает с позицией другого, как показано в примере. 
+                        </p>
+                        <p>
+                            Разница в один процент сделана, чтобы немного сгладить переход, иначе получается «лесенка» из пикселей, что смотрится не очень красиво.
+                        </p>
+                        <p>
+                            <img src="./img/gradient-img/Screenshot_26.png" alt="Радиальный градиент">
+                            <img src="./img/gradient-img/Screenshot_25.png" alt="Радиальный градиент">
+                        </p>
+                        <div class="radial5">
+                            <div class="radial4"></div>
+                        </div>
+                    </section>
                 </section>
             </article> 
             <a href="#header" class="btn">ВВЕРХ</a>
