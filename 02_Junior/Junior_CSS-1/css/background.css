@@ -262,3 +262,40 @@ dd {
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+.multiple {
+    width: 100%;
+    height: 400px;
+    background: url(//webref.ru/example/image/animate-bg3.png) 80% 50% no-repeat fixed, 
+                url(//webref.ru/example/image/animate-bg2.png) 40% 40% no-repeat fixed, 
+                url(//webref.ru/example/image/animate-bg1.jpg) no-repeat fixed;
+    background-size: auto, auto, cover; /* Меняем масштаб */
+   }
+.multiple2 {
+    width: 100%;
+    height: 400px;
+    background: url(//webref.ru/example/image/animate-bg3.png) 80% 50% no-repeat , 
+                url(//webref.ru/example/image/animate-bg2.png) 40% 40% no-repeat , 
+                url(//webref.ru/example/image/animate-bg1.jpg) no-repeat ;
+    background-size: auto, auto, cover; /* Меняем масштаб */
+    animation: ball 40s linear infinite;
+}
+   @keyframes ball {
+    from { background-position: 700px 90%, 180% 40%, 0 0; }
+    to { background-position: -200px 90%, -300px 20%, 0 0; }
+}
+
+.heart, .checkbox {
+    width: 64px; height: 64px; /* Размеры картинок */
+    background: url(../img/background-multiple-img/sprite.png) no-repeat; /* Спрайт */
+    display: inline-block; /* Выстраиваем по горизонтали */
+   }
+   .heart:hover {
+    background-position: 0 -64px ; /* Сдвигаем вверх */
+   }
+   .checkbox {
+    background-position: -64px 0; /* Сдвигаем влево */
+   }
+   .checkbox:hover {
+    background-position: -64px -64px; /* Сдвигаем влево и вверх  */
+   }

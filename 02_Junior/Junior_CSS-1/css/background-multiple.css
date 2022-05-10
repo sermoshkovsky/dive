@@ -119,27 +119,6 @@ dd {
     padding-left: 20px;
 }
 
-.multiple {
-    width: 100%;
-    height: 400px;
-    background: url(//webref.ru/example/image/animate-bg3.png) 80% 50% no-repeat fixed, 
-                url(//webref.ru/example/image/animate-bg2.png) 40% 40% no-repeat fixed, 
-                url(//webref.ru/example/image/animate-bg1.jpg) no-repeat fixed;
-    background-size: auto, auto, cover; /* Меняем масштаб */
-   }
-.multiple2 {
-    width: 100%;
-    height: 400px;
-    background: url(//webref.ru/example/image/animate-bg3.png) 80% 50% no-repeat , 
-                url(//webref.ru/example/image/animate-bg2.png) 40% 40% no-repeat , 
-                url(//webref.ru/example/image/animate-bg1.jpg) no-repeat ;
-    background-size: auto, auto, cover; /* Меняем масштаб */
-    animation: ball 40s linear infinite;
-}
-   @keyframes ball {
-    from { background-position: 700px 90%, 180% 40%, 0 0; }
-    to { background-position: -200px 90%, -300px 20%, 0 0; }
-}
 
 .aztec {
     width: 212px; /* Ширина блока с учётом padding */
@@ -151,4 +130,5 @@ dd {
       #f3dbb3;
     padding: 38px; /* Поля вокруг текста с учётом границы */
 }
+
 
