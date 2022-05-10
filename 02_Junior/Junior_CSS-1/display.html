@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/display.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <a href="../../00_Home/index.html" target="_blank">Главная</a> | 
+                <a href="./css-1.html" target="_blank">CSS-1</a> | 
+                <a href="./css-properties.html" target="_blank">CSS-свойства</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <article>
+               <h1>Свойство display</h1>
+               <p>
+                В HTML4 практически все элементы относятся к двум типам, различающихся своим поведением и свойствами — это блочные и строчные элементы. 
+               </p> 
+               <ul>
+                   <li>
+                    <strong>Блочные</strong> элементы (такие как <span class="tag">&lt;p&gt;</span>, <span class="tag">&lt;ol&gt;</span>, <span class="tag">&lt;div&gt;</span>) начинаются с новой строки и занимают всё доступное им пространство по ширине, независимо от содержимого.
+                   </li>
+                   <li>
+                    <strong>Строчные</strong> (такие как <span class="tag">&lt;a&gt;</span>, <span class="tag">&lt;var&gt;</span>, <span class="tag">&lt;span&gt;</span>) являются частью строки и размеры элементов определяются их содержимым.
+                   </li>
+               </ul>
+               <section class="elements">
+                <h2>Блочные и строчные элементы</h2>
+                <p>
+                    HTML5 отказался от разделения элементов на блочные и строчные, поскольку во многих случаях это порождает лишь путаницу и неверное использование элементов. К примеру, часто возникают ошибки с вложением одних элементов в другие.
+                </p>
+                <p>
+                    Тем не менее, само деление никуда не делось, но осуществляется через CSS. И теперь, когда мы говорим что элемент является блочным, это подразумевает его стилевое оформление. 
+                </p>
+                <p>
+                    Само превращение элемента через стили в блочный или строчный активно применяется в вёрстке веб-страниц:
+                </p>
+                <ul>
+                    <li>
+                            для компоновки элементов;
+                    </li>
+                    <li>
+                            для изменения поведения и характеристик элементов;
+                    </li>
+                    <li>
+                            для управления видом элементов.
+                    </li>
+                </ul>
+                <p>
+                        Таким образом, знание типов элементов позволяет сократить число ошибок в коде, быстро и корректно верстать блоки веб-страниц.
+                </p>
+                <p>
+                    Как именно отображаются элементы — как блочные или строчные или как-то ещё, определяется свойством <span class="atr">display</span>.  
+                </p>
+                <p>
+                    Есть немало значений для свойства <span class="atr">display</span>, но наиболее распространённые это <span class="mean">block</span>, <span class="mean">inline</span>, <span class="mean">inline-block</span> и <span class="mean">none</span>.
+                </p>
+                <ul>
+                    <li>
+                        <a href="#block"><strong>Блочные элементы</strong></a>
+                    </li>
+                    <li>
+                        <a href="#inline"><strong>Строчные элементы</strong></a>
+                    </li>
+                    <li>
+                        <a href="#inline-block"><strong>Строчно-блочные элементы</strong></a>
+                    </li>
+                    <li>
+                        <a href="#display"><strong>display в CSS</strong></a>
+                    </li>
+                </ul>
+                <h5>Почему бы не использовать строчные элементы, такие как <span class="tag">&lt;span&gt;</span>?</h5>
+                <p>
+                    Потому что вы выбираете элемент HTML по его <strong>смыслу</strong>, а не отображению. 
+                </p>
+                <p>
+                    Если мы решили, что абзац подходит нашему содержимому лучше всего, <em>мы не должны менять тег ради стилизации</em>. Это CSS заботится о стилизации.
+                </p>
+                <p>
+                    <strong><span class="atr">display</span> позволяет сменить тип элемента без изменения его смысла.</strong>
+                </p>
+                <ul>
+                    <li>
+                        <span class="mean">block </span> будет занимать всю доступную ширину;
+                    </li>
+                    <li>
+                        <span class="mean">inline </span> будет действовать как обычный текст;
+                    </li>
+                    <li>
+                        <span class="mean">inline-block</span> является, как предполагает его название, соединением блочного и строчного поведения, вариант «лучшее из обоих миров»;
+                    </li>
+                    <li>
+                        <span class="mean">list-item</span> похож на <span class="mean">block</span>, так как он занимает всю доступную ширину, но показывает дополнительный маркер пункта списка;
+                    </li>
+                    <li>
+                        у <span class="mean">table</span>, <span class="mean">table-row</span> и <span class="mean">table-cell</span> очень специфическое, хотя и неожиданное поведение, которое позволяет строить более интересные макеты.
+                    </li>
+                </ul>
+                </section>
+               <section class="block" id="block">
+                <h2>Блочные элементы</h2>
+                <p>
+                    Блочным называется элемент, который занимает всю доступную ширину и всегда начинается с новой строки. 
+                </p>
+                <p>
+                    У элементов с таким поведением в стилях свойство <span class="atr">display</span> задано как <span class="mean">block</span>, <span class="mean">list-item</span>, <span class="mean">table</span> и в некоторых случаях <span class="mean">run-in</span>. 
+                </p>
+                <section>
+                    <h3>Особенности блочных элементов</h3>
+                    <p>Для блочных элементов характерны следующие особенности.</p>
+                    <section>
+                        <h5>По ширине блочные элементы занимают всё допустимое пространство.</h5>
+                        <p>
+                            Если элемент располагается непосредственно внутри <body>, то он будет занимать всю ширину веб-страницы. 
+                        </p>
+                        <p>
+                            Если один элемент находится внутри другого, то он будет занимать всю ширину своего родителя.
+                        </p>
+                        <div>
+                            <img src="./img/display-img/Screenshot_2.png" alt="Блочные элементы">
+                            <img src="./img/display-img/Screenshot_1.png" alt="Блочные элементы">
+                        </div>
+                        <p>
+                            Элемент <span class="tag">&lt;section&gt;</span> занимает всю ширину веб-страницы, а заголовок <span class="tag">&lt;h2&gt;</span> и абзац <span class="tag">&lt;p&gt;</span> внутри <span class="tag">&lt;section&gt;</span> занимают всю доступную ширину блока.
+                        </p>
+                        <section class="example">
+                            <h2>Дочь Монтесумы</h2>
+                            <p>Они шли, чтобы покорить нас, чтобы пытать нас и сжигать     
+                                живьем на кострах, они шли, чтобы сделать с нами, вольными англичанами, то же самое, что Кортес сделал с индейцами Анауака</p>
+                        </section>
+                    </section>
+                    <section>
+                        <h5>Ширина блока складывается из значений свойств <span class="atr">width</span>, <span class="atr">padding</span>, <span class="atr">border</span> и <span class="atr">margin</span>.</h5>
+                        <p>
+                            В примере 1 намеренно не указано свойство <span class="atr">width</span>, которое определяет ширину содержимого блока.  
+                        </p>
+                        <p>
+                            Как только мы добавляем <span class="atr">width</span>, то блок уже не будет занимать всё доступное пространство по ширине.
+                            При этом ширина самого блока определяется сложением значений <span class="atr">margin-left</span>, <span class="atr">border-left</span>, <span class="atr">padding-left</span>, <span class="atr">width</span>, <span class="atr">padding-right</span>, <span class="atr">border-right</span>, <span class="atr">margin-right</span>.
+                        </p>
+                        <p>
+                            Иными словами, ширина содержимого плюс значения свойств <span class="atr">padding</span>, <span class="atr">border</span> и <span class="atr">margin</span> слева и справа (пример 2)
+                        </p>
+                        <div>
+                            <img src="./img/display-img/Screenshot_3.png" alt="Особенности блочных элементов">
+                        </div>
+                        <p>
+                            В данном примере добавлено свойство <span class="atr">width</span> со значением <span class="mean">400px</span>. 
+                        </p>
+                        <p>
+                            В итоге, ширина самого блока будет 440 пикселей, поскольку из всего набора свойств у нас есть только <span class="atr">width</span> и <span class="atr">padding</span> (рис. 2). Не забываем, что к <span class="atr">width</span> надо добавлять левый и правый <span class="atr">padding</span>. При этом, как можно заметить, заголовок также имеет свои внутренние отступы. 
+                        </p>
+                        <section class="example1">
+                            <h2>Дочь Монтесумы</h2>
+                            <p>Они шли, чтобы покорить нас, чтобы пытать нас и сжигать     
+                                живьем на кострах, они шли, чтобы сделать с нами, вольными англичанами, то же самое, что Кортес сделал с индейцами Анауака</p>
+                        </section>
+                        <p>
+                            Всё это кажется довольно сложным, так что следует помнить, что <span class="atr">width</span> — это не ширина блока, а лишь ширина содержимого, а сам блок состоит из его содержимого, отступов, границ и полей.
+                        </p>
+                        <p>
+                            Для упрощения применяется свойство <span class="atr">box-sizing</span>, которое меняет алгоритм расчёта ширины.
+                        </p>
+                        <p>
+                            При значении <span class="mean">border-box</span> свойство <span class="atr">width</span> определяет уже ширину блока, включая <span class="atr">padding</span> и <span class="atr">border</span>, но не <span class="atr">margin</span> (пример 3).
+                        </p>
+                        <div>
+                            <img src="./img/display-img/Screenshot_4.png" alt="Особенности блочных элементов">
+                        </div>
+                        <p>
+                            Теперь <span class="atr">width</span> устанавливает не ширину содержимого, а ширину блока целиком и она равна <span class="mean">400px</span> (рис. 3).
+                        </p>
+                        <section class="example2">
+                            <h2>Дочь Монтесумы</h2>
+                            <p>Они шли, чтобы покорить нас, чтобы пытать нас и сжигать     
+                                живьем на кострах, они шли, чтобы сделать с нами, вольными англичанами, то же самое, что Кортес сделал с индейцами Анауака</p>
+                        </section>
+                    </section>
+                    <section>
+                        <h5>Высота блочного элемента вычисляется браузером автоматически, исходя из содержимого блока.</h5>
+                        <p>
+                            Для высоты элемента работают те же принципы, что и для ширины, за исключением того, что высота блока зависит от высоты содержимого и меняется динамически, например, при изменении размера шрифта или окна браузера. 
+                        </p>
+                        <p>
+                            Если явно установить высоту содержимого через свойство <span class="atr">height</span>, то высота блока складывается из <span class="atr">height</span> и значений <span class="atr">margin</span>, <span class="atr">border</span>, <span class="atr">padding</span> сверху и снизу (пример 4).
+                        </p>
+                        <div>
+                            <img src="./img/display-img/Screenshot_5.png" alt="Высота блочного элемента">
+                            <img src="./img/display-img/Screenshot_6.png" alt="Высота блочного элемента">
+                        </div>
+                        <p>
+                            При превышении указанной высоты содержимое отображается поверх блока (рис. 4).
+                        </p>
+                        <section class="example31">
+                            <div class="example3">
+                                <p>Львы обитают в Африке южнее пустыни Сахары, также в небольшом
+                                    количестве водятся в Индии. Взрослый лев способен съесть 20–30 килограммов мяса за один присест. Средний самец льва имеет длину около трех метров и весит от 180 до 230 килограмм.</p>
+                                <p>
+                                    Зафиксированы случаи, когда лев в одиночку справлялся с африканским буйволом, вес которого превышает 600 килограмм, а характер оставляет желать лучшего. Лев, как и многие другие кошачьи, способен спать по 20 часов в сутки. Охотничий участок льва может иметь длину и ширину до тридцати километров.</p>
+                                <p>Лев ревёт только в том случае, когда сообщает, что территория принадлежит ему или провозглашает себя царём природы.</p>
+                                <p>Охотничий участок льва может иметь длину и ширину до тридцати километров</p>
+                            </div>
+                        </section>
+                        <h5>Блоки располагаются по вертикали друг под другом.</h5>
+                        <p>
+                            Поскольку блочные элементы занимают всё доступное пространство по ширине, то они располагаются друг под другом по вертикали.
+                        </p>
+                        <h5>На блочные элементы не действуют свойства, предназначенные для строчных элементов.</h5>
+                        <p>
+                            Ряд стилевых свойств, вроде <span class="atr">vertical-align</span>, работает только для строчных элементов и их применение к блочным элементам не даёт никакого видимого результата.
+                        </p>
+                    </section>
+                </section>
+                <section>
+                    <h3>Преобразование в блочный элемент <em>display: block</em></h3>
+                    <p>
+                        В некоторых случаях требуется наделить строчный элемент характеристиками блочного. Этот метод часто используется для <strong>ссылок</strong>, чтобы увеличить зону их щелчка, которую можно легко оценить, задав цвет фона. Так, превращение ссылки в блок позволяет увеличить полезную площадь ссылки за счёт использования свойств <span class="atr">width</span> и <span class="atr">height</span>.
+                    </p>
+                    <p>
+                        Если превратить эти ссылки в блочные, мы увеличим их область:
+                    </p>
+                    <div>
+                        <img src="./img/display-img/Screenshot_8.png" alt="display: block">
+                        <img src="./img/display-img/Screenshot_7.png" alt="display: block">
+                    </div>
+                    <ul class="menu">
+                        <li><a>Главная</a></li>
+                        <li><a>Возможности</a></li>
+                        <li><a>Цены</a></li>
+                        <li><a>О нас</a></li>
+                    </ul>
+                    <p>
+                        Для превращения ссылки в блочный элемент к селектору a добавляется свойство <span class="atr">display</span> со значением <span class="mean">block</span>. После этого вся строка выступает ссылкой при наведении курсора на строку, даже за пределами текст
+                    </p>
+                    <div>
+                        <img src="./img/display-img/Screenshot_10.png" alt="display: block">
+                        <img src="./img/display-img/Screenshot_9.png" alt="display: block">
+                    </div>
+                    <ul class="menu1">
+                        <li><a>Главная</a></li>
+                        <li><a>Возможности</a></li>
+                        <li><a>Цены</a></li>
+                        <li><a>О нас</a></li>
+                    </ul>
+                    <p>
+                        <span class="atr">display</span>:<span class="mean">block</span> - Превратит любой элемент в <strong>блочный</strong>. 
+                    </p>
+                </section>
+               </section>
+               <section class="inline" id="inline">
+                <h2>Строчные элементы</h2>
+                <p>
+                    Строчными называются такие элементы, которые являются непосредственной частью строки, у них значение свойства <span class="atr">display</span> установлено,  как <span class="mean">inline</span>. Элементы, для которых это значение задано по умолчанию, — <span class="tag">&lt;span&gt;</span>, <span class="tag">&lt;a&gt;</span>, <span class="tag">&lt;q&gt;</span>, <span class="tag">&lt;code&gt;</span> и др. В основном они используются для изменения вида текста или его смыслового выделения.
+                </p>
+                <section>
+                    <h3>Особенности строчных элементов</h3>
+                    <p>
+                        Перечислим характерные особенности строчных элементов.
+                    </p>
+                    <section>
+                        <h5>Свойства, связанные с размерами (<em>width, height</em>), не применимы.</h5>
+                        <p>
+                            Размеры строчных элементов определяются их содержимым и не могут напрямую меняться с помощью свойств <span class="atr">width</span> и <span class="atr">height</span>, которые, соответственно, задают ширину и высоту элемента.
+                        </p>
+                        <p>
+                            Добавление этих свойств к строчным элементам просто игнорируется.
+                        </p>
+                    </section>
+                    <section>
+                        <h5>Размер элемента равен его содержимому плюс значения <em>margin</em>, <em>border</em> и <em>padding</em>.</h5>
+                        <p>
+                            Несмотря на то, что явно задать размеры элемента нельзя, на него можно влиять косвенно с помощью свойств <span class="atr">margin</span>, <span class="atr">border</span> и <span class="atr">padding</span>, значения которых суммируются с размерами содержимого (пример 1).
+                        </p>
+                        <div>
+                            <img src="./img/display-img/Screenshot_11.png" alt="Особенности строчных элементов">
+                            <img src="./img/display-img/Screenshot_12.png" alt="Особенности строчных элементов">
+                        </div>
+                        <p>
+                            В данном примере внутрь блочного элемента <span class="tag">&lt;h1&gt;</span> добавлен строчный элемент <span class="tag">&lt;span&gt;</span> и для него уже заданы свойства <span class="atr">margin</span>, <span class="atr">padding</span> и <span class="atr">border</span>. Это сделано для того, чтобы линия была строго под текстом (рис. 1), а не на всю длину блока, как получилось бы, добавь мы <span class="atr">border</span> для <span class="tag">&lt;h1&gt;</span> напрямую.
+                        </p>
+                        <h1 class="example4"><span>Заголовок</span></h1>
+                        <p>
+                            <em>Заметьте одну особенность — для строчных элементов <span class="atr">margin</span> работает только по горизонтали, но никак не вертикали.</em>
+                        </p>
+                        <p>
+                            <em>Таким образом, свойства <span class="atr">margin-top</span> и <span class="atr">margin-bottom</span> не действуют.</em>
+                        </p>
+                    </section>
+                    <section>
+                        <h5>Строчные элементы переносятся на другую строку при необходимости.</h5>
+                        <p>
+                            Раз мы имеем дело со строками, то текст, естественно, переносится, чтобы строка целиком поместилась по ширине.
+                        </p>
+                        <p>
+                            Перенос текста, как правило, происходит в месте пробела и может разделить наш строчный элемент на две части и более. 
+                        </p>
+                        <p>
+                            Это не страшно, пока к элементу не применяется стилевое оформление. На рис. 2 показано, как фон и рамка разбивается на две части.
+                        </p>
+                        <div>
+                            <img src="./img/display-img/Screenshot_13.png" alt="Строчные элементы - перенос">
+                        </div>
+                        <div class="titles">
+                            <div class="example5">
+                                <p>Лягте животом на пол. Соедините стопы вместе, согнув ноги в коленях 
+                                    и развернув их в стороны. Руки за головой. Тяните голову руками 
+                                    вверх и вперёд до полного сокращения <span class="muscle">мышц живота</span>.
+                                    Задержитесь на две секунды. Выполните восемь повторений.</p>
+                            </div>
+                            <p>
+                                <img src="./img/display-img/Screenshot_14.png" alt="Строчные элементы - перенос">
+                            </p>
+                        </div>
+                        <p>
+                            Чтобы запретить перенос текста внутри элемента, добавьте свойство <a href="https://webref.ru/css/white-space" target="_blank"><strong>white-space</strong></a> со значением <span class="mean">nowrap</span> 
+                        </p>
+                        <div class="titles">
+                            <div class="example6">
+                                <p>Лягте животом на пол. Соедините стопы вместе, согнув ноги в коленях 
+                                    и развернув их в стороны. Руки за головой. Тяните голову руками 
+                                    вверх и вперёд до полного сокращения <span class="muscle1">мышц живота</span>.
+                                    Задержитесь на две секунды. Выполните восемь повторений.</p>
+                            </div>
+                            <p>
+                                <img src="./img/display-img/Screenshot_15.png" alt="Строчные элементы - перенос">
+                            </p>
+                        </div>
+                    </section>
+                    <section>
+                        <h5>Перенос текста считается за пробел.</h5>
+                        <p>
+                            В коде HTML любой перенос текста воспринимается браузером как пробел, это касается и размещения элементов на отдельных строках. 
+                        </p>
+                        <p>
+                            Сравните два абзаца в примере 3. В первом абзаце каждый <span class="tag">&lt;span&gt;</span> располагается на отдельной строке, а во втором абзаце код идёт сплошной строкой без пробелов и переносов.
+                        </p>
+                        <p>
+                            В первой строке между цветных прямоугольников появилось небольшое пространство, а вторая строка выглядит сплошной.
+                        </p>
+                        <p>
+                            <img src="./img/display-img/Screenshot_16.png" alt="Перенос текста считается за пробел">
+                        </p>
+                        <p>
+                            В строчно-блочных элементах мы ещё вернёмся к этой особенности.
+                        </p>
+                    </section>
+                    <section>
+                        <h5>Можно выравнивать по вертикали с помощью свойства <em>vertical-align</em>.</h5>
+                        <p>
+                            Свойство <a href="https://webref.ru/css/vertical-align" target="_blank"><strong>vertical-align</strong></a> выравнивает элементы относительно друг друга по вертикали, что позволяет делать верхний и нижний индексы, задавать выравнивание содержимого ячеек таблицы, задавать положение блоков и др. 
+                        </p>
+                        <p>
+                            В примере 4 показано выравнивание картинок и текста по середине друг друга.
+                        </p>
+                        <div>
+                            <img src="./img/display-img/Screenshot_17.png" alt="выравнивание картинок и текста по середине друг друга">
+                            <img src="./img/display-img/Screenshot_18.png" alt="выравнивание картинок и текста по середине друг друга">
+                            <img src="./img/display-img/Screenshot_19.png" alt="выравнивание картинок и текста по середине друг друга">
+                        </div>
+                        <p class="example7">
+                            <img src="./img/display-img/animate.UvyHR.png" alt=""><span class="icon">Анимация</span>
+                            <img src="./img/display-img/list.suJjY.png" alt=""><span class="icon">Список</span>
+                            <img src="./img/display-img/print.pfwe2.png" alt=""><span class="icon">Печать</span>
+                            <img src="./img/display-img/text.X6f1q.png" alt=""><span class="icon">Текст</span>
+                        </p>
+                        <p class="example8">
+                            <img src="./img/display-img/animate.UvyHR.png" alt=""><span class="icon2">Анимация</span>
+                            <img src="./img/display-img/list.suJjY.png" alt=""><span class="icon2">Список</span>
+                            <img src="./img/display-img/print.pfwe2.png" alt=""><span class="icon2">Печать</span>
+                            <img src="./img/display-img/text.X6f1q.png" alt=""><span class="icon2">Текст</span>
+                        </p>
+                    </section>
+                </section> 
+                <section>
+                    <h3>Преобразование в строчный элемент <em>display: inline</em></h3>
+                    <p>
+                        Блочные элементы можно превращать в строчные с помощью свойства <span class="atr">display</span> и его значения <span class="mean">inline</span>. 
+                    </p>
+                    <p>
+                        <span class="atr">display</span>: <span class="mean">inline</span> - Превращает любой элемент в <strong>строчный</strong>, как если бы он был только простым <strong>текстом</strong>.
+                    </p>
+                    <p>
+                        Часто используется для создания <strong>горизонтальной навигации</strong>, где семантически, но не визуально полезны <strong>пункты списка</strong>.
+                    </p>
+                    <div>
+                        <img src="./img/display-img/Screenshot_20.png" alt="display: inline">
+                        <img src="./img/display-img/Screenshot_21.png" alt="display: inline">
+                    </div>
+                    <p>
+                        Как можно заметить, <span class="atr">display</span>: <span class="mean">inline</span> также убирает маркеры у пунктов списка. 
+                    </p>
+                    <ul class="example9">
+                        <li><a href="1.html">Метод простых итераций</a></li>
+                        <li><a href="2.html">Метод случайных чисел</a></li>
+                        <li><a href="3.html">Метод дихотомии</a></li>
+                        <li><a href="4.html">Метод золотого сечения</a></li>
+                    </ul>
+                    <p>
+                        <em>Внимание! Превращение элемента в строчный не даёт право нарушать структуру кода HTML и порядок вложения элементов.</em>
+                    </p> 
+                    <p>
+                        Надо понимать, что HTML и CSS проверяются независимо друг от друга и какие бы вы манипуляции не производили с элементами через стили, на HTML это не оказывает влияние. 
+                    </p>
+                    <p>
+                        Код HTML в любом случае должен быть корректным с точки зрения синтаксиса HTML.
+                    </p>
+                </section>  
+               </section>
+               <section class="inline-block" id="inline-block">
+                <h2>Строчно-блочные элементы</h2>   
+               </section>
+               <section class="display" id="display">
+                   <h2>display в CSS</h2>
+                   <p>
+                    Каждый элемент содержит значение свойства <span class="atr">display</span> по умолчанию, но как и с любым другим значением свойств, это значение может быть переписано. Знание, как отображаются элементы и как изменить <span class="atr">display</span> довольно важно, так как <span class="atr">display</span> оказывает влияние на отображение блочной модели. 
+                   </p>
+                <div class="titles">
+                     <h4>display</h4>
+                     <p>
+                         <a href="https://webref.ru/css/display" target="_blank">Справочник CSS
+                         </a>
+                     </p>
+                </div>
+                <p>
+                    <strong>Многоцелевое свойство, которое определяет, как элемент должен быть показан в документе.</strong>
+                </p> 
+                <p>
+                    <strong>Значение по умолчанию</strong> <span class="mean">inline</span>
+                </p> 
+                <h6>Синтаксис </h6> 
+                <p>
+                    <code>
+                     <span class="atr">display</span>: <span class="mean">block</span> | <span class="mean">inline</span> | <span class="mean">inline-block</span> | <span class="mean">inline-table</span> |
+                     <span class="mean">inline-flex</span> | <span class="mean">flex</span> | <span class="mean">list-item</span> | <span class="mean">none</span> | 
+                     <span class="mean">run-in</span> | <span class="mean">table</span> | <span class="mean">table-caption</span> | <span class="mean">table-cell</span> | <span class="mean">table-column-group</span> | <span class="mean">table-column</span> | 
+                     <span class="mean">table-footer-group</span> | <span class="mean">table-header-group</span> | <span class="mean">table-row</span> | <span class="mean">table-row-group</span>
+                    </code>
+                </p>
+            </section>
+            </article>
+            <a href="#header" class="btn">ВВЕРХ</a>
+        </div>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p> 
+        </div>
+    </footer>
+</body>
+</html>
