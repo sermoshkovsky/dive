@@ -254,3 +254,13 @@ h1 span {
    .example9 li a {
     text-decoration: none; /* Убираем подчёркивание у ссылок */
    }
+.monuments {
+    background-color: aquamarine;
+}
+.monuments1 {
+    background-color: aquamarine;
+    width: 490px;
+} 
+.photo img {
+    display: inline-block;
+}
