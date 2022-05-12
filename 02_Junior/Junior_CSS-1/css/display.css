@@ -1,41 +1,58 @@
 body {
     background-color: azure;
-    font-family:'Lucida Sans', Arial, Helvetica, sans-serif;
+    font-family: 'Lucida Sans', Arial, Helvetica, sans-serif;
     font-size: 16px;
     box-sizing: content-box;
 }
-p, ul, ol, div {
+
+p,
+ul,
+ol,
+div {
     margin: .5em 0;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: gray;
     font-weight: bold;
     margin: .3em;
 }
+
 span {
-    font-weight:inherit;
+    font-weight: inherit;
 }
+
 h1 {
     font-size: 250%;
 }
+
 h2 {
     font-size: 200%;
 }
+
 h3 {
     font-size: 150%;
 }
+
 h4 {
     font-size: 150%;
     color: brown;
     margin: 0 .3em;
 }
+
 h5 {
     font-size: 120%;
     background-color: pink;
-    padding: 5px ;
+    padding: 5px;
     color: black;
 }
+
 h6 {
     font-size: 110%;
     display: inline-block;
@@ -43,38 +60,47 @@ h6 {
     background-color: pink;
     padding: 0 5px;
 }
+
 ul {
     list-style: disc;
     padding-left: 50px;
 }
+
 ol {
     list-style: decimal;
     padding-left: 50px;
 }
+
 dd {
     padding-left: 20px;
     margin-bottom: 5px;
 }
+
 .container {
     width: 1110px;
     margin: 0 auto;
 }
+
 .header {
     padding: 20px;
     background-color: aqua;
 }
+
 .header a {
     text-decoration: none;
     color: brown;
 }
+
 .footer {
     background-color: indigo;
-    color:azure;
+    color: azure;
     padding: 20px;
 }
+
 .footer p {
     padding-left: 120px;
 }
+
 .btn {
     background-color: orange;
     border-radius: 5px;
@@ -86,6 +112,7 @@ dd {
     font-weight: bold;
     color: azure;
 }
+
 /* Теги   
 <span class="tag">&lt;&gt;</span>
 */
@@ -93,6 +120,7 @@ dd {
     color: rgb(73, 73, 150);
     font-size: 18px;
 }
+
 /* Селектор 
 <span class="slc"></span>
 */
@@ -100,6 +128,7 @@ dd {
     color: rgb(206, 50, 50);
     font-size: 18px;
 }
+
 /* Свойство/Атрибуты 
 <span class="atr"></span>
 */
@@ -107,160 +136,395 @@ dd {
     color: orange;
     font-size: 18px;
 }
+
 /* Значение 
 <span class="mean"></span>
 */
 .mean {
     color: rgb(4, 190, 4);
-    font-size: 18px; 
+    font-size: 18px;
 }
 
 .titles {
     display: flex;
 }
+
 .titles p {
     padding-left: 20px;
 }
 
 .example {
-    background: #F5E8D0; /* Цвет фона */
-    padding: 20px; /* Поля */
-   }
+    background: #F5E8D0;
+    /* Цвет фона */
+    padding: 20px;
+    /* Поля */
+}
+
 .example h2 {
-    background: #F0BA7D; /* Цвет фона */
-    margin-top: 0; /* Убираем пустое пространство сверху */
-    padding: 10px; /* Поля */
-   }
+    background: #F0BA7D;
+    /* Цвет фона */
+    margin-top: 0;
+    /* Убираем пустое пространство сверху */
+    padding: 10px;
+    /* Поля */
+}
 
 .example1 {
-    background: #F5E8D0; /* Цвет фона */
-    width: 400px; /* Ширина содержимого */
-    padding: 20px; /* Поля */
-   }
+    background: #F5E8D0;
+    /* Цвет фона */
+    width: 400px;
+    /* Ширина содержимого */
+    padding: 20px;
+    /* Поля */
+}
+
 .example1 h2 {
-    background: #F0BA7D; /* Цвет фона */
-    margin-top: 0; /* Убираем пустое пространство сверху */
-    padding: 10px; /* Поля */
-   }
+    background: #F0BA7D;
+    /* Цвет фона */
+    margin-top: 0;
+    /* Убираем пустое пространство сверху */
+    padding: 10px;
+    /* Поля */
+}
 
 .example2 {
-    background: #F5E8D0; /* Цвет фона */
-    box-sizing: border-box; /* Алгоритм расчёта ширины */
-    width: 400px; /* Ширина блока */
-    border: 1px solid #333; /* Рамка */
-    padding: 20px; /* Поля */
-   }
+    background: #F5E8D0;
+    /* Цвет фона */
+    box-sizing: border-box;
+    /* Алгоритм расчёта ширины */
+    width: 400px;
+    /* Ширина блока */
+    border: 1px solid #333;
+    /* Рамка */
+    padding: 20px;
+    /* Поля */
+}
+
 .example2 h2 {
-    background: #F0BA7D; /* Цвет фона */
-    margin-top: 0; /* Убираем пустое пространство сверху */
-    padding: 10px; /* Поля */
-   }
+    background: #F0BA7D;
+    /* Цвет фона */
+    margin-top: 0;
+    /* Убираем пустое пространство сверху */
+    padding: 10px;
+    /* Поля */
+}
 
 .example31 {
     height: 250px;
     background-color: aquamarine;
     padding: 20px;
 }
+
 .example3 {
-    height: 100px; /*  Высота содержимого */
-    background: #F2EFE6; /* Цвет фона */
-    border: 1px solid #B25538; /* Параметры рамки */
-    padding: 0 10px; /* Пространство сверху и снизу */
-   }
+    height: 100px;
+    /*  Высота содержимого */
+    background: #F2EFE6;
+    /* Цвет фона */
+    border: 1px solid #B25538;
+    /* Параметры рамки */
+    padding: 0 10px;
+    /* Пространство сверху и снизу */
+}
 
 .menu {
     background-color: aquamarine;
 }
-.menu a { 
-    background: red; 
+
+.menu a {
+    background: red;
     color: white;
 }
 
 .menu1 {
     background-color: aquamarine;
 }
-.menu1 a { 
-    background: red; 
+
+.menu1 a {
+    background: red;
     color: white;
     display: block;
     margin-bottom: 5px;
 }
 
 .example4 {
-    background: #EDE6CE; /* Цвет фона */
+    background: #EDE6CE;
+    /* Цвет фона */
 }
+
 h1 span {
-    margin: 16px; /* Отступы */
-    padding: 1px; /* Поля */
-    border-bottom: 4px solid #D71920; /* Линия снизу */
+    margin: 16px;
+    /* Отступы */
+    padding: 1px;
+    /* Поля */
+    border-bottom: 4px solid #D71920;
+    /* Линия снизу */
 }
 
 .example5 {
     width: 310px;
-    background-color:#F5E8D0;
+    background-color: #F5E8D0;
 
 }
+
 .muscle {
-    padding: 2px; /* Поля вокруг текста */
-    border: 1px dotted maroon; /* Параметры рамки */
-    background: #C5E2BD; /* Цвет фона */
+    padding: 2px;
+    /* Поля вокруг текста */
+    border: 1px dotted maroon;
+    /* Параметры рамки */
+    background: #C5E2BD;
+    /* Цвет фона */
 }
+
 .example6 {
     width: 310px;
-    background-color:#F5E8D0;
+    background-color: #F5E8D0;
 
 }
+
 .muscle1 {
-    padding: 2px; /* Поля вокруг текста */
-    border: 1px dotted maroon; /* Параметры рамки */
-    background: #C5E2BD; /* Цвет фона */
-    white-space: nowrap; /* Запрещаем перенос текста */
+    padding: 2px;
+    /* Поля вокруг текста */
+    border: 1px dotted maroon;
+    /* Параметры рамки */
+    background: #C5E2BD;
+    /* Цвет фона */
+    white-space: nowrap;
+    /* Запрещаем перенос текста */
 }
 
 .example7 {
     background-color: #C5E2BD;
     border-bottom: solid 1px blue;
 }
+
 .icon {
-    margin-left: 7px; /* Отступ слева */
-    margin-right: 20px; /* Отступ справа */
-    color: #ED1C24; /* Цвет текста */
+    margin-left: 7px;
+    /* Отступ слева */
+    margin-right: 20px;
+    /* Отступ справа */
+    color: #ED1C24;
+    /* Цвет текста */
 }
 
-.example8  {
-    background-color:#C5E2BD;
+.example8 {
+    background-color: #C5E2BD;
     border-bottom: solid 1px blue;
 }
+
 .example8 img {
-    vertical-align: middle; /* Выравнивание по середине */
+    vertical-align: middle;
+    /* Выравнивание по середине */
 }
+
 .icon2 {
-    margin-left: 7px; /* Отступ слева */
-    margin-right: 20px; /* Отступ справа */
-    color: #ED1C24; /* Цвет текста */
-    vertical-align: middle; /* Выравнивание по середине */
+    margin-left: 7px;
+    /* Отступ слева */
+    margin-right: 20px;
+    /* Отступ справа */
+    color: #ED1C24;
+    /* Цвет текста */
+    vertical-align: middle;
+    /* Выравнивание по середине */
 }
 
 .example9 {
-    margin: 0; padding: 0; /* Убираем пустое пространство */
-    line-height: 1.8; /* Межстрочный интервал */
-   }
-   .example9 li {
-    display: inline; /* Строчные элементы */
-    background: #D9B492; /* Цвет фона */
-    padding: 3px 7px; /* Поля вокруг текста */
-    white-space: nowrap; /* Запрещаем перенос текста */
-   }
-   .example9 li a {
-    text-decoration: none; /* Убираем подчёркивание у ссылок */
-   }
+    margin: 0;
+    padding: 0;
+    /* Убираем пустое пространство */
+    line-height: 1.8;
+    /* Межстрочный интервал */
+}
+
+.example9 li {
+    display: inline;
+    /* Строчные элементы */
+    background: #D9B492;
+    /* Цвет фона */
+    padding: 3px 7px;
+    /* Поля вокруг текста */
+    white-space: nowrap;
+    /* Запрещаем перенос текста */
+}
+
+.example9 li a {
+    text-decoration: none;
+    /* Убираем подчёркивание у ссылок */
+}
+
 .monuments {
     background-color: aquamarine;
 }
+
+.photo {
+    background: #d9dabb;
+    /* Цвет фона */
+    width: 150px;
+    /* Ширина */
+    margin: 0 10px 10px 0;
+    /* Отступы справа и снизу */
+    padding: 10px 0;
+    /* Поля сверху и снизу */
+    text-align: center;
+    /* Выравнивание по центру */
+    display: inline-block;
+    /* Строчно-блочный элемент */
+    vertical-align: top;
+    /* Выравнивание по верхнему краю */
+}
+
+.photo img {
+    border: 2px solid #8b8e4b;
+    /* Параметры рамки */
+}
+
 .monuments1 {
     background-color: aquamarine;
     width: 490px;
-} 
-.photo img {
+}
+
+.monuments2 {
+    background-color: aquamarine;
+}
+
+.photom {
+    background: #d9dabb;
+    /* Цвет фона */
+    width: 150px;
+    /* Ширина */
+    margin: 0 10px 10px 0;
+    /* Отступы справа и снизу */
+    padding: 10px 0;
+    /* Поля сверху и снизу */
+    text-align: center;
+    /* Выравнивание по центру */
+}
+
+.photom img {
+    border: 2px solid #8b8e4b;
+    /* Параметры рамки */
+    
+}
+
+.monuments3 {
+    background-color: aquamarine;
+}
+
+.photom2 {
+    background: #d9dabb;
+    /* Цвет фона */
+    width: 150px;
+    /* Ширина */
+    margin: 0 10px 10px 0;
+    /* Отступы справа и снизу */
+    padding: 10px 0;
+    /* Поля сверху и снизу */
+    text-align: center;
+    /* Выравнивание по центру */
     display: inline-block;
+    /* Строчно-блочный элемент */
+    vertical-align: top;
+    /* Выравнивание по верхнему краю */
+}
+
+.photom2 img {
+    border: 2px solid #8b8e4b;
+    /* Параметры рамки */
+}
+.monuments4 {
+    background-color: aquamarine;
+}
+
+.photom3 {
+    background: #d9dabb;
+    /* Цвет фона */
+    width: 150px;
+    /* Ширина */
+    margin: 0 10px 10px 0;
+    /* Отступы справа и снизу */
+    padding: 10px 0;
+    /* Поля сверху и снизу */
+    text-align: center;
+    /* Выравнивание по центру */
+    display: inline-block;
+    /* Строчно-блочный элемент */
+    vertical-align: bottom;
+    /* Выравнивание по верхнему краю */
+}
+
+.photom3 img {
+    border: 2px solid #8b8e4b;
+    /* Параметры рамки */
+}
+
+.maket {
+    display: inline-block; /* Строчно-блочный элемент */
+    vertical-align: top; /* Выравнивание по верхнему краю */
+    min-height: 200px; /* Минимальная высота колонок */
+    box-sizing: border-box; /* Алгоритм расчёта ширины */
+    padding: 15px; /* Поля вокруг текста */
+}
+.col1 {
+    width: 20%; /* Ширина первой колонки */
+    background: #C8EAF5; /* Цвет фона первой колонки */
+}
+.col2 {
+    width: 40%; /* Ширина второй колонки */
+    background: #FEE4CD; /* Цвет фона второй колонки */
+}
+.col3 {
+    width: 40%; /* Ширина третьей колонки */
+    background: #E2EDC1; /* Цвет фона третьей колонки */
+}
+
+.sect {
+    font-size: 0;
+}
+.maket1 {
+    font-size: 16px;
+    display: inline-block; /* Строчно-блочный элемент */
+    vertical-align: top; /* Выравнивание по верхнему краю */
+    min-height: 200px; /* Минимальная высота колонок */
+    box-sizing: border-box; /* Алгоритм расчёта ширины */
+    padding: 15px; /* Поля вокруг текста */
+}
+.col11 {
+    width: 20%; /* Ширина первой колонки */
+    background: #C8EAF5; /* Цвет фона первой колонки */
+}
+.col22 {
+    width: 40%; /* Ширина второй колонки */
+    background: #FEE4CD; /* Цвет фона второй колонки */
+}
+.col33 {
+    width: 40%; /* Ширина третьей колонки */
+    background: #E2EDC1; /* Цвет фона третьей колонки */
+}
+
+.none {
+    background-color: aquamarine;
+}
+.gone-baby-gone { 
+    display: none; 
+}
+
+.hidden {
+    background-color: aquamarine;
+}
+.hollow-man { 
+    visibility: hidden; 
+}
+
+.mode {
+    background-color: aquamarine;
+}
+.button {
+    background: #fc0;
+    padding: 10px 20px;
+    display: inline-block;
+}
+.descr { 
+    visibility: hidden; 
+}
+.button:hover + .descr {
+    visibility: visible;
 }
