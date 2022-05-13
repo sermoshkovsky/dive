@@ -5,8 +5,113 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Группирование изображений и подписей к ним</title>
+    <link rel="stylesheet" href="../02_Junior/Junior_CSS-1/css/reset.css">
+    <link rel="stylesheet" href="./css/semantic-text.css">
 </head>
 <body>
-    
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <a href="../00_Home/index.html" target="_blank">Главная |</a>
+                <a href="../02_Junior/html-junior.html" target="_blank">HTML-1</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Подрисуночная подпись</h1>
+                <p>
+                    Подрисуночная подпись — это текст, который является комментарием к рисунку и его описывает. Такая подпись важна, поскольку она привлекает внимание читателя к иллюстрации и даёт больше информации об изображении. 
+                </p>
+                <p>
+                    У элемента <span class="tag">&lt;img&gt;</span> существует, конечно, атрибут <span class="atr">title</span>, который задаёт текст всплывающей подсказки, но чтобы её получить, приходится наводить курсор мыши на каждый рисунок, что довольно неудобно. Более наглядный способ и, соответственно, более предпочтительный заключается в размещении подрисуночной подписи возле самого изображения.
+                </p>
+                <p>
+                    Для размещения на веб-странице и рисунка, и подписи к нему удобно воспользоваться элементами <span class="tag">&lt;figure&gt;</span> и <span class="tag">&lt;figcaption&gt;</span>. 
+                </p>
+                <div>
+                    <img src="./img-middle/semantic-text-img/Screenshot_1.png" alt="">
+                <div class="ex">
+                <div class="example2">
+                <figure>
+                    <img src="//webref.ru/example/image/cocktail.jpg" width="200" height="200" alt="">
+                    <figcaption>Подпись снизу</figcaption>
+                </figure>
+                <figure>
+                    <figcaption>Подпись сверху</figcaption>
+                    <img src="//webref.ru/example/image/cocktail.jpg" width="200" height="200" alt="">
+                </figure>
+            </div>
+                </div>
+            </div>
+                <p>
+                    Для изменения положения текста — сверху или снизу изображения, достаточно просто поменять местами элементы <span class="tag">&lt;img&gt;</span> и <span class="tag">&lt;figcaption&gt;</span>. 
+                </p>
+            </section>
+            <section>
+                <div class="titles">
+                    <h4>figure</h4>
+                    <p><a href="https://webref.ru/html/figure" target="_blank">Справочник CSS</a></p>
+                </div>
+                <p>
+                    (от англ. <i>figure</i> — рисунок, иллюстрация) <strong>Используется для группирования любых элементов, например, изображений и подписей к ним. </strong>
+                </p>
+                <p>
+                    Обычно применяется для иллюстраций, фрагментов кода, схем, графиков, диаграмм и др.
+                </p>
+                <p>
+                    Его содержимое не ограничивается изображениями, допустимо вставлять видео, примеры кода, даже текст. Внутри <span class="tag">&lt;figure&gt;</span> при желании добавляется заголовок с помощью элемента <span class="tag">&lt;figcaption&gt;</span> до или после содержимого.
+                </p>
+                <p>
+                    Элемент <span class="tag">&lt;figure&gt;</span> не должен быть связан с основным текстом, так что если его переместить в другое место, то смысл содержания не потеряется. 
+                </p>
+                <p>
+                    К примеру, если добавить иллюстрацию, то в тексте на неё можно сослаться как «...изображена на рис. 2». Сам рисунок при этом может располагаться в другом месте, а не только идти сразу же после текста, главное, не забыть его подписать. 
+                </p>
+                <p>
+                    И, наоборот, неверным шагом будет воспользоваться <span class="tag">&lt;figure&gt;</span> и сослаться на него как «смотри рисунок ниже». Потому что при перемещении иллюстрации искажается смысл текста.
+                </p>
+                <p>
+                    <img src="./img-middle/semantic-text-img/Screenshot_2.png" alt="">
+                </p>
+                <div class="example3">
+                    <p>Зубчатые механизмы используют для изменения параметров вращательного движения, 
+                        а также для преобразования вращательного движения в поступательное. Зубчатый
+                        механизм с круглыми колёсами и реечной передачей, используемый в стрелочных 
+                        электроприводах железных дорог, показан на рис. 4.</p>
+                    <figure>
+                        <img src="//webref.ru/example/image/fig4.png" alt="Рис. 4">
+                        <figcaption>
+                            Рис. 4. Зубчатый механизм с круглыми колёсами и реечной передачей
+                        </figcaption>
+                    </figure>
+                </div>
+                <p>
+                    Содержимое <span class="tag">&lt;figure&gt;</span> выравнивается по левому краю и к нему добавляются небольшие отступы, это заметно по картинке, она отступает немного вправо относительно левого края текста.
+                </p>
+            </section>
+            <section>
+                <div class="titles">
+                    <h4>figcaption</h4>
+                    <p><a href="https://webref.ru/html/figcaption" target="_blank">Справочник CSS</a></p>
+                </div>
+                <p>
+                    (от англ. <i>figure caption</i> — подпись к рисунку) <strong>Содержит описание для элемента <span class="tag">&lt;figure&gt;</span>.</strong>
+                </p>
+                <p>
+                    <span class="tag">&lt;figcaption&gt;</span> должен быть первым или последним элементом в группе.
+                </p>
+            </section>
+        </div>
+        <a href="#header" class="btn">ВВЕРХ</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>
+                &copy; Sergey Moshkovsky
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -4,9 +4,191 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семантические текстовые теги</title>
+    <title>Семантика встроенного текста</title>
+    <link rel="stylesheet" href="../02_Junior/Junior_CSS-1/css/reset.css">
+    <link rel="stylesheet" href="./css/semantic-text.css">
 </head>
 <body>
-    
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <a href="../00_Home/index.html" target="_blank">Главная |</a>
+                <a href="../02_Junior/html-junior.html" target="_blank">HTML-1</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Семантика встроенного текста</h1>
+                <p>
+                    В то время как абзацы и списки предназначены для идентификации целых блоков текста, иногда мы хотим наделить смыслом одно слово (или несколько слов) в тексте. Используйте семантику встроенного текста HTML, чтобы определить значение, структуру или стиль слова, строки или любого произвольного фрагмента текста.
+                </p>
+                <section>
+                    <div class="titles">
+                        <h4>&lt;strong&gt;</h4>
+                        <p>
+                            <a href="https://webref.ru/html/strong" target="_blank">Справочник HTML</a>
+                        </p>
+                    </div>
+                    <p>
+                        (от англ. <i>strong</i>  — сильный) <strong> Выделяет важный текст, отображается жирным начертанием.</strong>
+                    </p>
+                    <p>
+                        Важное предложение имеет большое значение для всей веб-страницы, указывает на что-то серьёзное или срочное. 
+                    </p>
+                    <p>
+                        Важное слово или словосочетание показывает, что оно имеет большее значение по сравнению с окружающим текстом.
+                    </p>
+                    <p>
+                        Не используйте <span class="tag">&lt;strong&gt;</span> только для того, чтобы установить какой-нибудь текст жирным, скорее, чтобы придать ему <strong>большее значение</strong>.
+                    </p>
+                </section>
+                <section>
+                    <div class="titles">
+                        <h4>&lt;em&gt;</h4>
+                        <p>
+                            <a href="https://webref.ru/html/em" target="_blank">Справочник HTML</a>
+                        </p>
+                    </div>
+                    <p>
+                        (от англ. <i>emphasis</i>  — акцент) <strong>Предназначен для текста, имеющего особое значение или на который следует сделать акцент.</strong>
+                    </p>
+                    <p>
+                        Текст внутри <span class="tag">&lt;em&gt;</span> отображается курсивным начертанием.
+                    </p>
+                    <p>
+                        Не используйте <span class="tag">&lt;em&gt;</span> только для того, чтобы установить какой-нибудь текст курсивом, только чтобы сделать на нём <em>акцент</em>.
+                    </p>
+                </section>
+                <section>
+                    <div class="titles">
+                        <h4>&lt;i&gt;</h4>
+                        <p>
+                            <a href="https://webref.ru/html/i" target="_blank">Справочник HTML</a>
+                        </p>
+                    </div>
+                    <p>
+                        (от англ. <i>italic</i> — курсив) <strong>Используется для текста, который по разным причинам отличается от обычного текста. </strong>
+                    </p>
+                    <p>
+                        Это может быть термин, иностранное слово, название и др. Текст внутри <span class="tag">&lt;i&gt;</span>  отображается курсивным начертанием.
+                    </p>
+                    <p>
+                        <span class="tag">&lt;i&gt;</span> не должен применяться для оформления текста курсивом, для этого есть стили.
+                    </p>
+                </section>
+                <section>
+                    <div class="titles">
+                        <h4>&lt;abbr&gt;</h4>
+                        <p>
+                            <a href="https://webref.ru/html/abbr" target="_blank">Справочник HTML</a>
+                        </p>
+                    </div>
+                    <p>
+                        (от англ. <i>abbreviation</i> — аббревиатура) <strong>Указывает, что последовательность символов является аббревиатурой. </strong>
+                    </p>
+                    <p>
+                        С помощью атрибута <span class="atr">title</span> даётся расшифровка сокращения, что позволяет понимать аббревиатуру тем людям, которые с ней не знакомы. Кроме того, поисковые системы индексируют полнотекстовый вариант сокращения, это может использоваться для повышения рейтинга документа.
+                    </p>
+                    <p>
+                        Браузеры обычно добавляют к тексту пунктирное подчёркивание, но могут и не выделять содержимое элемента.
+                    </p>
+                    <p>
+                        Можно использовать для таких аббревиатур, как <abbr title="World Wide Web Consortium - Консорциум Всемирной паутины"><span class="example">W3C</span> </abbr>  или <abbr title="Compact Disc"><span class="example">CD</span></abbr> 
+                    </p>
+                </section>
+                <section>
+                    <div class="titles">
+                        <h4>&lt;blockquote&gt;</h4>
+                        <p>
+                            <a href="https://webref.ru/html/blockquote" target="_blank">Справочник HTML</a>
+                        </p>
+                    </div>
+                    <p>
+                        (от англ. <i>block quote</i> — блок с цитатой) <strong>Предназначен для выделения длинных цитат внутри документа. </strong>
+                    </p>
+                    <p>
+                        Текст внутри <span class="tag">&lt;blockquote&gt;</span> отображается как выровненный блок с отступами слева и справа (по 40 пикселей), а также с отбивкой сверху и снизу.
+                    </p>
+                    <p>
+                        <span class="example"> Возможно, Ленин использовал фразу А. П. Чехова из произведения 
+                        «Моя жизнь (рассказ провинциала)» гл. VI, первая публикация которого 
+                        была в приложении к «Ниве» в 1896 г.</span>
+                    </p>
+                        <blockquote>
+                         <span class="example"> Учиться нам нужно, учиться и учиться, а с глубокими
+                         общественными течениями погодим: мы ещё не доросли 
+                         до них и, по совести, ничего в них не понимаем.</span>
+                        </blockquote>
+                </section>
+                <section>
+                    <div class="titles">
+                        <h4>&lt;q&gt;</h4>
+                        <p>
+                            <a href="https://webref.ru/html/q" target="_blank">Справочник HTML</a>
+                        </p>
+                    </div>
+                    <p>
+                        (от англ. <i>quotation</i> — цитата, кавычки) <strong>Используется для выделения в тексте цитат.</strong>
+                    </p>
+                    <p>
+                        Содержимое контейнера автоматически  отображается в браузере в кавычках.
+                    </p>
+                    <p>
+                        <p>
+                           <span class="example"> Станислав Лец утверждал: <q>Чаще всего выход там, где был  вход</q>.</span>
+                        </p>
+                    </p>
+                </section>
+                <section>
+                    <div class="titles">
+                        <h4>&lt;pre&gt;</h4>
+                        <p>
+                            <a href="https://webref.ru/html/pre" target="_blank">Справочник HTML</a>
+                        </p>
+                    </div>
+                    <p>
+                        (от англ. <i>preformatted text</i> — форматированный текст) <strong>Определяет блок предварительно форматированного текста. </strong>
+                    </p>
+                    <p>
+                        Такой текст отображается обычно моноширинным шрифтом и со всеми пробелами между словами.
+                    </p>
+                    <p>
+                        По умолчанию, любое количество пробелов идущих в коде подряд, на веб-странице показывается как один. Элемент <span class="tag">&lt;pre&gt;</span> позволяет обойти эту особенность и отображать текст, как требуется разработчику. По этой причине <span class="tag">&lt;pre&gt;</span> часто применяется для фрагментов программ, где важны пробелы. 
+                    </p>
+                </section>
+                <section>
+                    <div class="titles">
+                        <h4>&lt;code&gt;</h4>
+                        <p>
+                            <a href="https://webref.ru/html/code" target="_blank">Справочник HTML</a>
+                        </p>
+                    </div>
+                    <p>
+                        (от англ. <i>code</i>  — код) <strong>Предназначен для отображения одной или нескольких строк текста, который представляет собой программный код.</strong>
+                    </p>
+                    <p>
+                        Сюда относятся имена переменных, ключевые слова, тексты функции и т. д. 
+                    </p>
+                    <p>
+                        Браузеры обычно отображают содержимое контейнера <span class="tag">&lt;code&gt;</span> как моноширинный текст уменьшенного размера.
+                    </p>
+                    <p>
+                        В отличие от элемента  
+                        <span class="tag">&lt;pre&gt;</span> дополнительные пробелы внутри контейнера <span class="tag">&lt;code&gt;</span> не учитываются, так же, как и переносы текста. Для разметки кода программы элементы <span class="tag">&lt;code&gt;</span> и <span class="tag">&lt;pre&gt;</span> комбинируют.
+                    </p>
+                </section>
+            </section>
+            <a href="#header" class="btn">ВВЕРХ</a>
+        </div>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>
+                &copy; Sergey Moshkovsky
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
