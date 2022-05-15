@@ -25,9 +25,321 @@
                 <p>
                     Учимся связывать изученные CSS-свойства и HTML-теги
                 </p>
-                <section>
+                <ul>
+                    <li>
+                        <a href="#styling-list">Стилизация пунктов списка</a>
+                    </li>
+                    <li>
+                        <a href="#horizontal-list">Горизонтальное отображение списка</a>
+                    </li>
+                </ul>
+                <section class="styling-list">
                     <h2>Стилизация пунктов списка</h2>
-                    
+                    <p>
+                        Маркированные и нумерованные списки используют маркеры пунктов списка по умолчанию. Для маркированных списков это, как правило, однотонные точки, в то время как для нумерованных списков, как правило, применяются числа.
+                    </p>
+                    <p>
+                        С помощью CSS стиль и положение этих маркеров можно настраивать.
+                    </p>
+                    <section>
+                        <div class="titles">
+                            <h4>list-style-image</h4>
+                            <p><a href="https://webref.ru/css/list-style-image" target="_blank">Справочник CSS</a></p>
+                        </div>
+                        <p>
+                            <strong>Устанавливает адрес изображения, которое служит в качестве маркера списка. </strong>
+                        </p>
+                        <p>
+                            Это свойство наследуется, поэтому для отдельных элементов списка для восстановления маркера используется значение <span class="mean">none</span>.
+                        </p>
+                        <p>
+                            <strong>Значение по умолчанию :</strong> <span class="mean">none</span>
+                        </p>
+                        <p>
+                            <strong>Применяется</strong> К элементам <span class="tag">&lt;dd&gt;</span>, <span class="tag">&lt;dt&gt;</span>, <span class="tag">&lt;li&gt;</span>, <span class="tag">&lt;ol&gt;</span> и <span class="tag">&lt;ul&gt;</span>, а также ко всем элементам, у которых указано <span class="atr">display</span>: <span class="mean">list-item</span>
+                        </p>
+                        <h6>Синтаксис </h6>
+                        <div>
+                            <p class="sintacsis">
+                                <span class="atr">list-style-image</span>: <span class="mean">none</span> | <span class="mean">url(<span class="tag">&lt;адрес&gt;</span>)</span>
+                            </p>
+                        </div>
+                        <h6>Значения</h6>
+                        <ul>
+                            <li>
+                                <span class="mean">none</span><br>  
+                                Отменяет изображение в качестве маркера для родительского элемента.
+                            </li>
+                            <li>
+                                <span class="mean">url</span><br> 
+                                Относительный или абсолютный путь к графическому файлу. Значение можно указывать в одинарных, двойных кавычках или без них.
+                            </li>
+                        </ul>
+                        <div class="example">
+                            <h6>Пример</h6>
+                            <p>
+                                <img src="./img/foundation-img/Screenshot_1.png" alt="">
+                                <img src="./img/foundation-img/Screenshot_2.png" alt="">
+                            </p>
+                            <ul>
+                                <li>Легко проверить, что аффинное преобразование   
+                                    монотонно.</li>
+                                <li>Доказательство решительно стабилизирует отрицательный
+                                    криволинейный интеграл, явно демонстрируя всю чушь вышесказанного.</li>
+                                <li>Степенной ряд, в первом приближении, расточительно  
+                                    искажает многомерный лист Мёбиуса, откуда следует доказываемое равенство.</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="titles">
+                            <h4>list-style-type</h4>
+                            <p><a href="https://webref.ru/css/list-style-type" target="_blank">Справочник CSS</a></p>
+                        </div>
+                        <p>
+                            <strong>Изменяет вид маркера для каждого элемента списка. </strong>
+                        </p>
+                        <p>
+                            Это свойство используется только в случае, когда значение <span class="atr">list-style-image</span> установлено как <span class="mean">none</span>.
+                        </p>
+                        <p>
+                            Доступные значения находятся в диапазоне от квадратиков и десятичных чисел до армянской нумерации и стиль в CSS может быть добавлен к элементам <span class="tag">&lt;ul&gt;</span>, <span class="tag">&lt;ol&gt;</span> или <span class="tag">&lt;li&gt;</span>.
+                        </p>
+                        <p>
+                            Маркеры различаются для маркированного списка (элемент <span class="tag">&lt;ul&gt;</span>) и нумерованного (элемент <span class="tag">&lt;ol&gt;</span>).
+                        </p>
+                        <p>
+                            <strong>Значение по умолчанию:</strong> <span class="mean">disc</span> (для <span class="tag">&lt;ul&gt;</span>); <span class="mean">decimal</span> (для <span class="tag">&lt;ol&gt;</span>)
+                        </p>
+                        <h6>Синтаксис </h6>
+                        <div>
+                            <p class="sintacsis">
+                                <span class="atr">list-style-type</span>: <span class="mean">circle</span> | <span class="mean">disc</span> | <span class="mean">square</span> | <span class="mean">armenian</span> | <span class="mean">decimal</span> | <span class="mean"> decimal-leading-zero</span> | <span class="mean">georgian</span> | <span class="mean">lower-alpha</span> | <span class="mean">lower-greek</span> | <span class="mean"> lower-latin</span> | <span class="mean">lower-roman</span> | <span class="mean">upper-alpha</span> | <span class="mean"> upper-latin</span> | <span class="mean">upper-roman</span> | <span class="mean">none</span>
+                            </p>
+                        </div>
+                        <h6>Значения</h6>
+                        <p>
+                            Значения зависят от того, к какому типу списка они применяются: маркированному или нумерованному.
+                        </p>
+                        <p>
+                            <strong>Маркированный список</strong>
+                        </p>
+                        <table>
+                            <tr>
+                                <td><span class="mean">circle</span></td>
+                                <td>Маркер в виде кружка.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="mean">disc</span></td>
+                                <td>Маркер в виде точки.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="mean">square</span></td>
+                                <td>Маркер в виде квадрата.</td>
+                            </tr>
+                        </table>
+                        <p>
+                            <strong>Нумерованный список</strong>
+                        </p>
+                        <table>
+                            <tr>
+                                <td><span class="mean">decimal</span></td>
+                                <td>
+                                    Арабские числа (1, 2, 3, 4,...).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="mean">decimal-leading-zero</span></td>
+                                <td>
+                                    Арабские числа с нулем впереди для цифр меньше десяти (01, 02, 03,...).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="mean">lower-alpha</span> | <span class="mean">lower-latin
+                                </span></td>
+                                <td>
+                                    Строчные латинские буквы (a, b, c, d,...).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="mean">lower-greek
+                                </span></td>
+                                <td>
+                                    Строчные греческие буквы (α, β, γ, δ,...).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="mean">upper-alpha</span> | <span class="mean">upper-latin</span></td>
+                                <td>
+                                    Заглавные латинские буквы (A, B, C, D,...).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="mean">upper-roman</span></td>
+                                <td>
+                                    Заглавные римские числа (I, II, III, IV, V,...).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="mean">lower-roman</span></td>
+                                <td>
+                                    Строчные римские числа (i, ii, iii, iv, v,...).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="mean">armenian</span></td>
+                                <td>
+                                    Традиционная армянская нумерация.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="mean">georgian</span></td>
+                                <td>
+                                    Традиционная грузинская нумерация.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="mean">none</span></td>
+                                <td>
+                                    Отменяет маркеры для списка.
+                                </td>
+                            </tr>
+                        </table>
+                        <h5>Использование изображения в качестве маркера списка</h5>
+                        <p>
+                            Может наступить время, когда значений по умолчанию для свойства <span class="atr">list-style-type</span> не хватит и мы пожелаем задать свой собственный маркер списка. Кроме, рассмотренного ранее свойства <span class="atr">list-style-image</span>, чаще всего это делается путём размещения фонового изображения для каждого элемента <span class="tag">&lt;li&gt;</span>.
+                        </p>
+                        <p>
+                            Процесс включает в себя удаление любого значения свойства <span class="atr">list-style-type</span> по умолчанию и добавление фонового изображения и полей для элемента <span class="tag">&lt;li&gt;</span>. Таким образом:
+                        </p>
+                        <ul>
+                            <li>
+                                Значение none свойства <span class="atr">list-style-type</span> удалит существующие маркеры списка.
+                            </li>
+                            <li>
+                                Свойство <span class="atr">background</span> задаст фоновое изображение вместе с его положением и повтором, если необходимо.
+                            </li>
+                            <li>
+                                Свойство <span class="atr">padding</span> обеспечит пространство слева от текста для фоновой картинки.
+                            </li>
+                        </ul>
+                        <div class="example2">
+                            <p>
+                                <img src="./img/foundation-img/Screenshot_4.png" alt="">
+                                <img src="./img/foundation-img/Screenshot_3.png" alt="">
+                            </p>
+                            <ul>
+                                <li>Оранжевый</li>
+                                <li>Зелёный</li>
+                                <li>Синий</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="titles">
+                            <h4>list-style-position</h4>
+                            <p><a href="https://webref.ru/css/list-style-position" target="_blank">Справочник CSS</a></p>
+                        </div>
+                        <p>
+                            <strong>Определяет, как будет размещаться маркер относительно текста</strong>
+                        </p>
+                        <p>
+                            — маркер обтекается текстом (рис. 1) или вынесен за границу элемента списка (рис. 2).
+                        </p>
+                        <div class="example3">
+                            <figure>
+                                <img src="./img/foundation-img/Screenshot_5.png" alt="маркер обтекается текстом">
+                                <figcaption>Рис.1 <em>Значение inside</em></figcaption>
+                            </figure>
+                            <figure>
+                                <img src="./img/foundation-img/Screenshot_6.png" alt="маркер обтекается текстом">
+                                <figcaption>Рис.2 <em>Значение outside</em></figcaption>
+                            </figure>
+                        </div>
+                        <p>
+                            <strong>Значение по умолчанию:</strong> <span class="mean">outside</span>
+                        </p>
+                        <p>
+                            <strong>Применяется:</strong> 	К элементам <span class="tag">&lt;dd&gt;</span>, <span class="tag">&lt;dt&gt;</span>, <span class="tag">&lt;li&gt;</span>, <span class="tag">&lt;ol&gt;</span> и <span class="tag">&lt;ul&gt;</span>, а также ко всем элементам, у которых указано <span class="atr">display</span>: <span class="mean">list-item</span>
+                        </p>
+                        <h6>Синтаксис </h6>
+                        <div>
+                            <p class="sintacsis">
+                                <span class="atr">list-style-position</span>: <span class="mean">inside</span> | <span class="mean">outside</span>
+                            </p>
+                        </div>
+                        <h6>Значения</h6>
+                        <table>
+                            <tr>
+                                <td><span class="mean">inside</span></td>
+                                <td>Маркер является частью текстового блока и отображается в элементе списка. <br> 
+                                (<em>маркер обтекается текстом</em> рис.1)</td>
+                            </tr>
+                            <tr>
+                                <td><span class="mean">outside</span></td>
+                                <td>Текст выравнивается по левому краю, а маркеры размещаются за пределами текстового блока. <br>
+                                 (<em>маркер вынесен за границу элемента списка</em> рис.2)</td>
+                            </tr>
+                        </table>
+                        <p>
+                            Значение <span class="mean">outside</span> размещает маркер списка слева от элемента <span class="tag">&lt;li&gt;</span> и не позволяют любому содержимому обтекать ниже этот маркер.
+                        </p>
+                        <div class="example4">
+                            <ul>
+                                <li>Капкейки — один из лучших существующих десертов, особенно с кремом из сливочного сыра сверху.</li>
+                                <li>Обсыпка — одна из наиболее популярных штук для капкеек, украшает их и добавляет немного сахара.</li>
+                            </ul>
+                        </div>
+                        <p>
+                            Значение <span class="mean">inside</span> (которое редко используется и можно увидеть) размещает маркер списка в первой строке элемента <span class="tag">&lt;li&gt;</span> и позволяет содержимому обтекать маркер при необходимости.
+                        </p>
+                        <p>
+                            <img src="./img/foundation-img/Screenshot_7.png" alt="">
+                        </p>
+                        <div class="example5">
+                            <ul>
+                                <li>Капкейки — один из лучших существующих десертов, особенно с кремом из сливочного сыра сверху.</li>
+                                <li>Обсыпка — одна из наиболее популярных штук для капкеек, украшает их и добавляет немного сахара.</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="titles">
+                            <h4>list-style</h4>
+                            <p><a href="https://webref.ru/css/list-style" target="_blank">Справочник CSS</a></p>
+                        </div>
+                        <p>
+                            <strong>Универсальное свойство</strong>
+                        </p>
+                        <p>
+                            Позволяет одновременно задать стиль маркера, его положение, а также изображение, которое будет использоваться в качестве маркера списка.
+                        </p>
+                        <p>
+                            <strong>Значение по умолчанию:</strong> Нет.
+                        </p>
+                        <p>
+                            <strong>Применяется:</strong> 	К элементам <span class="tag">&lt;dd&gt;</span>, <span class="tag">&lt;dt&gt;</span>, <span class="tag">&lt;li&gt;</span>, <span class="tag">&lt;ol&gt;</span> и <span class="tag">&lt;ul&gt;</span>, а также ко всем элементам, у которых указано <span class="atr">display</span>: <span class="mean">list-item</span>
+                        </p>
+                        <h6>Синтаксис </h6>
+                        <div>
+                            <p class="sintacsis">
+                                <span class="atr">list-style</span>: <span class="slc">list-style-type</span> || <span class="slc">list-style-position</span> || <span class="slc">list-style-image</span>
+                            </p>
+                        </div>
+                        <h6>Значения</h6>
+                        <p>
+                            Любые комбинации трёх значений определяющих стиль маркеров. Они разделяются между собой пробелом.
+                        </p>
+                        <p>
+                            Комбинации значений должны следовать в указанном порядке: вначале идёт тип маркера, затем положение и картинка. 
+                        </p>
+                        <p>
+                            Ни одно значение не является обязательным, поэтому неиспользуемые можно опустить.
+                        </p>
+                    </section>
+                </section>
+                <section class="horizontal-list" id="horizontal-list">
+                    <h2>Горизонтальное отображение списка</h2>
                 </section>
             </section>
             <a href="#header" class="btn">ВВЕРХ</a>

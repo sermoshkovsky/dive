@@ -30,7 +30,7 @@ h3 {
 }
 h4 {
     font-size: 150%;
-    color: rgb(64, 64, 95);
+    color:brown;
     margin: 0 .3em;
 }
 h5 {
@@ -130,3 +130,40 @@ dd {
 .titles p {
     padding-left: 20px;
 }
+.sintacsis {
+    border: 1px solid pink;
+    display: inline-block;
+    padding: 10px;
+    background: #fff;
+}
+.example, .example2, .example3 {
+    background: aquamarine;
+}
+
+.example ul {
+    list-style-image: url(//webref.ru/example/image/mathematics.png)
+}
+td {
+    padding-left: 10px;
+}
+
+.example2 li {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/29841/arrow.png") 0 50% no-repeat;
+    list-style-type: none;
+    padding-left: 12px;
+}
+
+.example3 figure {
+    padding: 10px;
+}
+.example3 {
+    display: flex;
+}
+
+.example4, .example5 {
+    background: aquamarine;
+    width: 50%;
+}
+.example5 ul {
+    list-style-position: inside;
+  }
