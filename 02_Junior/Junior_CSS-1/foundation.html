@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фундамент</title>
-    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/foundation.css">
 </head>
 <body>
@@ -25,6 +24,7 @@
                 <p>
                     Учимся связывать изученные CSS-свойства и HTML-теги
                 </p>
+                <h5>Списки</h5>
                 <ul>
                     <li>
                         <a href="#styling-list">Стилизация пунктов списка</a>
@@ -33,313 +33,941 @@
                         <a href="#horizontal-list">Горизонтальное отображение списка</a>
                     </li>
                 </ul>
-                <section class="styling-list">
-                    <h2>Стилизация пунктов списка</h2>
-                    <p>
-                        Маркированные и нумерованные списки используют маркеры пунктов списка по умолчанию. Для маркированных списков это, как правило, однотонные точки, в то время как для нумерованных списков, как правило, применяются числа.
-                    </p>
-                    <p>
-                        С помощью CSS стиль и положение этих маркеров можно настраивать.
-                    </p>
-                    <section>
-                        <div class="titles">
-                            <h4>list-style-image</h4>
-                            <p><a href="https://webref.ru/css/list-style-image" target="_blank">Справочник CSS</a></p>
-                        </div>
+                <h5>Таблицы</h5>
+                <p>
+                    Эффективное использование границ может помочь сделать таблицу более наглядной. Границы вокруг таблицы или отдельных ячеек могут оказать большое влияние, когда пользователь пытается интерпретировать данные и быстро сканировать информацию. 
+                </p>
+                <p>
+                    При стилизации границ через CSS есть два свойства, которые могут быстро пригодиться: <span class="atr">border-collapse</span> и <span class="atr">border-spacing</span>.
+                </p>
+                <ul>
+                    <li>
+                        <a href="#border-collapse">Границы в таблице - Свойство <em><strong>border-collapse</strong></em></a>
+                    </li>
+                    <li>
+                        <a href="#border-spacing">Границы в таблице - Свойство <em><strong>border-spacing</strong></em></a>
+                    </li>
+                    <li>
+                        <a href="#borders-lines">Добавление границ к строкам</a>
+                    </li>
+                    <li>
+                        <a href="#table-rotation">Чередование в таблице</a>
+                    </li>
+                    <li>
+                        <a href="#text-alignment">Выравнивание текста</a>
+                    </li>
+                    <li>
+                        <a href="#styled-table">Полностью стилизованная таблица</a>
+                    </li>
+                </ul>
+                <section>
+                    <section class="styling-list">
+                        <h2>Стилизация пунктов списка</h2>
                         <p>
-                            <strong>Устанавливает адрес изображения, которое служит в качестве маркера списка. </strong>
+                            Маркированные и нумерованные списки используют маркеры пунктов списка по умолчанию. Для маркированных списков это, как правило, однотонные точки, в то время как для нумерованных списков, как правило, применяются числа.
                         </p>
                         <p>
-                            Это свойство наследуется, поэтому для отдельных элементов списка для восстановления маркера используется значение <span class="mean">none</span>.
+                            С помощью CSS стиль и положение этих маркеров можно настраивать.
                         </p>
-                        <p>
-                            <strong>Значение по умолчанию :</strong> <span class="mean">none</span>
-                        </p>
-                        <p>
-                            <strong>Применяется</strong> К элементам <span class="tag">&lt;dd&gt;</span>, <span class="tag">&lt;dt&gt;</span>, <span class="tag">&lt;li&gt;</span>, <span class="tag">&lt;ol&gt;</span> и <span class="tag">&lt;ul&gt;</span>, а также ко всем элементам, у которых указано <span class="atr">display</span>: <span class="mean">list-item</span>
-                        </p>
-                        <h6>Синтаксис </h6>
-                        <div>
-                            <p class="sintacsis">
-                                <span class="atr">list-style-image</span>: <span class="mean">none</span> | <span class="mean">url(<span class="tag">&lt;адрес&gt;</span>)</span>
-                            </p>
-                        </div>
-                        <h6>Значения</h6>
-                        <ul>
-                            <li>
-                                <span class="mean">none</span><br>  
-                                Отменяет изображение в качестве маркера для родительского элемента.
-                            </li>
-                            <li>
-                                <span class="mean">url</span><br> 
-                                Относительный или абсолютный путь к графическому файлу. Значение можно указывать в одинарных, двойных кавычках или без них.
-                            </li>
-                        </ul>
-                        <div class="example">
-                            <h6>Пример</h6>
+                        <section>
+                            <div class="titles">
+                                <h4>list-style-image</h4>
+                                <p><a href="https://webref.ru/css/list-style-image" target="_blank">Справочник CSS</a></p>
+                            </div>
                             <p>
-                                <img src="./img/foundation-img/Screenshot_1.png" alt="">
-                                <img src="./img/foundation-img/Screenshot_2.png" alt="">
+                                <strong>Устанавливает адрес изображения, которое служит в качестве маркера списка. </strong>
                             </p>
-                            <ul>
-                                <li>Легко проверить, что аффинное преобразование   
-                                    монотонно.</li>
-                                <li>Доказательство решительно стабилизирует отрицательный
-                                    криволинейный интеграл, явно демонстрируя всю чушь вышесказанного.</li>
-                                <li>Степенной ряд, в первом приближении, расточительно  
-                                    искажает многомерный лист Мёбиуса, откуда следует доказываемое равенство.</li>
-                            </ul>
-                        </div>
-                    </section>
-                    <section>
-                        <div class="titles">
-                            <h4>list-style-type</h4>
-                            <p><a href="https://webref.ru/css/list-style-type" target="_blank">Справочник CSS</a></p>
-                        </div>
-                        <p>
-                            <strong>Изменяет вид маркера для каждого элемента списка. </strong>
-                        </p>
-                        <p>
-                            Это свойство используется только в случае, когда значение <span class="atr">list-style-image</span> установлено как <span class="mean">none</span>.
-                        </p>
-                        <p>
-                            Доступные значения находятся в диапазоне от квадратиков и десятичных чисел до армянской нумерации и стиль в CSS может быть добавлен к элементам <span class="tag">&lt;ul&gt;</span>, <span class="tag">&lt;ol&gt;</span> или <span class="tag">&lt;li&gt;</span>.
-                        </p>
-                        <p>
-                            Маркеры различаются для маркированного списка (элемент <span class="tag">&lt;ul&gt;</span>) и нумерованного (элемент <span class="tag">&lt;ol&gt;</span>).
-                        </p>
-                        <p>
-                            <strong>Значение по умолчанию:</strong> <span class="mean">disc</span> (для <span class="tag">&lt;ul&gt;</span>); <span class="mean">decimal</span> (для <span class="tag">&lt;ol&gt;</span>)
-                        </p>
-                        <h6>Синтаксис </h6>
-                        <div>
-                            <p class="sintacsis">
-                                <span class="atr">list-style-type</span>: <span class="mean">circle</span> | <span class="mean">disc</span> | <span class="mean">square</span> | <span class="mean">armenian</span> | <span class="mean">decimal</span> | <span class="mean"> decimal-leading-zero</span> | <span class="mean">georgian</span> | <span class="mean">lower-alpha</span> | <span class="mean">lower-greek</span> | <span class="mean"> lower-latin</span> | <span class="mean">lower-roman</span> | <span class="mean">upper-alpha</span> | <span class="mean"> upper-latin</span> | <span class="mean">upper-roman</span> | <span class="mean">none</span>
-                            </p>
-                        </div>
-                        <h6>Значения</h6>
-                        <p>
-                            Значения зависят от того, к какому типу списка они применяются: маркированному или нумерованному.
-                        </p>
-                        <p>
-                            <strong>Маркированный список</strong>
-                        </p>
-                        <table>
-                            <tr>
-                                <td><span class="mean">circle</span></td>
-                                <td>Маркер в виде кружка.</td>
-                            </tr>
-                            <tr>
-                                <td><span class="mean">disc</span></td>
-                                <td>Маркер в виде точки.</td>
-                            </tr>
-                            <tr>
-                                <td><span class="mean">square</span></td>
-                                <td>Маркер в виде квадрата.</td>
-                            </tr>
-                        </table>
-                        <p>
-                            <strong>Нумерованный список</strong>
-                        </p>
-                        <table>
-                            <tr>
-                                <td><span class="mean">decimal</span></td>
-                                <td>
-                                    Арабские числа (1, 2, 3, 4,...).
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="mean">decimal-leading-zero</span></td>
-                                <td>
-                                    Арабские числа с нулем впереди для цифр меньше десяти (01, 02, 03,...).
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="mean">lower-alpha</span> | <span class="mean">lower-latin
-                                </span></td>
-                                <td>
-                                    Строчные латинские буквы (a, b, c, d,...).
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="mean">lower-greek
-                                </span></td>
-                                <td>
-                                    Строчные греческие буквы (α, β, γ, δ,...).
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="mean">upper-alpha</span> | <span class="mean">upper-latin</span></td>
-                                <td>
-                                    Заглавные латинские буквы (A, B, C, D,...).
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="mean">upper-roman</span></td>
-                                <td>
-                                    Заглавные римские числа (I, II, III, IV, V,...).
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="mean">lower-roman</span></td>
-                                <td>
-                                    Строчные римские числа (i, ii, iii, iv, v,...).
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="mean">armenian</span></td>
-                                <td>
-                                    Традиционная армянская нумерация.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="mean">georgian</span></td>
-                                <td>
-                                    Традиционная грузинская нумерация.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="mean">none</span></td>
-                                <td>
-                                    Отменяет маркеры для списка.
-                                </td>
-                            </tr>
-                        </table>
-                        <h5>Использование изображения в качестве маркера списка</h5>
-                        <p>
-                            Может наступить время, когда значений по умолчанию для свойства <span class="atr">list-style-type</span> не хватит и мы пожелаем задать свой собственный маркер списка. Кроме, рассмотренного ранее свойства <span class="atr">list-style-image</span>, чаще всего это делается путём размещения фонового изображения для каждого элемента <span class="tag">&lt;li&gt;</span>.
-                        </p>
-                        <p>
-                            Процесс включает в себя удаление любого значения свойства <span class="atr">list-style-type</span> по умолчанию и добавление фонового изображения и полей для элемента <span class="tag">&lt;li&gt;</span>. Таким образом:
-                        </p>
-                        <ul>
-                            <li>
-                                Значение none свойства <span class="atr">list-style-type</span> удалит существующие маркеры списка.
-                            </li>
-                            <li>
-                                Свойство <span class="atr">background</span> задаст фоновое изображение вместе с его положением и повтором, если необходимо.
-                            </li>
-                            <li>
-                                Свойство <span class="atr">padding</span> обеспечит пространство слева от текста для фоновой картинки.
-                            </li>
-                        </ul>
-                        <div class="example2">
                             <p>
-                                <img src="./img/foundation-img/Screenshot_4.png" alt="">
-                                <img src="./img/foundation-img/Screenshot_3.png" alt="">
+                                Это свойство наследуется, поэтому для отдельных элементов списка для восстановления маркера используется значение <span class="mean">none</span>.
+                            </p>
+                            <p>
+                                <strong>Значение по умолчанию :</strong> <span class="mean">none</span>
+                            </p>
+                            <p>
+                                <strong>Применяется</strong> К элементам <span class="tag">&lt;dd&gt;</span>, <span class="tag">&lt;dt&gt;</span>, <span class="tag">&lt;li&gt;</span>, <span class="tag">&lt;ol&gt;</span> и <span class="tag">&lt;ul&gt;</span>, а также ко всем элементам, у которых указано <span class="atr">display</span>: <span class="mean">list-item</span>
+                            </p>
+                            <h6>Синтаксис </h6>
+                            <div>
+                                <p class="sintacsis">
+                                    <span class="atr">list-style-image</span>: <span class="mean">none</span> | <span class="mean">url(<span class="tag">&lt;адрес&gt;</span>)</span>
+                                </p>
+                            </div>
+                            <h6>Значения</h6>
+                            <ul>
+                                <li>
+                                    <span class="mean">none</span><br>  
+                                    Отменяет изображение в качестве маркера для родительского элемента.
+                                </li>
+                                <li>
+                                    <span class="mean">url</span><br> 
+                                    Относительный или абсолютный путь к графическому файлу. Значение можно указывать в одинарных, двойных кавычках или без них.
+                                </li>
+                            </ul>
+                            <div class="example">
+                                <h6>Пример</h6>
+                                <p>
+                                    <img src="./img/foundation-img/Screenshot_1.png" alt="">
+                                    <img src="./img/foundation-img/Screenshot_2.png" alt="">
+                                </p>
+                                <ul>
+                                    <li>Легко проверить, что аффинное преобразование   
+                                        монотонно.</li>
+                                    <li>Доказательство решительно стабилизирует отрицательный
+                                        криволинейный интеграл, явно демонстрируя всю чушь вышесказанного.</li>
+                                    <li>Степенной ряд, в первом приближении, расточительно  
+                                        искажает многомерный лист Мёбиуса, откуда следует доказываемое равенство.</li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="titles">
+                                <h4>list-style-type</h4>
+                                <p><a href="https://webref.ru/css/list-style-type" target="_blank">Справочник CSS</a></p>
+                            </div>
+                            <p>
+                                <strong>Изменяет вид маркера для каждого элемента списка. </strong>
+                            </p>
+                            <p>
+                                Это свойство используется только в случае, когда значение <span class="atr">list-style-image</span> установлено как <span class="mean">none</span>.
+                            </p>
+                            <p>
+                                Доступные значения находятся в диапазоне от квадратиков и десятичных чисел до армянской нумерации и стиль в CSS может быть добавлен к элементам <span class="tag">&lt;ul&gt;</span>, <span class="tag">&lt;ol&gt;</span> или <span class="tag">&lt;li&gt;</span>.
+                            </p>
+                            <p>
+                                Маркеры различаются для маркированного списка (элемент <span class="tag">&lt;ul&gt;</span>) и нумерованного (элемент <span class="tag">&lt;ol&gt;</span>).
+                            </p>
+                            <p>
+                                <strong>Значение по умолчанию:</strong> <span class="mean">disc</span> (для <span class="tag">&lt;ul&gt;</span>); <span class="mean">decimal</span> (для <span class="tag">&lt;ol&gt;</span>)
+                            </p>
+                            <h6>Синтаксис </h6>
+                            <div>
+                                <p class="sintacsis">
+                                    <span class="atr">list-style-type</span>: <span class="mean">circle</span> | <span class="mean">disc</span> | <span class="mean">square</span> | <span class="mean">armenian</span> | <span class="mean">decimal</span> | <span class="mean"> decimal-leading-zero</span> | <span class="mean">georgian</span> | <span class="mean">lower-alpha</span> | <span class="mean">lower-greek</span> | <span class="mean"> lower-latin</span> | <span class="mean">lower-roman</span> | <span class="mean">upper-alpha</span> | <span class="mean"> upper-latin</span> | <span class="mean">upper-roman</span> | <span class="mean">none</span>
+                                </p>
+                            </div>
+                            <h6>Значения</h6>
+                            <p>
+                                Значения зависят от того, к какому типу списка они применяются: маркированному или нумерованному.
+                            </p>
+                            <p>
+                                <strong>Маркированный список</strong>
+                            </p>
+                            <table>
+                                <tr>
+                                    <td><span class="mean">circle</span></td>
+                                    <td>Маркер в виде кружка.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="mean">disc</span></td>
+                                    <td>Маркер в виде точки.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="mean">square</span></td>
+                                    <td>Маркер в виде квадрата.</td>
+                                </tr>
+                            </table>
+                            <p>
+                                <strong>Нумерованный список</strong>
+                            </p>
+                            <table>
+                                <tr>
+                                    <td><span class="mean">decimal</span></td>
+                                    <td>
+                                        Арабские числа (1, 2, 3, 4,...).
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="mean">decimal-leading-zero</span></td>
+                                    <td>
+                                        Арабские числа с нулем впереди для цифр меньше десяти (01, 02, 03,...).
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="mean">lower-alpha</span> | <span class="mean">lower-latin
+                                    </span></td>
+                                    <td>
+                                        Строчные латинские буквы (a, b, c, d,...).
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="mean">lower-greek
+                                    </span></td>
+                                    <td>
+                                        Строчные греческие буквы (α, β, γ, δ,...).
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="mean">upper-alpha</span> | <span class="mean">upper-latin</span></td>
+                                    <td>
+                                        Заглавные латинские буквы (A, B, C, D,...).
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="mean">upper-roman</span></td>
+                                    <td>
+                                        Заглавные римские числа (I, II, III, IV, V,...).
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="mean">lower-roman</span></td>
+                                    <td>
+                                        Строчные римские числа (i, ii, iii, iv, v,...).
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="mean">armenian</span></td>
+                                    <td>
+                                        Традиционная армянская нумерация.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="mean">georgian</span></td>
+                                    <td>
+                                        Традиционная грузинская нумерация.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="mean">none</span></td>
+                                    <td>
+                                        Отменяет маркеры для списка.
+                                    </td>
+                                </tr>
+                            </table>
+                            <h5>Использование изображения в качестве маркера списка</h5>
+                            <p>
+                                Может наступить время, когда значений по умолчанию для свойства <span class="atr">list-style-type</span> не хватит и мы пожелаем задать свой собственный маркер списка. Кроме, рассмотренного ранее свойства <span class="atr">list-style-image</span>, чаще всего это делается путём размещения фонового изображения для каждого элемента <span class="tag">&lt;li&gt;</span>.
+                            </p>
+                            <p>
+                                Процесс включает в себя удаление любого значения свойства <span class="atr">list-style-type</span> по умолчанию и добавление фонового изображения и полей для элемента <span class="tag">&lt;li&gt;</span>. Таким образом:
                             </p>
                             <ul>
-                                <li>Оранжевый</li>
-                                <li>Зелёный</li>
-                                <li>Синий</li>
+                                <li>
+                                    Значение none свойства <span class="atr">list-style-type</span> удалит существующие маркеры списка.
+                                </li>
+                                <li>
+                                    Свойство <span class="atr">background</span> задаст фоновое изображение вместе с его положением и повтором, если необходимо.
+                                </li>
+                                <li>
+                                    Свойство <span class="atr">padding</span> обеспечит пространство слева от текста для фоновой картинки.
+                                </li>
                             </ul>
-                        </div>
+                            <div class="example2">
+                                <p>
+                                    <img src="./img/foundation-img/Screenshot_4.png" alt="">
+                                    <img src="./img/foundation-img/Screenshot_3.png" alt="">
+                                </p>
+                                <ul>
+                                    <li>Оранжевый</li>
+                                    <li>Зелёный</li>
+                                    <li>Синий</li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="titles">
+                                <h4>list-style-position</h4>
+                                <p><a href="https://webref.ru/css/list-style-position" target="_blank">Справочник CSS</a></p>
+                            </div>
+                            <p>
+                                <strong>Определяет, как будет размещаться маркер относительно текста</strong>
+                            </p>
+                            <p>
+                                — маркер обтекается текстом (рис. 1) или вынесен за границу элемента списка (рис. 2).
+                            </p>
+                            <div class="example3">
+                                <figure>
+                                    <img src="./img/foundation-img/Screenshot_5.png" alt="маркер обтекается текстом">
+                                    <figcaption>Рис.1 <em>Значение inside</em></figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="./img/foundation-img/Screenshot_6.png" alt="маркер обтекается текстом">
+                                    <figcaption>Рис.2 <em>Значение outside</em></figcaption>
+                                </figure>
+                            </div>
+                            <p>
+                                <strong>Значение по умолчанию:</strong> <span class="mean">outside</span>
+                            </p>
+                            <p>
+                                <strong>Применяется:</strong> 	К элементам <span class="tag">&lt;dd&gt;</span>, <span class="tag">&lt;dt&gt;</span>, <span class="tag">&lt;li&gt;</span>, <span class="tag">&lt;ol&gt;</span> и <span class="tag">&lt;ul&gt;</span>, а также ко всем элементам, у которых указано <span class="atr">display</span>: <span class="mean">list-item</span>
+                            </p>
+                            <h6>Синтаксис </h6>
+                            <div>
+                                <p class="sintacsis">
+                                    <span class="atr">list-style-position</span>: <span class="mean">inside</span> | <span class="mean">outside</span>
+                                </p>
+                            </div>
+                            <h6>Значения</h6>
+                            <table>
+                                <tr>
+                                    <td><span class="mean">inside</span></td>
+                                    <td>Маркер является частью текстового блока и отображается в элементе списка. <br> 
+                                    (<em>маркер обтекается текстом</em> рис.1)</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="mean">outside</span></td>
+                                    <td>Текст выравнивается по левому краю, а маркеры размещаются за пределами текстового блока. <br>
+                                    (<em>маркер вынесен за границу элемента списка</em> рис.2)</td>
+                                </tr>
+                            </table>
+                            <p>
+                                Значение <span class="mean">outside</span> размещает маркер списка слева от элемента <span class="tag">&lt;li&gt;</span> и не позволяют любому содержимому обтекать ниже этот маркер.
+                            </p>
+                            <div class="example4">
+                                <ul>
+                                    <li>Капкейки — один из лучших существующих десертов, особенно с кремом из сливочного сыра сверху.</li>
+                                    <li>Обсыпка — одна из наиболее популярных штук для капкеек, украшает их и добавляет немного сахара.</li>
+                                </ul>
+                            </div>
+                            <p>
+                                Значение <span class="mean">inside</span> (которое редко используется и можно увидеть) размещает маркер списка в первой строке элемента <span class="tag">&lt;li&gt;</span> и позволяет содержимому обтекать маркер при необходимости.
+                            </p>
+                            <p>
+                                <img src="./img/foundation-img/Screenshot_7.png" alt="">
+                            </p>
+                            <div class="example5">
+                                <ul>
+                                    <li>Капкейки — один из лучших существующих десертов, особенно с кремом из сливочного сыра сверху.</li>
+                                    <li>Обсыпка — одна из наиболее популярных штук для капкеек, украшает их и добавляет немного сахара.</li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="titles">
+                                <h4>list-style</h4>
+                                <p><a href="https://webref.ru/css/list-style" target="_blank">Справочник CSS</a></p>
+                            </div>
+                            <p>
+                                <strong>Универсальное свойство</strong>
+                            </p>
+                            <p>
+                                Позволяет одновременно задать стиль маркера, его положение, а также изображение, которое будет использоваться в качестве маркера списка.
+                            </p>
+                            <p>
+                                <strong>Значение по умолчанию:</strong> Нет.
+                            </p>
+                            <p>
+                                <strong>Применяется:</strong> 	К элементам <span class="tag">&lt;dd&gt;</span>, <span class="tag">&lt;dt&gt;</span>, <span class="tag">&lt;li&gt;</span>, <span class="tag">&lt;ol&gt;</span> и <span class="tag">&lt;ul&gt;</span>, а также ко всем элементам, у которых указано <span class="atr">display</span>: <span class="mean">list-item</span>
+                            </p>
+                            <h6>Синтаксис </h6>
+                            <div>
+                                <p class="sintacsis">
+                                    <span class="atr">list-style</span>: <span class="slc">list-style-type</span> || <span class="slc">list-style-position</span> || <span class="slc">list-style-image</span>
+                                </p>
+                            </div>
+                            <h6>Значения</h6>
+                            <p>
+                                Любые комбинации трёх значений определяющих стиль маркеров. Они разделяются между собой пробелом.
+                            </p>
+                            <p>
+                                Комбинации значений должны следовать в указанном порядке: вначале идёт тип маркера, затем положение и картинка. 
+                            </p>
+                            <p>
+                                Ни одно значение не является обязательным, поэтому неиспользуемые можно опустить.
+                            </p>
+                        </section>
                     </section>
-                    <section>
-                        <div class="titles">
-                            <h4>list-style-position</h4>
-                            <p><a href="https://webref.ru/css/list-style-position" target="_blank">Справочник CSS</a></p>
-                        </div>
+                    <section class="horizontal-list" id="horizontal-list">
+                        <h2>Горизонтальное отображение списка</h2>
                         <p>
-                            <strong>Определяет, как будет размещаться маркер относительно текста</strong>
+                            Иногда мы хотим отобразить списки горизонтально, а не вертикально. Возможно, мы желаем разделить список на несколько колонок, чтобы построить список навигации или разместить несколько пунктов списка в один ряд. В зависимости от содержания и желаемого внешнего вида есть несколько способов для отображения списков в виде одной строки, например, путём принятия значения свойства <span class="atr">display</span> для элементов <span class="tag">&lt;li&gt;</span> как <span class="mean">inline</span> или <span class="mean">inline-block</span> или через свойство <span class="atr">float</span>.
                         </p>
-                        <p>
-                            — маркер обтекается текстом (рис. 1) или вынесен за границу элемента списка (рис. 2).
-                        </p>
-                        <div class="example3">
-                            <figure>
-                                <img src="./img/foundation-img/Screenshot_5.png" alt="маркер обтекается текстом">
-                                <figcaption>Рис.1 <em>Значение inside</em></figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./img/foundation-img/Screenshot_6.png" alt="маркер обтекается текстом">
-                                <figcaption>Рис.2 <em>Значение outside</em></figcaption>
-                            </figure>
-                        </div>
-                        <p>
-                            <strong>Значение по умолчанию:</strong> <span class="mean">outside</span>
-                        </p>
-                        <p>
-                            <strong>Применяется:</strong> 	К элементам <span class="tag">&lt;dd&gt;</span>, <span class="tag">&lt;dt&gt;</span>, <span class="tag">&lt;li&gt;</span>, <span class="tag">&lt;ol&gt;</span> и <span class="tag">&lt;ul&gt;</span>, а также ко всем элементам, у которых указано <span class="atr">display</span>: <span class="mean">list-item</span>
-                        </p>
-                        <h6>Синтаксис </h6>
-                        <div>
-                            <p class="sintacsis">
-                                <span class="atr">list-style-position</span>: <span class="mean">inside</span> | <span class="mean">outside</span>
+                        <section>
+                            <h3>Отображение списка</h3>
+                            <p>
+                                Самый быстрый способ отобразить список на одной строке — это задать элементам <span class="tag">&lt;li&gt;</span> свойство <span class="atr">display</span> со значением <span class="mean">inline</span> или <span class="mean">inline-block</span>. Это поставит все элементы <span class="tag">&lt;li&gt;</span> в одну строку с одинаковым промежутком между каждым пунктом списка.
                             </p>
-                        </div>
-                        <h6>Значения</h6>
-                        <table>
-                            <tr>
-                                <td><span class="mean">inside</span></td>
-                                <td>Маркер является частью текстового блока и отображается в элементе списка. <br> 
-                                (<em>маркер обтекается текстом</em> рис.1)</td>
-                            </tr>
-                            <tr>
-                                <td><span class="mean">outside</span></td>
-                                <td>Текст выравнивается по левому краю, а маркеры размещаются за пределами текстового блока. <br>
-                                 (<em>маркер вынесен за границу элемента списка</em> рис.2)</td>
-                            </tr>
-                        </table>
-                        <p>
-                            Значение <span class="mean">outside</span> размещает маркер списка слева от элемента <span class="tag">&lt;li&gt;</span> и не позволяют любому содержимому обтекать ниже этот маркер.
-                        </p>
-                        <div class="example4">
-                            <ul>
-                                <li>Капкейки — один из лучших существующих десертов, особенно с кремом из сливочного сыра сверху.</li>
-                                <li>Обсыпка — одна из наиболее популярных штук для капкеек, украшает их и добавляет немного сахара.</li>
-                            </ul>
-                        </div>
-                        <p>
-                            Значение <span class="mean">inside</span> (которое редко используется и можно увидеть) размещает маркер списка в первой строке элемента <span class="tag">&lt;li&gt;</span> и позволяет содержимому обтекать маркер при необходимости.
-                        </p>
-                        <p>
-                            <img src="./img/foundation-img/Screenshot_7.png" alt="">
-                        </p>
-                        <div class="example5">
-                            <ul>
-                                <li>Капкейки — один из лучших существующих десертов, особенно с кремом из сливочного сыра сверху.</li>
-                                <li>Обсыпка — одна из наиболее популярных штук для капкеек, украшает их и добавляет немного сахара.</li>
-                            </ul>
-                        </div>
-                    </section>
-                    <section>
-                        <div class="titles">
-                            <h4>list-style</h4>
-                            <p><a href="https://webref.ru/css/list-style" target="_blank">Справочник CSS</a></p>
-                        </div>
-                        <p>
-                            <strong>Универсальное свойство</strong>
-                        </p>
-                        <p>
-                            Позволяет одновременно задать стиль маркера, его положение, а также изображение, которое будет использоваться в качестве маркера списка.
-                        </p>
-                        <p>
-                            <strong>Значение по умолчанию:</strong> Нет.
-                        </p>
-                        <p>
-                            <strong>Применяется:</strong> 	К элементам <span class="tag">&lt;dd&gt;</span>, <span class="tag">&lt;dt&gt;</span>, <span class="tag">&lt;li&gt;</span>, <span class="tag">&lt;ol&gt;</span> и <span class="tag">&lt;ul&gt;</span>, а также ко всем элементам, у которых указано <span class="atr">display</span>: <span class="mean">list-item</span>
-                        </p>
-                        <h6>Синтаксис </h6>
-                        <div>
-                            <p class="sintacsis">
-                                <span class="atr">list-style</span>: <span class="slc">list-style-type</span> || <span class="slc">list-style-position</span> || <span class="slc">list-style-image</span>
+                            <p>
+                                Намного чаще мы будем использовать значение <span class="mean">inline-block</span> вместо значения <span class="mean">inline</span>. Значение <span class="mean">inline-block</span> позволяет легко добавлять вертикальные отступы и другое пространство к элементам <span class="tag">&lt;li&gt;</span>, в то время как значение <span class="mean">inline</span> нет.
                             </p>
-                        </div>
-                        <h6>Значения</h6>
-                        <p>
-                            Любые комбинации трёх значений определяющих стиль маркеров. Они разделяются между собой пробелом.
-                        </p>
-                        <p>
-                            Комбинации значений должны следовать в указанном порядке: вначале идёт тип маркера, затем положение и картинка. 
-                        </p>
-                        <p>
-                            Ни одно значение не является обязательным, поэтому неиспользуемые можно опустить.
-                        </p>
+                            <p>
+                                При изменении значения свойства <span class="atr">display</span> на <span class="mean">inline</span> или <span class="mean">inline-block</span>, маркер списка, будь то точка, число или другое, удаляется.
+                            </p>
+                            <div class="example6">
+                                <p>
+                                    <img src="./img/foundation-img/Screenshot_8.png" alt="">
+                                    <img src="./img/foundation-img/Screenshot_9.png" alt="">
+                                </p>
+                                <ul>
+                                    <li>Оранжевый</li>
+                                    <li>Зелёный</li>
+                                    <li>Синий</li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section>
+                            <h3>Списки с <em>float</em></h3>
+                            <p>
+                                Изменение значение свойства <span class="atr">display</span> на <span class="mean">inline</span> или <span class="mean">inline-block</span> быстро, однако это удаляет маркеры списка. 
+                            </p>
+                            <p>
+                                Если они необходимы, то добавление <span class="atr">float</span> к каждому элементу <span class="tag">&lt;li&gt;</span> является лучшим вариантом, чем изменение свойства <span class="atr">display</span>.
+                            </p>
+                            <p>
+                                Установка для всех элементов <span class="tag">&lt;li&gt;</span> свойства <span class="atr">float</span> как <span class="mean">left</span> выровняет горизонтально все элементы <span class="tag">&lt;li&gt;</span> непосредственно рядом друг с другом без каких-либо промежутков между ними. Когда мы используем <span class="atr">float</span> для <span class="tag">&lt;li&gt;</span>, маркер списка отображается по умолчанию и будет располагаться поверх элемента <span class="tag">&lt;li&gt;</span> рядом с ним. 
+                            </p>
+                            <p>
+                                Чтобы предотвратить отображение маркера списка поверх других элементов <span class="tag">&lt;li&gt;</span>, должны быть добавлены горизонтальный <span class="atr">margin</span> или <span class="atr">padding</span>.
+                            </p>
+                            <div class="example7">
+                                <p>
+                                    <img src="./img/foundation-img/Screenshot_10.png" alt="">
+                                    <img src="./img/foundation-img/Screenshot_11.png" alt="">
+                                </p>
+                                <ul>
+                                    <li>Оранжевый</li>
+                                    <li>Зелёный</li>
+                                    <li>Синий</li>
+                                </ul>
+                            </div>
+                            <p>
+                                Как и с любыми обтекаемыми элементами это нарушает поток страницы. Мы не должны забывать очищать <span class="atr">float</span> и возвращать страницу в обычный поток — наиболее распространённым методом через <em>clearfix</em>.
+                            </p>
+                        </section>
+                        <section>
+                            <h3>Пример навигационного списка</h3>
+                            <nav class="navigation">
+                                <ul>
+                                <li><a href="#">Профиль</a></li><!--
+                                --><li><a href="#">Настройки</a></li><!--
+                                --><li><a href="#">Уведомления</a></li><!--
+                                --><li><a href="#">Выход</a></li>
+                                </ul>
+                            </nav>
+                            <div class="expo">
+                                <img src="./img/foundation-img/Screenshot_13.png" alt="">
+                            <img src="./img/foundation-img/Screenshot_12.png" alt=""> 
+                            </div>
+                        </section>
                     </section>
                 </section>
-                <section class="horizontal-list" id="horizontal-list">
-                    <h2>Горизонтальное отображение списка</h2>
+                <section>
+                    <section class="border-collapse" id="border-collapse">
+                        <h2>Границы в таблице - Свойство <em>border-collapse</em></h2>
+                        <p>
+                            Таблицы состоят из родительского элемента <span class="tag">&lt;table&gt;</span>, а также вложенных элементов <span class="tag">&lt;th&gt;</span> или <span class="tag">&lt;td&gt;</span>. Когда мы устанавливаем границы к этим элементам, то границы вокруг одного элемента начинают соединяться с границами другого элемента. 
+                        </p>
+                        <p>
+                            Например, если положить двухпиксельную границу вокруг всей таблицы, а затем дополнительно двухпиксельную границу вокруг каждой ячейки таблицы, то получится четырёхпиксельная граница вокруг каждой ячейки в таблице.
+                        </p>
+                        <p>
+                            Свойство <span class="atr">border-collapse</span> определяет модель границы в таблице. 
+                        </p>
+                        <div class="titles">
+                            <h4>border-collapse</h4>
+                            <p>
+                                <a href="https://webref.ru/css/border-collapse" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            <strong>Устанавливает, как отображать границы вокруг ячеек таблицы.</strong>
+                        </p>
+                        <p>
+                            Это свойство играет роль, когда для ячеек установлена рамка, тогда в месте стыка ячеек получится линия двойной толщины (рис. 1а). Значение collapse заставляет браузер анализировать подобные места в таблице и убирать в ней двойные линии (рис. 1б).
+                        </p>
+                        <p>
+                            <img src="./img/foundation-img/Screenshot_14.png" alt="">
+                        </p>
+                        <p>
+                            При этом между ячейками остаётся только одна граница, одновременно принадлежащая обеим ячейкам. То же правило соблюдается и для внешних границ, когда вокруг самой таблицы добавляется рамка.
+                        </p>
+                        <p>
+                            <strong>Значение по умолчанию:</strong> <span class="mean">separate</span>
+                        </p>
+                        <p>
+                            <strong>Применяется:</strong> 	К элементу <span class="tag">&lt;table&gt;</span> или к элементам, у которых значение <span class="atr">display</span> установлено как <span class="mean">table</span> или <span class="mean">inline-table</span>
+                        </p>
+                        <h6>Синтаксис </h6>
+                        <div>
+                            <p class="sintacsis">
+                                <span class="atr">border-collapse</span>: <span class="mean">collapse</span> | <span class="mean">separate</span>
+                            </p>
+                        </div>
+                        <h6>Значения</h6>
+                        <table>
+                            <tr>
+                                <td>
+                                    <span class="mean">collapse</span>
+                                </td>
+                                <td>
+                                    Линия между ячейками отображается только одна.
+                                </td> 
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="mean">separate</span>
+                                </td>
+                                <td>
+                                    Вокруг каждой ячейки отображается своя собственная рамка, в местах соприкосновения ячеек показываются сразу две линии.
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="extabl">
+                            <h6>Пример</h6>
+                            <p>
+                                <img src="./img/foundation-img/Screenshot_15.png" alt="">
+                                <img src="./img/foundation-img/Screenshot_16.png" alt="">
+                            </p>
+                            <table>
+                                <thead>
+                                  <tr>
+                                    <th scope="col" colspan="2">Название</th>
+                                    <th scope="col">Кол-во</th>
+                                    <th scope="col">Цена</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Не заставляйте меня думать Стив Круг</td>
+                                    <td>На складе</td>
+                                    <td>1</td>
+                                    <td>$30.02</td>
+                                  </tr>
+                                  <tr>
+                                    <td>UX-дизайн. Практическое руководство по проектированию опыта взаимодействия Расс Унгер, Кэролайн Чендлер</td>
+                                    <td>На складе</td>
+                                    <td>2</td>
+                                    <td>$52.94 ($26.47 &#215; 2)</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Изучаем HTML5 Брюс Лоусон, Реми Шарп</td>
+                                    <td>Нет на складе</td>
+                                    <td>1</td>
+                                    <td>$22.23</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Пуленепробиваемый веб-дизайн Дэн Сидерхолм</td>
+                                    <td>На складе</td>
+                                    <td>1</td>
+                                    <td>$30.17</td>
+                                  </tr>
+                                </tbody>
+                                <tfoot>
+                                  <tr>
+                                    <td colspan="3">Сумма</td>
+                                    <td>$135.36</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="3">НДС</td>
+                                    <td>$13.54</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="3">Итого</td>
+                                    <td>$148.90</td>
+                                  </tr>
+                                </tfoot>
+                              </table>
+                        </div>
+                    </section> 
+                    <section class="border-spacing" id="border-spacing">
+                        <h2>Границы в таблице - Свойство <em>border-spacing</em></h2>
+                        <p>
+                            Когда свойство <span class="atr">border-collapse</span> со значением <span class="mean">separate</span> позволяет соединять одну границу с другой, так свойство <span class="atr">border-spacing</span> задаёт, какое расстояние, если оно есть, отображается между этими границами.
+                        </p>
+                        <div class="titles">
+                            <h4>border-spacing</h4>
+                            <p>
+                                <a href="https://webref.ru/css/border-spacing" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            <strong>Задаёт расстояние между границами ячеек в таблице.</strong>
+                        </p>
+                        <p>
+                            <span class="atr">border-spacing</span> не работает в случае, когда для таблицы установлено свойство <span class="atr">border-collapse</span> со значением <span class="mean">collapse</span>.
+                        </p>
+                        <p>
+                            <strong>Значение по умолчанию:</strong> <span class="mean">0</span>
+                        </p>
+                        <p>
+                            <strong>Применяется:</strong> К таблицам
+                        </p>
+                        <h6>Синтаксис</h6>
+                        <div>
+                            <p class="sintacsis">
+                                <span class="atr">border-spacing</span>: <span class="tag">&lt;размер&gt;</span> [<span class="tag">&lt;размер&gt;</span>]
+                            </p>
+                        </div>
+                        <h6>Значения</h6>
+                        <p>
+                            Одно значение устанавливает одновременно расстояние по вертикали и горизонтали между границами ячеек. Если значений два, то первое определяет горизонтальное расстояние, а второе — вертикальное.
+                        </p>
+                        <h6>Пример</h6>
+                        <p>
+                            Например, таблица с однопиксельной границей вокруг всей таблицы и однопиксельной границей вокруг каждой ячейки будет иметь двухпиксельную границу вокруг каждой ячейки, потому что границы складываются друг с другом.
+                        </p>
+                        <p>
+                            Добавление <span class="atr">border-spacing</span> со значением <span class="mean">4px</span> отделяет границы на 4 пикселя.
+                        </p>
+                        <div class="extabl2">
+                            <p>
+                                <img src="./img/foundation-img/Screenshot_17.png" alt="">
+                            </p>
+                            <table>
+                                <thead>
+                                  <tr>
+                                    <th scope="col" colspan="2">Название</th>
+                                    <th scope="col">Кол-во</th>
+                                    <th scope="col">Цена</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Не заставляйте меня думать Стив Круг</td>
+                                    <td>На складе</td>
+                                    <td>1</td>
+                                    <td>$30.02</td>
+                                  </tr>
+                                  <tr>
+                                    <td>UX-дизайн. Практическое руководство по проектированию опыта взаимодействия Расс Унгер, Кэролайн Чендлер</td>
+                                    <td>На складе</td>
+                                    <td>2</td>
+                                    <td>$52.94 ($26.47 &#215; 2)</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Изучаем HTML5 Брюс Лоусон, Реми Шарп</td>
+                                    <td>Нет на складе</td>
+                                    <td>1</td>
+                                    <td>$22.23</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Пуленепробиваемый веб-дизайн Дэн Сидерхолм</td>
+                                    <td>На складе</td>
+                                    <td>1</td>
+                                    <td>$30.17</td>
+                                  </tr>
+                                </tbody>
+                                <tfoot>
+                                  <tr>
+                                    <td colspan="3">Сумма</td>
+                                    <td>$135.36</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="3">НДС</td>
+                                    <td>$13.54</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="3">Итого</td>
+                                    <td>$148.90</td>
+                                  </tr>
+                                </tfoot>
+                              </table>
+                        </div>
+                        <p>
+                            Свойство <span class="atr">border-spacing</span> работает только тогда, когда значение свойства <span class="atr">border-collapse</span> задано как <span class="mean">separate</span>, это значение по умолчанию. Если свойство <span class="atr">border-collapse</span> ранее не указывалось, мы можем использовать свойство <span class="atr">border-spacing</span> не волнуясь.
+                        </p>
+                    </section>
+                    <section class="borders-lines" id="borders-lines">
+                        <h2>Добавление границ к строкам</h2>
+                        <p>
+                            Добавление границ к таблице временами может быть сложным, особенно при вставке границ между строк. В таблице границы не могут применяться к элементам <span class="tag">&lt;tr&gt;</span> или структурным элементам таблицы. Так что, когда мы желаем поставить границу между строк, потребуется некоторое размышление.
+                        </p>
+                        <p>
+                            Начнём с того, что установим свойство <span class="atr">border-collapse</span> для таблицы как <span class="mean">collapse</span>, а затем добавим нижний <span class="atr">border</span> к каждой ячейке таблицы, независимо от того, какой это элемент, <span class="tag">&lt;th&gt;</span> или <span class="tag">&lt;td&gt;</span>. 
+                        </p>
+                        <p>
+                            По желанию мы можем убрать нижнюю границу у ячеек в последней строке таблицы с помощью псевдокласса <span class="atr">:last-child</span>, чтобы выбрать последний элемент <span class="tag">&lt;tr&gt;</span> в таблице и нацелиться на элементы <span class="tag">&lt;td&gt;</span> внутри строки.
+                        </p>
+                        <p>
+                            Кроме того, если таблица использует структурные элементы, мы должны убедиться, что последняя строка таблицы находится в элементе <span class="tag">&lt;tfoot&gt;</span>.
+                        </p>
+                        <div class="extabl3">
+                            <p>
+                                <img src="./img/foundation-img/Screenshot_18.png" alt="">
+                            </p>
+                            <table>
+                                <thead>
+                                  <tr>
+                                    <th scope="col" colspan="2">Название</th>
+                                    <th scope="col">Кол-во</th>
+                                    <th scope="col">Цена</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Не заставляйте меня думать Стив Круг</td>
+                                    <td>На складе</td>
+                                    <td>1</td>
+                                    <td>$30.02</td>
+                                  </tr>
+                                  <tr>
+                                    <td>UX-дизайн. Практическое руководство по проектированию опыта взаимодействия Расс Унгер, Кэролайн Чендлер</td>
+                                    <td>На складе</td>
+                                    <td>2</td>
+                                    <td>$52.94 ($26.47 &#215; 2)</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Изучаем HTML5 Брюс Лоусон, Реми Шарп</td>
+                                    <td>Нет на складе</td>
+                                    <td>1</td>
+                                    <td>$22.23</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Пуленепробиваемый веб-дизайн Дэн Сидерхолм</td>
+                                    <td>На складе</td>
+                                    <td>1</td>
+                                    <td>$30.17</td>
+                                  </tr>
+                                </tbody>
+                                <tfoot>
+                                  <tr>
+                                    <td colspan="3">Сумма</td>
+                                    <td>$135.36</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="3">НДС</td>
+                                    <td>$13.54</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="3">Итого</td>
+                                    <td>$148.90</td>
+                                  </tr>
+                                </tfoot>
+                              </table>
+                        </div>
+                    </section>
+                    <section class="table-rotation" id="table-rotation">
+                        <h2>Чередование в таблице</h2>
+                        <p>
+                            Среди усилий сделать таблицы более наглядными, одной типовой практикой дизайна является «чередование» строк таблицы с переменным цветом фона. Это делает строки чётче и обеспечивает наглядность при сканировании информации. 
+                        </p>
+                        <p>
+                            Один из способов сделать это — поместить класс к каждому элементу <span class="tag">&lt;tr&gt;</span> через один и установить цвет фона для этого класса. 
+                        </p>
+                        <p>
+                            Другой, более простой способ заключается в использовании псевдокласса <span class="atr">:nth-child</span> с параметром <span class="mean">even</span> или <span class="mean">odd</span>, чтобы выбрать каждый элемент <span class="tag">&lt;tr&gt;</span> через один.
+                        </p>
+                        <p>
+                            Здесь наша таблица с книгами использует псевдокласс <span class="atr">:nth-child</span> с параметром <span class="mean">even</span> для выбора всех чётных строк таблицы и применения к ним серого фона. Следовательно, каждая строка через одну в теле таблицы будет серой.
+                        </p>
+                        <div class="extabl4">
+                            <table>
+                                <thead>
+                                  <tr>
+                                    <th scope="col" colspan="2">Название</th>
+                                    <th scope="col">Кол-во</th>
+                                    <th scope="col">Цена</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Не заставляйте меня думать Стив Круг</td>
+                                    <td>На складе</td>
+                                    <td>1</td>
+                                    <td>$30.02</td>
+                                  </tr>
+                                  <tr>
+                                    <td>UX-дизайн. Практическое руководство по проектированию опыта взаимодействия Расс Унгер, Кэролайн Чендлер</td>
+                                    <td>На складе</td>
+                                    <td>2</td>
+                                    <td>$52.94 ($26.47 &#215; 2)</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Изучаем HTML5 Брюс Лоусон, Реми Шарп</td>
+                                    <td>Нет на складе</td>
+                                    <td>1</td>
+                                    <td>$22.23</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Пуленепробиваемый веб-дизайн Дэн Сидерхолм</td>
+                                    <td>На складе</td>
+                                    <td>1</td>
+                                    <td>$30.17</td>
+                                  </tr>
+                                </tbody>
+                                <tfoot>
+                                  <tr>
+                                    <td colspan="3">Сумма</td>
+                                    <td>$135.36</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="3">НДС</td>
+                                    <td>$13.54</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="3">Итого</td>
+                                    <td>$148.90</td>
+                                  </tr>
+                                </tfoot>
+                              </table>
+                              <p>
+                                <img src="./img/foundation-img/Screenshot_19.png" alt="">
+                            </p>
+                        </div>
+                        <p>
+                            В этом коде есть несколько нюансов, о которых стоит упомянуть.
+                        </p>
+                        <p>
+                            Для начала, элемент <span class="tag">&lt;table&gt;</span> явно содержит свойство <span class="atr">border-collapse</span> со значением <span class="mean">separate</span>, а <span class="atr">border-spacing</span> задано как <span class="mean">0</span>. Причина в том, что элементы <span class="tag">&lt;td&gt;</span> включают в себя границы, в то время как элементы <span class="tag">&lt;th&gt;</span> нет. Без свойства <span class="atr">border-collapse</span>, как <span class="mean">separate</span> границы у элементов <span class="tag">&lt;td&gt;</span> сделают тело и подвал таблицы шире, чем шапка.
+                        </p>
+                        <p>
+                            Поскольку свойство <span class="atr">border-collapse</span> задано как <span class="mean">separate</span>, мы должны быть осторожны в том, как границы применяются к элементам <span class="tag">&lt;td&gt;</span>. 
+                        </p>
+                        <p>
+                            Здесь границы устанавливаются справа и снизу у всех элементов <span class="tag">&lt;td&gt;</span>. Затем первый элемент <span class="tag">&lt;td&gt;</span> в <span class="tag">&lt;tr&gt;</span> получает левую границу. 
+                        </p>
+                        <p>
+                            Так как все элементы <span class="tag">&lt;td&gt;</span> соединяются вместе с их границами, это обеспечивает появление сплошной границы вокруг каждого элемента.
+                        </p>
+                        <p>
+                            Наконец, все элементы <span class="tag">&lt;th&gt;</span> получают синий фон, а каждый чётный элемент <span class="tag">&lt;tr&gt;</span> получает серый background через псевдокласс <span class="atr">:nth-child</span>.
+                        </p>
+                    </section>
+                    <section class="text-alignment" id="text-alignment">
+                        <h2>Выравнивание текста</h2>
+                        <p>
+                            В дополнение к границам и чередованию, важную роль в формировании таблицы играет выравнивание текста внутри ячеек.
+                        </p>
+                        <p>
+                            Имена, описания и тому подобное, как правило, выравниваются по левому краю, в то время как номера и другие числа выравниваются по правому. 
+                        </p>
+                        <p>
+                            Другая информация, в зависимости от контекста, может быть по центру. Мы можем переместить текст по горизонтали с помощью свойства  <span class="atr">text-&nbsp;align</span> в CSS
+                        </p>
+                        <p>
+                            Для выравнивания текста по вертикали, однако, применяется свойство <span class="atr">vertical-align</span>. Это свойство работает только со строчными элементами и ячейками таблицы и не будет работать для блочных, строчно-блочных или ещё каких-либо других элементов.
+                        </p>
+                        <p>
+                            Свойство <span class="atr">vertical-align</span> принимает несколько разных значений, самые популярные — <span class="mean">top</span>, <span class="mean">middle</span> и <span class="mean">bottom</span>. Эти значения вертикально позиционируют текст относительно ячейки таблицы или ближайшего родительского элемента для строчных элементов.
+                        </p>
+                        <p>
+                            Исправив HTML и CSS и включив свойства <span class="atr">text-align</span> и <span class="atr">vertical-align</span>, мы можем очистить макет нашей таблицы с книгами. Обратите внимание, что данные в таблице становится намного яснее и удобнее.
+                        </p>
+                        <div class="extabl5">
+                            <p>
+                                <img src="./img/foundation-img/Screenshot_20.png" alt="">
+                                <img src="./img/foundation-img/Screenshot_21.png" alt="">
+                            </p>
+                            <table>
+                                <thead>
+                                  <tr>
+                                    <th scope="col"  colspan="2">Название</th>
+                                    <th scope="col">Кол-во</th>
+                                    <th scope="col">Цена</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <strong class="book-title">Не заставляйте меня думать</strong> Стив Круг
+                                    </td>
+                                    <td class="item-stock">На складе</td>
+                                    <td class="item-qty">1</td>
+                                    <td class="item-price">$30.02</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <strong class="book-title">UX-дизайн. Практическое руководство по проектированию опыта взаимодействия</strong> Расс Унгер, Кэролайн Чендлер
+                                    </td>
+                                    <td class="item-stock">На складе</td>
+                                    <td class="item-qty">2</td>
+                                    <td class="item-price">$52.94 <span class="item-multiple">$26.47 &#215; 2</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <strong class="book-title">Изучаем HTML5</strong> Брюс Лоусон, Реми Шарп
+                                    </td>
+                                    <td class="item-stock">Нет на складе</td>
+                                    <td class="item-qty">1</td>
+                                    <td class="item-price">$22.23</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <strong class="book-title">Пуленепробиваемый веб-дизайн</strong> Дэн Сидерхолм
+                                    </td>
+                                    <td class="item-stock">На складе</td>
+                                    <td class="item-qty">1</td>
+                                    <td class="item-price">$30.17</td>
+                                  </tr>
+                                </tbody>
+                                <tfoot>
+                                  <tr>
+                                    <td colspan="3">Сумма</td>
+                                    <td>$135.36</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="3">НДС</td>
+                                    <td>$13.54</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="3">Итого</td>
+                                    <td>$148.90</td>
+                                  </tr>
+                                </tfoot>
+                              </table>
+                        </div>
+                    </section>
+                    <section class="styled-table" id="styled-table">
+                        <h2>Полностью стилизованная таблица</h2>
+                        <p>
+                            Пока наша таблица с книгами выглядит довольно хорошо. Давайте сделаем ещё один шаг вперёд, скруглим некоторые уголки и чуть больше стилизуем часть текста.
+                        </p>
+                        <div class="extabl6">
+                            <p>
+                                <a href="https://webref.ru/layout/learn-html-css/organizing-data-with-tables" target="_blank">Коды HTML и CSS</a>
+                            </p>
+                            <table>
+                                <thead>
+                                  <tr>
+                                    <th scope="col" colspan="2">Название</th>
+                                    <th scope="col">Кол-во</th>
+                                    <th scope="col">Цена</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <strong class="book-title">Не заставляйте меня думать</strong>
+                                      <span class="text-offset">Стив Круг</span>
+                                    </td>
+                                    <td class="item-stock">На складе</td>
+                                    <td class="item-qty">1</td>
+                                    <td class="item-price">$30.02</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <strong class="book-title">UX-дизайн. Практическое руководство по проектированию опыта взаимодействия</strong>
+                                      <span class="text-offset">Расс Унгер, Кэролайн Чендлер</span>
+                                    </td>
+                                    <td class="item-stock">На складе</td>
+                                    <td class="item-qty">2</td>
+                                    <td class="item-price">$52.94 <span class="text-offset item-multiple">$26.47 &#215; 2</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <strong class="book-title"> Изучаем HTML5</strong>
+                                      <span class="text-offset">Брюс Лоусон, Реми Шарп</span>
+                                    </td>
+                                    <td class="item-stock">Нет на складе</td>
+                                    <td class="item-qty">1</td>
+                                    <td class="item-price">$22.23</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <strong class="book-title">Пуленепробиваемый веб-дизайн</strong>
+                                      <span class="text-offset">Дэн Сидерхолм</span>
+                                    </td>
+                                    <td class="item-stock">На складе</td>
+                                    <td class="item-qty">1</td>
+                                    <td class="item-price">$30.17</td>
+                                  </tr>
+                                </tbody>
+                                <tfoot>
+                                  <tr class="text-offset">
+                                    <td colspan="3">Сумма</td>
+                                    <td>$135.36</td>
+                                  </tr>
+                                  <tr class="text-offset">
+                                    <td colspan="3">НДС</td>
+                                    <td>$13.54</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="3">Итого</td>
+                                    <td>$148.90</td>
+                                  </tr>
+                                </tfoot>
+                              </table>
+                        </div>
+                    </section>
                 </section>
             </section>
             <a href="#header" class="btn">ВВЕРХ</a>

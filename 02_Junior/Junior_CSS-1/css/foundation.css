@@ -166,4 +166,237 @@ td {
 }
 .example5 ul {
     list-style-position: inside;
+}
+.example6 {
+    background: aquamarine;
+    padding-bottom: 10px;
+}
+.example6 li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.example7 {
+    background: aquamarine;
+    padding-bottom: 50px;
+}
+.example7 li {
+    float: left;
+    margin: 0 20px;
+}
+
+.navigation ul {
+    font: bold 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+.navigation li {
+    display: inline-block;
+}
+.navigation a {
+    background: #395870;
+    background: linear-gradient(#49708f, #293f50);
+    border-right: 1px solid rgba(0, 0, 0, .3);
+    color: #fff;
+    padding: 12px 20px;
+    text-decoration: none;
+}
+.navigation a:hover {
+    background: #314b60;
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+}
+.navigation li:first-child a {
+    border-radius: 4px 0 0 4px;
+}
+.navigation li:last-child a {
+    border-right: 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.expo, .navigation {
+    margin-top: 20px;
+    background: aquamarine;
+}
+
+.extabl table {
+    border-collapse: collapse;
+}
+.extabl th, .extabl td {
+    border: 1px solid #cecfd5;
+    padding: 10px 15px;
+}
+.extabl {
+    padding: 20px;
+    border: 3px solid pink;
+}
+
+.extabl2 table {
+    border-collapse: separate;
+    border-spacing: 4px;
+}
+.extabl2 table, .extabl2 th,
+.extabl2 td {
+    border: 1px solid #cecfd5;
+}
+.extabl2 th, .extabl2 td {
+    padding: 10px 15px;
+}
+.extabl2 {
+    padding: 20px;
+    border: 3px solid pink;
+}
+
+.extabl3 table {
+    border-collapse: collapse;
+  }
+.extabl3 th, .extabl3 td {
+    border-bottom: 1px solid #cecfd5;
+    padding: 10px 15px;
+  }
+.extabl3 tfoot tr:last-child td {
+    border-bottom: 0;
+  }
+.extabl3, .extabl4, .extabl5, .extabl6  {
+    padding: 20px;
+    border: 3px solid pink;
+}
+
+.extabl4 table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.extabl4 th, .extabl4 td {
+    padding: 10px 15px;
+}
+.extabl4 thead {
+    background: #395870;
+    color: #fff;
+}
+.extabl4 tbody tr:nth-child(even) {
+    background: #f0f0f2;
+}
+.extabl4 td {
+    border-bottom: 1px solid #cecfd5;
+    border-right: 1px solid #cecfd5;
+}
+.extabl4 td:first-child {
+    border-left: 1px solid #cecfd5;
+}
+
+.extabl5 table {
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #4a4a4d;
+    font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .extabl5 th,
+  .extabl5 td {
+    padding: 10px 15px;
+    vertical-align: middle;
+  }
+  .extabl5 thead {
+    background: #395870;
+    color: #fff;
+  }
+  .extabl5 th:first-child {
+    text-align: left;
+  }
+  .extabl5 tbody tr:nth-child(even) {
+    background: #f0f0f2;
+  }
+  .extabl5 td {
+    border-bottom: 1px solid #cecfd5;
+    border-right: 1px solid #cecfd5;
+  }
+  .extabl5 td:first-child {
+    border-left: 1px solid #cecfd5;
+  }
+  .extabl5 .book-title {
+    color: #395870;
+    display: block;
+  }
+  .extabl5 .item-stock,
+  .extabl5 .item-qty {
+    text-align: center;
+  }
+  .extabl5 .item-price {
+    text-align: right;
+  }
+  .extabl5 .item-multiple {
+    display: block;
+  }
+  .extabl5 tfoot {
+    text-align: right;
+  }
+  .extabl5 tfoot tr:last-child {
+    background: #f0f0f2;
+  }
+
+ .extabl6 table {
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #4a4a4d;
+    font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .extabl6 th,
+  .extabl6 td {
+    padding: 10px 15px;
+    vertical-align: middle;
+  }
+  .extabl6 thead {
+    background: #395870;
+    background: linear-gradient(#49708f, #293f50);
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+  .extabl6 th:first-child {
+    border-top-left-radius: 5px;
+    text-align: left;
+  }
+  .extabl6 th:last-child {
+    border-top-right-radius: 5px;
+  }
+  .extabl6 tbody tr:nth-child(even) {
+    background: #f0f0f2;
+  }
+  .extabl6 td {
+    border-bottom: 1px solid #cecfd5;
+    border-right: 1px solid #cecfd5;
+  }
+  .extabl6 td:first-child {
+    border-left: 1px solid #cecfd5;
+  }
+  .extabl6 .book-title {
+    color: #395870;
+    display: block;
+  }
+  .extabl6 .text-offset {
+    color: #7c7c80;
+    font-size: 12px;
+  }
+  .extabl6 .item-stock,
+  .extabl6 .item-qty {
+    text-align: center;
+  }
+  .extabl6 .item-price {
+    text-align: right;
+  }
+  .extabl6 .item-multiple {
+    display: block;
+  }
+  .extabl6 tfoot {
+    text-align: right;
+  }
+  .extabl6 tfoot tr:last-child {
+    background: #f0f0f2;
+    color: #395870;
+    font-weight: bold;
+  }
+  .extabl6 tfoot tr:last-child td:first-child {
+    border-bottom-left-radius: 5px;
+  }
+  .extabl6 tfoot tr:last-child td:last-child {
+    border-bottom-right-radius: 5px;
   }
