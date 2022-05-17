@@ -5,8 +5,558 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Псевдоклассы</title>
+    <link rel="stylesheet" href="./css/pseudo-classes.css">
 </head>
 <body>
-    
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <a href="../../00_Home/index.html" target="_blank">Главная</a> |
+                <a href="../../02_Junior/Junior_CSS-1/css-1.html" target="_blank">CSS-1</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <article>
+                <h1>Псевдоклассы в CSS</h1>
+                <p>
+                    Мы видели в основном три типа селекторов CSS:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Обычные</strong> - <span class="slc">p</span> в CSS нацеливается на HTML-элементы <span class="tag">&lt;p&gt;</span>;
+                    </li>
+                    <li>
+                        <strong>Классы</strong> - <span class="slc">.intro</span> в CSS нацеливается на элементы с атрибутом <span class="atr">class</span>=<span class="mean">"intro"</span>;
+                    </li>
+                    <li>
+                        <strong>Идентификаторы</strong> - <span class="slc">#logo</span> в CSS нацеливается на элемент с атрибутом <span class="atr">id</span>=<span class="mean">"logo"</span>.
+                    </li>
+                </ul>
+                <p>
+                    Ко всем этим селекторам могут прикрепляться <strong>псевдоклассы</strong>.
+                </p>
+                <p>
+                    Псевдокласс:
+                </p>
+                <ul>
+                    <li>
+                        определяет конкретное <strong>состояние</strong> элемента;
+                    </li>
+                    <li>
+                        это ключевое слово, которое начинается с <strong>двоеточия</strong>.
+                    </li>
+                </ul>
+                <h6>Синтаксис</h6>
+                <p>
+                    Псевдокласс <strong>не может существовать сам по себе</strong>. Он должен быть <strong>прикреплён к селектору</strong>.
+                </p>
+                <p>
+                    Псевдокласс будет определять только <em>определённое состояние</em> этого селектора.
+                </p>
+                <p>
+                    Синтаксис выглядит следующим образом:
+                </p>
+                <div>
+                    <p class="sintacsis">
+                        <span class="slc">селектор</span>:<span class="slc">псевдокласс</span> <span class="atr">{ }</span>
+                    </p>
+                </div>
+                <p>
+                    <strong>Пробела</strong> между селектором и псевдоклассом <strong>нет</strong>, чтобы показать, что они <strong>связаны друг с другом</strong>.
+                </p>
+                <h5>Основные псевдоклассы состояния</h5>
+                <ul>
+                    <li>
+                        <a href="#hover">:hover</a>
+                    </li>
+                    <li>
+                        <a href="#link">:link</a>
+                    </li>
+                    <li>
+                        <a href="#active">:active</a>
+                    </li>
+                    <li>
+                        <a href="#visited">:visited</a>
+                    </li>
+                    <li>
+                        <a href="#focus">:focus</a>
+                    </li>
+                    <li>
+                        <a href="#target">:target</a>
+                    </li>
+                </ul>
+                <h5>Псевдоклассы навигации</h5>
+                <ul>
+                    <li>
+                        <a href="#first-child">:first-child</a>
+                    </li>
+                    <li>
+                        <a href="#last-child">:last-child</a>
+                    </li>
+                    <li>
+                        <a href="#first-of-type">:first-of-type</a>
+                    </li>
+                    <li>
+                        <a href="#last-of-type">:last-of-type</a>
+                    </li>
+                    <li>
+                        <a href="#not">:not</a>
+                    </li>
+                </ul>
+                <section>
+                    <h2>основные псевдоклассы состояния</h2>
+                    <section class="hover" id="hover">
+                        <div class="titles">
+                            <h4>:hover</h4>
+                            <p>
+                                <a href="https://webref.ru/css/hover" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            <strong>
+                                Определяет стиль элемента при наведении на него курсора мыши,
+                            </strong>
+                        </p>
+                        <p>
+                            При этом элемент еще не активирован, иными словами кнопка мыши не нажата.
+                        </p>
+                        <h6>Синтаксис</h6>
+                        <div>
+                            <p class="sintacsis">
+                                <em>Селектор</em>:hover { ... }
+                            </p>
+                        </div>
+                        <div class="example">
+                            <h6>Пример</h6>
+                            <p>
+                                <img src="./img/psevdo-classes-img/Screenshot_1.png" alt=""> 
+                                <img src="./img/psevdo-classes-img/Screenshot_2.png" alt="">
+                             </p>
+                            <div class="phover">
+                                <p><a href="#">Ссылка 1</a></p>
+                                <p><a href="#">Ссылка 2</a></p>
+                                <p><a href="#">Ссылка 3</a></p> 
+                            </div>
+                        </div>
+                        <p>
+                            В данном примере псевдокласс <span class="slc">:hover</span> применяется к ссылке (элементу <span class="tag">&lt;a&gt;</span>), при этом меняется цвет ссылки и фона под ней.
+                        </p>
+                    </section>
+                    <section class="link" id="link">
+                        <div class="titles">
+                            <h4>:link</h4>
+                            <p>
+                                <a href="https://webref.ru/css/link" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            <strong>Применяется к ссылкам, которые ещё не посещались пользователем</strong>
+                        </p>
+                        <h6>Синтаксис</h6>
+                        <div>
+                           <p class="sintacsis">
+                           <em>Селектор</em>:link { ... }
+                           </p> 
+                        </div>
+                        <div class="example">
+                            <h6>Пример</h6>
+                            <p>
+                                <img src="./img/psevdo-classes-img/Screenshot_7.png" alt=""> 
+                                <img src="./img/psevdo-classes-img/Screenshot_8.png" alt="">
+                             </p>
+                             <div class="phover3">
+                                <p>
+                                    <a href="https://webref.ru/example/page/task2.html" target="_blank">Выяснить вес нестандартного груза (камень)</a>
+                                </p> 
+                                <p>Дается: стул, палка, веревка, безмен с ограничением по весу.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="active" id="active">
+                        <div class="titles">
+                            <h4>:active</h4>
+                            <p>
+                                <a href="https://webref.ru/css/active" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            <strong>
+                                Определяет стиль активного элемента. 
+                            </strong>
+                        </p>
+                        <p>
+                            Это такое состояние элемента, которое происходит между щелчком и отпусканием клавиши мыши. В основном применяется к ссылкам и кнопкам, но ими не ограничен.
+                        </p>
+                        <h6>Синтаксис</h6>
+                        <div>
+                            <p class="sintacsis">
+                                <em>Селектор</em>:active{ ... }
+                            </p>
+                        </div>
+                        <div class="example">
+                            <h6>Пример</h6>
+                            <p>
+                                <img src="./img/psevdo-classes-img/Screenshot_5.png" alt=""> 
+                                <img src="./img/psevdo-classes-img/Screenshot_6.png" alt="">
+                            </p>
+                            <div class="phover2">
+                                <p>
+                                    <a href="https://webref.ru/example/page/task1.html" target="_blank">Вычислить число оборотов двигателя в минуту</a>
+                                </p>
+                                <p>
+                                    Даётся: линейка, часы с секундной стрелкой, лист бумаги, нитка, карандаш, ножницы.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            В данном примере задаётся цвет обычных, посещённых и активных ссылок.
+                        </p>
+                    </section>
+                    <section class="visited" id="visited">
+                        <div class="titles">
+                            <h4>:visited</h4>
+                            <p>
+                                <a href="https://webref.ru/css/visited" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            <strong>Применяется к ссылкам, уже посещённым пользователем</strong>
+                        </p>
+                        <p>
+                            Задаёт для них стилевое оформление. По умолчанию ссылки отображаются синими и при посещении становятся фиолетовыми. Результаты Google работают так же.
+                        </p>
+                        <h6>Синтаксис</h6>
+                        <div>
+                            <p class="sintacsis">
+                                a:visited  {  ...  }
+                            </p>
+                        </div>
+                        <div class="example">
+                            <h6>Пример</h6>
+                            <p>
+                                <img src="./img/psevdo-classes-img/Screenshot_9.png" alt=""> 
+                                <img src="./img/psevdo-classes-img/Screenshot_10.png" alt="">
+                             </p>
+                            <div class="phover4">
+                                <p><a href="#">Ссылка 1</a></p>
+                                <p><a href="#">Ссылка 2</a></p>
+                                <p><a href="#">Ссылка 3</a></p> 
+                            </div> 
+                        </div>
+                    </section>
+                    <section class="focus" id="focus">
+                        <div class="titles">
+                            <h4>:focus</h4>
+                            <p>
+                                <a href="https://webref.ru/css/focus" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            <strong>Определяет стиль для элемента, получающего фокус.</strong>
+                        </p>
+                        <p>
+                            Это особенно полезно для полей форм. Например, фокусом может быть текстовое поле формы, в которое устанавливается курсор.
+                        </p>
+                        <h6>Синтаксис</h6>
+                        <div>
+                            <p class="sintacsis">
+                                <em>Селектор</em>:focus { ... }
+                            </p>
+                        </div>
+                        <div class="example">
+                            <h6>Пример</h6>
+                            <p>
+                                <img src="./img/psevdo-classes-img/Screenshot_11.png" alt=""> 
+                                <img src="./img/psevdo-classes-img/Screenshot_12.png" alt="">
+                             </p>
+                            <p class="phover5">
+                                <input class="form-input" placeholder="Введите имя">
+                            </p>
+                        </div>
+                        <p>
+                            При получении фокуса текстовое поле меняет цвет фона и цвет границы. Правило <span class="slc">outline: none</span> удаляет свечение вокруг поля.
+                        </p>
+                    </section>
+                    <section class="target" id="target">
+                        <div class="titles">
+                            <h4>:target</h4>
+                            <p>
+                                <a href="https://webref.ru/css/target" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            <strong>Для перехода к выбранному фрагменту документа,</strong>
+                        </p>
+                        <p>
+                            В адресе пишется символ # и указывается имя идентификатора.
+                        </p>
+                        <p>
+                            К примеру, в адресе <i>http://www.w3.org/TR/css3-selectors/#target-pseudo</i> происходит переход к элементу, атрибут <span class="atr">id</span> которого задан как <span class="mean">target-pseudo</span>. Такая запись адреса называется «целевой элемент». 
+                        </p>
+                        <p>
+                            Псевдокласс <span class="slc">:target</span> применяется к целевому элементу, иными словами, к идентификатору, который указан в адресной строке браузера.
+                        </p>
+                        <h6>Синтаксис</h6>
+                        <div>
+                            <p class="sintacsis">
+                                <em>Селектор</em>:target { ... }
+                            </p>
+                        </div>
+                        <div class="example">
+                            <h6>Пример</h6>
+                            <p>
+                                <img src="./img/psevdo-classes-img/Screenshot_13.png" alt=""> 
+                                <img src="./img/psevdo-classes-img/Screenshot_14.png" alt="">
+                            </p>
+                            <div class="extarget">
+                                <ul>
+                                    <li><a href="#h1">История 1</a></li>
+                                    <li><a href="#h2">История 2</a></li>
+                                </ul>
+                                <h2 id="h1">История 1</h2>
+                                <p>История о том, как необходимо было сделать могилу, 
+                                   ее начали копать, а потом закапывать, и что из этого получилось.</p>
+                                <h2 id="h2">История 2</h2>
+                                <p>История о том, как возле столовой появились загадочные розовые
+                                   следы с шестью пальцами, и почему это случилось.</p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <h2>Псевдоклассы навигации</h2>
+                    <section class="first-child" id="first-child">
+                        <div class="titles">
+                            <h4>:first-child</h4>
+                            <p>
+                                <a href="https://webref.ru/css/first-child" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            <strong>Задаёт стиль первого элемента в группе братских элементов (имеющих одного родителя).</strong>
+                        </p>
+                        <p>
+                            При добавлении селектора к <span class="slc">:first-child</span> сперва берётся первый элемент, затем смотрится какого он типа. Если элемент совпадает с указанным селектором, то он будет выбран. 
+                        </p>
+                        <p>
+                            Таким образом, выбирается элемент, если он удовлетворяет двум условиям одновременно:
+                        </p>
+                        <ul>
+                            <li>это первый элемент</li>
+                            <li>элемент указанного типа</li>
+                        </ul>
+                        <h6>Синтаксис</h6>
+                        <div>
+                            <p class="sintacsis">
+                               <em>Селектор</em>:first-child { ... }
+                            </p>
+                        </div>
+                        <div class="example">
+                            <h6>Пример</h6>
+                            <p>
+                                <img src="./img/psevdo-classes-img/Screenshot_15.png" alt="">
+                                <img src="./img/psevdo-classes-img/Screenshot_16.png" alt="">
+                            </p>
+                            <div class="child">
+                                <p>
+                                    <b>Lorem ipsum</b> dolor sit amet, <b>consectetuer</b> 
+                                    adipiscing <b>elit</b>, sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.
+                                </p>
+                                <p>
+                                    <b>Ut wisis enim</b> ad minim veniam, <b>quis nostrud</b> 
+                                    exerci tution ullamcorper suscipit lobortis nisl ut aliquip ex ea <b>commodo  consequat</b>.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            В данном примере псевдокласс <span class="slc">:first-child</span> добавляется к селектору <span class="slc">b</span> и устанавливает для него красный цвет текста. 
+                        </p>
+                        <p>
+                            Хотя контейнер <span class="tag">&lt;b&gt;</span> встречается в первом абзаце три раза, красным цветом будет выделено лишь первое упоминание, т. е. текст «<i>Lorem ipsum</i>». 
+                        </p>
+                        <p>
+                            В остальных случаях содержимое контейнера <span class="tag">&lt;b&gt;</span> отображается чёрным цветом. Со следующим абзацем всё начинается снова, поскольку родительский элемент поменялся. Поэтому фраза «<i>Ut wisis enim</i>» также будет выделена красным цветом.
+                        </p>
+                    </section>
+                    <section class="last-child" id="last-child">
+                        <div class="titles">
+                            <h4>:last-child</h4>
+                            <p>
+                                <a href="https://webref.ru/css/last-child" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            <strong>Задаёт стиль последнего элемента в группе братских элементов (имеющих одного родителя).</strong>
+                        </p>
+                        <p>
+                            При добавлении селектора к <span class="slc">:last-child</span> сперва берётся последний элемент, затем смотрится какого он типа. Если элемент совпадает с указанным селектором, то он будет выбран.
+                        </p>
+                        <p>
+                            Таким образом, выбирается элемент, если он удовлетворяет двум условиям одновременно:
+                        </p>
+                        <ul>
+                            <li>это последний элемент</li>
+                            <li>это элемент указанного типа</li>
+                        </ul>
+                        <h6>Синтаксис</h6>
+                        <div>
+                            <p class="sintacsis">
+                                <em>Селектор</em>:last-child { ... }
+                            </p>
+                        </div>
+                        <div class="example">
+                            <h6>Пример</h6>
+                            <p>
+                                <img src="./img/psevdo-classes-img/Screenshot_18.png" alt="">
+                                <img src="./img/psevdo-classes-img/Screenshot_17.png" alt="">
+                            </p>
+                            <div class="block">
+                                <div>
+                                 При истечении возможности понимания вышеизложенной информации вы
+                                 имеете объективную возможность подать официальный запрос главному 
+                                 субординатору локальной виртуальной вселенной.
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <p>
+                            В данном примере псевдокласс <span class="slc">:last-child</span> применяется для определения стиля последнего элемента <span class="tag">&lt;div&gt;</span>, расположенного внутри контейнера с именем класса <span class="slc">block</span>. Это позволило создать цветную полосу внизу блока без включения новых классов.
+                        </p>
+                    </section>
+                    <section class="first-of-type" id="first-of-type">
+                        <div class="titles">
+                            <h4>:first-of-type</h4>
+                            <p>
+                                <a href="https://webref.ru/css/first-of-type" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            <strong>Задаёт стиль первого элемента <em>определённого типа</em> в группе братских элементов (имеющих одного родителя).</strong>
+                        </p>
+                        <p>
+                            При добавлении селектора к <span class="slc">:first-of-type</span> сперва выбираются указанные элементы, затем из них берётся первый элемент. Наличие других элементов и их порядок не учитываются.
+                        </p>
+                        <h6>Синтаксис</h6>
+                        <div>
+                            <p class="sintacsis">
+                                <em>Селектор</em>:first-of-type  {  ...  }
+                            </p>
+                        </div>
+                        <div class="example">
+                            <h6>Пример</h6>
+                            <p>
+                                <img src="./img/psevdo-classes-img/Screenshot_19.png" alt="">
+                                <img src="./img/psevdo-classes-img/Screenshot_20.png" alt="">
+                            </p>
+                            <table class="table">
+                                <tr> 
+                                 <td>&nbsp;</td><td>1998</td><td>1999</td><td>2000</td><td>2001</td>
+                                 <td>2002</td><td>2003</td>
+                                </tr>
+                                <tr> 
+                                 <td>Нефть</td>
+                                 <td>3</td><td>22</td><td>34</td><td>62</td><td>74</td><td>57</td>
+                                </tr>
+                                <tr>
+                                 <td>Золото</td>
+                                 <td>4</td><td>13</td><td>69</td><td>72</td><td>56</td><td>47</td>
+                                </tr>
+                                <tr>
+                                 <td>Дерево</td>
+                                 <td>4</td><td>7</td><td>73</td><td>79</td><td>34</td><td>86</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <p>
+                           В данном примере псевдокласс <span class="slc">:first-of-type</span> применяется для определения стиля только первой строки <span class="tag">&lt;tr&gt;</span> и каждой первой ячейки <span class="tag">&lt;td&gt;</span> каждой строки . 
+                        </p>
+                    </section>
+                    <section class="last-of-type" id="last-of-type">
+                        <div class="titles">
+                            <h4>:last-of-type</h4>
+                            <p>
+                                <a href="https://webref.ru/css/last-of-type" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            <strong>Задаёт стиль последнего элемента определённого типа в группе братских элементов (имеющих одного родителя).</strong>
+                        </p>
+                        <p>
+                            При добавлении селектора к <span class="slc">:last-of-type</span> сперва выбираются указанные элементы, затем из них берётся последний элемент. Наличие других элементов и их порядок не учитываются.
+                        </p>
+                        <h6>Синтаксис</h6>
+                        <div>
+                            <p class="sintacsis">
+                               <em>Селектор</em>:last-of-type { ... }
+                            </p>
+                        </div>
+                        <div class="example">
+                            <h6>Пример</h6>
+                            <p>
+                                <img src="./img/psevdo-classes-img/Screenshot_21.png" alt="">
+                                <img src="./img/psevdo-classes-img/Screenshot_22.png" alt="">
+                            </p>
+                            <div class="block2">
+                                <p>
+                                    Этот старинный скандинавский напиток пришёл к нам из древних времен и воспет во многих песнях. Теперь вы самостоятельно можете приготовить его и насладиться чудесным вкусом и ароматом легендарного нектара.
+                                </p>
+                                <p>...</p>
+                                <p>
+                                    Осталось добавить хлива и хрольва, чтобы напиток был готов. 
+                                    Подавать горячим.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            В данном примере в последнем абзаце текста добавляется специальный символ красного оттенка.
+                        </p>
+                    </section>
+                    <section class="not" id="not">
+                        <div class="titles">
+                            <h4>:not</h4>
+                            <p>
+                                <a href="https://webref.ru/css/not" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            <strong>Задаёт правила стилей для элементов, которые не содержат указанный селектор.</strong>
+                        </p>
+                        <h6>Синтаксис</h6>
+                        <div>
+                            <p class="sintacsis">
+                               <em>Селектор</em>:not(&lt;Селектор&gt;) { ... }
+                            </p>
+                        </div>
+                        <p>
+                            В качестве селектора могут указываться единичные псевдоклассы, теги, идентификаторы, классы и селекторы атрибутов. Нельзя использовать псевдокласс <span class="slc">:not</span> (конструкция :not(:not(...)) запрещена) и псевдоэлементы.
+                        </p>
+                        <div class="example">
+                            <h6>Пример</h6>
+                            <p>
+                                <img src="./img/psevdo-classes-img/Screenshot_23.png" alt="">
+                                <img src="./img/psevdo-classes-img/Screenshot_24.png" alt="">
+                            </p>
+                            <form action="handler.php" class="form">
+                                <p>Ваше имя: <input name="user"></p>
+                                <p>Прилагаемый файл: <input type="file" name="file"></p>
+                                <p><input type="submit" value="Отправить"></p>
+                            </form>
+                        </div>
+                        <p>
+                            В данном примере стиль применяется ко всем элементам <span class="tag">&lt;input&gt;</span> за исключением того, в параметрах которого установлено <em>type="submit"</em> (кнопка «Отправить»).
+                        </p>
+                    </section>
+                </section>
+            </article>
+            <a href="#header" class="btn">ВВЕРХ</a>  
+        </div>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
 </body>
 </html>

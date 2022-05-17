@@ -1,0 +1,246 @@
+body {
+    background-color: azure;
+    font-family: 'Lucida Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    box-sizing: content-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+    font-weight: bold;
+    margin: .3em;
+}
+span {
+    font-weight: inherit;
+}
+p, ul, ol, div {
+    margin: .5em 0;
+}
+div, p, input, button, form, span, a, ul, li {
+	box-sizing: border-box;
+}
+h1 {
+    font-size: 250%;
+}
+h2 {
+    font-size: 200%;
+}
+h3 {
+    font-size: 150%;
+}
+h4 {
+    font-size: 150%;
+    color:brown;
+    margin: 0 .3em;
+}
+h5 {
+    font-size: 120%;
+    background-color: pink;
+    padding: 5px;
+    color: black;
+}
+h6 {
+    font-size: 110%;
+    display: inline-block;
+    color: black;
+    background-color: pink;
+    padding: 0 5px;
+}
+ul {
+    list-style: disc;
+    padding-left: 30px;
+}
+ol {
+    list-style: decimal;
+    padding-left: 30px;
+}
+dd {
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+.container {
+    width: 1110px;
+    margin: 0 auto;
+}
+.header {
+    padding: 20px;
+    background-color: aqua;
+}
+.header a {
+    text-decoration: none;
+    color: brown;
+}
+.footer {
+    background-color: indigo;
+    color: azure;
+    padding: 20px;
+}
+.footer p {
+    padding-left: 120px;
+}
+.btn {
+    background-color: orange;
+    border-radius: 5px;
+    padding: 10px 30px;
+    text-align: center;
+    display: inline-block;
+    margin: 10px 0;
+    text-decoration: none;
+    font-weight: bold;
+    color: azure;
+}
+.tags {
+    font-size: 35px;
+    margin: 0;
+    color: rgb(64, 64, 95);
+    font-weight: 700;
+}
+
+/* Теги   
+<span class="tag">&lt;&gt;</span>
+*/
+.tag {
+    color: rgb(73, 73, 150);
+    font-size: 18px;
+}
+/* Селектор 
+<span class="slc"></span>
+*/
+.slc {
+    color: rgb(206, 50, 50);
+    font-size: 18px;
+}
+/* Свойство/Атрибуты 
+<span class="atr"></span>
+*/
+.atr {
+    color: orange;
+    font-size: 18px;
+}
+/* Значение 
+<span class="mean"></span>
+*/
+.mean {
+    color: rgb(4, 190, 4);
+    font-size: 18px;
+}
+.titles {
+    display: flex;
+}
+.titles p {
+    padding-left: 20px;
+}
+.sintacsis {
+    border: 1px solid pink;
+    display: inline-block;
+    padding: 10px;
+    background: #fff;
+}
+
+.example {
+    border: 3px pink solid;
+    padding: 10px;
+}
+.phover, .phover2, .extarget {
+    background: aquamarine;
+}
+.phover p {
+    display: inline-block;
+}
+.phover a:link {
+    color: #0000d0; /* Цвет ссылок */
+    padding: 2px; /* Поля вокруг текста */ 
+}
+.phover a:hover {
+    background: #786b59; /* Цвет фона под ссылкой */ 
+    color: #ffe; /* Цвет ссылки */ 
+}
+
+.phover2 a:link {
+    color: #0000d0; /* Цвет ссылок */
+}
+.phover2 a:visited {
+    color: #900060; /* Цвет посещённых ссылок */
+}
+.phover2 a:active {
+    color: #f00; /* Цвет активной ссылки */ 
+}
+
+.phover3 a:link {
+    color: #0000d0; /* Цвет ссылок */
+}
+.phover3  a:visited {
+    color: #900060; /* Цвет посещённых ссылок */
+}
+
+.phover4 a:link {
+    color: #0000d0; /* Цвет ссылок */
+}
+.phover4  a:visited {
+    color: #900060; /* Цвет посещённых ссылок */
+}
+
+.phover5 .form-input {
+    border: 2px solid grey;
+    padding: 5px;
+}  
+.phover5 .form-input:focus {
+    background: pink;
+    border-color: blue;
+    outline: none;
+}
+
+.extarget h2:target {
+    background: #fc0; /* Цвет фона */
+    padding: 3px; 
+   }
+
+.child {
+    background: aquamarine;
+}
+.child b:first-child {
+    color: red; /* Красный цвет текста */
+}
+
+.block {
+    background: aquamarine; /* Цвет фона */
+    color: brown; /* Цвет текста */
+}
+.block :first-child {
+    padding: 10px; /*  Поля вокруг текста */
+}
+.block :last-child { 
+    background: #dda458 url(//webref.ru/example/image/line.png) repeat-x; /* Параметры фона */
+    height: 5px; /* Высота блока */
+}
+
+.table {
+    border-collapse: collapse; /* Убираем двойные границы */
+    width: 100%; /* Ширина таблицы */
+    border-spacing: 0; /* Расстояние между ячеек */
+}
+.table td { 
+    border: 1px solid #6A3E14; /* Параметры рамки */
+    padding: 4px; /* Поля в ячейках */
+}
+.table tr:first-of-type {
+    background: #808990; /* Цвет фона */
+    color: #fff; /* Цвет текст */
+}
+.table td:first-of-type {
+    background: #CFD6D3; /* Цвет фона */
+}
+
+.block2 p:last-of-type::after {
+    content: ' ◄'; /* Добавляем символ в конце текста */
+    color: #c00000; /* Цвет символа */
+}
+
+.form {
+    background: aquamarine;
+    padding: 10px;
+}
+input:not([type="submit"]) {
+    border: 2px solid red;
+    padding: 5px;
+}
