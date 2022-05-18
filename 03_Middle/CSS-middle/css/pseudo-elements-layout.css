@@ -1,0 +1,339 @@
+body {
+    background-color: azure;
+    font-family: 'Lucida Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    box-sizing: content-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+    font-weight: bold;
+    margin: .3em;
+}
+span {
+    font-weight: inherit;
+}
+p, ul, ol, div {
+    margin: .5em 0;
+}
+div, p, input, button, form, span, a, ul, li {
+	box-sizing: border-box;
+}
+h1 {
+    font-size: 250%;
+}
+h2 {
+    font-size: 200%;
+}
+h3 {
+    font-size: 150%;
+}
+h4 {
+    font-size: 150%;
+    color:brown;
+    margin: 0 .3em;
+}
+h5 {
+    font-size: 120%;
+    background-color: pink;
+    padding: 5px;
+    color: black;
+}
+h6 {
+    font-size: 110%;
+    display: inline-block;
+    color: black;
+    background-color: pink;
+    padding: 0 5px;
+}
+ul {
+    list-style: disc;
+    padding-left: 30px;
+}
+ol {
+    list-style: decimal;
+    padding-left: 30px;
+}
+dd {
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+.container {
+    width: 1110px;
+    margin: 0 auto;
+}
+.header {
+    padding: 20px;
+    background-color: aqua;
+}
+.header a {
+    text-decoration: none;
+    color: brown;
+}
+.footer {
+    background-color: indigo;
+    color: azure;
+    padding: 20px;
+}
+.footer p {
+    padding-left: 120px;
+}
+.btn {
+    background-color: orange;
+    border-radius: 5px;
+    padding: 10px 30px;
+    text-align: center;
+    display: inline-block;
+    margin: 10px 0;
+    text-decoration: none;
+    font-weight: bold;
+    color: azure;
+}
+.tags {
+    font-size: 35px;
+    margin: 0;
+    color: rgb(64, 64, 95);
+    font-weight: 700;
+}
+
+/* Теги   
+<span class="tag">&lt;&gt;</span>
+*/
+.tag {
+    color: rgb(73, 73, 150);
+    font-size: 18px;
+}
+/* Селектор 
+<span class="slc"></span>
+*/
+.slc {
+    color: rgb(206, 50, 50);
+    font-size: 18px;
+}
+/* Свойство/Атрибуты 
+<span class="atr"></span>
+*/
+.atr {
+    color: orange;
+    font-size: 18px;
+}
+/* Значение 
+<span class="mean"></span>
+*/
+.mean {
+    color: rgb(4, 190, 4);
+    font-size: 18px;
+}
+.titles {
+    display: flex;
+}
+.titles p {
+    padding-left: 20px;
+}
+.sintacsis {
+    border: 1px solid pink;
+    display: inline-block;
+    padding: 10px;
+    background: #fff;
+}
+
+.example {
+    border: 3px pink solid;
+    padding: 10px;
+}
+.block, .block3, .block4
+ {
+    background: aquamarine;
+    padding: 5px;
+}
+
+.panel {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4d4d4f; /* Цвет текста */
+    width: 240px; /* Ширина блока */
+    min-height: 240px; /* Минимальная высота */
+    padding: 20px; /* Поля вокруг текста */
+    box-sizing: border-box; /* Не учитываем padding */
+    overflow: hidden; /* Обрезаем лишнее */
+    position: relative; /* Относительное позиционирование */
+}
+.panel::before {
+    content: ''; /* Выводим пустой блок */
+    background: aquamarine; /* Цвет фона */
+    transform: skewY(-10deg); /* Скашиваем блок */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 100%; height: 100%; /* Размеры */
+    left: 0; /* Положение от левого края */
+    top: -30px; /* Сдвигаем вверх */
+    z-index: -1; /* Ставим блок ниже текста */
+}
+.panel p {
+    margin-top: 0; /* Убираем отступ сверху */
+}
+.panel [type="email"] {
+    padding: 5px; /* Поля вокруг текста */
+}
+.panel button {
+    padding: 10px 15px; /* Поля в кнопке */
+    background: #11897d; /* Цвет фона кнопки */
+    color: #fff; /* Цвет текста */
+    border: 1px solid #fff; /* Параметры рамки */
+    border-radius: 5px; /* Радиус скругления */
+}
+
+.ingredients {
+    padding: 0; /* Убираем отступы */
+}
+.ingredients li {
+    align-items: baseline; /* Выравниваем текст */
+    display: flex; /* Включаем флексы */
+    margin-bottom: 0.5em; /* Отступ снизу */
+}
+.ingredients li::before {
+    content: ''; /* Выводим линию */
+    border-bottom: 1px dashed brown; /* Параметры линии */
+    flex-grow: 1; /* Линия занимает всё доступное пространство */
+    order: 2; /* Выводим вторым */
+    margin: 0 5px; /* Расстояние от текста */
+}
+.ingredients .value {
+    order: 3; /* Выводим третьим */
+}
+
+.block2 {
+    width: 300px; /* Ширина блока */
+}
+.photo img { display: block; }
+.block2 .title {
+    font: normal 20px Arial, sans-serif; /* Параметры шрифта */
+    background: #f7f7f7; /* Цвет фона */
+    color: #2d3032; /* Цвет текста */
+    border-bottom: 2px solid #ecebe9; /* */
+    padding: 1em; /* Поля вокруг текста */
+    position: relative; /* Относительное позиционирование */
+}
+.block2 .title::before {
+    content: ''; /* Выводим треугольник */
+    left: 0; top: 1em; /* Положение треугольника */
+    /* Создание треугольника */
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent transparent transparent #de3a31;
+    position: absolute; /* Абсолютное позиционирование */
+}
+.block2:hover .title {
+    background: #323e4e; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    border-color: #de3a31; /* Цвет линии снизу */
+}
+.block2:hover .title::before {
+    border-left-color: #fff; /* Цвет треугольника */
+}
+
+.note {
+    position: relative; /* Относительное позиционирование */
+    background: #c5df94; /* Цвет фона */
+    padding: 20px; /* Поля вокруг текста */
+    overflow: hidden; /* Обрезаем лишнее */ 
+    width: 45%;
+}
+.note::after {
+    content: ''; /* Выводим треугольник */
+    position: absolute; /* Абсолютное позиционирование */
+    top: 0; right: 0; /* Положение треугольника */
+    /* Создание треугольника */
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 20px 0 0 20px;
+    border-color: #fff transparent transparent #e2edc1;
+    box-shadow: 0 0 4px rgba(0,0,0,0.4);
+}
+
+.shadow {
+    background: #f7f7f7; /* Цвет фона */
+    border: 1px solid #ccc; /* Параметры рамки */
+    padding: 20px; /* Поля вокруг текста */
+    position: relative; /* Относительное позиционирование */
+    width: 45%;
+}
+.shadow::before, .shadow::after {
+    content: ''; /* Вывод тени */
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 15px; /* Положение снизу */
+    left: 10px; /* Положение слева */
+    width: 50%; /* Ширина тени */
+    max-width: 300px; /* Максимальная ширина тени */
+    height: 15px; /* Высота тени */
+    box-shadow: 0 15px 10px rgba(0,0,0,0.5); /* Тень */
+    transform: rotate(-3deg); /* Поворот */
+    z-index: -1; /* Опускаем ниже блока */
+}
+.shadow::after {
+    transform: rotate(3deg); /* Поворот */
+    right: 10px; /* Положение справа */
+    left: auto; /* Восстанавливаем положение слева */
+}
+
+.border {
+    display: inline-block; /* Строчно-блочный элемент */
+    position: relative; /* Относительное позиционирование */
+    outline: 1px solid #fff; /* Параметры рамки */
+}
+.border, .border::after {
+    padding: 4px; /* Толщина внутренней рамки */
+    background: #dad6cf; /* Цвет внутренней рамки */
+    border: 2px solid #c2b59d; /* Параметры рамки */
+    box-sizing: border-box; /* Не учитываем padding */
+}
+.border img { display: block; }
+.border::after {
+    content: ''; /* Выводим рамку */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; top: 0; /* Положение */
+    width: 100%; height: 100%; /* Размеры */
+    z-index: -1; /* Опускаем вниз */
+    transform: rotate(-7deg); /* Поворачиваем */
+}
+
+
+.figure {
+    display: inline-block; /* Строчно-блочный элемент */
+    padding: 12px; /* Расстояние от рамки до уголка */
+    position: relative; /* Относительное позиционирование */
+    overflow: hidden; /* Обрезаем лишнее */
+} 
+.figure::before, .figure::after {
+    content: ''; /* Выводим уголки */
+    position: absolute; /* Абсолютное позиционирование */
+    z-index: 2; /* Уголки поверх */
+    width: 70px; height: 70px; /* Размеры уголка */
+    left: -35px; bottom: -35px; /* Левый нижний уголок */
+    transform: rotate(45deg); /* Поворачиваем уголок */
+    box-shadow: 0 0 10px rgba(0,0,0,.5); /* Параметры тени */
+    outline: #c2b59d dashed 1px; /* Пунктирная линия */
+    outline-offset: -3px; /* Расстояние от края до линии */
+    background: #f7f6f2; /* Цвет фона */
+}
+.figure::after {
+    /* Правый верхний уголок */ 
+    left: auto; right: -35px; top: -35px;
+}
+.borders {
+    position: relative; /* Относительное позиционирование */
+}
+.borders, .borders::after {
+    padding: 4px; /* Толщина внутренней рамки */
+    background: #dad6cf; /* Цвет внутренней рамки */
+    border: 2px solid #c2b59d; /* Параметры рамки */
+    box-sizing: border-box; /* Не учитываем padding */
+}
+.borders img { display: block; }
+.borders::after {
+    content: ''; /* Выводим рамку */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; top: 0; /* Положение */
+    width: 100%; height: 100%; /* Размеры */
+    z-index: -1; /* Опускаем вниз */
+    transform: rotate(-7deg); /* Поворачиваем */
+}

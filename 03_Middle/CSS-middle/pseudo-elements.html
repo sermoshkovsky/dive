@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Псевдоэлементы</title>
-    <link rel="stylesheet" href="./css/pseudo-classes.css">
+    <link rel="stylesheet" href="./css/psevdo-elements.css">
 </head>
 <body>
     <header class="header" id="header">
@@ -20,12 +20,6 @@
         <div class="container">
             <article>
                 <h1>Псевдоэлементы</h1>
-                <p>
-                    Использование псевдоэлементов <span class="slc">::after</span> и <span class="slc">::before</span> является одним из самых популярных приёмов при вёрстке фрагментов веб-страниц и их стилизации. С их помощью можно выводить произвольный текст, добавлять тени, треугольники, линии и др.
-                </p>
-                <p>
-                    Фактически, <span class="slc">::after</span> и <span class="slc">::before</span> заменяют собой два обычных элемента в коде HTML, к которым можно добавлять любое стилевое оформление. Но поскольку мы всё делаем через CSS, то в полной мере сохраняется принцип разделения содержания и оформления. Тем самым, код HTML остаётся простым и чистым, а дизайн элементов возлагается на CSS.
-                </p>
                 <ul>
                     <li>
                         <a href="#aft-bf">Псевдоэлементы ::after и ::before</a>
@@ -34,7 +28,7 @@
                         <a href="#no-text">Не только текст</a>
                     </li>
                     <li>
-                        <a href="#layout">Использование в вёрстке</a>
+                        <a href="./pseudo-elements-layout.html">Использование в вёрстке</a>
                     </li>
                     <li>
                         <a href="#uni-psclasses">Сочетание с псевдоклассами</a>
@@ -42,37 +36,341 @@
                 </ul>
                 <section class="aft-bf" id="aft-bf">
                     <h2>Псевдоэлементы ::after и ::before</h2>
-                    <section>
+                    <p>
+                        Использование псевдоэлементов <span class="slc">::after</span> и <span class="slc">::before</span> является одним из самых популярных приёмов при вёрстке фрагментов веб-страниц и их стилизации. С их помощью можно выводить произвольный текст, добавлять тени, треугольники, линии и др.
+                    </p>
+                    <p>
+                        Фактически, <span class="slc">::after</span> и <span class="slc">::before</span> заменяют собой два обычных элемента в коде HTML, к которым можно добавлять любое стилевое оформление. Но поскольку мы всё делаем через CSS, то в полной мере сохраняется принцип разделения содержания и оформления. Тем самым, код HTML остаётся простым и чистым, а дизайн элементов возлагается на CSS.
+                    </p>
+                    <section class="after" id="after">
                         <div class="titles">
                             <h4>::after</h4>
                             <p>
-                                <a href="" target="_blank">Справочник CSS</a>
+                                <a href="https://webref.ru/css/after" target="_blank">Справочник CSS</a>
                             </p>
                         </div>
                         <p>
-                            <strong></strong>
+                            <strong>Используется для вывода контента после содержимого элемента, к которому он добавляется.</strong>
+                        </p>
+                        <p>
+                            Работает только совместно со стилевым свойством <a href="https://webref.ru/css/content" target="_blank"><span class="atr">content</span></a>, которое определяет содержимое для вставки. Не у всех элементов есть собственное содержимое, поэтому ::after не даёт результата для <span class="tag">&lt;img&gt;</span>, <span class="tag">&lt;input&gt;</span> и ряда других элементов.
+                        </p>
+                        <p>
+                            По умолчанию <span class="slc">::after</span> создаёт строчный элемент.
+                        </p>
+                        <h6>Синтаксис</h6>
+                        <div>
+                            <p class="sintacsis">
+                               <em>Селектор</em>::after { content: "текст" }
+                            </p>
+                        </div>
+                        <div class="example">
+                            <h6>Пример</h6>
+                            <p>
+                                <img src="./img/psevdo-elements-img/Screenshot_1.png" alt="">
+                                <img src="./img/psevdo-elements-img/Screenshot_2.png" alt="">
+                            </p>
+                            <div class="block">
+                                <p class="new">
+                                    Ловля льва в пустыне с помощью метода золотого сечения.
+                                </p>
+                                <p>
+                                    Метод ловли льва простым перебором.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            В данном примере к содержимому абзаца с классом <span class="atr">new</span> добавляется дополнительное слово, которое выступает значением свойства <span class="atr">content</span>.
                         </p>
                     </section>
-                    <section>
+                    <section class="before" id="before">
                         <div class="titles">
                             <h4>::before</h4>
                             <p>
-                                <a href="" target="_blank">Справочник CSS</a>
+                                <a href="https://webref.ru/css/before" target="_blank">Справочник CSS</a>
                             </p>
                         </div>
                         <p>
-                            <strong></strong>
+                            <strong>Применяется для отображения контента до содержимого элемента, к которому он добавляется. </strong>
                         </p>
+                        <p>
+                            Работает совместно со свойством <a href="https://webref.ru/css/content" target="_blank"><span class="atr">content</span></a>.
+                        </p>
+                        <p>
+                            По умолчанию <span class="slc">::before</span> создаёт строчный элемент.
+                        </p>
+                        <h6>Синтаксис</h6>
+                        <div>
+                            <p class="sintacsis">
+                                <em>Селектор</em>::before { content: "текст" }
+                            </p>
+                        </div>
+                        <p>
+                            В примере  показано добавление маркеров своего типа к пунктам списка посредством сокрытия стандартных маркеров и применения псевдоэлемента <span class="slc">::before</span>.
+                        </p>
+                        <div class="example">
+                            <h6>Пример</h6>
+                            <p>
+                                <img src="./img/psevdo-elements-img/Screenshot_3.png" alt="">
+                                <img src="./img/psevdo-elements-img/Screenshot_4.png" alt="">
+                            </p>
+                            <div class="block">
+                                <ul>
+                                    <li>Чебурашка</li>
+                                    <li>Крокодил Гена</li>
+                                    <li>Шапокляк</li>
+                                    <li>Крыса Лариса</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p>
+                            В данном примере псевдоэлемент <span class="slc">::before</span> устанавливается для селектора <span class="slc">li</span> и определяет маркеры списка. Добавление желаемых символов происходит путём задания значения свойства <span class="atr">content</span>.
+                        </p>
+                    </section>
+                    <section class="options" id="options">
+                        <div class="example">
+                            <h5>Блок с цитатой</h5>
+                            <p>
+                                <span class="slc">::after</span> и <span class="slc">::before</span> прекрасно подходят для оформления цитат, в частности, вывода увеличенных кавычек, которые показывают пользователям, что перед ними цитата
+                            </p>
+                            <p>
+                                <img src="./img/psevdo-elements-img/Screenshot_5.png" alt="">
+                                <img src="./img/psevdo-elements-img/Screenshot_6.png" alt="">
+                            </p>
+                            <div class="block">
+                                <blockquote>Чаще всего выход там, где был вход.</blockquote>
+                            </div>
+                            Для отображения кавычки перед текстом мы используем <span class="slc">::before</span>, а после текста — <span class="slc">::after</span>. К ним же добавляем и желаемое оформление кавычек, вроде изменения цвета и размера
+                        </div>
+                        <div class="example">
+                            <h5>Хлебные крошки</h5>
+                            <p>
+                                Хлебные крошки представляют собой разновидность навигации по сайту, которая показывает путь к текущему документу и его положение в иерархии сайта 
+                            </p>
+                            <p>
+                                Для создания такой навигации обычно применяется список <span class="tag">&lt;ul&gt;</span>>, а внутри пунктов <span class="tag">&lt;li&gt;</span> вставляются ссылки на соответствующие разделы сайта. Чтобы отделить ссылки друг от друга, между ними вставляется разделитель, в качестве него обычно используется косая черта, но можно использовать стрелку и другие символы.
+                            </p>
+                            <p>
+                                Разделитель добавляем через свойство <span class="atr">content</span> и селектор <span class="slc">li + li::before</span>, он выберет все элементы <span class="tag">&lt;li&gt;</span>, кроме первого
+                            </p>
+                            <p>
+                                <img src="./img/psevdo-elements-img/Screenshot_7.png" alt="">
+                                <img src="./img/psevdo-elements-img/Screenshot_8.png" alt="">
+                            </p>
+                            <div class="block2">
+                                <ul class="breadcrumbs">
+                                    <li><a href="#">Главная</a></li>
+                                    <li><a href="#">Картинки</a></li>
+                                    <li><a href="#">Девушки</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </section>
                 </section>
                 <section class="no-text" id="no-text">
-                    <h2>Не только текст</h2>
+                    <h3>Не только текст</h3>
+                    <p>
+                        Хотя мы рассмотрели, что псевдоэлементы <span class="slc">::after</span> и <span class="slc">::before</span> выводят текст, они могут делать не только это, а выводить ещё кавычки, изображения, нумерацию и значения атрибутов. Все эти возможности заложены в свойство <span class="atr">content</span>
+                        , которое работает в связке с псевдоэлементами.
+                    </p>
+                    <section>
+                        <h5>Кавычки</h5>
+                        <p>
+                            Кавычки можно непосредственно выводить как текст, но у свойства <a href="https://webref.ru/css/content" target="_blank"><span class="atr">content</span></a> для этой цели есть специальные значения: <span class="mean">open-quote</span> — для открывающей кавычки и <span class="mean">close-quote</span> — для закрывающей. 
+                        </p>
+                        <p>
+                            Вид кавычек задаётся в свойстве <a href="https://webref.ru/css/quotes" target="_blank"><span class="atr">quotes</span></a>, причём можно сразу определить сами кавычки и вложенные кавычки. В русском языке традиционно используются «ёлочки», а внутренние кавычки обозначаются «лапками», итого получается четыре вида кавычек
+                        </p>
+                        <p>
+                            «Ёлочки» мы выводим через свойство <span class="atr">content</span>, добавляя его к псевдоэлементам, а «лапки» применяются браузером автоматически для элемента <span class="tag">&lt;q&gt;</span>, как показано в примере. 
+                        </p>
+                        <div class="example">
+                            <h6>Кавычки в цитате</h6>
+                            <p>
+                                <img src="./img/psevdo-elements-img/Screenshot_9.png" alt="">
+                                <img src="./img/psevdo-elements-img/Screenshot_10.png" alt="">
+                            </p>
+                            <div class="block3">
+                                <blockquote>
+                                    Станислав Лец утверждал: 
+                                    <q>Чаще всего выход там, где был вход</q>.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h5>Изображения</h5>
+                        <p>
+                            Для вывода изображений у свойства <span class="atr">content</span> следует указать ключевое слово <span class="mean">url</span>, а в круглых скобках написать адрес картинки. Аналогично работает свойство <span class="atr">background-image</span>, так что синтаксис должен быть знаком.
+                        </p>
+                        <p>
+                            В примере мы создаём форму для поиска, где вместо кнопки применяется картинка лупы. Поскольку картинку мы выводим непосредственно на кнопке, сохраняется весь функционал поиска — в поле можно вводить текст, по кнопке можно щёлкать.
+                        </p>
+                        <div class="example">
+                            <h6>Вывод иконки</h6>
+                            <p>
+                                <img src="./img/psevdo-elements-img/Screenshot_11.png" alt="">
+                                <img src="./img/psevdo-elements-img/Screenshot_12.png" alt="">
+                            </p>
+                            <div class="block">
+                                <form>
+                                    <div class="search">
+                                     <input type="search" name="s" placeholder="Поиск по сайту">
+                                     <button class="zoom"></button>
+                                    </div>
+                                </form> 
+                            </div>
+                        </div>
+                        <p>
+                            На деле свойство <span class="atr">content</span> для вывода изображений проигрывает традиционному <span class="atr">background</span>, у которого намного больше возможностей, вроде позиционирования и масштабирования картинки. Так что <span class="atr">content</span> для отображения изображений применяется редко.
+                        </p>
+                    </section>
+                    <section>
+                        <h5>Нумерация списков</h5>
+                        <p>
+                            При создании нумерованных списков напрямую нельзя изменить стиль чисел, отображаемых перед пунктами. Поэтому идут на хитрость — прячут исходную нумерацию и создают новую с помощью <span class="slc">::before</span>. При этом мы легко можем задать своё произвольное оформление нумерации
+                        </p>
+                        <p>
+                            Для начала убираем нумерацию через <span class="atr">list-style</span> со значением <span class="mean">none</span>, добавляя это свойство к селектору <span class="slc">ul</span>. 
+                        </p>
+                        <p>
+                            Затем воспользуемся свойством <a href="https://webref.ru/css/counter-increment" target="_blank"><span class="atr">counter-increment</span></a> для создания новой нумерации. 
+                        </p>
+                        <p>
+                            Вывод чисел возложим на <span class="slc">::before</span> через свойство <span class="atr">content</span> и значение <span class="mean">counter</span>, а остальные свойства нужны для оформления этих чисел.
+                        </p>
+                        <p>
+                            В примере числа в списке выводятся в синем прямоугольнике белым цветом.
+                        </p>
+                        <div class="example">
+                            <h6>Нумерация списка</h6>
+                            <p>
+                                <img src="./img/psevdo-elements-img/Screenshot_13.png" alt="">
+                                <img src="./img/psevdo-elements-img/Screenshot_14.png" alt="">
+                            </p>
+                            <div class="block5">
+                                <ul>
+                                    <li>Чебурашка</li>
+                                    <li>Крокодил Гена</li>
+                                    <li>Шапокляк</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h5>Атрибуты</h5>
+                        <p>
+                            Свойство <span class="atr">content</span> позволяет выводить содержимое любых атрибутов у элементов через ключевое слово <span class="mean">attr</span>. В частности, так можно вывести адрес ссылки, как показано в примере. 
+                        </p>
+                        <p>
+                            Обратите внимание, что кроме самого значения атрибута допустимо показывать и произвольный текст, так что адрес для красоты отображается внутри квадратных скобок.
+                        </p>
+                        <p>
+                            Поскольку <span class="slc">::after</span> выводит содержимое внутри элемента, а не после него, то отображаемый адрес является частью ссылки и на него можно щёлкать для перехода по ссылке.
+                        </p>
+                        <div class="example">
+                            <h6>Вывод адреса ссылки</h6>
+                            <p>
+                                <img src="./img/psevdo-elements-img/Screenshot_15.png" alt="">
+                                <img src="./img/psevdo-elements-img/Screenshot_16.png" alt="">
+                            </p>
+                            <div class="block6">
+                                <p>Перейти на сайт <a href="https://google.ru">Гугла</a></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h5>Иконки</h5>
+                        <p>
+                            Иконки могут быть не только графическими, но и в виде текстовых символов. Это даёт несколько преимуществ:
+                        </p>
+                        <ul>
+                            <li>
+                                текст можно масштабировать без потери качества;
+                            </li>
+                            <li>
+                                текст легко окрасить в желаемый цвет;
+                            </li>
+                            <li>
+                                к тексту можно применить разные эффекты, вроде тени.
+                            </li>
+                        </ul>
+                        <p>
+                            Множество готовых символов, подходящих в качестве иконки, можно найти на сайте <a href="https://www.utf8icons.com/" target="_blank">utf8icons.com</a>. Достаточно скопировать символ и вставить его как значение свойства <span class="atr">content</span>. В примере  перед каждым абзацем добавляется коричневого цвета иконка.
+                        </p>
+                        <div class="example">
+                            <h6>Символ в качестве иконки</h6>
+                            <p>
+                                <img src="./img/psevdo-elements-img/Screenshot_17.png" alt="">
+                                <img src="./img/psevdo-elements-img/Screenshot_18.png" alt="">
+                            </p>
+                            <div class="block7">
+                                <p>
+                                    Астероид, и это следует подчеркнуть, неустойчив.
+                                </p>
+                                <p>
+                                    Космический мусор гасит сарос, но кольца видны только при 40–50.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            Хотя UTF поддерживает разнообразные символы, их явно недостаточно для большинства задач и требуется что-то ещё. На сайте <a href="https://fontello.com/" target="_blank">fontello.com</a> можно найти несколько сотен текстовых иконок. Выбираете желаемые иконки и скачиваете их в виде архива, содержащего требуемые шрифты и стилевые файлы.
+                        </p>
+                        <p>
+                            Сам набор шрифтов для разных браузеров подключается через <a href="https://webref.ru/css/font-face" target="_blank"><span class="slc">@font-face</span></a>, а сама иконка добавляется через <span class="slc">::before</span> и код символа.  
+                        </p>
+                        <p>
+                            <img src="./img/psevdo-elements-img/Screenshot_19.png" alt="">
+                        </p>
+                    </section>
                 </section>
-                <section class="layout" id="layout">
-                    <h2>Использование в вёрстке</h2>
-                </section>
-                <section class="uni-psclasses">
-                    <h2>Сочетание с псевдоклассами</h2>
+                <section class="uni-psclasses" id="uni-psclasses">
+                    <h3>Сочетание с псевдоклассами</h3>
+                    <p>
+                        Псевдоклассы нельзя применять к псевдоэлементам, поскольку они в такой комбинации работать не будет. Таким образом сочетание <span class="slc">::after.visited</span> или <span class="slc">::before:hover</span> не действует. А вот псевдоэлементы к псевдоклассам присоединять допустимо и связка <span class="slc">.visited::after</span> или <span class="slc">:hover::before</span> уже работает.
+                    </p>
+                    <p>
+                        Использование псевдоклассов позволяет расширить возможности по стилизации элементов и добавить к ним разные эффекты, вроде всплывающей подсказки. Сам текст подсказки мы добавим через пользовательский атрибут <span class="atr">data-title</span>, а выводить его будем через свойство <span class="atr">content</span> и значение <span class="mean">attr(data-title)</span>.
+                    </p>
+                    <p>
+                        Чтобы блок соответствовал размеру изображения мы превратим его в строчно-блочный элемент через свойство <span class="atr">display</span>. Тут возникает один побочный эффект — к изображениям внутри такого элемента снизу добавляется небольшой отступ. Он легко убирается, если изображение сделать блочным элементом опять же через <span class="atr">display</span>.
+                    </p>
+                    <p>
+                        Вывод текста и его оформление возлагается на селектор <span class="slc">.photo:hover::after</span>. Таким образом, текст подсказки выводится при наведении курсора на картинку.
+                    </p>
+                    <div class="example">
+                        <h6>Создание всплывающей подсказки</h6>
+                        <p>
+                            <img src="./img/psevdo-elements-img/Screenshot_20.png" alt="">
+                            <img src="./img/psevdo-elements-img/Screenshot_21.png" alt="">
+                        </p>
+                        <div class="block9">
+                            <div class="photo" data-title="Софийский собор">
+                                <img src="./img/psevdo-elements-img/thumb1.jpg" alt="">
+                            </div>
+                            <div class="photo" data-title="Польский костел">
+                                <img src="./img/psevdo-elements-img/thumb2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Текст подсказки отображается мгновенно без всяких задержек. Чтобы сделать появление подсказки плавным добавим свойство <span class="atr">transition</span> и переделаем стили, оставив у <span class="slc">:hover</span> только изменяемые в процессе анимации свойства. Остальное оформление перенесём в <span class="slc">::after</span>, как показано в примере. 
+                    </p>
+                    <div class="example">
+                        <h6>Добавление анимации</h6>
+                        <p>
+                            <img src="./img/psevdo-elements-img/Screenshot_22.png" alt="">
+                            <img src="./img/psevdo-elements-img/Screenshot_23.png" alt="">
+                        </p>
+                        <div class="block10">
+                            <div class="photo" data-title="Софийский собор">
+                                <img src="./img/psevdo-elements-img/thumb1.jpg" alt="">
+                            </div>
+                            <div class="photo" data-title="Польский костел">
+                                <img src="./img/psevdo-elements-img/thumb2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </article>
             <a href="#header" class="btn">ВВЕРХ</a>

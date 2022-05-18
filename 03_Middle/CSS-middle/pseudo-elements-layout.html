@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Использование в вёрстке ::after и ::before</title>
+    <link rel="stylesheet" href="./css/pseudo-elements-layout.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <a href="../../00_Home/index.html" target="_blank">Главная</a> |
+                <a href="../../02_Junior/Junior_CSS-1/css-1.html" target="_blank">CSS-1</a> |
+                <a href="./pseudo-elements.html" target="_blank">Псевдоэлементы</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <article>
+                <h1>Использование в вёрстке <em>::after</em> и <em>::before</em></h1>
+                <p>
+                    Обычно для демонстрации возможностей псевдоэлементов, <span class="slc">::after</span> и <span class="slc">::before</span> используются для вывода текста после и до содержимого элемента. Чаще всего на практике эти псевдоэлементы оставляют пустыми, а затем к ним добавляют нужную стилизацию.
+                </p>
+                <ul>
+                    <li>
+                        <a href="#introduce"><em>::after</em> и <em>::before</em> в HTML</a>
+                    </li>
+                    <li>
+                        <a href="#points">Точки между слов</a>
+                    </li>
+                    <li>
+                        <a href="#triangle">Добавление треугольника</a>
+                    </li>
+                    <li>
+                        <a href="#shadows">Добавление тени</a>
+                    </li>
+                    <li>
+                        <a href="#frames">Повёрнутые рамки</a>
+                    </li>
+                    <li>
+                        <a href="#multiple">Несколько псевдоэлементов</a>
+                    </li>
+                </ul>
+                <section class="introduce" id="introduce">
+                    <h2><em>::after</em> и <em>::before</em> в HTML</h2>
+                    <p>
+                        Сами псевдоэлементы в HTML можно представить следующим образом.
+                    </p>
+                    <p>
+                        <img src="./img/psevdo-elements-img/Screenshot_24.png" alt="">
+                    </p>
+                    <p>
+                        Про псевдоэлементы следует помнить следующее:
+                    </p>
+                    <ul>
+                        <li>
+                            это строчные элементы;
+                        </li>
+                        <li>
+                            они не работают без свойства <span class="atr">content</span>;
+                        </li>
+                        <li>
+                            они являются дочерними элементами.
+                        </li>
+                    </ul>
+                    <p>
+                        Для строчных элементов нельзя задать ширину и высоту, поэтому псевдоэлементы следует сделать блочными через <span class="atr">display</span> или, что применяется чаще, задать им <em>абсолютное</em> позиционирование. В сочетании с <em>относительным</em>  позиционированием у родителя это позволяет нам легко управлять положением блока.
+                    </p>
+                    <p>
+                        В качестве демонстрации сделаем блок со скошенным краем
+                    </p>
+                    <p>
+                        Цветной прямоугольник мы добавим через <span class="slc">::before</span> и сделаем его скошенным через свойство <a href="https://webref.ru/css/transform" target="_blank"><span class="atr">transform</span></a> с функцией <span class="mean">skewY()</span>. 
+                    </p>
+                    <p>
+                        Далее, используя абсолютное позиционирование, зададим блоку размеры, совпадающие с родителем, и сдвинем блок вверх через свойство <a href="https://webref.ru/css/top" target="_blank"><span class="atr">top</span></a>, чтобы спрятать верхний скошенный край. Цветной блок отображается поверх текста, так что его надо опустить ниже с помощью свойства <a href="https://webref.ru/css/z-index" target="_blank"><span class="atr">z-index</span></a> со значением <span class="mean">-1</span>. 
+                    </p>
+                    <p>
+                        Финальный код показан в примере
+                    </p>
+                    <div class="example">
+                        <h6>Блок со скошенным краем</h6>
+                        <p>
+                            <img src="./img/psevdo-elements-img/Screenshot_25.png" alt="">
+                            <img src="./img/psevdo-elements-img/Screenshot_26.png" alt="">
+                        </p>
+                        <div class="panel">
+                            <form>
+                                <p>Подпишитесь на наши новости.</p>
+                                <p><input type="email" placeholder="Ваш email"></p>
+                                <p><button>Подписаться</button></p>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section class="points" id="points">
+                    <h2>Точки между слов</h2>
+                    <p>
+                        В оглавлениях, справочниках, рецептах для наглядности и удобства разные части текста на одной строке соединяют пунктирной линией. Взгляд скользит по этой линии и не перескакивает на другую строку.
+                    </p>
+                    <p>
+                        Отдельные строки мы создаём через список и элементы <span class="tag">&lt;li&gt;</span>, внутрь которых вставляются левый и правый фрагменты строки. Чтобы стилизовать правую часть строки, поместим её в элемент <span class="tag">&lt;span&gt;</span>.
+                    </p>
+                    <p>
+                        <img src="./img/psevdo-elements-img/Screenshot_27.png" alt="">
+                    </p>
+                    <p>
+                        Линия между частями текста создаётся с помощью свойства <span class="atr">border-bottom</span> - оно позволяет задать одновременно желаемую толщину, стиль и цвет линии. В итоге мы легко можем сделать линию пунктирной или сплошной, поменяв в стилях одно значение. Сама линия выводится с помощью псевдоэлемента <span class="slc">li::before</span>, как показано в примере. 
+                    </p>
+                    <div class="example">
+                        <h6>Точки между слов</h6>
+                        <p>
+                            <img src="./img/psevdo-elements-img/Screenshot_28.png" alt="">
+                            <img src="./img/psevdo-elements-img/Screenshot_29.png" alt="">
+                        </p>
+                        <div class="block">
+                            <ul class="ingredients">
+                                <li>Ликёр Калуа<span class="value">20 мл</span></li>
+                                <li>Ликёр Бейлис<span class="value">20 мл</span></li>
+                                <li>Ликёр Куантро<span class="value">20 мл</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="triangle" id="triangle">
+                    <h2>Добавление треугольника</h2>
+                    <p>
+                        Треугольники в веб-дизайне часто используются как указатели, стрелки или просто в качестве оформления элементов веб-страниц. Для создания треугольников обычно применяются границы — сперва делается блок нулевого размера, затем к этому блоку добавляется <span class="atr">border</span>, размер которого совпадает с размером треугольника. Окончательно делаем границы на неиспользуемых сторонах прозрачными, в итоге остаётся цветной треугольник.
+                    </p>
+                    <p>
+                        Чтобы на первых было проще делать разные треугольники, можно воспользоваться генераторами.  
+                        Вот один из них. <a href="http://apps.eky.hk/css-triangle-generator/" target="_blank">CSS triangle generator</a>. 
+                    </p>
+                    <p>
+                        Выбираете желаемую форму треугольника, задаёте его размеры и цвет, после чего получаете готовый код CSS.
+                    </p>
+                    <p>
+                        Добавление треугольника и его позиционирование возлагается на псевдоэлементы. В примере  мы делаем блок с фотографией и заголовком, слева от которого вставляется цветной треугольник. При наведении курсора на блок, цвет фона заголовка и цвет треугольника меняются.
+                    </p>
+                    <p>
+                        Позиционирование треугольника делается традиционно — через свойство <span class="atr">position</span> и свойства <span class="atr">left</span> и <span class="atr">top</span>. Такой подход позволяет разместить треугольник в любом произвольном месте нашего блока.
+                    </p>
+                    <div class="example">
+                        <h6>Треугольник возле заголовка</h6>
+                        <p>
+                            <img src="./img/psevdo-elements-img/Screenshot_30.png" alt="">
+                            <img src="./img/psevdo-elements-img/Screenshot_31.png" alt="">
+                        </p>
+                        <div class="block3">
+                            <div class="block2">
+                                <div class="photo">
+                                    <img src="./img/psevdo-elements-img/mojito.jpg" alt="Мохито">
+                                </div>
+                                <div class="title">Коктейль Мохито</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Другой разновидностью треугольника может служить уголок, который имитирует загнутый лист
+                    </p>
+                    <p>
+                        Опять же, сперва делаем прямоугольный треугольник с помощью <span class="atr">border</span>, затем помещаем его в правый верхний угол блока. Чтобы при этом получить эффект загнутого уголка, часть квадрата закрасим белым цветом, совпадающим с цветом фона. Да, выходит, что на разноцветном фоне этот метод работать не будет.
+                    </p>
+                    <p>
+                        Для большей выразительности уголка добавим к нему тень через <span class="atr">box-shadow</span>, а чтобы тень оставалась только на уголке, обрежем её за пределами блока через свойство <span class="atr">overflow</span> со значением <span class="mean">hidden</span>. 
+                    </p>
+                    <div class="example">
+                        <h6>Загнутый уголок</h6>
+                        <p>
+                            <img src="./img/psevdo-elements-img/Screenshot_32.png" alt="">
+                            <img src="./img/psevdo-elements-img/Screenshot_33.png" alt="">
+                        </p>
+                        <div class="note">
+                            В соответствии со сложившейся правоприменительной 
+                            практикой делькредере запрещает уголовный задаток.
+                        </div>
+                    </div>
+                </section>
+                <section class="shadows" id="shadows">
+                    <h2>Добавление тени</h2>
+                    <p>
+                        Тень для блока делается с помощью свойства <span class="atr">box-shadow</span>, при этом тень повторяет форму блока. Так, если сделать блок со скруглёнными уголками через <span class="atr">border-radius</span>, то тень тоже будет со скруглением.
+                    </p>
+                    <p>
+                        В некоторых ситуациях <span class="atr">box-shadow</span> уже недостаточно, когда мы хотим сделать тень сложной формы, например, имитирующей приподнятые уголки (рис. 1).
+                    </p>
+                    <p>
+                        <img src="./img/psevdo-elements-img/Screenshot_34.png" alt="">
+                    </p>
+                    <p>
+                        Для создания подобных теней мы добавляем два псевдоэлемента через <span class="slc">::before</span> и <span class="slc">::after</span>. Для них ставим <span class="atr">box-shadow</span> и позиционируем нужным нам образом. Окончательно опускаем псевдоэлементы ниже блока с помощью свойства <span class="atr">z-index</span> со значением <span class="mean">-1</span>.
+                    </p>
+                    <p>
+                        Если для наглядности окрасить псевдоэлементы фоновым цветом и поставить их вперёд, то получим вид блоков как на рис. 2.
+                    </p>
+                    <p>
+                        <img src="./img/psevdo-elements-img/Screenshot_35.png" alt="">
+                    </p>
+                    <p>
+                        В примере показано добавление тени с помощью <span class="slc">::before</span> и <span class="slc">::after</span>.
+                    </p>
+                    <div class="example">
+                        <h6>Создание тени</h6>
+                        <p>
+                            <img src="./img/psevdo-elements-img/Screenshot_36.png" alt="">
+                            <img src="./img/psevdo-elements-img/Screenshot_37.png" alt="">
+                        </p>
+                        <div class="shadow">
+                            Септаккорд полифигурно начинает форшлаг.
+                        </div>
+                    </div>
+                    <p>
+                        Для создания разных теней можно воспользоваться  визуальным генератором <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator" target="_blank">Box-shadow_generator</a>
+                    </p>
+                </section>
+                <section class="frames" id="frames">
+                    <h2>Повёрнутые рамки</h2>
+                    <p>
+                        Рамки можно делать с помощью свойств <span class="atr">border</span>, <span class="atr">outline</span>, даже с помощью <span class="atr">box-shadow</span> и градиентов. Все эти свойства позволяют получить самые разнообразные декоративные рамки. Однако если рамка должна быть повёрнута, то без псевдоэлементов не обойтись, поскольку нам надо трансформировать только рамку, не затрагивая содержимого элемента.
+                    </p>
+                    <p>
+                        Для этого мы создадим псевдоэлемент таких же размеров, что и сам элемент, и с такой же рамкой, а затем просто повернём его с помощью свойства <span class="atr">transform</span>. 
+                    </p>
+                    <div class="example">
+                        <h6>Создание рамки</h6>
+                        <p>
+                            <img src="./img/psevdo-elements-img/Screenshot_38.png" alt="">
+                            <img src="./img/psevdo-elements-img/Screenshot_39.png" alt="">
+                        </p>
+                        <figure class="border">
+                            <img src="./img/psevdo-elements-img/b-52.jpg" alt="Б-52" width="150" height="150">
+                        </figure>
+                    </div>
+                </section>
+                <section class="multiple" id="multiple">
+                    <h2>Несколько псевдоэлементов</h2>
+                    <p>
+                        Следует помнить, что к каждому элементу можно добавить только один <span class="slc">::before</span> и только один <span class="slc">::after</span>.  
+                    </p>
+                    <p>
+                        В большинстве ситуаций двух псевдоэлементов вполне достаточно, хотя в сложных случаях их потребуется больше.
+                    </p>
+                    <p>
+                        При этом можно воспользоваться таким трюком — внутрь нашего элемента вставить пустой <span class="tag">&lt;div&gt;</span> и к нему уже добавить ещё псевдоэлементы.
+                    </p>
+                    <p>
+                        Модифицируем повёрнутую рамку, добавив к ней ещё и уголки. 
+                    </p>
+                    <p>
+                        Два уголка плюс рамка — итого получается три псевдоэлемента. <span class="slc">::after</span> и <span class="slc">::before</span> «навесим» на элемент <span class="tag">&lt;figure&gt;</span>, а ещё один добавим к <span class="tag">&lt;div&gt;</span> с классом border внутри <span class="tag">&lt;figure&gt;</span>, как показано в примере
+                    </p>
+                    <p>
+                        Уголки сделаем с помощью квадратов, фон которых совпадает с фоном веб-страницы. Один уголок располагается в правом верхнем углу, а другой — в левом нижнем. Затем уголки поворачиваются на 45 градусов, а лишние части удаляются через свойство <span class="atr">overflow</span> со значением <span class="mean">hidden</span>.
+                    </p>
+                    <div class="example">
+                        <h6>Несколько псевдоэлементов</h6>
+                        <p>
+                            <img src="./img/psevdo-elements-img/Screenshot_40.png" alt="">
+                            <img src="./img/psevdo-elements-img/Screenshot_41.png" alt="">
+                        </p>
+                        <figure class="figure">
+                            <div class="borders">
+                             <img src="./img/psevdo-elements-img/b-52.jpg" alt="Б-52" width="150" height="150">
+                            </div>
+                        </figure>
+                    </div>
+                </section>
+            </article>
+            <a href="#header" class="btn">ВВЕРХ</a>
+        </div>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>

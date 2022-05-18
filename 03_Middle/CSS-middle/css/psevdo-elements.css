@@ -1,0 +1,304 @@
+body {
+    background-color: azure;
+    font-family: 'Lucida Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    box-sizing: content-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+    font-weight: bold;
+    margin: .3em;
+}
+span {
+    font-weight: inherit;
+}
+p, ul, ol, div {
+    margin: .5em 0;
+}
+div, p, input, button, form, span, a, ul, li {
+	box-sizing: border-box;
+}
+h1 {
+    font-size: 250%;
+}
+h2 {
+    font-size: 200%;
+}
+h3 {
+    font-size: 150%;
+}
+h4 {
+    font-size: 150%;
+    color:brown;
+    margin: 0 .3em;
+}
+h5 {
+    font-size: 120%;
+    background-color: pink;
+    padding: 5px;
+    color: black;
+}
+h6 {
+    font-size: 110%;
+    display: inline-block;
+    color: black;
+    background-color: pink;
+    padding: 0 5px;
+}
+ul {
+    list-style: disc;
+    padding-left: 30px;
+}
+ol {
+    list-style: decimal;
+    padding-left: 30px;
+}
+dd {
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+.container {
+    width: 1110px;
+    margin: 0 auto;
+}
+.header {
+    padding: 20px;
+    background-color: aqua;
+}
+.header a {
+    text-decoration: none;
+    color: brown;
+}
+.footer {
+    background-color: indigo;
+    color: azure;
+    padding: 20px;
+}
+.footer p {
+    padding-left: 120px;
+}
+.btn {
+    background-color: orange;
+    border-radius: 5px;
+    padding: 10px 30px;
+    text-align: center;
+    display: inline-block;
+    margin: 10px 0;
+    text-decoration: none;
+    font-weight: bold;
+    color: azure;
+}
+.tags {
+    font-size: 35px;
+    margin: 0;
+    color: rgb(64, 64, 95);
+    font-weight: 700;
+}
+
+/* Теги   
+<span class="tag">&lt;&gt;</span>
+*/
+.tag {
+    color: rgb(73, 73, 150);
+    font-size: 18px;
+}
+/* Селектор 
+<span class="slc"></span>
+*/
+.slc {
+    color: rgb(206, 50, 50);
+    font-size: 18px;
+}
+/* Свойство/Атрибуты 
+<span class="atr"></span>
+*/
+.atr {
+    color: orange;
+    font-size: 18px;
+}
+/* Значение 
+<span class="mean"></span>
+*/
+.mean {
+    color: rgb(4, 190, 4);
+    font-size: 18px;
+}
+.titles {
+    display: flex;
+}
+.titles p {
+    padding-left: 20px;
+}
+.sintacsis {
+    border: 1px solid pink;
+    display: inline-block;
+    padding: 10px;
+    background: #fff;
+}
+
+.example {
+    border: 3px pink solid;
+    padding: 10px;
+}
+.block, .block2, .block3,
+.block4, .block5, .block6,
+.block7, .block8, .block9, .block10
+ {
+    background: aquamarine;
+    padding: 5px;
+}
+
+.new::after {
+    content: " - Новьё!"; /* Добавляем после текста абзаца */
+    color: red; /* Красный цвет текста */
+    font-style: italic; /* Курсивное начертание */
+}
+
+.block ul {
+    list-style: none; /* Прячем маркеры списка */
+}
+.block li::before {
+    content: "✿"; /* Добавляем символ */
+    padding-right: 7px; /* Расстояние от текста до маркеров */
+    color: red; /* Красный цвет маркеров */
+}
+
+.block blockquote {
+    background: #f9f0de; /* Цвет фона */
+    border-left: 2px solid #0083ca; /* Линия слева */
+    padding: 1em; /* Поля вокруг текста */
+}
+.block blockquote::before,
+.block blockquote::after {
+    content: "“"; /* Левая кавычка */
+    font-size: 40px; /* Размер текста кавычек */
+    color: #c1172c; /* Цвет кавычек */
+    line-height: 0; /* Текст не занимает место */
+}
+.block blockquote::after {
+    content: "”"; /* Правая кавычка */
+}
+
+.breadcrumbs {
+    margin: 0; /* Убираем отступы */
+    padding: 10px; /* Поля вокруг текста */
+    background: #b2d235; /* Цвет фона */
+}
+.breadcrumbs li {
+    display: inline-block; /* Размещаем список по горизонтали */
+} 
+.breadcrumbs a { 
+    color: #fff; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчёркивание у ссылок */
+}
+.breadcrumbs li + li::before {
+    content: '/'; /* Разделитель ссылок */
+    padding: 0 7px; /* Расстояние вокруг разделителя */
+}
+
+.block3 blockquote { 
+    quotes: "«" "»" "„" "“"; /* Определяем вид кавычек */ 
+}
+.block3 blockquote::before {
+    content: open-quote; /* Открывающая кавычка */
+    color: #c1172c; /* Цвет кавычки */
+}
+.block3 blockquote::after {
+    content: close-quote; /* Закрывающая кавычка */
+    color: #c1172c; /* Цвет кавычки */
+}
+
+.search {
+    padding: 5px 15px; /* Поля вокруг */
+    display: inline-block; /* Ширина соответствует содержимому */
+    border: 1px solid #945323; /* Параметры рамки */
+    border-radius: 20px; /* Скругляем рамку */
+}
+[type="search"] {
+    border: none; outline: none; /* Убираем рамку */
+}
+.zoom {
+    border: none; /* Убираем рамку */
+    background: transparent; /* Убираем фон */
+    width: 20px; height: 20px; /* Размеры картинки */
+    vertical-align: middle; /* Выравниваем по центру */
+    padding: 0; /* Убираем поля для IE */
+}
+.zoom::before {
+    content: url(//webref.ru/example/image/search.png); /* Выводим картинку */
+}
+
+.block5 ul {
+    list-style: none; /* Убираем исходную нумерацию */
+}
+.block5 li {
+    counter-increment: list; /* Создаём новую нумерацию */
+    margin-bottom: 0.2em; /* Расстояние между пунктами */
+}
+   /* Стиль нумерации */
+.block5 li::before {
+    content: counter(list); /* Выводим числа */
+    display: inline-block; /* Строчно-блочный элемент */
+    width: 1.5em; /* Ширина */
+    height: 1.5em; /* Высота */
+    line-height: 1.5em; /* Выравниваем по вертикали */
+    background-color: #478eb0; /* Цвет фона */
+    color: #fff; /* Белый цвет текста */
+    text-align: center; /* Выравниваем по центру */
+    margin-right: 0.5em; /* Расстояние от числа до текста */
+}
+
+.block6 a::after {
+    content: " [" attr(href) "]"; /* Выводим значение href */
+    color: #666; /* Цвет текста */
+}
+
+.block7 p::before {
+    content: '❡';
+    font-size: 1.2em;
+    color: brown;
+}
+
+.photo {
+    display: inline-block; /* Строчно-блочный элемент */
+    position: relative; /* Относительное позиционирование */
+}
+.photo img {
+    display: block; /* Убираем отступ снизу */
+}
+.photo:hover::after {
+    content: attr(data-title); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; right: 0; /* Вся ширина блока */
+    bottom: 0; /* Положение снизу */
+    background: rgba(209,155,111,0.8); /* Цвет фона */
+    font-size: 11px; /* Размер текста */
+    padding: 5px; /* Поля вокруг текста */
+    text-align: center; /* Выравниваем текст по центру */
+}
+
+.block10 .photo {
+    display: inline-block; /* Строчно-блочный элемент */
+    position: relative; /* Относительное позиционирование */
+    overflow: hidden; /* Прячем лишнее */
+}
+.block10 .photo img {
+    display: block; /* Убираем отступ снизу */
+}
+.block10 .photo::after {
+    content: attr(data-title); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; right: 0; /* Вся ширина блока */
+    bottom: -1em; /* Положение снизу */
+    background: rgba(209,155,111,0.8); /* Цвет фона */
+    font-size: 11px; /* Размер текста */
+    padding: 5px; /* Поля вокруг текста */
+    text-align: center; /* Выравниваем текст по центру */
+    transition: 0.5s; /* Время анимации */
+    opacity: 0; /* Полная прозрачность */
+}
+.block10 .photo:hover::after {
+    opacity: 1; /* Полная видимость */
+    bottom: 0; /* Положение снизу */
+}
