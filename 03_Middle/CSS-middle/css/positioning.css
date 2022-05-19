@@ -1,0 +1,362 @@
+body {
+    background-color: azure;
+    font-family: 'Lucida Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+    font-weight: bold;
+    margin: .3em;
+}
+span {
+    font-weight: inherit;
+}
+h1 {
+    font-size: 250%;
+}
+h2 {
+    font-size: 200%;
+}
+h3 {
+    font-size: 150%;
+}
+h4 {
+    font-size: 150%;
+    color:brown;
+    margin: 0 .3em;
+}
+h5 {
+    font-size: 120%;
+    background-color: pink;
+    padding: 5px;
+    color: black;
+}
+h6 {
+    font-size: 110%;
+    display: inline-block;
+    color: black;
+    background-color: pink;
+    padding: 0 5px;
+}
+ul {
+    list-style: disc;
+    padding-left: 30px;
+}
+ol {
+    list-style: decimal;
+    padding-left: 30px;
+}
+dd {
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+.container {
+    width: 1110px;
+    margin: 0 auto;
+}
+.header {
+    padding: 20px;
+    background-color: aqua;
+}
+.header a {
+    text-decoration: none;
+    color: brown;
+}
+.footer {
+    background-color: indigo;
+    color: azure;
+    padding: 20px;
+}
+.footer p {
+    padding-left: 120px;
+}
+.btn {
+    background-color: orange;
+    border-radius: 5px;
+    padding: 10px 30px;
+    text-align: center;
+    display: inline-block;
+    margin: 10px 0;
+    text-decoration: none;
+    font-weight: bold;
+    color: azure;
+}
+.tags {
+    font-size: 35px;
+    margin: 0;
+    color: rgb(64, 64, 95);
+    font-weight: 700;
+}
+
+/* Теги   
+<span class="tag">&lt;&gt;</span>
+*/
+.tag {
+    color: rgb(73, 73, 150);
+    font-size: 18px;
+}
+/* Селектор 
+<span class="slc"></span>
+*/
+.slc {
+    color: rgb(206, 50, 50);
+    font-size: 18px;
+}
+/* Свойство/Атрибуты 
+<span class="atr"></span>
+*/
+.atr {
+    color: orange;
+    font-size: 18px;
+}
+/* Значение 
+<span class="mean"></span>
+*/
+.mean {
+    color: rgb(4, 190, 4);
+    font-size: 18px;
+}
+.titles {
+    display: flex;
+}
+.titles p {
+    padding-left: 20px;
+}
+.sintacsis {
+    border: 1px solid pink;
+    display: inline-block;
+    padding: 10px;
+    background: #fff;
+}
+
+.example {
+    border: 3px pink solid;
+    padding: 10px;
+}
+.block, .block2, .block3, .block4 {
+    background: aquamarine;
+    padding: 5px;
+}
+
+.overlay {
+    background: midnightblue;
+    color: white;
+    padding: 20px;
+}
+  
+.overlay p {
+    background: mediumseagreen;
+    padding: 20px;
+}
+  
+.overlay strong {
+    background: crimson;
+    color: white;
+    padding: 2px 5px;
+    font-weight: normal;
+}
+
+.fig { 
+    float: left;
+    margin: 0 10px 0 0;
+}
+.block2, .block3 {
+    width: 50%;
+}
+.frame { 
+    float: right;
+    background: #887dba; /* Цвет фона */
+    color: #f5faf4; /* Цвет текста */
+    padding: 10px; /* Поля вокруг текста */
+    margin: 0 0 10px 10px; /* Отступы вокруг */
+}
+
+.block3 div {
+    color: #f5faf4; /* Цвет текста */
+    font-size: 2em; /* Размер шрифта */
+    padding: 10px 20px; /* Поля вокруг текста */
+    margin-bottom: 1em; /* Отступ снизу */
+}
+.ltr { 
+    float: left;
+    background: #69539c; /* Цвет фона */
+    margin-right: 10px; /* Отступ справа */
+}
+.rtl { 
+    float: right;
+    background: #37673f; /* Цвет фона */
+    margin-left: 10px; /* Отступ слева */
+}
+.block3 {
+       height: 100px;
+       width: 100%;
+}
+.block4 {
+    height: 300px;
+}
+ 
+.col1, .col2 {
+    float: left;
+    min-height: 150px; /* Минимальная высота */
+}
+.col1 {
+    background: #85ab70; /* Цвет фона */
+    width: 30%; /* Ширина */
+    border-right: 2px solid red; /* Линия справа */
+}
+.col2 {
+    background: #406325; /* Цвет фона */
+    width: 70%; /* Ширина */
+}
+.block5  {
+    background: aquamarine;
+    padding: 5px;
+    height: 200px;
+}
+
+.block5 div {
+    border: 1px solid #000; /* Рамка */
+    padding: 10px; /* Поля вокруг текста */
+}
+.figs { 
+    float: left;
+    margin-right: 10px; /* Отступ справа */
+}
+
+.block6 {
+    background: aquamarine;
+    padding: 5px;
+    height: 100px; 
+}
+
+.block6 div {
+    background: blue; /* Цвет фона */
+}
+.block6 h2 { 
+    float: left;
+    background: #f04e23; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    margin: 0; /* Отступ */
+    padding: 5px 10px; /* Поля */
+}
+
+.arrow {
+    font-size: 2em; /* Размер стрелок */
+    background: #e7e7e0; /* Цвет фона */
+}
+.prev, .next {
+    color: #d51920; /* Цвет стрелок */
+    width: 50%; /* Ширина блоков */
+}
+.prev { 
+    float: left; 
+}
+.next { 
+    float: right;
+    text-align: right; /* Выравнивание по правому краю */
+}
+
+.over .arrow {
+    font-size: 2em; /* Размер стрелок */
+    background: #e7e7e0; /* Цвет фона */
+    color: #d51920; /* Цвет стрелок */
+    overflow: hidden; /* Отменяем обтекание */
+}
+.over .prev { 
+    float: left; 
+}
+.over .next { 
+    float: right; 
+}
+
+.flow div {
+    border: 1px solid #000; /* Рамка */
+    padding: 10px; /* Поля вокруг текста */
+    overflow: hidden; /* Отменяем обтекание */
+}
+.figo { 
+    float: left;
+    position: relative; /* Относительное позиционирование */
+    left: -70px; /* Сдвигаем влево */
+}
+
+.section {
+    border: 1px solid #000; /* Рамка */
+    padding: 10px; /* Поля вокруг текста */
+}
+.figus { 
+    float: left;
+    margin-right: 10px;
+}
+.clearfix { clear: both; }
+
+.col10, .col20, .foot { 
+    padding: 10px; 
+}
+.col10 { 
+    float: left; 
+    width: 100px; 
+    background: #E8D9A9; 
+}
+.col20 { 
+    margin-left: 120px; background: #ECC0A4; 
+}
+.photo { 
+    border: 1px solid #333; text-align: center; 
+     background: #fff; 
+     float: left; 
+     padding: 10px; 
+}
+.clearfix2 { 
+    clear: both; 
+}
+.foot { 
+    background: #9A5044; 
+    color: #fff; 
+    clear: left; 
+}
+
+.col11, .col22, .foots { 
+    padding: 10px; 
+}
+.col11 { 
+    float: left; 
+    width: 100px; 
+    background: #E8D9A9; 
+}
+.col22 { 
+    margin-left: 120px; background: #ECC0A4; 
+}
+.photos { 
+    border: 1px solid #333; text-align: center; 
+     background: #fff; 
+     float: left; 
+     padding: 10px; 
+}
+.sect {
+    overflow:hidden;
+}
+.foots { 
+    background: #9A5044; 
+    color: #fff; 
+    clear: left; 
+}
+.constr {
+    border: 1px solid gray;
+    padding: 1px;
+}
+
+.clearfix3 {
+    border: 1px solid #000; /* Рамка */
+    padding: 10px; /* Поля вокруг текста */
+}
+.figgg { 
+    float: left;
+    margin-right: 10px;
+}
+.clearfix3::after { 
+    content: '';
+    clear: both; 
+    display: block;
+}

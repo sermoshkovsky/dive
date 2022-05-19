@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <link rel="stylesheet" href="./css/positioning.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <a href="../../00_Home/index.html" target="_blank">Главная</a> |
+                <a href="../../02_Junior/Junior_CSS-1/css-1.html" target="_blank">CSS-1</a> |
+                <a href="../../02_Junior/html-junior.html" target="_blank">HTML-1</a> |
+                <a href="./positioning.html" target="_blank">Позиционирование</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <article>
+                <h1>Позиционирование через <em>float</em></h1>
+                <p>
+                    Стилевое свойство <span class="atr">float</span> изначально было внедрено в CSS для создания обтекаемых картинок и текстовых врезок, но со временем расширило сферу своего применения.
+                </p>
+                <p>
+                    За <span class="atr">float</span> стоит бесконечное море возможностей и куча проблем. Вероятно потому, что из всех свойств позиционирования, оно больше всего влияет на окружение.
+                </p>
+                <p>
+                    По существу, свойство <span class="atr">float</span> берёт элемент, убирает его из обычного потока страницы и позиционирует слева или справа от родительского элемента. Все остальные элементы на странице будут обтекать такой элемент. 
+                </p>
+                <p>
+                    Другими словами, применение <span class="atr">float</span> не только модифицирует сам элемент, но и меняет его предков, родственников, потомков и следующие за ним элементы.
+                </p>
+                <p>
+                    Зато свойство <span class="atr">float</span> достаточно универсальное и поддерживается всеми браузерами. При этом использовать <span class="atr">float</span> временами сложно, поскольку у него есть ряд неприятных особенностей и они могут привести к тому, что макет просто «рассыпется». К тому же <span class="atr">float</span> не является интуитивно понятным и на его работу оказывают воздействие другие свойства, вроде <span class="atr">overflow</span>, которые напрямую с <span class="atr">float</span> не связаны.
+                </p>
+                <p>
+                    Несмотря на эти ограничения <span class="atr">float</span> достаточно активно применяются при вёрстке веб-страниц и служит для реализации подобных и не только задач:
+                </p>
+                <ul>
+                    <li>
+                        обтекание картинок текстом;
+                    </li>
+                    <li>
+                        создание врезок;
+                    </li>
+                    <li>
+                        горизонтальные меню;
+                    </li>
+                    <li>
+                        галерея фотографий;
+                    </li>
+                    <li>
+                        двух и трёхколоночные макеты.
+                    </li>
+                </ul>
+                <p>
+                    Сейчас на смену <span class="atr">float</span> пришли более прогрессивные системы вёрстки, но при этом <span class="atr">float</span> до сих пор встречается в разных CSS-фреймворках, вроде Bootstrap 3.
+                </p>
+                <ul>
+                    <li>
+                        <a href="#description">Описание <span class="atr">float</span></a>
+                    </li>
+                    <li>
+                        <a href="#influence">Влияние <span class="atr">float</span></a>
+                    </li>
+                    <li>
+                        <a href="#cleaning">Очистка <span class="atr">float</span></a>
+                    </li>
+                    <li>
+                        <a href="./application-float.html">Примеры использования <span class="atr">float</span></a>
+                    </li>
+                </ul>
+                <section class="description" id="description">
+                    <h2>Описание <em>float</em></h2>
+                    <p>
+                        Свойство <span class="atr">float</span> прижимает элемент к левому или правому краю родителя, а близлежащий текст обходит элемент с других сторон. Такое поведение текста напоминает поток воды, обтекающий камень, поэтому элементы с <span class="atr">float</span> называются плавающими, обтекаемыми или поплавками.
+                    </p>
+                    <p>
+                        Цель обтекания элемента состоит в том, чтобы сдвинуть его к одной стороне и сделать так, чтобы текст обтекал вокруг элемента.
+                    </p>
+                    <p>
+                        У свойства <span class="atr">float</span> есть три значения: <span class="mean">left</span>, <span class="mean">right</span> и <span class="mean">none</span>. По умолчанию используется значение <span class="mean">none</span>, иными словами, <span class="atr">float</span> не применяется к элементу. 
+                    </p>
+                    <p>
+                        В примере, исходно картинка и текст выравниваются по левому краю окна браузера, при этом первая строка текста располагается по нижнему краю изображения.
+                    </p>
+                    <div class="example">
+                        <h6>Исходное положение картинки с текстом</h6>
+                        <p>
+                            <img src="./img/positioning-img/Screenshot_3.png" alt="">
+                        </p>
+                        <div class="block2">
+                            <p>
+                                <img src="./img/positioning-img/winnie.png">
+                                Винни-Пух был всегда не прочь немного подкрепиться, в особенности часов в одиннадцать утра, потому что в это время завтрак уже давно окончился, а обед ещё и не думал начинаться. И, конечно, он страшно обрадовался, увидев, что Кролик достаёт чашки и тарелки.
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        Проблемой вставки изображения в текст является то, что изображение занимает одну строку текста и тем самым увеличивает высоту строки, на которой находится. В нашем случае на высоту картинки. 
+                    </p>
+                    <p>
+                        Мы хотим, чтобы текст обходил изображение. Значение <span class="mean">left</span> у свойства <span class="atr">float</span> выравнивает картинку по левому краю браузера, а все остальные элементы, вроде текста, обтекают её по правой стороне
+                    </p>
+                    <p>
+                        Чтобы текст при этом не прижимался плотно к картинке, дополним стиль  свойством <span class="atr">margin</span>, которое добавит пространство между изображением и текстом.
+                    </p>
+                    <div class="example">
+                        <h6>Значение <em>left</em> - Обтекание картинки текстом справа</h6>
+                        <p>
+                            <img src="./img/positioning-img/Screenshot_4.png" alt="">
+                            <img src="./img/positioning-img/Screenshot_5.png" alt="">
+                        </p>
+                        <div class="block2">
+                            <p>
+                                <img src="./img/positioning-img/winnie.png" class="fig">
+                                Винни-Пух был всегда не прочь немного подкрепиться, в особенности часов в одиннадцать утра, потому что в это время завтрак уже давно окончился, а обед ещё и не думал начинаться. И, конечно, он страшно обрадовался, увидев, что Кролик достаёт чашки и тарелки.  
+                            </p>
+                            <!-- <p>
+                                А когда Кролик спросил: «Тебе чего намазать — мёду или сгущённого молока?» — Пух пришёл в такой восторг, что выпалил: «И того, и другого!»
+                            </p>
+                            <p>
+                                Правда, спохватившись, он, чтобы не показаться очень жадным, поскорее добавил: «А хлеба можно совсем не давать!» И тут он замолчал и долго-долго ничего не говорил, потому что рот у него был ужасно занят.
+        
+                                А спустя долгое время, мурлыкая что-то сладким-сладким голоском — голос у него стал прямо-таки медовый! — Пух встал из-за стола, от всей души пожал Кролику лапу и сказал, что ему пора идти.
+                            </p>
+                            <p>
+                                — Уже пора? — вежливо спросил Кролик. Нельзя ручаться, что он не подумал про себя:
+        
+                                «Не очень-то вежливо уходить из гостей сразу, как только наелся». Но вслух он этого не сказал, потому что он был очень умный Кролик. 
+                            </p> -->
+                        </div>
+                    </div>
+                    <h3 class="span">Особенности <em>float</em></h3>
+                    <h5>Ширина элемента с <em>float</em></h5>
+                    <p>
+                        Элемент с <span class="atr">float</span> и со значением <span class="mean">left</span> или <span class="mean">right</span> превращается в блочный, к нему автоматически добавляется свойство <span class="atr">display</span> со значением <span class="mean">block</span>. При этом ширина элемента равна его содержимому плюс значения свойств <span class="atr">padding</span>, <span class="atr">border</span> и <span class="atr">margin</span>. В этом отношении элемент ведёт себя как строчно-блочный. В примере  показано, как выглядит ширина элемента.
+                    </p>
+                    <div class="example">
+                        <p>
+                            <img src="./img/positioning-img/Screenshot_6.png" alt="">
+                            <img src="./img/positioning-img/Screenshot_7.png" alt="">
+                        </p>
+                        <div class="block2">
+                            <div class="frame">
+                                Отрицательный интеграл Дирихле
+                            </div>
+                            <p>
+                                Интеграл от функции, обращающейся в бесконечность в 
+                                изолированной точке, общеизвестно, ускоряет абстрактный 
+                                двойной интеграл, явно демонстрируя всю чушь вышесказанного.
+                            </p>
+                        </div>
+                    </div>
+                    <h5>Порядок элементов</h5>
+                    <p>
+                        Элементы с <span class="atr">float</span> располагаются друг с другом по горизонтали. При значении <span class="mean">left</span> это происходит слева направо, а при значении <span class="mean">right</span> — справа налево. В примере  показан порядок элементов, в зависимости от используемого значения <span class="atr">float</span>.
+                    </p>
+                    <div class="example">
+                        <p>
+                            <img src="./img/positioning-img/Screenshot_8.png" alt="">
+                            <img src="./img/positioning-img/Screenshot_9.png" alt="">
+                        </p>
+                        <div class="block3">
+                            <div class="ltr">1</div><div class="ltr">2</div>
+                            <div class="ltr">3</div><div class="ltr">4</div>
+                            <div class="ltr">5</div><div class="ltr">6</div>
+                            <div class="rtl">1</div><div class="rtl">2</div>
+                            <div class="rtl">3</div><div class="rtl">4</div>
+                            <div class="rtl">5</div><div class="rtl">6</div>
+                        </div>
+                    </div>
+                    <h5>Перенос блока на другую строку</h5>
+                    <p>
+                        Если близлежащему к обтекаемому элементу не хватает места по ширине, то он переносится на следующую строку. Это хорошо заметно на блоках, общая ширина которых превышает 100%. 
+                    </p>
+                    <p>
+                        В примере добавлено два блока, для которых задано свойство <span class="atr">float</span> со значением <span class="mean">left</span>, что обеспечивает их расположение рядом друг с другом по горизонтали.
+                    </p>
+                    <p>
+                        Ширина первого блока — 30%, второго — 70%. При этом к первому блоку справа добавляется линия толщиной два пикселя, из-за чего суммарная ширина блоков превышает ширину окна браузера (30% + 2px + 70%).
+                    </p>
+                    <div class="example">
+                        <p>
+                            <img src="./img/positioning-img/Screenshot_10.png" alt="">
+                            <img src="./img/positioning-img/Screenshot_11.png" alt="">
+                        </p>
+                        <div class="block4">
+                            <div class="col1"></div>
+                            <div class="col2"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="influence" id="influence">
+                    <h2>Влияние <em>float</em></h2>
+                    <p>
+                        Обтекаемые элементы не участвуют в потоке документа, когда все элементы выстраиваются последовательно друг за другом согласно схеме документа. Из-за этого обтекаемые элементы не оказывают влияние на высоту блока, внутри которого они располагаются. Чтобы это заметить, достаточно обвести блок рамкой и поместить внутрь него картинку с <span class="atr">float</span> (пример 1).
+                    </p>
+                    <p>
+                        Рамка обводит сам <span class="tag">&lt;div&gt;</span> с текстом, а картинка отображается поверх рамки.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 1. Высота блока</h6>
+                        <p>
+                            <img src="./img/positioning-img/Screenshot_12.png" alt="">
+                            <img src="./img/positioning-img/Screenshot_13.png" alt="">
+                        </p>
+                        <div class="block5">
+                            <div>
+                                <p><img src="./img/positioning-img/winnie.png" class="figs"></p>
+                                <p>Винни-Пух в гостях у Кролика</p>
+                            </div>
+                               <p>Не стоит слишком долго засиживаться в гостях.</p>
+                        </div>
+                    </div>
+                    <p>
+                        Ситуация может оказаться ещё более выраженной, если внутри блока кроме обтекаемых элементов не будет другого содержимого. В примере 2 показано добавление <span class="atr">float</span> к элементу <span class="tag">&lt;h2&gt;</span>, из-за чего <span class="tag">&lt;div&gt;</span> «схлопывается» и его фон не отображается.
+                    </p>
+                    <p>
+                        Поскольку <span class="tag">&lt;h2&gt;</span> не участвует в потоке документа из-за <span class="atr">float</span> и не оказывает влияние на высоту <span class="tag">&lt;div&gt;</span>, то <span class="tag">&lt;div&gt;</span> считается пустым.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 2. Высота блока</h6>
+                        <p>
+                            <img src="./img/positioning-img/Screenshot_14.png" alt="">
+                            <img src="./img/positioning-img/Screenshot_15.png" alt="">
+                        </p>
+                        <div class="block6">
+                            <div>
+                                <h2>Винни-Пух</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Действие <span class="atr">float</span> может продолжаться и за пределами родителя, если высота обтекаемого элемента превышает высоту родителя. На рис. 1 видно, что второй текстовый абзац начинается не под картинкой, а справа от неё.
+                    </p>
+                    <p>
+                        Все эти особенности обтекаемых элементов могут оказать довольно неприятное воздействие на макет веб-страницы, особенно в перечисленных выше ситуациях. Основной способ добиться желаемого результата — в нужный момент отменить действие <span class="atr">float</span> с помощью разных методов.
+                    </p>
+                </section>
+                <section class="cleaning" id="cleaning">
+                    <h2>Очистка <em>float</em></h2>
+                    <p>
+                        При правильном использовании <span class="atr">float</span> превращается в мощный инструмент вёрстки, применяемый для выравнивания и упорядочивания элементов. Однако чтобы держать этот инструмент под контролем, необходим противовес, без которого огромный потенциал <span class="atr">float</span> сужается до пары узких задач. Речь идёт об отмене обтекания с помощью разных методов. Перечислим несколько наиболее популярных.
+                    </p>
+                    <section>
+                        <h3>Ширина элементов</h3>
+                        <p>
+                            Если обтекаемые элементы будет занимать всю доступную ширину, то остальные элементы, следующие за ними, будут начинаться с новой строки. Для этого суммарная ширина элементов должна равняться 100%. В примере 1 показано создание стрелок на одной строке.
+                        </p>
+                        <p>
+                            Каждый блок со стрелкой теперь занимает ширину 50% и в сумме они дают 100% ширины, поэтому абзац, идущий после <span class="slc">arrow</span>, начинается с новой строки.
+                        </p>
+                        <p>
+                            Данный метод применяется редко, поскольку не всегда можно явно указать ширину элементов, к тому же метод не решает проблему с высотой блока и его фоном - Нет фоновой заливки. 
+                        </p>
+                        <div class="example">
+                            <h6>Пример 1. Использование width</h6>
+                            <p>
+                                <img src="./img/positioning-img/Screenshot_16.png" alt="">
+                                <img src="./img/positioning-img/Screenshot_17.png" alt="">
+                            </p>
+                            <div class="block">
+                                <div class="arrow">
+                                    <div class="prev">←</div>
+                                    <div class="next">→</div>
+                                </div>
+                                <p>Текст</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Использование <em>overflow</em></h3>
+                        <p>
+                            Свойство <a href="https://webref.ru/css/overflow" target="_blank"><span class="atr">overflow</span></a> управляет отображением содержимого блока, если оно целиком не помещается и выходит за область заданных размеров. 
+                        </p>
+                        <p>
+                            Значение <span class="mean">auto</span>, в частности, добавляет полосы прокрутки при необходимости, а <span class="mean">hidden</span> отображает только область внутри элемента, остальное скрывает. Кроме этого, использование <span class="atr">overflow</span> со значением <span class="mean">auto</span>, <span class="mean"></span> или <span class="mean">hidden</span> отменяет действие <span class="atr">float</span> (пример 2). 
+                        </p>
+                        <p>
+                            Результат после применения свойства <span class="atr">overflow</span> сразу меняется
+                        </p>
+                        <div class="example">
+                            <h6>Пример 2. Применение <em>overflow</em></h6>
+                            <p>
+                                <img src="./img/positioning-img/Screenshot_18.png" alt="">
+                                <img src="./img/positioning-img/Screenshot_19.png" alt="">
+                            </p>
+                            <div class="block over">
+                                <div class="arrow">
+                                    <div class="prev">←</div>
+                                    <div class="next">→</div>
+                                </div>
+                                <p>Текст</p>
+                            </div>
+                        </div>
+                        <p>
+                            <span class="atr">overflow</span> — одно из самых популярных свойств, работающее в связке со свойством <span class="atr">float</span>. Но иногда возникают ситуации, когда применение этого метода недопустимо. Это происходит в тех случаях, когда элемент выходит за пределы блока, при этом он будет «обрезан». В примере 3 картинка сдвигается влево от своего исходного положения.
+                        </p>
+                        <div class="example">
+                            <h6>Пример 3. Обрезание области элемента</h6>
+                            <p>
+                                <img src="./img/positioning-img/Screenshot_20.png" alt="">
+                                <img src="./img/positioning-img/Screenshot_21.png" alt="">
+                            </p>
+                            <div class="block flow">
+                                <div>
+                                    <p><img src="./img/positioning-img/winnie.png" class="figo" alt=""></p>
+                                    <p>Винни-Пух в гостях у Кролика</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Свойство <em>clear</em></h3>
+                        <p>
+                            Для отмены действия <span class="atr">float</span> от вышестоящего элемента применяется свойство <a href="https://webref.ru/css/clear" target="_blank"><span class="atr">clear</span></a> со следующими значениями:
+                        </p>
+                        <table>
+                            <tr>
+                                <td><span class="mean">left </span></td>
+                                <td> — отменяет действие значения <span class="mean">left </span> у <span class="atr">float</span>;</td>
+                            </tr>
+                            <tr>
+                                <td><span class="mean">right </span></td>
+                                <td>— отменяет действие значения <span class="mean">right </span> у <span class="atr">float</span>;</td>
+                            </tr>
+                            <tr>
+                                <td><span class="mean">both </span></td>
+                                <td> — одновременно отменяет действие значений <span class="mean">left </span> и <span class="mean">right </span> у <span class="atr">float</span>.  Это значение рекомендуется устанавливать, когда требуется отменить обтекание элемента, но неизвестно точно с какой стороны.</td>
+                            </tr>
+                        </table>
+                        <p>
+                            Чтобы отменить действие обтекания, свойство <span class="atr">clear</span> надо добавлять к элементу, идущему после элемента с <span class="atr">float</span>. Обычно вводят универсальный класс, к примеру, <span class="slc">clearfix</span> и вставляют пустой <span class="tag">&lt;div&gt;</span> с этим классом (пример 4).
+                        </p>
+                        <p>
+                            В данном примере для класса <span class="slc">clearfix</span> установлено свойство <span class="atr">clear</span> со значением <span class="mean">both</span>.
+                        </p>
+                        <div class="example">
+                            <h6>Пример 4. Использование <em>clear</em></h6>
+                            <p>
+                                <img src="./img/positioning-img/Screenshot_22.png" alt="">
+                                <img src="./img/positioning-img/Screenshot_23.png" alt="">
+                            </p>
+                            <div class="block section">
+                                <p><img src="./img/positioning-img/winnie.png" class="figus"></p>
+                                <p>Винни-Пух в гостях у Кролика</p>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <p>
+                            Использование <span class="atr">clear</span> является одним из самых популярных в вёрстке в силу простоты и универсальности. Но иногда возникают комбинации, в которых использование <span class="atr">clear</span> даёт сбой. Это происходит, когда в коде встречается одновременно несколько разных обтекаемых элементов.
+                        </p>
+                        <p>
+                            Так, в примере 5 с помощью <span class="atr">float</span> создаются две колонки, а в правой колонке <span class="atr">float</span> упорядочивает фотографии.
+                        </p>
+                        <p>
+                            Свойство <span class="atr">clear</span> действует не только на класс <span class="slc">photo</span>, но и на класс <span class="slc">col1</span>, т. е. на все элементы выше, у которых установлено <span class="atr">float</span>. Поэтому «Новая строка» начинается не сразу же после фотографий, а после завершения левой колонки.
+                        </p>
+                        <div class="example">
+                            <h6>Пример 5. Ошибка с отображением строки</h6>
+                            <p>
+                                <img src="./img/positioning-img/Screenshot_24.png" alt="">
+                                <img src="./img/positioning-img/Screenshot_25.png" alt="">
+                            </p>
+                            <div class="block">
+                                <div class="col10">
+                                    <h3>Меню</h3>
+                                    <p>Лучшие фотографии</p>
+                                    <p>По годам</p>
+                                    <p>По рейтингу</p>
+                                    <p>По комментариям</p>
+                                </div>
+                                <div class="col20">
+                                    <figure class="photo">
+                                        <img src="./img/positioning-img/thumb1.jpg">
+                                        <figcaption>Софийский собор</figcaption>
+                                    </figure>
+                                    <figure class="photo">
+                                        <img src="./img/positioning-img/thumb2.jpg">
+                                        <figcaption>Польский костёл</figcaption>
+                                    </figure>
+                                    <div class="clearfix2"></div>
+                                    <p>Новая строка</p>
+                                </div>
+                                <footer class="foot">Подвал</footer>
+                            </div>
+                        </div>
+                        <p>
+                            В подобных ситуациях помогает комбинация разных методов. Так, фотографии можно добавить в контейнер с <span class="atr">overflow</span> и удалить <span class="slc">clearfix2</span>. Колонка приобретёт следующий вид.
+                        </p>
+                        <div class="example">
+                            <h6>Пример 6. Отображение строки</h6>
+                            <p>
+                                <img src="./img/positioning-img/Screenshot_26.png" alt="">
+                                <img src="./img/positioning-img/Screenshot_27.png" alt="">
+                            </p>
+                            <div class="block">
+                                <div class="col11">
+                                    <h3>Меню</h3>
+                                    <p>Лучшие фотографии</p>
+                                    <p>По годам</p>
+                                    <p>По рейтингу</p>
+                                    <p>По комментариям</p>
+                                </div>
+                                <div class="col22">
+                                    <section class="sect">
+                                        <figure class="photos">
+                                            <img src="./img/positioning-img/thumb1.jpg">
+                                            <figcaption>Софийский собор</figcaption>
+                                        </figure>
+                                        <figure class="photos">
+                                            <img src="./img/positioning-img/thumb2.jpg">
+                                            <figcaption>Польский костёл</figcaption>
+                                        </figure>
+                                    </section>
+                                    <p>Новая строка</p>
+                                </div>
+                                <footer class="foots">Подвал</footer>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Псевдоэлемент <em>::after</em></h3>
+                        <p>
+                            Частое включение пустого элемента <span class="tag">&lt;div&gt;</span> со свойством <span class="atr">clear</span> захламляет код, особенно при активном использовании свойства <span class="atr">float</span>. Логично перенести всё в стили, избавившись от лишних элементов. 
+                        </p>
+                        <p>
+                            Для этого воспользуемся псевдоэлементом <span class="slc">::after</span>, который в комбинации со свойством <span class="atr">content</span> добавляет пустой текст после содержимого элемента. К такому тексту можно применить стилевые свойства, в частности <span class="atr">clear</span>.
+                        </p>
+                        <p>
+                            <img src="./img/positioning-img/Screenshot_28.png" alt="">
+                        </p>
+                        <p>
+                            Вместо значения <span class="mean">block</span> у <span class="atr">display</span> иногда вставляют значение <span class="mean">table</span>, но смысл это не меняет, так же как и набор других возможных свойств. Их задача — создать невидимый блок, который будет отменять действие <span class="atr">float</span> у вышестоящих элементов.
+                        </p>
+                        <p>
+                            Поскольку текст, генерируемый через псевдоэлемент <span class="slc">::after</span>, располагается после содержимого элемента, он с лёгкостью заменяет конструкцию <span class="constr"><span class="tag">&lt;div <span class="mean">class</span>=<span class="slc">"clearfix"</span>&gt;</span><span class="tag">&lt;/div&gt;</span></span> 
+                            . Там, где она требуется, достаточно только добавить класс <span class="slc">clearfix</span>, как показано в примере 7.
+                        </p>
+                        <p>
+                            Удобство приведённого метода заключается в использовании класса <span class="slc">clearfix</span>, который при необходимости добавляется к любому элементу.
+                        </p>
+                        <div class="example">
+                            <h6>Пример 7. Псевдоэлемент <em>::after</em></h6>
+                            <p>
+                                <img src="./img/positioning-img/Screenshot_30.png" alt="">
+                                <img src="./img/positioning-img/Screenshot_31.png" alt="">
+                            </p>
+                            <section class="block clearfix3">
+                                <p><img src="./img/positioning-img/winnie.png" class="figgg" alt=""></p>
+                                <p>Винни-Пух в гостях у Кролика</p>
+                            </section>
+                        </div>
+                    </section>
+                </section>
+            </article>
+            <a href="#header" class="btn">ВВЕРХ</a>
+        </div>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>
