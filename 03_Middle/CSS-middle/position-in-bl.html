@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Позиционирование через inline-block</title>
+    <link rel="stylesheet" href="./css/position-in-bl.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html" target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="./positioning.html" target="_blank">Позиционирование </a> </li>
+                    <li><a href="./float.html" target="_blank">Float</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Позиционирование через <em>inline-block</em></h1>
+                <p>
+                    В дополнение к использованию <span class="atr">float</span>, ещё один способ, которым мы можем позиционировать контент — это применение свойства <span class="atr">display</span> в сочетании со значением <span class="mean">inline-block</span>. Метод с <span class="mean">inline-block</span>, в первую очередь полезен для компоновки страниц или для размещения элементов в линию рядом друг с другом.
+                </p>
+                <p>
+                    Напомним, что значение <span class="mean">inline-block</span> для свойства <span class="atr">display</span> отображает элементы в линию и позволяет им принимать все свойства блочной модели, включая <span class="atr">height</span>, <span class="atr">width</span>, <span class="atr">padding</span>, <span class="atr">border</span> и <span class="atr">margin</span>. Применение <span class="mean">inline-block</span> позволяет нам в полной мере воспользоваться блочной моделью, не беспокоясь об очистке каких-либо <span class="atr">float</span>.
+                </p>
+                <p>
+                    Для наглядности создадим вначале общий макет страницы с шапкой вверху, двумя колонками в центре и подвалом внизу с помощью свойства <span class="atr">float</span>
+                </p>
+                <section>
+                    <h2><em>float</em> на практике</h2>
+                    <p>
+                        В идеале эту страницу следует разметить с помощью элементов <span class="tag">&lt;header&gt;</span>, <span class="tag">&lt;section&gt;</span>, <span class="tag">&lt;aside&gt;</span> и <span class="tag">&lt;footer&gt;</span>. Внутри элемента <span class="tag">&lt;body&gt;</span> HTML может выглядеть так:
+                    </p>
+                    <p>
+                        <img src="./img/positioning-img/Screenshot_46.png" alt="">
+                    </p>
+                    <div class="example">
+                        <h6>Демонстрация макета без <em>float</em></h6>
+                        <p>
+                            <img src="./img/positioning-img/Screenshot_47.png" alt="">
+                            <img src="./img/positioning-img/Screenshot_48.png" alt="">
+                        </p>
+                        <div class="block">
+                            <header class="header1">
+                                <code class="code1">&#60;header&#62;</code>
+                            </header> 
+                            <section class="section1">
+                                <code class="code1">&#60;section&#62;</code>
+                            </section>
+                            <aside class="aside1">
+                                <code class="code1">&#60;aside&#62;</code>
+                            </aside>
+                            <footer class="footer1">
+                                <code class="code1">&#60;footer&#62;</code>
+                            </footer>
+                        </div>
+                    </div>
+                    <p>
+                        Здесь элементы <span class="tag">&lt;section&gt;</span> и <span class="tag">&lt;aside&gt;</span> являются блочными, поэтому они укладываются один поверх другого по умолчанию. Однако мы хотим, чтобы эти элементы располагались бок о бок. Установив <span class="atr">float</span> для <span class="tag">&lt;section&gt;</span> как <span class="atr">left</span>, а для <span class="tag">&lt;aside&gt;</span> как <span class="atr">right</span>, мы можем позиционировать их как две колонки, расположенных напротив друг друга. Наш CSS должен выглядеть так:
+                    </p>
+                    <p>
+                        <img src="./img/positioning-img/Screenshot_49.png" alt="">
+                    </p>
+                    <p>
+                        <em>Для справки</em>: обтекаемые элементы располагаются по краю родительского элемента. Если нет родителя, обтекаемый элемент будет располагаться по краю страницы.
+                    </p>
+                    <p>
+                        Когда мы устанавливаем элемент обтекаемым, то убираем его из обычного потока HTML-документа. Это приводит к тому, что ширина этого элемента по умолчанию становится шириной его содержимого. Иногда, например, когда мы создаём колонки для многократно используемого макета, такое поведение нежелательно. 
+                    </p>
+                    <p>
+                        Это можно исправить путём добавления свойства <span class="atr">width</span> с фиксированным значением для каждой колонки. Кроме того, чтобы обтекаемые элементы не соприкасались друг с другом, в результате чего содержимое одного элемента располагается рядом с другим, мы можем использовать свойство <span class="atr">margin</span>, чтобы установить пространство между элементами.
+                    </p>
+                    <p>
+                        Ниже мы расширяем предыдущий блок кода, добавив <span class="atr">margin</span> и <span class="atr">width</span> для каждой колонки, чтобы лучше формировать наш желаемый результат.
+                    </p>
+                    <p>
+                        <img src="./img/positioning-img/Screenshot_50.png" alt="">
+                    </p>
+                    <div class="example">
+                        <h6>Демонстрация макета с <em>float</em></h6>
+                        <p>
+                            <img src="./img/positioning-img/Screenshot_51.png" alt="">
+                            <img src="./img/positioning-img/Screenshot_52.png" alt="">
+                        </p>
+                        <div class="block">
+                            <header class="header2">
+                                <code class="code2">&#60;header&#62;</code>
+                            </header> 
+                            <section class="section2">
+                                <code class="code2">&#60;section&#62; <br> float: left;</code>
+                            </section>
+                            <aside class="aside2">
+                                <code class="code2">&#60;aside&#62; <br> float: right;</code>
+                            </aside>
+                            <footer class="footer2">
+                                <code class="code2">&#60;footer&#62;</code>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="accent">
+                        <h5><em>float</em> могут изменить значение <em>display</em> у элемента</h5>
+                        <p>
+                            Для обтекаемого элемента также важно понимать, что элемент удаляется из обычного потока страницы и что у элемента может измениться значение <span class="atr">display</span>, заданное по умолчанию.
+                        </p>
+                        <p>
+                            Свойство <span class="atr">float</span> опирается на то, что у элемента значение <span class="atr">display</span> задано как <span class="mean">block</span> и может изменить значение <span class="atr">display</span> у элемента по умолчанию, если он ещё не отображается как блочный элемент.
+                        </p>
+                        <p>
+                            Например, элемент, у которого <span class="atr">display</span> указан как <span class="mean">inline</span>, такой как строчный <span class="tag">&lt;span&gt;</span>, игнорирует любые свойства <span class="atr">height</span> или <span class="atr">width</span>. Однако, если для строчного элемента указать <span class="atr">float</span>, значение <span class="atr">display</span> изменится на <span class="mean">block</span> и тогда элемент уже может принимать свойства <span class="atr">height</span> или <span class="atr">width</span>.
+                        </p>
+                        <p>
+                            Когда мы применяем <span class="atr">float</span> для элемента, то должны следить за тем, как это влияет на значение свойства <span class="atr">display</span>.
+                        </p>
+                    </div>
+                    <p>
+                        Для двух колонок вы можете установить <span class="atr">float</span>, для одной колонки как <span class="mean">left</span>, а для другой как <span class="mean">right</span>, но для нескольких колонок нам придётся изменить наш подход. Скажем, к примеру, мы хотели бы получить ряд из трёх колонок между нашими элементами <span class="tag">&lt;header&gt;</span> и <span class="tag">&lt;footer&gt;</span>. Если мы выбросим наш элемент <span class="tag">&lt;aside&gt;</span> и воспользуемся тремя элементами <span class="tag">&lt;section&gt;</span>, наш HTML может выглядеть следующим образом:
+                    </p>
+                    <p>
+                        <img src="./img/positioning-img/Screenshot_53.png" alt="">
+                    </p>
+                    <p>
+                        Чтобы расположить эти три элемента <span class="tag">&lt;section&gt;</span> в строку из трёх колонок, мы должны задать <span class="atr">float</span> для всех элементов <span class="tag">&lt;section&gt;</span> как <span class="mean">left</span>. Мы также должны настроить ширину <span class="tag">&lt;section&gt;</span> с учётом дополнительных колонок и расположить их один рядом с другим.
+                    </p>
+                    <p>
+                        <img src="./img/positioning-img/Screenshot_54.png" alt="">
+                    </p>
+                    <p>
+                        Здесь у нас есть три колонки, все с равной шириной и значением <span class="atr">margin</span>, а также с <span class="atr">float</span>, заданным как <span class="mean">left</span>.
+                    </p>
+                    <div class="example">
+                        <h6>Демонстрация трёхколоночного макета с <em>float</em></h6>
+                        <p>
+                            <img src="./img/positioning-img/Screenshot_55.png" alt="">
+                            <img src="./img/positioning-img/Screenshot_56.png" alt="">
+                        </p>
+                        <div class="block">
+                            <header class="header3">
+                                <code class="code3">&#60;header&#62;</code>
+                            </header> 
+                            <section class="section3">
+                                <code class="code3">&#60;section&#62; <br> float: left;</code>
+                            </section>
+                            <section class="section3">
+                                <code class="code3">&#60;section&#62; <br> float: left;</code>
+                            </section>
+                            <section class="section3">
+                                <code class="code3">&#60;section&#62; <br> float: left;</code>
+                            </section>
+                            <footer class="footer3">
+                                <code class="code3">&#60;footer&#62;</code>
+                            </footer>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2><em>inline-block</em> на практике</h2>
+                </section>
+            </section>
+            <a href="#header" class="btn">ВВЕРХ</a>
+        </div>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>
