@@ -59,10 +59,6 @@ dd {
     padding: 20px;
     background-color: aqua;
 }
-.header a {
-    text-decoration: none;
-    color: brown;
-}
 .footer {
     background-color: indigo;
     color: azure;
@@ -87,6 +83,23 @@ dd {
     margin: 0;
     color: rgb(64, 64, 95);
     font-weight: 700;
+}
+nav ul {
+    background: #0083ca; /* Цвет фона */
+    list-style: none; /* Убираем маркеры */
+    margin: 0; padding: 0; /* Обнуляем все отступы */
+    overflow: hidden; /* Отменяем обтекание */
+}
+nav li {
+    float: left; /* Выстраиваем по горизонтали */
+}
+nav a {
+    display: block; /* Блочный элемент */
+    padding: 7px 15px; /* Поля вокруг текста */
+    color: brown; /* Цвет текста */
+    text-decoration: none;
+    background: rgb(102, 199, 245);
+    margin: 10px;
 }
 
 /* Теги   
@@ -134,7 +147,147 @@ dd {
     border: 3px pink solid;
     padding: 10px;
 }
-.block {
+.block, .block2 {
     background: aquamarine;
     padding: 5px;
+}
+.block2 {
+    width: 50%;
+}
+
+aside {
+    float: right; /* Размещаем справа */
+    background: #F3F0E9; /* Цвет фона */
+    border: 1px solid #cbc8c5; /* Параметры границы */
+    padding: 0 10px; /* Поля */
+    margin: 5px 0 5px 10px; /* Отступы */
+    width: 140px; /* Ширина */
+    font-size: 0.9em; /* Размер шрифта */
+}
+aside p { 
+    margin: 0.6em 0; 
+}
+aside img {
+    width: 21px;
+    height: 15px; 
+    vertical-align: middle; /* Выравнивание по середине строки */ 
+}
+
+.hrzt ul {
+    background: #0083ca; /* Цвет фона */
+    list-style: none; /* Убираем маркеры */
+    margin: 0; padding: 0; /* Обнуляем все отступы */
+    overflow: hidden; /* Отменяем обтекание */
+}
+.hrzt li {
+    float: left; /* Выстраиваем по горизонтали */
+}
+.hrzt a {
+    display: block; /* Блочный элемент */
+    padding: 7px 15px; /* Поля вокруг текста */
+    color: #fff; /* Цвет текста */
+}
+
+.article {
+    overflow: hidden; /* Отменяем обтекание */
+}
+.article figure {
+    background: #f5f4f1; /* Цвет фона */
+    width: 150px; /* Ширина */
+    float: left; /* Блоки выстраиваются по горизонтали */
+    margin: 0 10px 10px 0; /* Отступы */
+    text-align: center; /* Выравнивание по центру */
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4); /* Параметры тени */
+}
+.article figure img {
+    border: 1px solid #bc8e5c; /* Параметры рамки */
+}
+.article figure p {
+    margin-bottom: 0; /* Отступ снизу */
+}
+.article figcaption {
+    padding-bottom: 10px; /* Расстояние снизу */
+}
+
+.row {
+    overflow: hidden; /* Отменяем обтекание */
+}
+.sidebr, .content {
+    float: left; /* Формируем колонки */
+    box-sizing: border-box; /* padding не влияет на ширину */
+    padding: 10px; /* Поля вокруг текста */
+    min-height: 100px; /* Минимальная высота */
+}
+.sidebr {
+    width: 20%; /* Ширина колонки */
+    background: #ffead0; /* Цвет фона */
+}
+.content {
+    width: 80%; /* Ширина колонки */
+    background: #89becf; /* Цвет фона */
+}
+
+.sidebrs, .contents, .ftr {
+    box-sizing: border-box; /* padding не влияет на ширину */
+    padding: 10px; /* Поля вокруг текста */
+}
+.rows {
+    overflow: hidden; /* Отменяем обтекание */
+}
+.sidebrs, .contents { 
+    min-height: 100px; 
+}
+.sidebrs {
+    float: left; /* Формируем колонки */
+    width: 200px; /* Ширина колонки */
+    background: #ffead0; /* Цвет фона */
+}
+.contents {
+    margin-left: 210px; /* Отступ слева */
+    background: #c8eaf5; /* Цвет фона */ 
+}
+.ftr {
+    background: #e2edc1; /* Цвет фона */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.sidebar2, .content2 {
+    box-sizing: border-box; 
+    padding: 10px; 
+    min-height: 100px;
+}
+.row2 { 
+    overflow: hidden; 
+}
+.sidebar2 {
+    float: right;
+    width: 200px; background: #ffead0;
+}
+.content2 {
+    margin-right: 210px;
+    background: #c8eaf5; 
+}
+
+.sidebar3, .content3, .nav3 {
+    box-sizing: border-box; 
+    padding: 10px; 
+    min-height: 100px;
+}
+.row3 { 
+    overflow: hidden; 
+}
+.sidebar3 {
+    float: right; /* Колонка справа */
+    width: 20%; /* Ширина колонки */
+    background: #ffead0;
+}
+.nav3 {
+    float: left; /* Колонка слева */
+    width: 200px; /* Ширина колонки */
+    background: #fde9f1;
+} 
+.content3 {
+    margin-right: 20%; /* Ширина колонки справа */
+    margin-left: 200px; /* Ширина колонки слева */
+    background: #c8eaf5;
 }
