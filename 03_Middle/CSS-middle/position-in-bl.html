@@ -162,6 +162,51 @@
                 </section>
                 <section>
                     <h2><em>inline-block</em> на практике</h2>
+                    <p>
+                        Давайте взглянем на наш трёхколоночный пример с самого начала. Начнём мы, сохраняя наш HTML таким:
+                    </p>
+                    <p>
+                        <img src="./img/positioning-img/Screenshot_57.png" alt="">
+                    </p>
+                    <p>
+                        Теперь вместо <span class="atr">float</span> для наших трёх элементов <span class="tag">&lt;section&gt;</span> мы изменим у них значение <span class="atr">display</span> на <span class="mean">inline-block</span>, оставляя свойства <span class="atr">margin</span> и <span class="atr">width</span> те, что были ранее. В результате наш CSS будет выглядеть следующим образом:
+                    </p>
+                    <p>
+                        <img src="./img/positioning-img/Screenshot_58.png" alt="">
+                    </p>
+                    <p>
+                        К сожалению, одного этого кода недостаточно чтобы сделать трюк и последний элемент <span class="tag">&lt;section&gt;</span> выталкивается на новую строку. Помните, поскольку строчно-блочные элементы отображаются на одной линии друг за другом, они включают единое пространство между ними. 
+                    </p>
+                    <p>
+                        Когда размер каждого отдельного пространства добавляется к ширине и значению горизонтального <span class="atr">margin</span> всех элементов в строке, общая ширина становится слишком большой, выталкивая последний элемент <span class="tag">&lt;section&gt;</span> на новую строку. 
+                    </p>
+                    <p>
+                        Чтобы отобразить все элементы <span class="tag">&lt;section&gt;</span> на одной строке, следует удалить пустое пространство между каждым <span class="tag">&lt;section&gt;</span>.
+                    </p>
+                    <div class="example">
+                        <h6>Демонстрация элементов <em>inline-block</em> с пробелом</h6>
+                        <p>
+                            <img src="./img/positioning-img/Screenshot_60.png" alt="">
+                            <img src="./img/positioning-img/Screenshot_61.png" alt="">
+                        </p>
+                        <div class="block">
+                            <header class="header31">
+                               <code class="code31">&#60;header&#62;</code>
+                            </header>
+                            <section class="section31">
+                               <code class="code31">&#60;section&#62; <br> display: <br> inline-block;</code>
+                            </section>
+                            <section class="section31">
+                               <code class="code31">&#60;section&#62; <br> display: <br> inline-block;</code>
+                            </section>
+                            <section class="section31">
+                               <code class="code31">&#60;section&#62; <br> display: <br> inline-block;</code>
+                            </section>
+                            <footer class="footer31">
+                               <code class="code31">&#60;footer&#62;</code>
+                            </footer>
+                        </div>
+                    </div>
                 </section>
             </section>
             <a href="#header" class="btn">ВВЕРХ</a>
