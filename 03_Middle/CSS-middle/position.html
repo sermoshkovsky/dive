@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свойство position</title>
+    <link rel="stylesheet" href="./css/position.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html" target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="./positioning.html" target="_blank">Позиционирование </a> </li>
+                    <li><a href="./float.html" target="_blank">Float</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <article>
+                <section>
+                    <h1>Уникальное позиционирование  через  <em>position</em></h1>
+                    <p>
+                        Рано или поздно каждый пожелает точно позиционировать элемент, но <span class="atr">float</span> или <em>строчно-блочные</em> элементы не позволяют проделать такой трюк. 
+                    </p>
+                    <ul>
+                        <li>
+                            Обтекаемые элементы, которые удаляют элемент из потока страницы, часто приводят к нежелательным результатам, поскольку окружающие элементы обтекают вокруг элемента с <span class="atr">float</span>. 
+                        </li>
+                        <li>
+                            <em>Строчно-блочные</em> элементы, если только мы не создаём колонки, могут быть довольно неудобны, когда дело касается правильного положения.
+                        </li>
+                    </ul>
+                    <p>
+                        Для подобных ситуаций мы можем использовать свойство <span class="atr">position</span> в сочетании со свойствами смещения блока.
+                    </p>
+                    <p>
+                        Свойство <span class="atr">position</span> определяет, как элемент позиционируется на странице и будет ли он отображаться в обычном потоке документа. Оно применяется в сочетании со свойствами смещения блока — <span class="atr">top</span>, <span class="atr">right</span>, <span class="atr">bottom</span> и <span class="atr">left</span>, которые точно определяют, где элемент будет расположен путём перемещения элемента в разных направлениях.
+                    </p>
+                    <p>
+                        Благодаря комбинации свойств <span class="atr">position</span>, <span class="atr">left</span>, <span class="atr">top</span>, <span class="atr">right</span> и <span class="atr">bottom</span> можно отображать элемент в точке с заданными координатами, фиксировать его в указанном месте, определять положение одного элемента относительно другого, управлять размерами и др. 
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="#properties">Свойства позиционирования</a>
+                        </li>
+                        <li>
+                            <a href="#static ">Нормальное позиционирование</a>
+                        </li>
+                        <li>
+                            <a href="#relative ">Относительное позиционирование</a>
+                        </li>
+                        <li>
+                            <a href="#absolute ">Абсолютное позиционирование</a>
+                        </li>
+                        <li>
+                            <a href="#rel-abs">relative и absolute</a>
+                        </li>
+                        <li>
+                            <a href="#fixed ">Фиксированное позиционирование</a>
+                        </li>
+                        <li>
+                            <a href="#sticky ">Липкое позиционирование</a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="properties" id="properties">
+                    <h2>Свойства позиционирования</h2>
+                    <p>
+                        Для изменения типа позиционирования применяется свойство <a href="https://webref.ru/css/position" target="_blank"><strong>position</strong></a>. Само по себе это свойство используется крайне редко и как правило идёт в комбинации со свойствами <a href="https://webref.ru/css/left" target="_blank"><strong>left</strong></a>, <a href="https://webref.ru/css/right" target="_blank"><strong>right</strong></a>, <a href="https://webref.ru/css/top" target="_blank"><strong>top</strong></a>, <a href="https://webref.ru/css/bottom" target="_blank"><strong>bottom</strong></a>, которые определяют, соответственно, положение элемента слева, справа, сверху и снизу.
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="atr">left</span> &#8211; задаёт координаты левого края элемента от левого края родителя или левого края исходного положения элемента. 
+                        </li>
+                        <li>
+                            <span class="atr">right</span> &#8211; задаёт координаты правого края элемента от правого края родителя или правого края исходного положения элемента.
+                        </li>
+                        <li>
+                            <span class="atr">top</span> &#8211; задаёт координаты верхнего края элемента от верхнего края родителя или верхнего края исходного положения элемента.
+                        </li>
+                        <li>
+                            <span class="atr">bottom</span> &#8211; задаёт координаты нижнего края элемента от нижнего края родителя или нижнего края исходного положения элемента.
+                        </li>
+                    </ul>
+                    <p>
+                        Заметьте, что напрямую нельзя задать положение правого края элемента от левого края родителя и наоборот. Также нельзя задать положение верхнего края элемента от нижнего края родителя и наоборот.
+                    </p>
+                    <p>
+                        У <span class="atr">position</span> есть пять значений:
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="mean">static </span> &#8211; <strong>нормальное </strong> или статичное позиционирование, при этом элементы отображаются на веб-странице в том порядке, в каком они идут в исходном коде HTML сверху вниз. <span class="mean">static </span> — это значение по умолчанию для <span class="atr">position</span>.
+                        </li>
+                        <li>
+                            <span class="mean">relative </span> &#8211; <strong>относительное </strong> позиционирование. Изменяет положение элемента от его исходного расположения.
+                        </li>
+                        <li>
+                            <span class="mean">absolute </span> &#8211; <strong>абсолютное </strong> позиционирование. Элемент при этом не существует в потоке документа и его положение задаётся относительно краёв браузера.
+                        </li>
+                        <li>
+                            <span class="mean">fixed </span> &#8211; <strong>фиксированное </strong> позиционирование. По своему действию похоже на абсолютное позиционирование, но в отличие от него привязывается к указанной свойствами <span class="atr">left</span>, <span class="atr">top</span>, <span class="atr">right</span> и <span class="atr">bottom</span> точке на экране и не меняет своего положения при прокрутке веб-страницы.
+                        </li>
+                        <li>
+                            <span class="mean">sticky </span> &#8211;  <strong>липкое </strong> позиционирование. Обычно применяется для фиксации заголовка на одном месте, пока содержимое, к которому относится заголовок, прокручивается на странице.
+                        </li>
+                    </ul>
+                    <p>
+                        Свойство <span class="atr">position</span> не наследуется, так что для дочерних элементов его требуется указывать явно.
+                    </p>
+                    <p>
+                        Для изменения положения элементов по оси Z применяется свойство <a href="https://webref.ru/css/z-index" target="_blank"><strong>z-index</strong></a>, которое непосредственно связано со свойством <span class="atr">position</span>. 
+                    </p>
+                    <p>
+                        <span class="atr">z-index</span> работает только для элементов, у которых <span class="atr">position</span> задано как <span class="mean">relative</span>, <span class="mean">absolute</span> или <span class="mean">fixed</span>.
+                    </p>
+                </section>
+                <section class="static " id="static ">
+                    <h2>Нормальное позиционирование</h2>
+                    <p>
+                        Если для элемента свойство <span class="atr">position</span> не задано или его значение явно указано как <span class="mean">static</span>, элемент выводится в потоке документа как обычно. Иными словами, элементы отображаются на странице в том порядке, как они идут в исходном коде HTML. <span class="mean">static</span> — это значение свойства <span class="atr">position</span> по умолчанию, иными словами, если вы не задали для элемента <span class="atr">position</span>, то оно считается браузером как <span class="mean">static</span>.
+                    </p>
+                    <p>
+                        Формально, <span class="mean">static</span> не является типом позиционирования, это естественное исходное состояние любого элемента. Таким образом, термины «нормальное позиционирование», «обычное позиционирование», «статичное позиционирование», «статичный элемент» указывают лишь на значение <span class="mean">static</span> у свойства <span class="atr">position</span>, поскольку позиционирования как такового нет и элемент остаётся на своём начальном месте.
+                    </p>
+                    <p>
+                        Для нормального позиционирования характерны следующие особенности:
+                    </p>
+                    <ul>
+                        <li>
+                            элементы на веб-странице выводятся в том порядке, как они описаны в коде HTML;
+                        </li>
+                        <li>
+                            свойства <span class="atr">left</span>, <span class="atr">right</span>, <span class="atr">top</span> и <span class="atr">bottom</span> не дают никакого эффекта;
+                        </li>
+                        <li>
+                            свойство <span class="atr">z-index</span> не работает.
+                        </li>
+                    </ul>
+                    <p>
+                        В примере 1 показан вывод трёх элементов с нормальным позиционированием.
+                    </p>
+                    <p>
+                        В данном примере в коде HTML перечислены элементы с классами <span class="slc">box-1</span>, <span class="slc">box-2</span>, <span class="slc">box-3</span>, они выводятся на веб-странице в этом же порядке
+                    </p>
+                    <div class="example">
+                        <h6>Пример 1. Вывод элементов</h6>
+                        <p>
+                            <img src="./img/position-img/Screenshot_1.png" alt="">
+                            <img src="./img/position-img/Screenshot_2.png" alt="">
+                        </p>
+                        <div class="block">
+                            <div class="box box-1"></div>
+                            <div class="box box-2"></div>
+                            <div class="box box-3"></div>
+                        </div>
+                    </div>
+                    <p>
+                        Само по себе значение <span class="mean">static</span> применяется редко, поскольку является значением по умолчанию и не требует явного указания. Оно используется на практике лишь для возврата свойства <span class="atr">position</span> к начальному значению. 
+                    </p>
+                    <p>
+                        В примере 2 для элемента задано относительное позиционирование и оно сдвинуто вниз от своего исходного положения. Псевдокласс <span class="slc">:hover</span> отменяет относительное позиционирование и элемент возвращается в исходное положение, если навести на него курсор.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 2. Использование <em>static</em></h6>
+                        <p>
+                            <img src="./img/position-img/Screenshot_3.png" alt="">
+                            <img src="./img/position-img/Screenshot_4.png" alt="">
+                        </p>
+                        <div class="block">
+                            <div class="box-10"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="relative " id="relative ">
+                    <h2>Относительное позиционирование</h2>
+                </section>
+                <section class="absolute " id="absolute ">
+                    <h2>Абсолютное позиционирование</h2>
+                </section>
+                <section class="rel-abs" id="rel-abs">
+                    <h2>relative и absolute</h2>
+                </section>
+                <section class="fixed " id="fixed ">
+                    <h2>Фиксированное позиционирование</h2>
+                </section>
+                <section class="sticky " id="sticky ">
+                    <h2>Липкое позиционирование</h2>
+                </section>
+            </article>
+            <a href="#header" class="btn">ВВЕРХ</a>
+        </div>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>

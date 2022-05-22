@@ -9,9 +9,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     margin: .3em;
 }
-/* span {
-    font-weight: inherit;
-} */
 h1 {
     font-size: 250%;
 }
@@ -155,137 +152,26 @@ nav a {
     width: 50%;
 }
 
-.code1 {
-    background: #2db34a;
-    border-radius: 6px;
-    color: #fff;
-    display: block;
-    font: 14px/24px "Source Code Pro", Inconsolata, 
-          "Lucida Console", Terminal, "Courier New", Courier;
-    padding: 24px 15px;
-    text-align: center;
+.box {
+    min-height: 60px; /* Минимальная высота */
+    margin-bottom: 10px; /* Отступ снизу */
 }
-.header1, .section1, .aside1, .footer1 {
-    margin: 0 1.5% 24px 1.5%;
+.box-1 {
+    background: #CE242B; /* Красный фон */
 }
-.footer1 {
-    margin-bottom: 0;
+.box-2 {
+    background: #009D4B; /* Зелёный фон */
+}
+.box-3 {
+    background: #3989C9; /* Синий фон */
 }
 
-.code2 {
-    background: #2db34a;
-    border-radius: 6px;
-    color: #fff;
-    display: block;
-    font: 14px/24px "Source Code Pro", Inconsolata, 
-        "Lucida Console", Terminal, "Courier New", Courier;
-    padding: 24px 15px;
-    text-align: center;
+.box-10 {
+    background: #CE242B; /* Красный фон */
+    min-height: 60px; /* Минимальная высота */
+    position: relative; /* Относительное позиционирование */
+    top: 20px; /* Расстояние сверху */
 }
-  .header2, .section2, .aside2, .footer2 {
-    margin: 0 1.5% 24px 1.5%;
-}
-  .section2 {
-    float: left;
-    width: 63%;
-}
-.aside2 {
-    float: right;
-    width: 30%;
-}
-.footer2 {
-    clear: both;
-    margin-bottom: 0;
-}
-
-.accent {
-    border-left: 5px solid brown;
-    padding: 20px;
-    margin: 30px 0;
-    background-color: #e5e9eb;
-}
-
-.code3 {
-    background: #2db34a;
-    border-radius: 6px;
-    color: #fff;
-    display: block;
-    font: 14px/24px "Source Code Pro", Inconsolata, 
-    "Lucida Console", Terminal, "Courier New", Courier;
-    padding: 24px 15px;
-    text-align: center;
-}
-.header3, .section3, .footer3 {
-    margin: 0 1.6% 24px 1.6%;
-}
-.section3 {
-    float: left;
-    width: 30%;
-}
-.footer3 {
-    clear: both;
-    margin-bottom: 0;
-}
-
-.code31 {
-    background: #2db34a;
-    border-radius: 6px;
-    color: #fff;
-    display: block;
-    font: 14px/24px "Source Code Pro", Inconsolata, 
-    "Lucida Console", Terminal, "Courier New", Courier;
-    padding: 24px 15px;
-    text-align: center;
-}
-.header31, .section31, .footer31 {
-    margin: 0 1.6% 24px 1.6%;
-}
-.section31 {
-    display: inline-block;
-    width: 30%;
-}
-.footer31 {
-    margin-bottom: 0;
-}
-
-.code32 {
-    background: #2db34a;
-    border-radius: 6px;
-    color: #fff;
-    display: block;
-    font: 14px/24px "Source Code Pro", Inconsolata, 
-      "Lucida Console", Terminal, "Courier New", Courier;
-    padding: 24px 15px;
-    text-align: center;
-}
-.header32, .section32, .footer32 {
-    margin: 0 1.6% 24px 1.6%;
-}
-.section32 {
-    display: inline-block;
-    width: 30%;
-}
-.footer32 {
-    margin-bottom: 0;
-}
-
-.code33 {
-    background: #2db34a;
-    border-radius: 6px;
-    color: #fff;
-    display: block;
-    font: 14px/24px "Source Code Pro", Inconsolata, 
-      "Lucida Console", Terminal, "Courier New", Courier;
-    padding: 24px 15px;
-    text-align: center;
-}
-.header33, .section33, .footer33 {
-    margin: 0 1.6% 24px 1.6%;
-}
-.section33 {
-    display: inline-block;
-    width: 30%;
-}
-.footer33 {
-    margin-bottom: 0;
+.box-10:hover {
+    position: static; /* Статичное позиционирование */
 }

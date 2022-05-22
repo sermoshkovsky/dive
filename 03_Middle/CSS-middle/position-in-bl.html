@@ -31,10 +31,21 @@
                 <p>
                     Напомним, что значение <span class="mean">inline-block</span> для свойства <span class="atr">display</span> отображает элементы в линию и позволяет им принимать все свойства блочной модели, включая <span class="atr">height</span>, <span class="atr">width</span>, <span class="atr">padding</span>, <span class="atr">border</span> и <span class="atr">margin</span>. Применение <span class="mean">inline-block</span> позволяет нам в полной мере воспользоваться блочной моделью, не беспокоясь об очистке каких-либо <span class="atr">float</span>.
                 </p>
+                <ul>
+                    <li>
+                        <a href="#flt"><em>float</em> на практике</a>
+                    </li>
+                    <li>
+                        <a href="#in-bl"><em>inline-block</em> на практике</a>
+                    </li>
+                    <li>
+                        <a href="#reusable">Создание многократно используемых макетов</a>
+                    </li>
+                </ul>
                 <p>
                     Для наглядности создадим вначале общий макет страницы с шапкой вверху, двумя колонками в центре и подвалом внизу с помощью свойства <span class="atr">float</span>
                 </p>
-                <section>
+                <section class="flt" id="flt">
                     <h2><em>float</em> на практике</h2>
                     <p>
                         В идеале эту страницу следует разметить с помощью элементов <span class="tag">&lt;header&gt;</span>, <span class="tag">&lt;section&gt;</span>, <span class="tag">&lt;aside&gt;</span> и <span class="tag">&lt;footer&gt;</span>. Внутри элемента <span class="tag">&lt;body&gt;</span> HTML может выглядеть так:
@@ -160,7 +171,7 @@
                         </div>
                     </div>
                 </section>
-                <section>
+                <section class="in-bl" id="in-bl">
                     <h2><em>inline-block</em> на практике</h2>
                     <p>
                         Давайте взглянем на наш трёхколоночный пример с самого начала. Начнём мы, сохраняя наш HTML таким:
@@ -207,6 +218,101 @@
                             </footer>
                         </div>
                     </div>
+                    <h5>Удаление пространства между строчно-блочными элементами</h5>
+                    <p>
+                        Есть несколько методов, как удалить пространство между строчно-блочными элементами и некоторые из них более сложные, чем другие. Мы собираемся сосредоточиться на двух самых простых методах, каждый из которых происходят внутри HTML.
+                    </p>
+                    <p>
+                        Первое решение — это поместить каждый новый открывающий тег элемента <span class="tag">&lt;section&gt;</span> в той же строке, что и закрывающий тег предыдущего элемента <span class="tag">&lt;section&gt;</span>. Вместо использования новой строки для каждого элемента мы в итоге начинаем элементы с той же строки. Наш HTML может выглядеть следующим образом:
+                    </p>
+                    <p>
+                        <img src="./img/positioning-img/Screenshot_62.png" alt="">
+                    </p>
+                    <p>
+                        Написание строчно-блочных элементов таким образом гарантирует, что пространства между такими элементами в HTML не существует. Следовательно, пространство и не появится при отображении страницы.
+                    </p>
+                    <div class="example">
+                        <h6>Демонстрация элементов <em>inline-block</em> без пробелов</h6>
+                        <p>
+                            <img src="./img/positioning-img/Screenshot_63.png" alt="">
+                            <img src="./img/positioning-img/Screenshot_64.png" alt="">
+                        </p>
+                        <div class="block">
+                            <header class="header32">
+                                <code class="code32">&#60;header&#62;</code>
+                            </header>
+                              
+                            <section class="section32">
+                                <code class="code32">&#60;section&#62; <br> display: <br> inline-block;</code>
+                            </section><section class="section32">
+                                <code class="code32">&#60;section&#62; <br> display: <br> inline-block;</code>
+                            </section><section class="section32">
+                                <code class="code32">&#60;section&#62; <br> display: <br> inline-block;</code>
+                            </section>
+                              
+                            <footer class="footer32">
+                                <code class="code32">&#60;footer&#62;</code>
+                            </footer>
+                        </div>
+                    </div>
+                    <p>
+                        Ещё один метод для удаления пространства между строчно-блочными элементами состоит в открытии комментария HTML непосредственно после закрывающего тега элемента. Затем закройте комментарий непосредственно перед открывающим тегом следующего элемента. Это позволяет строчно-блочным элементам начинаться и завершаться на отдельных строках в HTML и «закомментирует» любое потенциальное пространство между элементами. В результате код будет выглядеть следующим образом:
+                    </p>
+                    <p>
+                        <img src="./img/positioning-img/Screenshot_65.png" alt="">
+                    </p>
+                    <div class="example">
+                        <h6>Демонстрация элементов <em>inline-block</em> без пробелов с комментарием</h6>
+                        <p>
+                            <img src="./img/positioning-img/Screenshot_66.png" alt="">
+                            <img src="./img/positioning-img/Screenshot_67.png" alt="">
+                        </p>
+                        <div class="block">
+                            <header class="header33">
+                                <code class="code33">&#60;header&#62;</code>
+                            </header>
+                              
+                            <section class="section33">
+                                <code class="code33">&#60;section&#62; <br> display: <br> inline-block;</code>
+                            </section><!--
+                            --><section class="section33">
+                                <code class="code33">&#60;section&#62; <br> display: <br> inline-block;</code>
+                            </section><!--
+                            --><section class="section33">
+                                <code class="code33">&#60;section&#62; <br> display: <br> inline-block;</code>
+                            </section>
+                              
+                            <footer class="footer33">
+                                <code class="code33">&#60;footer&#62;</code>
+                            </footer>
+                        </div>
+                    </div>
+                </section>
+                <section class="reusable" id="reusable">
+                    <h2>Создание многократно используемых макетов</h2>
+                    <p>
+                        При создании сайта всегда лучше написать модульные стили, которые могут быть повторно задействованы в других местах, а многократно используемые макеты находятся в верхней части списка повторно применяемого кода. Макеты могут быть созданы с помощью <span class="atr">float</span> или строчно-блочных элементов, но что работает лучше и почему?
+                    </p>
+                    <p>
+                        Вопрос что лучше для структуры страницы — обтекаемые или строчно-блочные элементы открыт для обсуждения. Мой подход заключается в:
+                    </p>
+                    <ul>
+                        <li>
+                            использовании строчно-блочных элементов для создания сетки или макета страницы,
+                        </li>
+                        <li>
+                            а затем задействовать <span class="atr">float</span>, когда мне хочется чтобы контент обтекал вокруг данного элемента (для чего <span class="atr">float</span> и были предназначены при работе с изображениями).
+                        </li>
+                    </ul>
+                    <p>
+                        Вообще, я также считаю, что со строчно-блочными элементами легче работать.
+                    </p>
+                    <p>
+                        Тем не менее, используйте то, что работает лучше для вас. Если с одним подходом вы знакомы лучше чем с другим, тогда задействуйте его.
+                    </p>
+                    <p>
+                        В настоящее время в работе появились новые спецификации CSS — в частности, свойства <span class="atr">flex</span> и <span class="atr">grid</span>, которые помогут решить, как лучше всего сверстать страницы. Следите за этими методами, когда они начнут всплывать.
+                    </p>
                 </section>
             </section>
             <a href="#header" class="btn">ВВЕРХ</a>
