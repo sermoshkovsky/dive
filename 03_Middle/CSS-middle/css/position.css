@@ -175,3 +175,152 @@ nav a {
 .box-10:hover {
     position: static; /* Статичное позиционирование */
 }
+
+.rlt0 p { 
+    border: 2px solid blue; 
+}
+
+.rlt01 p {
+    border: 2px solid blue;
+  }
+  
+.rlt01 .second {
+    position: relative;
+    border-color: red;
+    left: 20px;
+    top: 10px;
+}
+
+.rlt h1 {
+    font: normal 2em Arial, Tahome, sans-serif; /* Параметры шрифта */
+    background: #3989c9; /* Синий цвет фона */
+    color: #fff; /* Белый цвет текста */
+    padding: 0 1rem; /* Поля вокруг заголовка */
+    overflow: hidden; /* Скрываем всё за пределами заголовка */
+}
+.rlt h1 span {
+    position: relative; /* Относительное позиционирование */
+    top: 0.48rem; /* Сдвигаем вниз */
+}
+
+button {
+    background: #CE242B; /* Красный фон */
+    color: #fff; /* Белый цвет текста */
+    border: none; /* Убираем рамку */
+    padding: .7rem 2rem; /* Поля вокруг текста */
+    box-shadow: 5px 5px 0 #000; /* Параметры тени */
+    position: relative; /* Относительное позиционирование */
+    left: 0; /* Положение слева */
+    top: 0; /* Положение сверху */
+    transition: 1s; /* Время анимации */
+}
+   button:hover {
+    left: 5px; /* Положение слева */
+    top: 5px; /* Положение сверху */
+    box-shadow: 0 0 0 #000; /* Параметры тени */
+}
+
+.z img {
+    border: 1px solid #ce242b; /* Параметры рамки */
+    position: relative; /* Относительное позиционирование */
+    transition: 1s; /* Время анимации */
+}
+.z img:hover {
+    z-index: 10; /* Поверх всех картинок */
+    transform: scale(1.2); /* Масштабирование на 20% */
+}
+
+.abs0 section {
+    background: gold;
+    height: 200px;
+    padding: 10px;
+    position: relative; /* Превращает <section> в точку отсчёта для <p> */
+} 
+.abs0 p {
+    background: limegreen;
+    color: white;
+    padding: 10px;
+    position: absolute; /* Делает <p> свободно перемещаемым */
+    bottom: 10px; /* 10px снизу */
+    left: 20px; /* 20px слева */
+}
+
+.abs1 {
+    margin: 0; /* Убираем отступы */ 
+    position: relative; /* Превращает abs1 в точку отсчёта для sidebar и content */
+    height: 250px;
+    padding: auto;
+}
+.abs1 .sidebar, .abs1 .content { 
+ position: absolute; /* Абсолютное позиционирование */
+ overflow: auto; /* Полосы прокрутки при необходимости */
+ padding: 10px; /* Поля вокруг текста */
+ top: 67px; /* Расстояние от верхнего края */
+ bottom: 0; /* Расстояние от нижнего края */
+}
+.abs1 .content {
+    margin-right: 5px;
+}
+.abs1 header {
+ height: 60px; /* Высота */
+ background: #FEDFC0; /* Цвет фона */
+ border-bottom: 1px solid #7B5427; /* Линия снизу */
+}
+.abs1 header h1 { 
+ line-height: 60px; /* Выравниваем по середине */
+ margin: 0 10px; /* Сдвигаем заголовок */
+}
+.abs1 .sidebar { 
+ width: 150px; /* Ширина */
+ background: #ECF5E4; /* Цвет фона */
+ border-right: 1px solid #231F20; /* Линия справа */
+}
+.abs1 .content {
+ left: 171px; /* Расстояние от левого края */ 
+ right: 0; /* Расстояние справа */
+}
+
+.abs2 {
+    margin: 0; /* Убираем отступы */ 
+    position: relative; /* Превращает abs2 в точку отсчёта для overlay и dialog */
+    height: 250px;
+    
+}
+.overlay {
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; right: 0; top: 0; bottom: 0; /* Занимает всё пространство */
+    background: rgba(0, 0, 0, 0.8); /* Полупрозрачный цвет фона */
+}
+.dialog {
+    position: absolute; /* Абсолютное позиционирование */
+    background: #fff; /* Цвет фона */
+    width: 260px; /* Ширина */
+    padding: 20px; /* Поля */
+    min-height: 80px; /* Минимальная высота */
+    left: 0; right: 0; /* Нужно для выравнивания */
+    margin: 80px auto 0; /* Выравниваем по центру */
+}
+
+.abs3 {
+    height: 70px;
+}
+.checkbox {
+    width: 28px; /* Ширина переключателя */
+    height: 28px; /* Высота переключателя */
+    background: #333; /* Цвет рамки */
+}
+.checkbox input[type=checkbox] {
+    position: absolute; /* Абсолютное позиционирование */
+    left: -9999px; /* Скрываем элемент */
+}
+.checkbox input[type=checkbox]:checked + label {
+    background: #009d4b; /* Цвет фона включенного переключателя */
+}
+.checkbox label {
+    display: block; /* Блочный элемент */
+    width: 20px; /* Ширина */
+    height: 20px; /* Высота */
+    position: relative; /* Относительное позиционирование */
+    left: 4px; top: 4px; /* Смещаем вправо и вниз */
+    background: #fff; /* Цвет фона выключенного переключателя */
+}
