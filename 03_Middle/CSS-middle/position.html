@@ -469,6 +469,65 @@
                 </section>
                 <section class="rel-abs" id="rel-abs">
                     <h2>relative и absolute</h2>
+                    <p>
+                        Обычно относительное позиционирование само по себе применяется не часто, поскольку для смещения элемента от его исходного положения есть ряд других свойств, к примеру, <span class="atr">margin</span> или <span class="atr">transform</span>. Но комбинация разных типов позиционирования для вложенных элементов является одним из удобных и практичных приёмов вёрстки. Если для родительского элемента задать <span class="mean">relative</span>, а для дочернего <span class="mean">absolute</span>, то произойдёт смена системы координат и положение дочернего элемента при этом указывается относительно его родителя (рис. 1).
+                    </p>
+                    <p>
+                        <img src="./img/position-img/Screenshot_27.png" alt="">
+                    </p>
+                    <p>
+                        Отсчёт координат ведётся от внутреннего края границы, значения <span class="atr">padding</span> не учитываются. В примере 1 прямоугольник располагается в правом нижнем углу блока возле границы.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 1. Использование <em>position</em></h6>
+                        <p>
+                            <img src="./img/position-img/Screenshot_28.png" alt="">
+                            <img src="./img/position-img/Screenshot_29.png" alt="">
+                        </p>
+                        <div class="block">
+                            <div class="block-1">
+                                <div class="block-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Для родителя допустимо указывать значение <span class="mean">relative</span>, <span class="mean">absolute</span>, <span class="mean">fixed</span> или <span class="mean">sticky</span>. Если у дочернего элемента свойство <span class="atr">position</span> задано как <span class="mean">absolute</span>, то отсчёт координат ведётся от родителя. В примере 2 показано сочетание абсолютного позиционирования для размещения даты в левом верхнем углу фотографии.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 2. Использование <em>absolute</em></h6>
+                        <p>
+                            <img src="./img/position-img/Screenshot_30.png" alt="">
+                            <img src="./img/position-img/Screenshot_31.png" alt="">
+                        </p>
+                        <div class="block abrec">
+                            <figure class="plumb">
+                                <img src="./img/positioning-img/blueberry.jpg" alt="Голубика">
+                                <div class="pub">
+                                  <div class="date">15</div>
+                                  <div class="month">авг</div>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                    <p>
+                        Сочетание относительного и абсолютного позиционирования можно применять и к псевдоэлементам <span class="slc">::before</span> и <span class="slc">::after</span>. Это сокращает размер кода HTML, поскольку нам уже не нужны лишние элементы, и позволяет делать всякие интересные декоративные эффекты. В примере 3 показано создание всплывающей подсказки.
+                    </p>
+                    <p>
+                        Текст самой подсказки мы пишем в пользовательском атрибуте <span class="slc">data-tooltip</span> и выводим его с помощью свойства <span class="atr">content</span> со значением <span class="mean">attr(data-tooltip)</span>. Остальной код CSS используется для оформления этого текста
+                    </p>
+                    <div class="example">
+                        <h6>Пример 3. Создание всплывающей подсказки</h6>
+                        <p>
+                            <img src="./img/position-img/Screenshot_32.png" alt="">
+                            <img src="./img/position-img/Screenshot_33.png" alt="">
+                        </p>
+                        <div class="block">
+                            <p>Текст до строки.</p>
+                            <p data-tooltip="Всплывающая подсказка сообщает о чём-то многозначном и полезном...">
+                             Наведи сюда курсор.</p>
+                            <p>Текст после строки.</p>
+                        </div>
+                    </div>
                 </section>
                 <section class="fixed " id="fixed ">
                     <h2>Фиксированное позиционирование</h2>

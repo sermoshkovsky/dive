@@ -114,7 +114,7 @@ nav a {
     font-size: 18px;
 }
 /* Свойство/Атрибуты 
-<span class="atr"></span>
+
 */
 .atr {
     color: orange;
@@ -323,4 +323,63 @@ button {
     position: relative; /* Относительное позиционирование */
     left: 4px; top: 4px; /* Смещаем вправо и вниз */
     background: #fff; /* Цвет фона выключенного переключателя */
+}
+
+.block-1 {
+    position: relative; /* Относительное позиционирование */
+    background: #3989c9; /* Синий цвет фона */
+    min-height: 160px; /* Минимальная высота */
+    padding: 20px; /* Поля */
+    border: 2px solid #000; /* Параметры границы */
+}
+.block-2 {
+    position: absolute; /* Абсолютное позиционирование */
+    right: 0; bottom: 0; /* Положение элемента */
+    background: #feea3f; /* Жёлтый цвет фона */
+    width: 50px; height: 50px; /* Размеры элемента */
+}
+
+.abrec {
+    position: relative;
+    height: 300px;
+}
+.plumb, .pub {
+    position: absolute; /* Абсолютное позиционирование */
+}
+.pub {
+    background: #3989c9; /* Синий цвет фона */
+    color: #fff; /* Цвет текста */
+    left: 10px; top: 10px; /* Положение даты */
+    text-align: center; /* Выравнивание по центру */
+    padding: 5px 10px; /* Поля вокруг текста */
+    min-width: 40px; /* Минимальная ширина */
+    border: 2px solid #fff; /* Параметры рамки */
+}
+.date {
+    font-size: 28px; /* Размер шрифта */
+}
+
+[data-tooltip] {
+    position: relative; /* Относительное позиционирование */
+}
+   /* Выводим треугольник */
+[data-tooltip]:hover::before {
+    content: '';
+    position: absolute;
+    top: 1.4em; left: 20px;
+    width: 0; height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #3989c9;
+} 
+   /* Выводим саму подсказку */
+[data-tooltip]:hover::after {
+    content: attr(data-tooltip); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 400px; /* Ширина подсказки */
+    left: 0; top: 2em; /* Положение подсказки */
+    background: #3989c9; /* Синий цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 0.5em; /* Поля вокруг текста */
+    border-radius: 5px; /* Скругляем уголки */
 }
