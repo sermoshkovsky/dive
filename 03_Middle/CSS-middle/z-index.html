@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-index</title>
+    <link rel="stylesheet" href="./css/position.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html" target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="./positioning.html" target="_blank">Позиционирование </a> </li>
+                    <li><a href="./float.html" target="_blank">Float</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Свойство <em>z-index</em></h1>
+                <p>
+                    По своей природе веб-страницы часто считаются двумерными, отображающие элементы по осям х и у. Однако, когда вы начинаете позиционировать элементы, они иногда располагаются поверх друг друга. 
+                </p>
+                <p>
+                    Чтобы изменить <a href="http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/" target="_blank"><strong>порядок выкладывания этих элементов</strong></a> по оси z должно использоваться свойство <span class="atr">z-index</span>.
+                </p>
+                <p>
+                    Как правило, элементы располагаются по оси z в том порядке, в каком они появляются в DOM. Элементы, приходящие сверху DOM, расположены позади элементов идущих после них. Изменение этого порядка с помощью свойства <span class="atr">z-index</span> является довольно прямолинейным. Элемент с наибольшим значением <span class="atr">z-index</span> появится сверху, независимо от его расположения в DOM.
+                </p>
+                <p>
+                    Чтобы применить свойство <span class="atr">z-index</span> к элементу, необходимо сначала задать значение <span class="atr">position</span> как <span class="mean">relative</span>, <span class="mean">absolute</span> или <span class="mean">fixed</span>. То же, как если бы вы хотели применить свойства смещения блока.
+                </p>
+                <section>
+                    <p>
+                        В приведённом ниже примере, без свойства <span class="atr">z-index</span> каждый блок будет позиционироваться точно, начиная со второго блока расположенного поверх первого, а третий блок расположен поверх второго и т. д. Изменение порядка через свойство <span class="atr">z-index</span> теперь позиционирует второй блок поверх остальных, затем третий блок под ним, а четвёртый под третьим.
+                    </p>
+                    <p>
+                        Поменяйте значения свойства <span class="atr">z-index</span> и обратите внимание, как элементы меняют свой порядок.
+                    </p>
+                    <div class="example">
+                        <h6>Демонстрация <em>z-index</em></h6>
+                        <p>
+                            <img src="./img/position-img/Screenshot_44.png" alt="">
+                            <img src="./img/position-img/Screenshot_45.png" alt="">
+                            <img src="./img/position-img/Screenshot_46.png" alt="">
+                        </p>
+                        <div class="block">
+                            <div class="box-set">
+                                <figure class="box5 box-11">Блок 1</figure>
+                                <figure class="box5 box-22">Блок 2</figure>
+                                <figure class="box5 box-33">Блок 3</figure>
+                                <figure class="box5 box-44">Блок 4</figure>
+                            </div>
+                        </div>
+                        <p>
+                            <img src="./img/position-img/Screenshot_47.png" alt="">
+                            <img src="./img/position-img/Screenshot_48.png" alt="">
+                            <img src="./img/position-img/Screenshot_49.png" alt="">
+                        </p>
+                        <div class="block">
+                            <div class="bx-set">
+                                <figure class="bx5 bx-11">Блок 1</figure>
+                                <figure class="bx5 bx-22">Блок 2</figure>
+                                <figure class="bx5 bx-33">Блок 3</figure>
+                                <figure class="bx5 bx-44">Блок 4</figure>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <hr>
+                    <div class="titles">
+                        <h4>z-index</h4>
+                        <p><a href="https://webref.ru/css/z-index" target="_blank">Справочник CSS</a></p>
+                    </div>
+                    <p class="bord">
+                        Любые позиционированные элементы на веб-странице могут накладываться друг на друга в определенном порядке, имитируя тем самым третье измерение, перпендикулярное экрану. Каждый элемент может находиться как ниже, так и выше других объектов веб-страницы, их размещением по z-оси и управляет <span class="atr">z-index</span>. Это свойство работает только для элементов, у которых значение <span class="atr">position</span> задано как <span class="mean">absolute</span>, <span class="mean">fixed</span> или <span class="mean">relative</span>.
+                    </p>
+                    <p>
+                        Значение по умолчанию	<span class="mean">auto</span>
+                    </p>
+                    <h6>Синтаксис</h6>
+                    <div>
+                        <p class="sintacsis">
+                            <span class="atr">z-index</span>: <span class="tag">&lt;число&gt;</span> | <span class="mean">auto</span>
+                        </p>
+                    </div>
+                    <h6>Значения</h6>
+                    <p>
+                        В качестве значения используются целые числа (положительные, отрицательные и ноль). Чем больше значение, тем выше находится элемент по сравнению с теми элементами, у которых оно меньше. При равном значении <span class="atr">z-index</span>, на переднем плане находится тот элемент, который в коде HTML описан ниже. Допустимо использовать отрицательное значение.
+                    </p>
+                    <p>
+                        Кроме числовых значений применяется <span class="mean">auto</span> — порядок элементов в этом случае строится автоматически, исходя из их положения в коде HTML и принадлежности к родителю, поскольку дочерние элементы имеют тот же номер, что их родительский элемент.
+                    </p>
+                    <p>
+                        В данном примере при наведении курсора на карту она выходит на передний край, частично перекрывая остальные собой остальные изображения
+                    </p>
+                    <div class="example">
+                        <h6>Изменение порядка карт</h6>
+                        <p>
+                           <img src="./img/position-img/Screenshot_51.png" alt="">
+                           <img src="./img/position-img/Screenshot_50.png" alt=""> 
+                        </p>
+                        <div class="block car">
+                            <img src="./img/positioning-img/3.png" alt="3" class="card three">
+                            <img src="./img/positioning-img/7.png" alt="7" class="card seven">
+                            <img src="./img/positioning-img/ace.png" alt="Туз" class="card ace">
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <a href="#header" class="btn">ВВЕРХ</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>

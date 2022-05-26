@@ -65,15 +65,18 @@ dd {
     padding-left: 120px;
 }
 .btn {
-    background-color: orange;
-    border-radius: 5px;
-    padding: 10px 30px;
+    background-color: rgb(255, 165, 0, 0.5) ;
+    border-radius: 95px;
+    padding: 10px 20px;
     text-align: center;
     display: inline-block;
     margin: 10px 0;
     text-decoration: none;
     font-weight: bold;
     color: azure;
+    position: fixed;
+    top: 80%;
+    left: 1%;
 }
 .tags {
     font-size: 35px;
@@ -114,7 +117,7 @@ nav a {
     font-size: 18px;
 }
 /* Свойство/Атрибуты 
-
+<span class="atr"></span>
 */
 .atr {
     color: orange;
@@ -383,3 +386,93 @@ button {
     padding: 0.5em; /* Поля вокруг текста */
     border-radius: 5px; /* Скругляем уголки */
 }
+
+.box-set, .box5 {
+  border-radius: 6px;
+}
+.box-set {
+    background: #eaeaed;
+    height: 160px;
+    position: relative;
+}
+.box5 {
+    background: #2db34a;
+    border: 2px solid #ff7b29;
+    position: absolute;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    width: 80px;
+}
+.box-11 {
+    left: 10px;
+    top: 10px;
+}
+.box-22 {
+    bottom: 10px;
+    left: 70px;
+    z-index: 3;
+}
+.box-33 {
+    left: 130px;
+    top: 10px;
+    z-index: 2;
+}
+.box-44 {
+    bottom: 10px;
+    left: 190px;
+    z-index: 1;
+}
+
+.bx-set, .bx5 {
+  border-radius: 6px;
+}
+.bx-set {
+  background: #eaeaed;
+  height: 160px;
+  position: relative;
+}
+.bx5 {
+  background: #2db34a;
+  border: 2px solid #ff7b29;
+  position: absolute;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  width: 80px;
+}
+.bx-11 {
+  left: 10px;
+  top: 10px;
+  z-index: 2;
+}
+.bx-22 {
+  bottom: 10px;
+  left: 70px;
+  z-index: 1;
+}
+.bx-33 {
+  left: 130px;
+  top: 10px;
+  z-index: 3;
+}
+.bx-44 {
+  bottom: 10px;
+  left: 190px;
+}
+
+.bord {
+    border-left: #CE242B 3px solid;
+    padding: 10px;
+    background: #e5eaee;
+}
+
+.car {
+    height: 300px;
+}
+
+.card { position: relative; }
+.three { top: 50px; left: 55px; z-index: 5; }
+.seven { left: -120px; top: 25px; z-index: 2;}
+.ace { left: -295px; z-index: 1; }
+.card:hover { z-index: 10; }
