@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Переходы</title>
+    <link rel="stylesheet" href="css/transitions.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../02_Junior/Junior_CSS-1/css-1.html" target="_blank">CSS-1 </a> </li>
+                    <li><a href="../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Переходы</h1>
+                <div class="text">
+                    <p>
+                        Переходом называется плавная смена свойств элемента при наведении на него курсора мыши. Самый простой способ задать стили для различных состояний — это воспользоваться псевдоклассами <span class="atr">:hover</span>, <span class="atr">:focus</span>, <span class="atr">:active</span> и <span class="atr">:target</span>. При использовании псевдокласса <span class="atr">:hover</span> изменение происходит мгновенно, <span class="atr">transition</span> же позволяет задать продолжительность и метод перехода.
+                    </p>
+                    <p>
+                        Переходы в CSS позволяют плавно перейти от одного состояния элемента к другому. Работает это так, что отдельные свойства анимируются от начального состояния до конечного.
+                    </p>
+                    <p>
+                        Есть четыре свойства, связанных с переходами в целом:
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="atr">transition-property</span>: какие <strong>свойства</strong> анимируются;
+                        </li>
+                        <li>
+                            <span class="atr">transition-duration</span>: <strong>как долго</strong> длится анимация;
+                        </li>
+                        <li>
+                            <span class="atr">transition-timing-function</span>: как вычисляются <strong>промежуточные состояния</strong>;
+                        </li>
+                        <li>
+                            <span class="atr">transition-delay</span>: анимация начинается <strong>через</strong> некоторое время.
+                        </li>
+                    </ul>
+                    <p>
+                        Вы можете установить каждое свойство CSS по отдельности или использовать сокращённую версию: <span class="atr">transition</span>. В этом случае, только <span class="atr">transition-duration</span> является обязательным.
+                    </p>
+                    <p>
+                        Имейте в виду, что переход представляет собой специфический вид анимации, где есть только начальное и конечное состояние.
+                    </p>
+                </div>
+                <section class="transition-duration" id="transition-duration">
+                    <div class="titles">
+                        <h4>transition-duration</h4>
+                        <p>
+                            <a href="https://webref.ru/css/transition-duration" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <span class="atr">transition-duration</span> является единственным стилевым свойством, необходимым для создания перехода. Оно может быть установлено либо в секундах (2s), либо в миллисекундах (100ms).
+                    </p>
+                    <p>
+                        Если вы хотите, чтобы ваш переход длился полсекунды, то можете написать 0.5s или 500ms. В зависимости от того, насколько быстро вы хотите, чтобы длился переход, может быть проще и/или быстрее писать одну единицу.
+                    </p>
+                    <div class="example">
+                        <p>
+                            <img src="img/transitions-img/Screenshot_1.png" alt="">
+                            <img src="img/transitions-img/Screenshot_2.png" alt="">
+                        </p>
+                        <div class="block dur">
+                            <a>Без перехода</a>
+                            <a class="with-fast-transition">Переход 0.5s</a>
+                            <a class="with-slow-transition">Переход 3s</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="transition-property" id="transition-property">
+                    <div class="titles">
+                        <h4>transition-property</h4>
+                        <p>
+                            <a href="https://webref.ru/css/transition-property" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        Только треть свойств CSS может быть анимирована - только для свойств, которые имеют различимую точку на полпути. Цвета, размеры шрифтов и тому подобное могут переходить от одного значения к другому, поскольку у них есть распознаваемые значения в промежутке друг с другом. У свойства <span class="atr">display</span>, например, не может быть перехода, поскольку оно не имеет никакой средней точки. Набор наиболее популярных свойств, к которым применим переход следующий.
+                    </p>
+                    <table>
+                        <tr>
+                            <td>background-color</td>
+                            <td>left</td>
+                            <td>padding</td>
+                            <td>background-position</td>
+                            <td>letter-spacing</td>
+                            <td>right</td>
+                        </tr>
+                        <tr>
+                            <td>border-color</td>
+                            <td>line-height</td>
+                            <td>text-indent</td>
+                            <td>border-width</td>
+                            <td>margin</td>
+                            <td>text-shadow</td>
+                        </tr>
+                        <tr>
+                            <td>border-spacing</td>
+                            <td>max-height</td>
+                            <td>top</td>
+                            <td>bottom</td>
+                            <td>max-width</td>
+                            <td>vertical-align</td>
+                        </tr>
+                        <tr>
+                            <td>clip</td>
+                            <td>min-height</td>
+                            <td>visibility</td>
+                            <td>color</td>
+                            <td>min-width</td>
+                            <td>width</td>
+                        </tr>
+                        <tr>
+                            <td>crop</td>
+                            <td>opacity</td>
+                            <td>word-spacing</td>
+                            <td>font-size</td>
+                            <td>outline-color</td>
+                            <td>z-index</td>
+                        </tr>
+                        <tr>
+                            <td>font-weight</td>
+                            <td>outline-offset</td>
+                            <td>height</td>
+                            <td>outline-width</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <p>
+                        По умолчанию у свойства <span class="atr">transition-property</span> значение <span class="mean">all</span>. Это просто означает, что будут анимироваться все возможные свойства.
+                    </p>
+                    <p>
+                        Вы можете разрешить анимацию только одного или нескольких свойств.
+                    </p>
+                    <div class="example">
+                        <p>
+                            <img src="img/transitions-img/Screenshot_3.png" alt="">
+                            <img src="img/transitions-img/Screenshot_4.png" alt="">
+                        </p>
+                        <div class="block prop">
+                            <a>Без перехода</a>
+                            <a class="with-background-transition">Переход только для background</a>
+                            <a class="with-all-transition">Переход для всех свойств</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="transition-timing-function" id="transition-timing-function">
+                    <div class="titles">
+                        <h4>transition-timing-function</h4>
+                        <p>
+                            <a href="https://webref.ru/css/transition-timing-function" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        Функция времени определяет, как вычисляется значение каждого свойства во время перехода.
+                    </p>
+                    <p>
+                        По умолчанию переход равен <span class="mean">ease</span>: он ускоряется в начале и замедляется в конце.
+                    </p>
+                    <p>
+                        Вы можете решить, что переход будет происходить с постоянной скоростью. Функция времени может ускорить или замедлить переход.
+                    </p>
+                    <p>
+                        Самый простой способ визуализации функций времени заключается в изменении свойств позиционирования, вроде <span class="atr">left</span>.
+                    </p>
+                    <div class="example">
+                        <p>
+                            <img src="img/transitions-img/Screenshot_5.png" alt="">
+                            <img src="img/transitions-img/Screenshot_6.png" alt="">
+                        </p>
+                        <div class="block tim">
+                            <div class="main">
+                                <p><strong>ease</strong>: медленно начинается, быстро в середине, медленно завершается</p>
+                                <div class="div ease"></div>
+                                <p><strong>linear</strong>: постоянная скорость</p>
+                                <div class="div linear"></div>
+                                <p><strong>ease-in</strong>: медленно начинается, быстро завершается</p>
+                                <div class="div ease-in"></div>
+                                <p><strong>ease-out</strong>: быстро начинается, медленно завершается</p>
+                                <div class="div ease-out"></div>
+                                <p><strong>ease-in-out</strong>: похоже на ease, но с более выраженным ускорением/замедлением</p>
+                                <div class="div ease-in-out"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Имейте в виду, что все переходы занимают одинаковое время (1 секунда).
+                    </p>
+                </section>
+                <section class="transition-delay" id="transition-delay">
+                    <div class="titles">
+                        <h4>transition-delay</h4>
+                        <p>
+                            <a href="https://webref.ru/css/transition-delay" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <span class="atr">transition-delay</span> определяет задержку, т. е. как долго переход должен ждать, прежде чем начнётся на самом деле.
+                    </p>
+                    <p>
+                        Как и с <span class="atr">transition-duration</span> вы можете использовать секунды (s) или миллисекунды (ms).
+                    </p>
+                    <div class="example">
+                        <p>
+                            <img src="img/transitions-img/Screenshot_7.png" alt="">
+                            <img src="img/transitions-img/Screenshot_8.png" alt="">
+                        </p>
+                        <div class="block delay">
+                            <div>
+                                <p>Наведите курсор на серую область</p>
+                                <a>Без задержки</a>
+                                <a class="with-delay">С секундной задержкой</a>
+                              </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>
