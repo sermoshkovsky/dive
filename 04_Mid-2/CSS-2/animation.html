@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анимация</title>
+    <link rel="stylesheet" href="css/animation.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../02_Junior/Junior_CSS-1/css-1.html" target="_blank">CSS-1 </a> </li>
+                    <li><a href="../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Анимация</h1>
+                <div class="text">
+                    <p>
+                        Переходы — это способ <strong>анимации</strong> стилевых свойств от <em>исходного</em> до <em>конечного</em> состояния.
+                    </p>
+                    <p>
+                        Переходы в CSS являются специфическим видом анимации, где:
+                    </p>
+                    <ul>
+                        <li>
+                            есть только два состояния: начало и конец;
+                        </li>
+                        <li>
+                            анимация не зациклена;
+                        </li>
+                        <li>
+                            промежуточные состояния управляются только функцией времени.
+                        </li>
+                    </ul>
+                    <p>
+                        Но, что если вы хотите:
+                    </p>
+                    <ul>
+                        <li>
+                            иметь контроль над <strong>промежуточными</strong> состояниями?
+                        </li>
+                        <li>
+                            <strong>зациклить</strong> анимацию?
+                        </li>
+                        <li>
+                            сделать разные виды анимаций для одного элемента?
+                        </li>
+                        <li>
+                            анимировать определённое свойство только на <strong>половину</strong> пути?
+                        </li>
+                        <li>
+                            имитировать <strong>различные функции времени</strong> для разных свойств?
+                        </li>
+                    </ul>
+                    <p>
+                        Анимация в CSS позволяет всё это, и не только.
+                    </p>
+                    <p>
+                        Анимация как мини-фильм, где вы в качестве режиссёра даёте инструкции (стилевые правила) вашим актёрам (элементам HTML) для разных сцен (ключевые кадры).
+                    </p>
+                </div>
+                <section>
+                    <h2>Виды анимации</h2>
+                        <p>
+                            Анимация бывает двух видов — покадровая анимация и анимация по ключевым кадрам. 
+                        </p>
+                        <section>
+                            <h3>Покадровая анимация</h3>
+                            <p>
+                                При покадровой анимации важным показателем является частота кадров в секунду. 
+                            </p>
+                            <p>
+                                Для ориентира — в кинотеатрах используется 24 кадра в секунду, на телевидении — 25, современные камеры умеют снимать с частотой 50 и более кадров в секунду. Соответственно, чтобы сделать рисованный ролик продолжительностью полминуты и с частотой 24 кадра, потребуется 720 изображений. Некоторые мультипликаторы идут на хитрость и чтобы не рисовать огромное количество картинок сокращают их число в два раза, при этом повторяя каждый кадр дважды.
+                            </p>
+                            <h3>Анимация по ключевым кадрам</h3>
+                            <p>
+                                Анимация по ключевым кадрам использует совершенно иной подход. Например, нам нужно сделать перемещение квадрата из одной точки в другую. Достаточно задать исходные, конечные координаты квадрата и время перемещения. Расчёт промежуточных кадров берёт на себя программа, в нашем случае браузер, раз мы говорим о веб-технологиях.
+                            </p>
+                            <p>
+                                <img src="img/animation-img/Screenshot_1.png" alt="">
+                            </p>
+                            <p>
+                                Понятно, что это сильно упрощает процесс создания анимации, поскольку число кадров существенно сокращается, а всякая рутина вычисляется автоматически. Вместе с тем есть и ряд ограничений.
+                            </p>
+                            <p>
+                                К примеру, если требуется сделать движение объекта по дуге. Продвинутые программы вроде Adobe Flash позволяют перемещать объекты вдоль произвольной кривой, но браузеры пока сильно уступают им в этом плане. Движение может происходить только линейно, поэтому кривую мы заменяем приближённой ломаной. В математике этот метод называется аппроксимацией. Чем больше точек мы поставим, тем ближе ломаная будет к исходной кривой и тем плавнее движение, но с другой стороны это усложняет работу, фактически приближая её к покадровой анимации. Так что важно соблюдать баланс между качеством и затратами труда.
+                            </p>
+                            <p>
+                                <img src="img/animation-img/Screenshot_2.png" alt="">
+                            </p>
+                            <p>
+                                Сама анимация на веб-странице делается с помощью двух вещей. Продолжительность анимации, задержка перед её выполнением, число повторений и другие параметры указываются через универсальное свойство <span class="atr">animation</span>. А ключевые кадры и значения свойств элемента определяются правилом <span class="atr">@keyframes</span>. Затем они связываются между собой с помощью переменной, имя для которой мы придумываем сами. Схематично это выглядит так.
+                            </p>
+                            <p>
+                                <img src="img/animation-img/Screenshot_3.png" alt="">
+                            </p>
+                            <p>
+                                Таким образом, создав несколько заготовок ключевых кадров мы можем их применять к разным элементам указывая нужную переменную. 
+                            </p>
+                        </section>
+                </section>
+                <section>
+                    <div class="titles">
+                        <h4>@keyframes</h4>
+                        <p>
+                            <a href="https://webref.ru/css/keyframes" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        Перед применением анимации к элементам HTML, требуется написать анимацию с помощью ключевых кадров. Вообще, ключевые кадры — это каждый промежуточный шаг в анимации. Они определяются с помощью процентов:
+                    </p>
+                    <ul>
+                        <li>0% — первый шаг анимации;</li>
+                        <li>50% — шаг на полпути в анимации;</li>
+                        <li>100% — последний шаг.</li>
+                    </ul>
+                    <p class="accent">
+                        Можно также использовать ключевые слова <span class="mean">from</span> и <span class="mean">to</span> вместо 0% и 100%, соответственно.
+                    </p>
+                    <p>
+                        Вы можете определить столько ключевых кадров, сколько хотите, вроде 33%, 4% или даже 29.86%. На практике вы будете писать только некоторые из них.
+                    </p>
+                    <p>
+                        Каждый ключевой кадр является <strong>правилом CSS</strong>, это означает, что вы можете писать свойства CSS как обычно.
+                    </p>
+                    <p>
+                        Чтобы определить анимацию, просто напишите ключевое слово <span class="atr">@keyframes</span> с его <strong>названием</strong>, имя которому придумываем сами:
+                    </p>
+                    <div class="example play">
+                        <p>
+                            <img src="img/animation-img/Screenshot_5.png" alt="">
+                            <img src="img/animation-img/Screenshot_4.png" alt="">
+                        </p>
+                        <div class="block key">
+                            <p>
+                                Привет
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        Обратите внимание, что начало 0% и конец 100% содержат <strong>одинаковые правила</strong> CSS. Это гарантирует, что анимация зациклится идеально. Поскольку счётчик итераций установлен как <span class="mean">infinite</span>, то анимация будет идти от 0% до 100%, а затем немедленно обратно к 0% и так бесконечно.
+                    </p>
+                </section>
+                <section>
+                    <h2>Свойства анимации</h2>
+                    <div class="text">
+                        <p>
+                            Как и <span class="atr">transition</span>, свойство <span class="atr">animation</span> является сокращённым для нескольких других:
+                        </p>
+                        <ul>
+                            <li><span class="atr">animation-name</span>: название анимации;</li>
+                            <li><span class="atr">animation-duration</span>: как долго длится анимация;</li>
+                            <li><span class="atr">animation-timing-function</span>: как вычисляются промежуточные состояния;</li>
+                            <li><span class="atr">animation-delay</span>: анимация начинается спустя некоторое время;</li>
+                            <li><span class="atr">animation-iteration-count</span>: сколько раз должна выполняться анимация;</li>
+                            <li><span class="atr">animation-direction</span>: должно движение идти в обратную сторону или нет;</li>
+                            <li><span class="atr">animation-fill-mode</span>: какие стили применяются до начала анимации и после её завершения.</li>
+                        </ul>
+                    </div>
+                    <section>
+                        <div class="titles">
+                            <h4>animation-name</h4>
+                            <p>
+                                <a href="https://webref.ru/css/animation-name" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            Название анимации используется, по крайней мере, дважды:
+                        </p>
+                        <ul>
+                            <li>при написании анимации с помощью <span class="atr">@keframes</span>;</li>
+                            <li>при использовании анимации с помощью свойства <span class="atr">animation-name</span> (или через сокращённое свойство <span class="atr">animation</span>).</li>
+                        </ul>
+                        <p>
+                            <img src="img/animation-img/Screenshot_6.png" alt="">
+                        </p>
+                        <p>
+                            Подобно именам классов CSS, название анимации может включать в себя только:
+                        </p>
+                        <ul>
+                            <li>буквы (a-z);</li>
+                            <li>цифры (0-9);</li>
+                            <li>подчёркивание (_);</li>
+                            <li>дефис (-).</li>
+                        </ul>
+                        <p>
+                            Название не может начинаться с цифры или с двух дефисов.
+                        </p>
+                    </section>
+                    <section>
+                        <div class="titles">
+                            <h4>animation-duration</h4>
+                            <p>
+                                <a href="https://webref.ru/css/animation-duration" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            Как и длительность перехода, длительность анимации может быть установлена в секундах (1s) или миллисекундах (200ms).
+                        </p>
+                        <p>
+                            <img src="img/animation-img/Screenshot_7.png" alt="">
+                        </p>
+                        <p>
+                            Значение по умолчанию равно 0s, что означает отсутствие анимации вообще.
+                        </p>
+                    </section>
+                    <section>
+                        <div class="titles">
+                            <h4>animation-timing-function</h4>
+                            <p>
+                                <a href="https://webref.ru/css/animation-timing-function" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            Подобно <a href="https://webref.ru/course/css-advanced/transitions" target="_blank">функциям времени для переходов</a>, функции времени для анимации могут использовать <strong>ключевые слова</strong>, такие как <span class="mean">linear</span>, <span class="mean">ease-out</span> или могут быть определены с помощью произвольных <strong>кривых Безье</strong>.
+                        </p>
+                        <p>
+                            <img src="img/animation-img/Screenshot_8.png" alt="">
+                        </p>
+                        <p>
+                            Значение по умолчанию: <span class="mean">ease</span>.
+                        </p>
+                        <p class="accent">
+                            Поскольку анимация в CSS использует ключевые кадры, вы можете установить <strong>линейную</strong> функцию времени и <strong>моделировать</strong> конкретную кривую Безье, определяя множество очень специфичных ключевых кадров. Посмотрите <a href="http://bouncejs.com/" target="_blank">Bounce.js</a> для создания передовой анимации.
+                        </p>
+                    </section>
+                    <section>
+                        <div class="titles">
+                            <h4>animation-delay</h4>
+                            <p>
+                                <a href="https://webref.ru/css/animation-delay" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            Как и с <a href="https://webref.ru/course/css-advanced/transitions" target="_blank">задержкой перехода</a>, задержка анимации может быть установлена в секундах (1s) или миллисекундах (200ms).
+                        </p>
+                        <p>
+                            По умолчанию равно 0s, что означает отсутствие любой задержки.
+                        </p>
+                        <p>
+                            Полезно использовать, когда включается несколько анимаций в <strong>серии</strong>.
+                        </p>
+                        <p>
+                            <img src="img/animation-img/Screenshot_9.png" alt="">
+                        </p>
+                    </section>
+                    <section>
+                        <div class="titles">
+                            <h4>animation-iteration-count</h4>
+                            <p>
+                                <a href="https://webref.ru/css/animation-iteration-count" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            По умолчанию, анимация воспроизводится только <strong>один раз</strong> (значение 1). Вы можете установить три типа значений:
+                        </p>
+                        <ul>
+                            <li>целые числа, вроде 2 или 3;</li>
+                            <li>дробные числа, вроде 0.5, которые будут воспроизводить только половину анимации;</li>
+                            <li>ключевое слово <span class="mean">infinite</span>, которое будет повторять анимацию бесконечно.</li>
+                        </ul>
+                        <p>
+                            <img src="img/animation-img/Screenshot_9.png" alt="">
+                        </p>
+                    </section>
+                    <section>
+                        <div class="titles">
+                            <h4>animation-direction</h4>
+                            <p>
+                                <a href="https://webref.ru/css/animation-direction" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            Свойство <span class="atr">animation-direction</span> определяет, <em>в каком порядке</em> читаются ключевые кадры.
+                        </p>
+                        <ul>
+                            <li><span class="mean">normal</span>: начинается с 0%, заканчивается на 100%, начинается с 0% снова.</li>
+                            <li><span class="mean">reverse</span>: начинается со 100%, заканчивается на 0%, начинается со 100% снова.</li>
+                            <li><span class="mean">alternate</span>: начинается с 0%, идёт до 100%, возвращается на 0%.</li>
+                            <li><span class="mean">alternate-reverse</span>: начинается со 100%, идёт до 0%, возвращается на 100%.</li>
+                        </ul>
+                        <p>
+                            Это легче представить, если счётчик итераций анимации установлен как <span class="mean">infinite</span>.
+                        </p>
+                        <div class="example">
+                            <p>
+                                <img src="img/animation-img/Screenshot_11.png" alt="">
+                                <img src="img/animation-img/Screenshot_12.png" alt="">
+                            </p>
+                            <div class="block direct">
+                                <p><strong>normal</strong>: 0% --&gt; 100%</p>
+                                <div class="normal">
+                                    <div></div>
+                                </div>
+                                <p><strong>reverse</strong>: 100% --&gt; 0%</p>
+                                <div class="reverse">
+                                    <div></div>
+                                </div>
+                                <p><strong>alternate</strong>: 0% &lt;--&gt; 100%</p>
+                                <div class="alternate">
+                                    <div></div>
+                                </div>
+                                <p><strong>alternate-reverse</strong>: 100% &lt;--&gt; 0%</p>
+                                <div class="alternate-reverse">
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="titles">
+                            <h4>animation-fill-mode</h4>
+                            <p>
+                                <a href="https://webref.ru/css/animation-fill-mode" target="_blank">Справочник CSS</a>
+                            </p>
+                        </div>
+                        <p>
+                            Свойство <span class="atr">animation-fill-mode</span> определяет, что происходит <em>перед</em> началом анимации и <em>после</em> её завершения.
+                        </p>
+                        <p>
+                            При определении <strong>ключевых кадров</strong> можно указать <strong>правила CSS</strong>, которые будут применяться на разных шагах анимации. Теперь эти правила CSS могут <em>столкнуться</em> с теми, которые <em>уже применяются</em> к анимируемым элементам.
+                        </p>
+                        <p>
+                            <span class="atr">animation-fill-mode</span> позволяет сообщить браузеру, если <em>стили анимации</em> <strong>также</strong> должны применяться <strong>за пределами анимации</strong>.
+                        </p>
+                        <p>
+                            Давайте представим себе <strong>кнопку</strong>, которая является:
+                        </p>
+                        <ul>
+                            <li><strong>красной</strong> по умолчанию;</li>
+                            <li>становится <strong>синей</strong> в начале анимации;</li>
+                            <li>и в итоге <strong>зелёной</strong>, когда анимация завершена.</li>
+                        </ul>
+                        <p>
+                            <img src="img/animation-img/Screenshot_13.png" alt="">
+                        </p>
+                        <div class="example">
+                            <p>
+                                <img src="img/animation-img/Screenshot_15.png" alt="">
+                                <img src="img/animation-img/Screenshot_16.png" alt="">
+                            </p>
+                            <div class="block mode">
+                                <p>
+                                    <span><strong>1.</strong> До анимации</span>
+                                    <span><strong>2.</strong> В процессе анимации</span>
+                                    <span><strong>3.</strong> После анимации</span>
+                                  </p>
+                                  <p><strong>none</strong>: стили анимации не влияют на стиль по умолчанию.</p>
+                                  <p>
+                                    <span>Красный по умолчанию</span>
+                                    <span>От синего к зелёному</span>
+                                    <span>Обратно к красному</span>
+                                  </p>
+                                  <div class="none">
+                                    <div></div>
+                                  </div>
+                                  <p><strong>forwards</strong>: последние стили, применяемые в конце анимации, сохраняются впоследствии.</p>
+                                  <p>
+                                    <span>Красный по умолчанию</span>
+                                    <span>От синего к зелёному</span>
+                                    <span>Остаётся зелёным</span>
+                                  </p>
+                                  <div class="forwards">
+                                    <div></div>
+                                  </div>
+                                  <p><strong>backwards</strong>: стили анимации будут применяться до того, как на самом деле начинается анимация.</p>
+                                  <p>
+                                    <span>Уже синий</span>
+                                    <span>От синего к зелёному</span>
+                                    <span>Обратно к красному</span>
+                                  </p>
+                                  <div class="backwards">
+                                    <div></div>
+                                  </div>
+                                  <p><strong>Both</strong>: стили применяются до и после воспроизведения анимации.</p>
+                                  <p>
+                                    <span>Уже синий</span>
+                                    <span>От синего к зелёному</span>
+                                    <span>Остаётся зелёным</span>
+                                  </p>
+                                  <div class="both">
+                                    <div></div>
+                                  </div>
+                            </div>
+                            <p>
+                                <img src="img/animation-img/Screenshot_14.png" alt="">
+                            </p>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>

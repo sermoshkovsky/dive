@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Флекс-элементы</title>
+    <link rel="stylesheet" href="css/flex-elements.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Свойства flex-элементов</h1>
+                <section>
+                    <div class="titles">
+                        <h4>order</h4>
+                        <p>
+                            <a href="https://webref.ru/css/order" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        Свойство <span class="atr">order</span> управляет порядком, в котором дочерние элементы появляются внутри <em>flex-контейнера</em>. По умолчанию они располагаются в том порядке, как добавлены исходно во <em>flex-контейнер</em>.
+                    </p>
+                    <h6>Значения</h6>
+                    <div class="example">
+                        <h4 class="misk">&lt;целое число&gt;</h4>
+                        <p>
+                            <img src="img/flex-elements-img/Screenshot_1.png" alt="">
+                        </p>
+                        <p>
+                            <em>flex-элементы</em> могут быть переупорядочены с помощью этого простого свойства без изменения кода HTML.
+                        </p>
+                        <p>
+                            <img src="img/flex-elements-img/Screenshot_2.png" alt="">
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Значение по умолчанию:</strong> <span class="mean">0</span>
+                    </p>
+                </section>
+                <section>
+                    <div class="titles">
+                        <h4>flex-grow</h4>
+                        <p>
+                            <a href="https://webref.ru/css/flex-grow" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        Это свойство задаёт коэффициент роста, который определяет, насколько <em>flex-элемент</em> будет увеличиваться относительно остальных <em>flex-элементов</em> во <em></em>flex-контейнере, при распределении положительного свободного пространства.
+                    </p>
+                    <h6>Значения</h6>
+                    <div class="example">
+                        <h4 class="misk">&lt;число&gt;</h4>
+                        <p>
+                            <img src="img/flex-elements-img/Screenshot_3.png" alt="">
+                        </p>
+                        <p>
+                            Если все <em>flex-элементы</em> имеют одинаковое значение <span class="atr">flex-grow</span>, то все элементы будут иметь и одинаковый размер в контейнере.
+                        </p>
+                        <p>
+                            <img src="img/flex-elements-img/Screenshot_4.png" alt="">
+                        </p>
+                        <p>
+                            Второй <em>flex-элемент</em> занимает больше места относительно размера других <em>flex-элементов</em>.
+                        </p>
+                        <p>
+                            <img src="img/flex-elements-img/Screenshot_5.png" alt="">
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Значение по умолчанию:</strong> <span class="mean">0</span>
+                    </p>
+                    <p class="accent">
+                        Отрицательные числа недопустимы.
+                    </p>
+                </section>
+                <section>
+                    <div class="titles">
+                        <h4>flex-shrink</h4>
+                        <p>
+                            <a href="https://webref.ru/css/flex-shrink" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <span class="atr">flex-shrink</span> задаёт коэффициент сжатия, который определяет, насколько <em>flex-элемент</em> будет сжиматься относительно остальных <em>flex-элементов</em> во <em>flex-контейнере</em>, при распределении отрицательного свободного пространства.
+                    </p>
+                    <h6>Значения</h6>
+                    <div class="example">
+                        <h4 class="misk">&lt;число&gt;</h4>
+                        <p>
+                            <img src="img/flex-elements-img/Screenshot_6.png" alt="">
+                        </p>
+                        <p>
+                            По умолчанию все <em>flex-элементы</em> могут быть сжаты, но если мы установим значение <span class="atr">flex-shrink</span> нулевым (без сжатия), то элементы сохраняют исходный размер.
+                        </p>
+                        <p>
+                            <img src="img/flex-elements-img/Screenshot_7.png" alt="">
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Значение по умолчанию:</strong> <span class="mean">1</span>
+                    </p>
+                    <p class="accent">
+                        Отрицательные числа недопустимы.
+                    </p>
+                </section>
+                <section>
+                    <div class="titles">
+                        <h4>flex-basis</h4>
+                        <p>
+                            <a href="https://webref.ru/css/flex-basis" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        Это свойство принимает те же значения, что и свойства <span class="atr">width</span> и <span class="atr">height</span>, и определяет начальный основной размер <em>flex-элемента</em>, до того, как свободное пространство распределяется в соответствии с коэффициентами.
+                    </p>
+                    <h6>Значения</h6>
+                    <div class="example">
+                        <h4 class="misk bas">auto</h4> | <h4 class="misk bas">&lt;ширина&gt;</h4>
+                        <p>
+                            <img src="img/flex-elements-img/Screenshot_8.png" alt="">
+                        </p>
+                        <p>
+                            <span class="atr">flex-basis</span> указан для четвёртого <em>flex-элемента</em> и диктует его начальный размер.
+                        </p>
+                        <p>
+                            <img src="img/flex-elements-img/Screenshot_9.png" alt="">
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Значение по умолчанию:</strong> <span class="mean">auto</span>
+                    </p>
+                </section>
+                <section>
+                    <div class="titles">
+                        <h4>flex</h4>
+                        <p>
+                            <a href="https://webref.ru/css/flex" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        Это свойство является сокращением для свойств <span class="atr">flex-grow</span>, <span class="atr">flex-shrink</span> и <span class="atr">flex-basis</span>. Кроме других значений также можно установить <span class="mean">auto</span> (<span class="mean">1 1 auto</span>) и <span class="mean">none</span> (<span class="mean">0 0 auto</span>).
+                    </p>
+                    <h6>Значения</h6>
+                    <div class="example">
+                        <img src="img/flex-elements-img/Screenshot_10.png" alt="">
+                    </div>
+                    <p>
+                        <strong>Значение по умолчанию:</strong> <span class="mean">0 1 auto</span>
+                    </p>
+                    <p class="accent">
+                        W3C рекомендует использовать сокращённое свойство <span class="atr">flex</span>, вместо отдельных свойств, поскольку <span class="atr">flex</span> правильно сбрасывает любые неуказанные компоненты для <a href="https://www.w3.org/TR/css-flexbox/#flex-common" target="_blank">типового использования</a>.
+                    </p>
+                </section>
+                <section>
+                    <div class="titles">
+                        <h4>align-self</h4>
+                        <p>
+                            <a href="https://webref.ru/css/align-self" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        Свойство <span class="atr">align-self</span> позволяет переопределить выравнивание по умолчанию (или значение, указанное через <span class="atr">align-items</span>) для отдельных <em>flex-элементов</em>. Для понимания доступных значений обратитесь к описанию <span class="atr">align-items</span> для <em>flex-контейнера</em>.
+                    </p>
+                    <h6>Значения</h6>
+                    <div class="example">
+                        <p>
+                            <img src="img/flex-elements-img/Screenshot_11.png" alt="">
+                        </p>
+                        <p>
+                            Для третьего и четвёртого <em>flex-элементов</em> переопределено выравнивание через свойство <span class="atr">align-self</span>.
+                        </p>
+                        <p>
+                            <img src="img/flex-elements-img/Screenshot_12.png" alt="">
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Значение по умолчанию:</strong> <span class="mean">auto</span>
+                    </p>
+                    <p class="accent">
+                        Значение <span class="mean">auto</span> для <span class="atr">align-self</span> вычисляется как значение <span class="atr">align-items</span> родительского элемента или <span class="mean">stretch</span>, если родитель отсутствует.
+                    </p>
+                </section>
+                <section>
+                    <h3>Замечания</h3>
+                    <p>
+                        Свойства <span class="atr">float</span>, <span class="atr">clear</span> и <span class="atr">vertical-align</span> не оказывают влияния на <em>flex-элемент</em> и не вырывают его из потока.
+                    </p>
+                </section>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>

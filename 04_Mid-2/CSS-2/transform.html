@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Трансформация</title>
+    <link rel="stylesheet" href="css/transform.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Трансформация</h1>
+                <div class="text">
+                    <p>
+                        Ранее мы видели, что CSS позволяет нам применять цвета, устанавливать шрифты, изменять настройки текста, позиционировать элементы, задавать для них пространство, украшать их и перемещать.
+                    </p>
+                    <p>
+                        <strong>Преобразования</strong> в CSS представляют собой набор функций, которые позволяют определённым образом придавать элементу <strong>форму</strong>:
+                    </p>
+                    <ul>
+                        <li><span class="mean">translate</span>: перемещает элемент вдоль трёх осей (х, у и z);</li>
+                        <li><span class="mean">rotate</span>: вращает элемент вокруг центральной точки;</li>
+                        <li><span class="mean">scale</span>: изменяет размер элемента;</li>
+                        <li><span class="mean">skew</span>: искажает элемент.</li>
+                    </ul>
+                    <p>
+                        Трансформация — это изменение вида элемента, к которым относятся следующие визуальные модификации: поворот, масштабирование, наклон и сдвиг. Чтобы сделать трансформацию, к селектору добавляется свойство <span class="atr">transform</span>, а в качестве значения пишется функция трансформации и её параметры. В общем виде это записывается так:
+                    </p>
+                    <p>
+                        <img src="img/transform-img/Screenshot_1.png" alt="">
+                    </p>
+                </div>
+                <section>
+                    <h2>Свойства трансформации</h2>
+                    <p>
+                        Есть три доступных свойства для трансформации:
+                    </p>
+                    <ul>
+                        <li><a href="https://webref.ru/css/transform" target="_blank"><strong>transform</strong></a> определяет, какая функция будет применяться (<span class="mean">translate</span>, <span class="mean">rotate</span>, <span class="mean">scale</span> и др.);</li>
+                        <li><a href="https://webref.ru/css/transform-origin" target="_blank"><strong>transform-origin</strong></a> позволяет изменять точку начала преобразования (работает как <span class="atr">background-position</span>);</li>
+                        <li><a href="https://webref.ru/css/transform-style" target="_blank"><strong>transform-style</strong></a> для настройки 3D.</li>
+                    </ul>
+                    <p>
+                        Обратите внимание, что в отличие от <span class="atr">background</span> и <span class="atr">border</span>, свойство <span class="atr">transform</span> <strong>не является сокращённым</strong>.
+                    </p>
+                    <p>
+                        Здесь мы будем использовать только <span class="atr">transform</span>.
+                    </p>
+                    <h5>Не прерывает поток</h5>
+                    <p>
+                        Чтобы предотвратить неожиданное поведение, трансформируемые элементы <strong>не влияют на поток</strong>. Независимо от вращения, масштабирования или перемещения, они не будут влиять на другие элементы.
+                    </p>
+                </section>
+                <section> 
+                    <h4 class="misk">translate</h4>
+                    <p>
+                        Функция <span class="mean">translate</span>() позволяет перемещать элемент в плоскости (по осям х и у). Она принимает либо:
+                    </p>
+                    <ul>
+                        <li><strong>один</strong> параметр: перемещает элемент вдоль оси х;</li>
+                        <li><strong>два</strong> параметра: первое значение для оси х, второе для оси у.</li>
+                    </ul>
+                    <p>
+                        Это похоже на использование <a href="https://webref.ru/course/positioning/position" target="_blank">относительного позиционирования</a> с помощью значений <span class="atr">left</span> и <span class="atr">top</span>.
+                    </p>
+                    <p>
+                        Давайте переделаем нашу замкнутую <a href="https://webref.ru/course/css-advanced/animation" target="_blank">анимацию</a> с помощью <span class="mean">translate</span>, вместо позиционирования <span class="atr">left</span> / <span class="atr">top</span>:
+                    </p>
+                    <div class="example tsl1">
+                        <p>
+                            <img src="img/transform-img/Screenshot_2.png" alt="">
+                            <img src="img/transform-img/Screenshot_3.png" alt="">
+                        </p>
+                        <div class="block tsl">
+                            <p>Привет</p>
+                        </div>
+                    </div>
+                    <p>
+                        Помните: <span class="atr">transform</span> — это стилевое свойство, <span class="mean">translate</span>() — это значение (и одновременно функция), применяемое к этому свойству.
+                    </p>
+                    <p>
+                        Вы можете использовать <span class="mean">translateX</span>() и <span class="mean">translateY</span>(), чтобы переместить элемент вдоль только оси х и у, соответственно.
+                    </p>
+                </section>
+                <section>
+                    <h4 class="misk">rotate</h4>
+                    <p>
+                        Функция <span class="mean">rotate</span>() позволяет <strong>вращать элемент вокруг неподвижной точки</strong>. По умолчанию, вращение происходит вокруг центра элемента. Думайте об этом как о грампластинке, которая играет на проигрывателе.
+                    </p>
+                    <p>
+                        <span class="mean">rotate</span>() принимает только <strong>один</strong> параметр, который является значением <strong>угла</strong> и определяется в градусах (deg), градах (grad), радианах (rad) или в оборотах (turn) (один оборот эквивалентен полному кругу).
+                    </p>
+                    <div class="example rot1">
+                        <p>
+                            <img src="img/transform-img/Screenshot_4.png" alt="">
+                            <img src="img/transform-img/Screenshot_5.png" alt="">
+                        </p>
+                        <div class="block rot">
+                            <p>Винил</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h4 class="misk">scale</h4>
+                    <p>
+                        Функция <span class="mean">scale</span>() позволяет изменять размер элемента. Она может увеличить или уменьшить элемент. Функция принимает либо:
+                    </p>
+                    <ul>
+                        <li><strong>один</strong> параметр: изменение размеров элемента одинаково по высоте и ширине;</li>
+                        <li><strong>два</strong> параметра: первое значение изменяет размер элемента по горизонтали, второе по вертикали.</li>
+                    </ul>
+                    <p>
+                        Диапазон возможных значений:
+                    </p>
+                    <ul>
+                        <li>1: элемент сохраняет свой первоначальный размер;</li>
+                        <li>2: элемент удваивается в размере;</li>
+                        <li>0.5: элемент уменьшается наполовину;</li>
+                        <li>0: элемент в основном исчезает (так как его высота и ширина равны нулю);</li>
+                        <li>-1: элемент отражается</li>
+                    </ul>
+                    <div class="example">
+                        <p>
+                            <img src="img/transform-img/Screenshot_8.png" alt="">
+                        </p>
+                        <div class="scal1">
+                            <p>
+                                <img src="img/transform-img/Screenshot_6.png" alt="">
+                                <img src="img/transform-img/Screenshot_7.png" alt="">
+                            </p>
+                            <div class="block scal">
+                                <p><strong>scale(1)</strong>: обычный размер</p>
+                                <p><strong>scale(2)</strong>: двойной размер</p>
+                                <p><strong>scale(0.5)</strong>: половина размера</p>
+                                <p><strong>scale(0)</strong>: нулевой размер (невидим)</p>
+                                <p><strong>scale(-1)</strong>: отражение</p>
+                                <div>Масштаб</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Как и для <span class="mean">translate</span>(), у функция <span class="mean">scale</span>() есть версии для х и у: <span class="mean">scaleX</span>() и <span class="mean">scaleY</span>(), для изменения размера по горизонтали и вертикали, соответственно.
+                    </p>
+                </section>
+                <section>
+                    <h4 class="misk">skew</h4>
+                    <p>
+                        Функция <span class="mean">skew</span>() позволяет <strong>искажать элемент</strong>, сдвигая его стороны вдоль линий.
+                    </p>
+                    <p>
+                        Эта функция преобразования используется редко, поскольку её последствия весьма непредсказуемы, а результат не обязательно привлекателен. Тем не менее, давайте посмотрим, как это работает.
+                    </p>
+                    <p>
+                        Как и <span class="mean">scale</span>(), функция <span class="mean">skew</span>() принимает либо:
+                    </p>
+                    <ul>
+                        <li><strong>один</strong> параметр: элемент искажается по горизонтали;</li>
+                        <li><strong>два</strong> параметра: первое значение искажает элемент по горизонтали, второе по вертикали.</li>
+                    </ul>
+                    <p>
+                        Как и <span class="mean">rotate</span>(), функция <span class="mean">skew</span>() принимает только значения угла, такого как градусы (deg).
+                    </p>
+                    <div class="example skew1">
+                        <p>
+                            <img src="img/transform-img/Screenshot_9.png" alt="">
+                            <img src="img/transform-img/Screenshot_10.png" alt="">
+                        </p>
+                        <div class="block skew">
+                            <p>OOOOO</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2>3D-функции</h2>
+                    <p>
+                        Мы видели, как функции трансформации работают на <strong>плоскости</strong>, вдоль осей х и у.
+                    </p>
+                    <p>
+                        Например:
+                    </p>
+                    <ul>
+                        <li>
+                            У <span class="mean">translate</span>() до двух параметров:
+                            <ul>
+                                <li><span class="mean">translate(x)</span></li>
+                                <li><span class="mean">translate(x, y)</span></li>
+                            </ul>
+                        </li>
+                        <li><span class="mean">translateX()</span> только для оси х</li>
+                        <li><span class="mean">translateY()</span> только для оси у</li>
+                    </ul>
+                    <p>
+                        Но, для всех этих функций также есть <strong>3D-версии</strong>.
+                    </p>
+                    <p>
+                        Например, для <span class="mean">translate</span>() есть версия <span class="mean">translate3d</span>(), которая выполняет преобразование в <strong>трёх измерениях</strong>, а это значит, что она также включает в себя <strong>ось z</strong> (кроме того существует отдельная функция <span class="mean">translateZ</span>).
+                    </p>
+                    <p>
+                        Параметр <strong>z</strong> в основном заставляет элемент двигаться ближе и дальше, в зависимости от уменьшения или увеличения значения. Это как увеличение и уменьшение масштаба.
+                    </p>
+                    <div class="example trz1">
+                        <p>
+                            <img src="img/transform-img/Screenshot_11.png" alt="">
+                            <img src="img/transform-img/Screenshot_12.png" alt="">
+                        </p>
+                        <div class="block trz">
+                            <div id="zoom-animation">
+                                <div>Оригинал</div>
+                                <p>Преобразование</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Зелёный блок поднимается на 200px «вверх» по оси z, как будто становясь ближе к нам.
+                    </p>
+                    <p class="accent">
+                        К родительскому элементу требуется применить <span class="atr">perspective</span>: <span class="mean">500px</span>, чтобы трёхмерное пространство стало заметным. В качестве альтернативы также может быть использовано <span class="atr">transform</span>: <span class="mean">perspective(500px)</span>.
+                    </p>
+                    <p class="funct">
+                        <a href="https://webref.ru/layout/html5-css3/transform/function" target="_blank">Функции трансформации</a>
+                    </p>
+                    <p>
+                        Функций трансформаций довольно много и они делятся по следующим группам: поворот, масштабирование, наклон и сдвиг, а также на двумерные и трёхмерные трансформации. Последние обозначаются добавлением 3d к имени функции. Кроме того, с помощью этих трансформаций можно делать отражение элемента, задавая отрицательные значения параметров у некоторых функций. Все функции комбинируются между собой, позволяя тем самым получить множество новых фигур.
+                    </p>
+                </section>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>

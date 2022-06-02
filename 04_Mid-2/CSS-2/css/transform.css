@@ -1,0 +1,360 @@
+body {
+    background-color: azure;
+    font-family: 'Lucida Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+    font-weight: bold;
+    margin: .3em;
+}
+h1 {
+    font-size: 250%;
+}
+h2 {
+    font-size: 200%;
+}
+h3 {
+    font-size: 150%;
+}
+h4 {
+    font-size: 150%;
+    color:brown;
+    margin: 0 .3em;
+}
+h5 {
+    font-size: 120%;
+    background-color: pink;
+    padding: 5px;
+    color: black;
+}
+h6 {
+    font-size: 110%;
+    display: inline-block;
+    color: black;
+    background-color: pink;
+    padding: 0 5px;
+}
+ul {
+    list-style: disc;
+    padding-left: 30px;
+}
+ol {
+    list-style: decimal;
+    padding-left: 30px;
+}
+dd {
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+.container {
+    width: 1110px;
+    margin: 0 auto;
+}
+.header {
+    padding: 20px;
+    background-color: aqua;
+}
+.footer {
+    background-color: indigo;
+    color: azure;
+    padding: 20px;
+}
+.footer p {
+    padding-left: 120px;
+}
+.btn {
+    background-color: rgb(255, 165, 0, 0.5) ;
+    border-radius: 95px;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    margin: 10px 0;
+    text-decoration: none;
+    font-weight: bold;
+    color: azure;
+    position: fixed;
+    top: 80%;
+    left: 1%;
+}
+.tags {
+    font-size: 35px;
+    margin: 0;
+    color: rgb(64, 64, 95);
+    font-weight: 700;
+}
+nav ul {
+    background: #0083ca; /* Цвет фона */
+    list-style: none; /* Убираем маркеры */
+    margin: 0; padding: 0; /* Обнуляем все отступы */
+    overflow: hidden; /* Отменяем обтекание */
+}
+nav li {
+    float: left; /* Выстраиваем по горизонтали */
+}
+nav a {
+    display: block; /* Блочный элемент */
+    padding: 7px 15px; /* Поля вокруг текста */
+    color: brown; /* Цвет текста */
+    text-decoration: none;
+    background: rgb(102, 199, 245);
+    margin: 10px;
+}
+
+/* Теги   
+<span class="tag">&lt;&gt;</span>
+*/
+.tag {
+    color: rgb(73, 73, 150);
+    font-size: 18px;
+}
+/* Селектор 
+<span class="slc"></span>
+*/
+.slc {
+    color: rgb(206, 50, 50);
+    font-size: 18px;
+}
+/* Свойство/Атрибуты 
+<span class="atr"></span>
+*/
+.atr {
+    color: orange;
+    font-size: 18px;
+}
+/* Значение 
+<span class="mean"></span>
+*/
+.mean {
+    color: rgb(4, 190, 4);
+    font-size: 18px;
+}
+.titles {
+    display: flex;
+}
+.titles p {
+    padding-left: 20px;
+}
+.sintacsis {
+    border: 1px solid pink;
+    display: inline-block;
+    padding: 10px;
+    background: #fff;
+}
+
+.example {
+    border: 3px pink solid;
+    padding: 10px;
+}
+.block, .block2 {
+    background: aquamarine;
+    padding: 5px;
+}
+.block2 {
+    width: 50%;
+}
+.misk {
+    color: rgb(4, 190, 4);
+}
+
+.tsl1 {
+    display: flex;
+}
+.tsl {
+    position: relative;
+    height: 200px;
+    width: 28%;
+    margin: 80px;
+}
+.tsl p {
+    animation: translating 4s linear 0s infinite;
+    background: turquoise;
+    color: white;
+    height: 60px;
+    line-height: 60px;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    width: 60px;
+}
+@keyframes translating {
+  0%  { transform: translate(0, 0);}
+  25% { transform: translate(240px, 0);}
+  50% { transform: translate(240px, 140px);}
+  75% { transform: translate(0, 140px);}
+  100%{ transform: translate(0, 0);}
+}
+
+.rot1 {
+    display: flex;
+
+}
+.rot {
+    padding: 30px;
+    margin: 15px 50px;
+}
+.rot p {
+    animation: rotating 5s linear 0s infinite;
+    background: slateblue;
+    border-radius: 60px;
+    color: white;
+    height: 120px;
+    line-height: 120px;
+    margin: 0;
+    text-align: center;
+    width: 120px;
+}
+  
+@keyframes rotating {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+.scal1 {
+    display: flex;
+}
+.scal {
+    position: relative;
+    margin: 70px;
+}
+.scal p {
+    animation: scaling-toggle 10s steps(1) 0s infinite forwards;
+    background: white;
+    color: grey;
+    left: 2rem;
+    margin: 0;
+    opacity: 0;
+    padding: 0 0.5em;
+    position: absolute;
+    top: 2rem;
+    z-index: 1;
+  }
+  .scal p:first-child {
+    left: 0;
+    position: relative;
+    top: 0;
+  }
+  .scal p:nth-child(2) {animation-delay: 2s;}
+  .scal p:nth-child(3) {animation-delay: 4s;}
+  .scal p:nth-child(4) {animation-delay: 6s;}
+  .scal p:nth-child(5) {animation-delay: 8s;}
+  .scal p strong {
+    content: "";
+    display: inline-block;
+  }
+  .scal div {
+    animation: scaling 10s linear 0s infinite;
+    background: goldenrod;
+    border-radius: 60px;
+    color: white;
+    height: 120px;
+    line-height: 120px;
+    margin-top: 2rem;
+    ;
+    text-align: center;
+    transition: all 100ms linear;
+    width: 120px;
+  }
+  @keyframes scaling {
+    0% {transform: scale(1);}
+    19% {transform: scale(1);}
+    20% {transform: scale(2);}
+    39% {transform: scale(2);}
+    40% {transform: scale(0.5);}
+    59% {transform: scale(0.5);}
+    60% {transform: scale(0);}
+    79% {transform: scale(0);}
+    80% {transform: scale(-1);}
+    99% {transform: scale(-1);}
+    100% {transform: scale(1);}
+  }
+  @keyframes scaling-toggle {
+    0% {opacity: 1;}
+    20% {opacity: 0;}
+    100% {opacity: 0;}
+  }
+
+  .skew1 {
+      display: flex;
+  }
+  .skew {
+      width: 20%;
+      height: 250px;
+      padding: 70px;
+      margin: 50px;
+  }
+  .skew p {
+    animation: skewing 10s steps(1) 0s infinite;
+    background: slateblue;
+    border-radius: 60px;
+    color: white;
+    height: 120px;
+    line-height: 120px;
+    margin: 0;
+    text-align: center;
+    width: 120px;
+  }
+  
+  @keyframes skewing {
+    0%   { transform: skew(0deg); }
+    20%  { transform: skew(10deg); }
+    40%  { transform: skew(45deg); }
+    60%  { transform: skew(90deg); }
+    80%  { transform: skew(120deg); }
+    100% { transform: skew(0deg); }
+  }
+
+.trz1 {
+    display: flex;
+}
+.trz {
+    position: relative;
+    width: 30%;
+    height: 350px;
+    margin: 50px;
+}
+#zoom-animation {
+    perspective: 500px;
+}  
+#zoom-animation div,
+#zoom-animation p {
+    background: midnightblue;
+    color: white;
+    height: 200px;
+    line-height: 200px;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    width: 200px;
+} 
+#zoom-animation p {
+    animation: zooming 5s alternate infinite both;
+    background: limegreen;
+    left: 2rem;
+    opacity: 0.7;
+    position: absolute;
+    top: 2rem;
+}
+@keyframes zooming {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(0, 0, 200px);
+    }
+}
+
+.accent {
+    border-left: 5px solid blue;
+    background-color: aquamarine;
+    padding: 20px;
+}
+.funct {
+    font-size: 20px;
+    font-weight: 700;
+}

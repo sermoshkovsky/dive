@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Флекс-контейнер</title>
+    <link rel="stylesheet" href="css/flex-container.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Свойства flex-контейнера</h1>
+                <section>
+                    <div class="titles">
+                        <h4>flex-direction</h4>
+                        <p>
+                            <a href="https://webref.ru/css/flex-direction" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        Это свойство указывает, как <em>flex-элементы</em> располагаются во <em>flex-контейнере</em>, задавая направление главной оси <em>flex-контейнера</em>. Элементы могут располагаться по двум основным направлениям — как строки по горизонтали или как столбцы по вертикали.
+                    </p>
+                    <h6>Значения</h6>
+                    <div class="example">
+                        <h4 class="misk">row</h4>
+                        <p>
+                            Со значением <span class="mean">row</span> <em>flex-элементы</em> располагаются в ряд слева направо в контексте <em>ltr</em>.
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_1.png" alt="">
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4 class="misk">row-reverse</h4>
+                        <p>
+                            При значении <span class="mean">row-reverse</span> <em>flex-элементы</em> располагаются в ряд справа налево в контексте <em>ltr</em>.
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_2.png" alt="">
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4 class="misk">column</h4>
+                        <p>
+                            Со значением <span class="mean">column</span> <em>flex-элементы</em> располагаются в колонку сверху вниз.
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_3.png" alt="">
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4 class="misk">column-reverse</h4>
+                        <p>
+                            При значении c<span class="mean">column-reverse</span> <em>flex-элементы</em> располагаются в колонку снизу вверх.
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_4.png" alt="">
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Значение по умолчанию:</strong> <span class="mean">row</span>
+                    </p>
+                    <p class="accent">
+                        <span class="mean">row</span> и <span class="mean">row-reverse</span> зависят от режима написания, так что в контексте <em>rtl</em> они будут соответственно перевёрнуты.
+                    </p>
+                </section>
+                <section>
+                    <div class="titles">
+                        <h4>flex-wrap</h4>
+                        <p>
+                            <a href="https://webref.ru/css/flex-wrap" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        Исходная концепция <em>flexbox</em> — это контейнер для установки своих элементов в одну строку. Если <em>flex-контейнер</em> располагает свои элементы в одну или несколько строк, то свойство <span class="atr">flex-wrap</span> управляет направлением, в котором эти новые строки располагаются.
+                    </p>
+                    <h6>Значения</h6>
+                    <div class="example">
+                        <h4 class="misk">nowrap</h4>
+                        <p>
+                            <em>flex-элементы</em> отображаются в одну строку, по умолчанию они уменьшаются, чтобы соответствовать ширине <em>flex-контейнера</em>.
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_5.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_6.png" alt="">
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4 class="misk">wrap</h4>
+                        <p>
+                            <em>flex-элементы</em> отображаются в несколько строк, если это необходимо, слева направо и сверху вниз.
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_7.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_8.png" alt="">
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4 class="misk">wrap-reverse</h4>
+                        <p>
+                            <em>flex-элементы</em> отображаются в несколько строк, если это необходимо, слева направо и снизу вверх.
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_9.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_10.png" alt="">
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Значение по умолчанию:</strong> <span class="mean">nowrap</span>
+                    </p>
+                    <p class="accent">
+                        Эти свойства зависят от режима написания, поэтому в контексте <em>rtl</em> они будут соответственно перевёрнуты.
+                    </p>
+                </section>
+                <section>
+                    <div class="titles">
+                        <h4>flex-flow</h4>
+                        <p>
+                            <a href="https://webref.ru/css/flex-flow" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                       Это свойство является сокращением для установки свойств <span class="atr">flex-direction</span> и <span class="atr">flex-wrap</span>.
+                    </p>
+                    <h6>Значения</h6>
+                    <div class="example">
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_11.png" alt="">
+                        </p>   
+                    </div>
+                    <p>
+                        <strong>Значение по умолчанию:</strong> <span class="mean">row nowrap</span>
+                    </p>
+                </section>
+                <section>
+                    <div class="titles">
+                        <h4>justify-content</h4>
+                        <p>
+                            <a href="https://webref.ru/css/justify-content" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        Свойство <span class="atr">justify-content</span> выравнивает <em>flex-элементы</em> вдоль главной оси текущей строки <em>flex-контейнера</em>. Свойство помогает распределять оставшееся свободное пространство, когда все <em>flex-элементы</em> в строке не растягиваются или растягиваются, но достигли максимального размера.
+                    </p>
+                    <h6>Значения</h6>
+                    <div class="example">
+                        <h4 class="misk">flex-start</h4>
+                        <p>
+                            <em>flex-элементы</em> выравниваются по левой стороне <em>flex-контейнера</em> в контексте <em>ltr</em>.
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_12.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_13.png" alt="">
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4 class="misk">flex-end</h4>
+                        <p>
+                            <em>flex-элементы</em> выравниваются по правой стороне <em>flex-контейнера</em>  в контексте <em>ltr</em>.
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_14.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_15.png" alt="">
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4 class="misk">center</h4>
+                        <p>
+                            <em>flex-элементы</em> выравниваются по центру <em>flex-контейнера</em>.
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_16.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_17.png" alt="">
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4 class="misk">space-between</h4>
+                        <p>
+                            <em>flex-элементы</em> отображаются с равным интервалом между ними, первый и последний <em>flex-элементы</em> выравниваются по краям <em>flex-контейнера</em>.
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_18.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_19.png" alt="">
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4 class="misk">space-around</h4>
+                        <p>
+                            <em>flex-элементы</em> отображаются с равным интервалом вокруг каждого <em>flex-элемента</em>, включая первый и последний.
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_20.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_21.png" alt="">
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Значение по умолчанию:</strong> <span class="mean">flex-start</span>
+                    </p>
+                </section>
+                <section>
+                    <div class="titles">
+                        <h4>align-items</h4>
+                        <p>
+                            <a href="https://webref.ru/css/align-items" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        <em>flex-элементы</em> могут быть выровнены по поперечной оси текущей строки <em>flex-контейнера</em>, подобно <span class="atr">justify-content</span>, но в перпендикулярном направлении. Это свойство устанавливает выравнивание по умолчанию для всех <em>flex-элементов</em>, включая анонимных.
+                    </p>
+                    <h6>Значения</h6>
+                    <div class="example">
+                        <h4 class="misk">stretch</h4>
+                        <p>
+                            <em>flex-элементы</em> заполняют всю высоту (или ширину) от поперечного начала до поперечного конца <em>flex-контейнера</em>.
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_22.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_23.png" alt="">
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4 class="misk">flex-start</h4>
+                        <p>
+                            <em>flex-элементы</em> располагаются у поперечного начала <em>flex-контейнера</em>.
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_24.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_25.png" alt="">
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4 class="misk">flex-end</h4>
+                        <p>
+                            <em>flex-элементы</em> располагаются у поперечного конца <em>flex-контейнера</em>.
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_26.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_27.png" alt="">
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4 class="misk">center</h4>
+                        <p>
+                            <em>flex-элементы</em> располагаются в центре поперечной оси <em>flex-контейнера</em>.
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_28.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_29.png" alt="">
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4 class="misk">baseline</h4>
+                        <p>
+                            <em>flex-элементы</em> выравниваются таким образом, чтобы их базовые линии были выровнены.
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_30.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_31.png" alt="">
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Значение по умолчанию:</strong> <span class="mean">stretch</span>
+                    </p>
+                    <p>
+                        Подробнее о том, как рассчитываются базовые линии, читайте <a href="https://www.w3.org/TR/css-flexbox/#flex-baselines" target="_blank">здесь</a>.
+                    </p>
+                </section>
+                <section>
+                    <div class="titles">
+                        <h4>align-content</h4>
+                        <p>
+                            <a href="https://webref.ru/css/align-content" target="_blank">Справочник CSS</a>
+                        </p>
+                    </div>
+                    <p>
+                        Свойство <span class="atr">align-content</span> выравнивает строки внутри <em>flex-контейнера</em>, когда в поперечной оси имеется дополнительное пространство, подобно тому, как <span class="atr">justify-content</span> выравнивает отдельные элементы по главной оси.
+                    </p>
+                    <h6>Значения</h6>
+                    <div class="example">
+                        <h4 class="misk">stretch</h4>
+                        <p>
+                            <em>flex-элементы</em> отображаются с дополнительным пространством после каждой строки <em>flex-элементов</em>.
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_32.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_33.png" alt="">
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4 class="misk">flex-start</h4>
+                        <p>
+                            <em>flex-элементы</em> располагаются стопкой возле поперечного начала <em>flex-контейнера</em>.
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_34.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_35.png" alt="">
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4 class="misk">flex-end</h4>
+                        <p>
+                            <em>flex-элементы</em> располагаются стопкой возле поперечного конца <em>flex-контейнера</em>.
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_36.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_37.png" alt="">
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4 class="misk">center</h4>
+                        <p>
+                            <em>flex-элементы</em> располагаются в центре поперечной оси <em>flex-контейнера</em>.
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_38.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_39.png" alt="">
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4 class="misk">space-between</h4>
+                        <p>
+                            Строки <em>flex-элементов</em> отображаются с равным интервалом между ними, первая и последняя строки выравниваются по краям <em>flex-контейнера</em>.
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_40.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_41.png" alt="">
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4 class="misk">space-around</h4>
+                        <p>
+                            <em>flex-элементы</em> отображаются с равным интервалом вокруг каждой строки.
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_42.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/flex-container-img/Screenshot_43.png" alt="">
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Значение по умолчанию:</strong> <span class="mean">stretch</span>
+                    </p>
+                    <p class="accent">
+                        Это свойство имеет эффект только тогда, когда <em>flex-контейнер</em> содержит несколько строк <em>flex-элементов</em>. Если элементы располагаются в одну строку, свойство <span class="atr">align-content</span> никак не влияет на макет.
+                    </p>
+                </section>
+                <section>
+                    <h3>Замечания</h3>
+                    <ul>
+                        <li>
+                            Все свойства <span class="atr">column-*</span> не оказывают влияния на <em>flex-контейнер</em>.
+                        </li>
+                        <li>
+                            Псевдоэлементы <span class="atr">::first-line</span> и <span class="atr">::first-letter</span> не применяются к <em>flex-контейнерам</em>.
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>
