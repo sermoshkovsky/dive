@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание форм</title>
+    <link rel="stylesheet" href="css/01_create-forms.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Создание форм</h1>
+                <section class="text">
+                    <p>
+                        Форма создаётся с помощью элемента <a href="https://webref.ru/html/form" target="_blank"><span class="tag">&lt;form&gt;</span></a>, внутри которого могут быть любые необходимые элементы, и характеризуется следующими необязательными параметрами:
+                    </p>
+                    <ul>
+                        <li>адрес программы на веб-сервере, которая будет обрабатывать содержимое данных формы;</li>
+                        <li>элементы формы, которые представляют собой стандартные поля для ввода информации пользователем;</li>
+                        <li>кнопка отправки данных на сервер.</li>
+                    </ul>
+                    <p>
+                        Для отправки формы на сервер используется кнопка <i>Submit</i>, такого же эффекта можно добиться, если нажать клавишу <i>Enter</i> в пределах формы.
+                    </p>
+                    <p>
+                        После того, как пользователь щёлкнет по кнопке, происходит вызов обработчика формы, который получает введённую в форме информацию, а дальше делает с ней то, что предполагает разработчик. В качестве обработчика формы обычно выступает программа, заданная атрибутом <span class="atr">action</span> элемента <span class="tag">&lt;form&gt;</span>. Программа может быть написана на любом серверном языке вроде PHP, Python, C# и др. 
+                    </p>
+                    <p>
+                        Перед отправкой данных браузер подготавливает информацию в виде пары «<em>имя=значение</em>», где имя определяется атрибутом <span class="atr">name</span> элемента <span class="tag">&lt;input&gt;</span> или другим допустимым в форме, а значение введено пользователем или установлено в поле формы по умолчанию.
+                    </p>
+                </section>
+                <section class="box">
+                    <p>
+                        В примере 1 показано создание формы для поиска.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 1. Форма</h6>
+                        <p>
+                            <img src="img/01_create-forms-img/Screenshot_1.png" alt="">
+                            <img src="img/01_create-forms-img/Screenshot_2.png" alt=""> 
+                        </p>
+                    </div>
+                </section>
+                <section class="box">
+                    <p>
+                        Допускается использовать несколько форм на странице, но они не должны вкладываться одна в другую (пример 2).
+                    </p>
+                    <div class="example">
+                        <h6>Пример 2. Ошибочное использование форм</h6>
+                        <p>
+                            <img src="img/01_create-forms-img/Screenshot_5.png" alt="">
+                            <img src="img/01_create-forms-img/Screenshot_6.png" alt=""> 
+                        </p>
+                    </div>
+                </section>    
+                <section class="box">
+                    <p>
+                        Часто бывает, что текущая страница написанная, допустим, на языке PHP, сама является обработчиком формы, в таком случае можно указать пустое значение атрибута <span class="atr">action</span> или вообще его не писать. В простейшем случае элемент <span class="tag">&lt;form&gt;</span> не содержит никаких атрибутов и представлен в примере 3.
+                    </p> 
+                    <div class="example">
+                        <h6>Пример 3. Простая форма</h6>
+                        <p>
+                            <img src="img/01_create-forms-img/Screenshot_3.png" alt="">
+                            <img src="img/01_create-forms-img/Screenshot_4.png" alt=""> 
+                        </p>
+                    </div>   
+                </section>
+                <section class="box">
+                    <p>
+                        В качестве значения атрибута <span class="atr">action</span> можно указать также адрес электронной почты, начиная его с ключевого слова <span class="mean">mailto:</span>. При отправке формы будет запущена почтовая программа, установленная по умолчанию. 
+                    </p>
+                    <p>
+                        В целях безопасности в браузере задано, что отправить незаметно информацию, введённую в форме, по почте невозможно. Для корректной интерпретации данных используйте атрибут <span class="atr">enctype</span> со значением <span class="mean">text/plain</span> внутри <span class="tag">&lt;form&gt;</span> (пример 4). Браузеры откроют программу, сопоставленную с почтой
+                    </p>
+                    <div class="example">
+                        <h6>Пример 4. Отправка формы по почте</h6>
+                        <p>
+                            <img src="img/01_create-forms-img/Screenshot_7.png" alt="">
+                            <img src="img/01_create-forms-img/Screenshot_8.png" alt="">
+                        </p>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a> 
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>
