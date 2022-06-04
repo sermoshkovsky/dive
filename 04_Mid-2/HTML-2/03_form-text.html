@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Текстовое поле</title>
+    <link rel="stylesheet" href="css/03_form-text.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="forms.html" target="_blank">Формы</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Текстовое поле</h1>
+                <section>
+                    <p>
+                        Почти всем формам требуется текстовый ввод от пользователей, чтобы ввести своё имя, адрес электронной почты, пароль, адрес и др. Текстовые поля формы приходят в разных вариантах.
+                    </p>
+                    <table class="table1">
+                        <tbody>
+                            <tr>
+                                <th>Текст</th> 
+                                <td>&lt;input type="text"&gt;</td> 
+                                <td><input type="text"></td> 
+                                <td>Допускает любой тип символов</td>
+                            </tr> 
+                            <tr>
+                                <th>Email</th> 
+                                <td>&lt;input type="email"&gt;</td> 
+                                <td><input type="email"></td> 
+                                <td> Может показывать предупреждение, если введён неверный email</td>
+                            </tr> 
+                            <tr>
+                                <th>Пароль</th> 
+                                <td>&lt;input type="password"&gt;</td> 
+                                <td><input type="password"></td> 
+                                <td>Символы показываются как точки</td>
+                            </tr> 
+                            <tr>
+                                <th>Число</th> 
+                                <td>&lt;input type="number"&gt;</td> 
+                                <td><input type="number"></td> 
+                                <td>Могут быть использованы клавиши вверх/вниз</td>
+                            </tr> 
+                            <tr>
+                                <th>Телефон</th> 
+                                <td>&lt;input type="tel"&gt;</td> 
+                                <td><input type="text"></td> 
+                                <td>Может сработать автозаполнение</td>
+                            </tr> 
+                            <tr>
+                                <th>Многострочный текст</th> 
+                                <td>&lt;textarea&gt;&lt;/textarea&gt;</td> 
+                                <td><textarea name="textarea"></textarea></td> 
+                                <td>Может быть изменён размер поля</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Хотя эти поля очень похожи и позволяют пользователям вводить текст любого рода (даже неправильный), их тип обеспечивает специфическую <strong>семантику</strong> для ввода, определяя, какую информацию поле <strong>должно</strong> содержать.
+                    </p>
+                    <p>
+                        Браузеры могут впоследствии немного изменить интерфейс элемента управления, чтобы повысить <em>интерактивность</em> или подсказать, какое содержимое ожидается.
+                    </p>
+                    <p>
+                        К примеру, поле для пароля показывает точки вместо символов. А поле для чисел позволяет увеличивать/уменьшать значение с помощью клавиш вверх и вниз
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Однострочное текстовое поле предназначено для ввода строки символов с помощью клавиатуры. Одним из основных элементов, используемых для получения текста от пользователей, является элемент <span class="tag">&lt;input&gt;</span>. Данный элемент включает атрибут <span class="atr">type</span> для определения, какой тип информации будет получен в элементе управления. Наиболее популярное значение атрибута <span class="atr">type</span> — это <span class="mean">text</span>, который обозначает ввод одной строки текста.
+                    </p>
+                    <p>
+                        <img src="img/03_form-text-img/Screenshot_1.png" alt="">
+                    </p>
+                    <p>
+                        Значение атрибута type для <span class="tag">&lt;input&gt;</span> по умолчанию определено как <span class="mean">text</span>, поэтому его можно не указывать явно. Таким образом, текстовое поле задаётся просто как <span class="tag">&lt;input&gt;</span>.
+                    </p>
+                    <p>
+                        <img src="img/03_form-text-img/Screenshot_2.png" alt="">
+                    </p>
+                </section>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>

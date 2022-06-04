@@ -162,3 +162,32 @@ nav a {
     background-color: rgb(208, 243, 231);
     padding: 20px;
 }
+
+.data {
+    margin: auto auto 1rem;
+    box-sizing: inherit;
+}
+table {
+    border-spacing: 2px;
+    border-collapse: collapse;
+    width: 100%;
+    display: table;
+    text-indent: initial;
+    border-color: grey;
+}
+caption {
+    font-weight: 700;
+    margin-bottom: 3px;
+    padding: 5px;
+}
+tbody {
+    border: 1px solid grey;
+}
+th, td {
+    border: 1px solid grey;
+    padding: 2px;
+}
+th {
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.123);
+}
