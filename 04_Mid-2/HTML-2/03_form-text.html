@@ -91,6 +91,201 @@
                     <p>
                         <img src="img/03_form-text-img/Screenshot_2.png" alt="">
                     </p>
+                    <p>
+                        Наряду с установкой атрибута <span class="atr">type</span>, хорошей практикой будет также дать элементу <span class="tag">&lt;input&gt;</span> атрибут <span class="atr">name</span>. Значение атрибута <span class="atr">name</span> применяется в качестве имени элемента управления и отправляется вместе с входными данными на сервер.
+                    </p>
+                    <p>
+                        <img src="img/03_form-text-img/Screenshot_3.png" alt="">
+                    </p>
+                    <p>
+                        Элемент <span class="tag">&lt;input&gt;</span> является самостоятельным, то есть он задействует только один тег и не оборачивает какой-либо контент. Значение элемента обеспечивается его атрибутами и их соответствующими значениями. 
+                    </p>
+                    <p>
+                        Первоначально было только два текстовых значения атрибута <span class="atr">type</span> — <span class="mean">text</span> и <span class="mean">password</span> (для ввода паролей), однако HTML5 привёз с собой несколько новых значений атрибута <span class="atr">type</span>.
+                    </p>
+                    <p>
+                        Эти значения были добавлены, чтобы обеспечить чёткое смысловое значение для полей ввода, а также предоставить лучшее управление пользователям. Если браузер не понимает одно из этих HTML5-значений атрибута <span class="atr">type</span>, он автоматически вернётся к значению <span class="mean">text</span>. Ниже приведён список новых типов HTML5.
+                    </p>
+                    <div class="value">
+                        <ul>
+                            <li><span class="mean">color</span></li>
+                            <li><span class="mean">date</span></li>
+                        </ul>
+                        <ul>
+                            <li><span class="mean">datetime</span></li>
+                            <li><span class="mean">email</span></li>
+                        </ul>
+                        <ul>
+                            <li><span class="mean">month</span></li>
+                            <li><span class="mean">number</span></li>
+                        </ul>
+                        <ul>
+                            <li><span class="mean">range</span></li>
+                            <li><span class="mean">search</span></li>
+                        </ul>
+                        <ul>
+                            <li><span class="mean">tel</span></li>
+                            <li><span class="mean">time</span></li>
+                        </ul>
+                        <ul>
+                            <li><span class="mean">url</span></li>
+                            <li><span class="mean">week</span></li>
+                        </ul>
+                    </div>
+                    <p>
+                        Следующие элементы <span class="tag">&lt;input&gt;</span> показывают некоторые из этих значений атрибута type из HTML5 в использовании
+                    </p>
+                    <p>
+                        <img src="img/03_form-text-img/Screenshot_6.png" alt="">
+                    </p>
+                    <p>
+                        Допустимые атрибуты текстового поля перечислены в табл. 1.
+                    </p>
+                    <table class="data">
+                        <caption>Табл. 1. Атрибуты однострочного текстового поля</caption>
+                         <tbody>
+                             <tr>
+                                 <th>Атрибут</th> 
+                                 <th>Описание</th>
+                            </tr> 
+                            <tr>
+                                <td class="atr">name</td> 
+                                <td>Имя поля, предназначено для того, чтобы обработчик формы мог его идентифицировать.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">disabled</td> 
+                                <td>Блокирует поле для ввода текста и не отправляет данные на сервер.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">form</td> 
+                                <td>Идентификатор формы для связывания текстового поля с элементом <span class="tag">&lt;form&gt;</span>.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">type</td> 
+                                <td>Для текстового поля мы указываем значение <span class="mean">text</span> или вообще не пишем этот атрибут.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">maxlength</td> 
+                                <td>Устанавливает максимальное число символов, которое может быть введено пользователем в текстовом поле. Когда это количество достигается при наборе, дальнейший ввод становится невозможным. Если данный атрибут опустить, то можно вводить строку длинее самого поля. </td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">readonly</td> 
+                                <td>Блокирует поле для ввода текста.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">size</td> 
+                                <td>Ширина текстового поля, которая определяется числом символов моноширинного шрифта. Обычно не указывают, потому что через стили задать желаемые размеры проще и точнее.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">value</td> 
+                                <td>Начальный текст, отображаемый в поле.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">autocomplete </td> 
+                                <td>Введённый ранее текст запоминается браузером и подставляется при следующем вводе.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">autofocus</td> 
+                                <td>Поле получает фокус после загрузки документа.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">list</td> 
+                                <td>Значение атрибута <span class="atr">id</span> элемента <span class="tag">&lt;datalist&gt;</span>, для связи с этим элементом.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">pattern</td> 
+                                <td>Шаблон ввода текста.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">required</td> 
+                                <td>Указывает, что поле является обязательным для заполнения.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">placeholder</td> 
+                                <td>Добавляет подсказку, которая исчезает при вводе текста.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">dirname</td> 
+                                <td>Имя переменной, которая отправляется на сервер и автоматически получает значение <span class="mean">ltr</span> (для текста слева направо) или <span class="mean">rtl</span> (для текста справа налево).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Большинство атрибутов являются типовыми и применяются к другим элементам формы. Создание текстового поля показано в примере 1.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 1. Текстовое поле</h6>
+                        <p>
+                            <img src="img/03_form-text-img/Screenshot_4.png" alt="">
+                            <img src="img/03_form-text-img/Screenshot_5.png" alt="">
+                        </p>
+                    </div>
+                </section>
+                <section>
+                    <p>
+                        Ширина текстового поля — величина нестабильная и в разных браузерах может меняться в небольших пределах. Для формы, которая располагается в колонке ограниченной ширины, подобные изменения приводят к нарушению исходного макета. Так что лучше вообще отказаться от использования атрибута <span class="atr">size</span> и задать параметры поля через стили. К тому же CSS позволяет изменять цвет фона, тип шрифта и рамки вокруг поля, как показано в примере 2.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 2. Изменение вида текстового поля</h6>
+                        <p>
+                            <img src="img/03_form-text-img/Screenshot_7.png" alt="">
+                            <img src="img/03_form-text-img/Screenshot_8.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/03_form-text-img/Screenshot_9.png" alt="">
+                        </p>
+                    </div>
+                    <p>
+                        Поскольку общая ширина элемента суммируется из значений <span class="atr">width</span>, <span class="atr">padding</span> и <span class="atr">border</span>, то мы получим поле, которое будет выходить за пределы окна браузера. Чтобы этого не произошло, добавлено свойство <span class="atr">box-sizing</span> со значением <span class="mean">border-box</span>, оно изменяет алгоритм расчёта ширины и ширина поля будет равна 100% независимо от значений других свойств. 
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Для элемента <span class="tag">&lt;input&gt;</span> есть простые правила, которые следует соблюдать:
+                    </p>
+                    <ul>
+                        <li><span class="tag">&lt;input&gt;</span> нельзя вкладывать внутрь ссылки ;<span class="tag">&lt;a&gt;</span></li>
+                        <li><span class="tag">&lt;input&gt;</span> нельзя вкладывать внутрь кнопки ;<span class="tag">&lt;button&gt;</span></li>
+                        <li>атрибут <span class="atr">list</span> должен ссылаться на элемент .<span class="tag">&lt;datalist&gt;</span></li>
+                    </ul>
+                    <p>
+                        Элемент <a href="https://webref.ru/html/datalist" target="_blank"><span class="tag">&lt;datalist&gt;</span></a> позволяет создать список подсказок, который появляется при наборе текста. Подобное можно наблюдать в поисковой системе Яндекс или Гугл, когда вы вводите поисковый запрос.
+                    </p>
+                    <p>
+                        <span class="tag">&lt;datalist&gt;</span> пишется обычно за пределами формы, каждый пункт при этом создаётся элементом <a href="https://webref.ru/html/option" target="_blank"><span class="tag">&lt;option&gt;</span></a>, а затем полученный список связывается с текстовым полем с помощью атрибута <span class="atr">list</span>, значением которого выступает значение <span class="atr">id</span> у <span class="tag">&lt;datalist&gt;</span> (пример 2).
+                    </p>
+                    <div class="example">
+                        <h6>Пример 2. Подсказки для текстового поля</h6>
+                        <p>
+                            <img src="img/03_form-text-img/Screenshot_10.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p><strong>Введите ваш город</strong></p>
+                                <p><input name="city" list="city"></p>
+                            </form> 
+                            <datalist id="city">
+                                <option>Волгоград</option>
+                                <option>Воронеж</option>
+                                <option>Екатеринбург</option>
+                                <option>Казань</option>
+                                <option>Красноярск</option>
+                                <option>Москва</option>
+                                <option>Нижний Новгород</option>
+                                <option>Новосибирск</option>
+                                <option>Омск</option>
+                                <option>Пермь</option>
+                                <option>Ростов-на-Дону</option>
+                                <option>Самара</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Уфа</option>
+                                <option>Челябинск</option>
+                            </datalist>
+                        </div>
+                    </div>
+                    <p>
+                        При наборе первых букв показываются подходящие варианты из списка. Пункт списка можно выбрать курсором мыши или с помощью стрелок на клавиатуре и он добавится в текстовое поле. При этом можно вводить собственный текст или редактировать уже добавленный.
+                    </p>
                 </section>
             </section>
         </div>
