@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Многострочный текст</title>
+    <link rel="stylesheet" href="css/05_form-textarea.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="forms.html" target="_blank">Формы</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Многострочный текст</h1>
+                <section> 
+                    <p>
+                        Ещё одним элементом, используемым для сбора текстовых данных, является элемент <span class="tag">&lt;textarea&gt;</span>, который предназначен для создания области, в которую можно вводить несколько строк текста. Он отличается от элемента <span class="tag">&lt;input&gt;</span> тем, что может принимать большие отрывки текста в несколько строк. В отличие от <span class="tag">&lt;input&gt;</span> в текстовом поле допустимо делать переносы строк, они сохраняются при отправке данных на сервер.
+                    </p>
+                    <p>
+                        Поле для многострочного текста незаменимо для добавления комментариев к статьям, написания сообщений форума, вставки и редактирования постов в блоге и во многих других случаях, когда одной строки текста явно недостаточно.
+                    </p>
+                    <p>
+                        Элемент <span class="tag">&lt;textarea&gt;</span> также содержит начальный и конечный теги, которые могут обернуть простой текст. Поскольку <span class="tag">&lt;textarea&gt;</span> принимает только один тип значения, атрибут <span class="atr">type</span> здесь не применим, но атрибут <span class="atr">name</span> по прежнему используется.
+                    </p>
+                    <p>
+                        Между тегов <span class="tag">&lt;textarea&gt;</span> и <span class="tag">&lt;/textarea&gt;</span> можно поместить любой текст, который будет отображаться внутри поля. Если текста нет, то поле будет изначально пустым.
+                    </p>
+                    <div class="example">
+                        <h6>Демонстрация текстовой области</h6>
+                        <p>
+                            <img src="img/05_form-textarea-img/Screenshot_1.png" alt="">
+                        </p>
+                        <div class="block">
+                            <textarea name="comment">Добавьте сюда свой комментарий</textarea>
+                        </div>
+                    </div>
+                    <p>
+                        Допустимые атрибуты перечислены в табл. 1.
+                    </p>
+                    <table class="data">
+                        <caption>Табл. 1. Атрибуты <span class="tag">&lt;textarea&gt;</span></caption>
+                         <tbody>
+                             <tr>
+                                 <th>Атрибут</th> 
+                                 <th>Описание</th>
+                            </tr> 
+                            <tr>
+                                <td class="atr">name</td> 
+                                <td>Имя поля, предназначено для того, чтобы обработчик формы мог его идентифицировать.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">disabled</td> 
+                                <td>Блокирует поле и не отправляет данные на сервер.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">form</td> 
+                                <td>Идентификатор формы для связывания поля с элементом <span class="tag">&lt;form&gt;</span>.</td>
+                            </tr>  
+                            <tr>
+                                <td class="atr">maxlength</td> 
+                                <td>Устанавливает максимальное число символов, которое может быть введено пользователем в текстовом поле. Когда это количество достигается при наборе, дальнейший ввод становится невозможным. </td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">readonly</td> 
+                                <td>Блокирует поле для ввода текста.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">autofocus</td> 
+                                <td>Поле получает фокус после загрузки документа.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">required</td> 
+                                <td>Указывает, что поле  является обязательным для заполнения.</td>
+                            </tr>
+                            <tr>
+                                <td class="atr">placeholder</td> 
+                                <td>Добавляет подсказку, которая исчезает при вводе текста.</td>
+                            </tr>
+                            <tr>
+                                <td class="atr">dirname</td> 
+                                <td>Имя переменной, которая отправляется на сервер и автоматически получает значение <span class="mean">ltr</span> (для текста слева направо) или <span class="mean">rtl</span> (для текста справа налево).</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">rows</td> 
+                                <td>Высота поля в строках текста.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">wrap</td> 
+                                <td>Значение <span class="mean">soft</span> передаёт на сервер текст одной строкой, а <span class="mean">hard</span> учитывает значение <span class="atr">cols</span> и автоматически добавляет переносы.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">cols</td> 
+                                <td>Ширина поля в символах.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <p>
+                        Ни один из этих атрибутов не является обязательным, поэтому простая форма для отправки текста выглядит так (пример 1).
+                    </p>
+                    <div class="example">
+                        <h6>Пример 1. Текстовое поле</h6>
+                        <p>
+                            <img src="img/05_form-textarea-img/Screenshot_2.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p><b>Введите ваш отзыв:</b></p>
+                                <p><textarea name="comment"></textarea></p>
+                                <p><input type="submit"></p>
+                               </form>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <p>
+                        Для <span class="tag">&lt;textarea&gt;</span> действуют те же ограничения, что и для <span class="tag">&lt;input&gt;</span>, а именно:
+                    </p>
+                    <ul>
+                        <li><span class="tag">&lt;textarea&gt;</span> нельзя вкладывать внутрь ссылки <span class="tag">&lt;a&gt;</span>;</li>
+                        <li><span class="tag">&lt;textarea&gt;</span> нельзя вкладывать внутрь кнопки <span class="tag">&lt;button&gt;</span>;</li>
+                    </ul>
+                    <p>
+                        В <span class="tag">&lt;textarea&gt;</span> допустимо вставить произвольный текст и он отобразится внутри текстового поля для редактирования. При этом учитываются все пробелы, в отличие от обычного HTML (пример 2).
+                    </p>
+                    <div class="example">
+                        <h6>Пример 2. Текстовое поле с текстом</h6>
+                        <p>
+                            <img src="img/05_form-textarea-img/Screenshot_3.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form action="#">
+                                <p><strong>Отредактируйте ваш отзыв:</strong></p>
+                                <p>
+                                    <textarea name="edit" rows="3" cols="30">
+                                            КГ/АМ
+                                        выпий йаду.
+                                 </textarea>
+                                </p>
+                                <p><input type="submit"></p>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <p>
+                        При оформлении многострочного поля применяются те же стилевые свойства, что и для однострочного текста. А именно можно изменять ширину (свойство <span class="atr">width</span>), высоту (<span class="atr">height</span>), границу (<span class="atr">border</span>), цвет текста и фона (<span class="atr">color</span> и <span class="atr">background</span> соответственно) и др. Пример создания текстового поля с разными характеристиками приведен в примере 3.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 3. Оформление текстового поля</h6>
+                        <p>
+                            <img src="img/05_form-textarea-img/Screenshot_4.png" alt="">
+                            <img src="img/05_form-textarea-img/Screenshot_5.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form action="#">
+                                <p><b>Введите ваш отзыв:</b></p>
+                                <p><textarea name="comment" class="textarea"></textarea></p>
+                                <p><input type="submit"></p>
+                               </form>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <p>
+                        Все браузеры кроме Internet Explorer поддерживают изменение размера для <span class="tag">&lt;textarea&gt;</span>. Достаточно потянуть за правый нижний уголок, который по своему виду отличается от остальных. Вид в разных браузерах может несколько различаться, но общая схожесть сохраняется.
+                    </p>
+                    <p>
+                        Если вам не нужно, чтобы пользователь мог менять размеры текстового поля, то добавьте свойство <span class="atr">resize</span> со значением <span class="mean">none</span>.
+                    </p>
+                    <p>
+                        <img src="img/05_form-textarea-img/Screenshot_6.png" alt="">
+                    </p>
+                    <p>
+                        Как правило, размеры <span class="tag">&lt;textarea&gt;</span> задаются с помощью стилей, но если одновременно заданы атрибуты <span class="atr">rows</span> и <span class="atr">cols</span> с шириной и высотой через CSS, то стили имеют преимущество и значение атрибутов игнорируется.
+                    </p>
+                </section>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>
