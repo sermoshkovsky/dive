@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Переключатели</title>
+    <link rel="stylesheet" href="css/07_form-radio.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="https://webref.ru/html" target="_blank">Справочник HTML</a> </li>
+                    <li><a href="https://webref.ru/css" target="_blank">Справочник CSS</a> </li>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="forms.html" target="_blank">Формы</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Переключатели</h1>
+                <section>
+                    <p>
+                        Переключатели (жарг. <i>радиокнопки</i>) — это простой способ, позволяющий пользователям сделать быстрый выбор из небольшого списка вариантов. Переключатели дают пользователю выбрать только один вариант в отличие от нескольких.
+                    </p>
+                    <p>
+                        Чтобы создать переключатель, используется элемент <span class="tag">&lt;input&gt;</span> со значением <span class="mean">radio</span> у атрибута <span class="atr">type</span>. 
+                    </p>
+                    <p>
+                        <img src="img/07_form-radio-img/Screenshot_1.png" alt="">
+                    </p>
+                    <p>
+                        Атрибуты переключателей перечислены в табл. 1.
+                    </p>
+                    <table class="data">
+                        <caption>Табл. 1. Атрибуты переключателей</caption>
+                         <tbody>
+                             <tr>
+                                 <th>Атрибут</th> 
+                                 <th>Описание</th>
+                            </tr> 
+                            <tr>
+                                <td class="atr">name</td> 
+                                <td>Имя группы переключателей для идентификации поля. Поскольку переключатели являются групповыми элементами, то имя у всех элементов группы должно быть одинаковым.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">disabled</td> 
+                                <td>Блокирует переключатель для выбора.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">form</td> 
+                                <td>Идентификатор формы для связывания кнопки с элементом&nbsp;<span class="tag">&lt;form&gt;</span>.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">type</td> 
+                                <td>Для переключателя значение должно быть <span class="mean">radio</span>.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">checked</td> 
+                                <td>Предварительное выделение переключателя. По определению, набор переключателей может иметь только один выделенный пункт, поэтому добавление <span class="atr">checked</span> сразу к нескольким полям не даст особого результата. В любом случае, будет отмечен элемент, находящийся в коде HTML последним.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">value</td> 
+                                <td>Задаёт, какой текст будет отправлен на сервер. Здесь уже каждый элемент должен иметь свое уникальное значение, чтобы можно было идентифицировать, какой пункт был выбран пользователем. </td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">autofocus</td> 
+                                <td>Переключатель получает фокус после загрузки документа.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">required</td> 
+                                <td>Выбор переключателя перед отправкой формы становится обязательным.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Как обычно, переключатели нельзя вкладывать внутрь ссылок и кнопок.
+                    </p>
+                    <p>
+                        Создание группы переключателей показано в примере 1.
+                    </p>
+                    <p>
+                        Заметьте, что для работы этого элемента формы, ваш HTML-код должен <strong>сгруппировать</strong> список переключателей вместе. Это достигается с помощью одного и того же значения для атрибута <span class="atr">name</span>.  
+                    </p>
+                    <p>
+                        В данном примере значение атрибута <span class="atr">name</span> для всех переключателей одинаково, именно в таком случае браузер понимает, что переключатели связаны между собой и помечает только один пункт из предложенных.
+                    </p>
+                    <p>
+                        Поскольку все переключатели используют одинаковое значение атрибута <span class="atr">name</span> (в данном случае значение <span class="mean">dzen</span>), выбор одного из вариантов отменит все остальные. Переключатели являются <strong>взаимоисключающими</strong>.
+                    </p>
+                    <p>
+                        С <em>текстовыми полями</em> их значение определяется тем, что пользователь в них набирает; с <em>переключателями</em> пользователь делает множественный выбор. Таким образом, мы должны определить входное значение. Используя атрибут <span class="atr">value</span> мы можем установить конкретное значение для каждого элемента <span class="tag">&lt;input&gt;</span>. Значение атрибута <span class="atr">value</span> должно различаться, чтобы обработчик формы мог понять, какой вариант выбран пользователем.
+                    </p>
+                    <p>
+                        Кроме того, для предварительного выбора переключателя мы можем использовать логический атрибут <span class="atr">checked</span>.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 1. Создание переключателей</h6>
+                        <p>
+                            <img src="img/07_form-radio-img/Screenshot_2.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p><b>Какое у вас состояние разума?</b></p>
+                                 <p><input name="dzen" type="radio" value="nedzen"> Не дзен</p>
+                                 <p><input name="dzen" type="radio" value="dzen"> Дзен</p>
+                                 <p><input name="dzen" type="radio" value="pdzen" checked> Полный дзен</p>
+                                 <p><input type="submit" value="Выбрать"></p>
+                               </form>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>

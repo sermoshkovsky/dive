@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Флажки</title>
+    <link rel="stylesheet" href="css/08_form-checkbox.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="https://webref.ru/html" target="_blank">Справочник HTML</a> </li>
+                    <li><a href="https://webref.ru/css" target="_blank">Справочник CSS</a> </li>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="forms.html" target="_blank">Формы</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Флажки</h1>
+                <section>
+                    <p>
+                        Флажки (жарг. <i>чекбоксы</i>) очень похожи на переключатели. Они используют те же атрибуты и шаблоны, за исключением значения атрибута type. Разница между ними состоит в том, что флажки позволяют пользователям выбрать несколько значений и связать их все с одним именем, в то время как переключатели ограничивают пользователей одним значением. 
+                    </p>
+                    <p>
+                        Флажки используют, когда необходимо выбрать любое количество вариантов из предложенного списка. Если требуется выбор лишь одного варианта, то для этого следует предпочесть переключатели (<span class="mean">radiobutton</span>). Флажок создается следующим образом.
+                    </p>
+                    <p>
+                        <img src="img/08_form-checkbox-img/Screenshot_1.png" alt="">
+                    </p>
+                    <p>
+                        Атрибуты флажков перечислены в табл. 1.
+                    </p>
+                    <table class="data">
+                        <caption>Табл. 1. Атрибуты флажков</caption>
+                         <tbody>
+                             <tr>
+                                 <th>Атрибут</th> 
+                                 <th>Описание</th>
+                            </tr> 
+                            <tr>
+                                <td class="atr">name</td> 
+                                <td>Имя флажка для идентификации поля. </td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">disabled</td> <td>Блокирует флажок для выбора.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">form</td> <td>Идентификатор формы для связывания флажка с элементом&nbsp;<span class="tag">&lt;form&gt;</span>.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">type</td> 
+                                <td>Для флажка значение должно быть <span class="mean">checkbox</span>.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">checked</td> <td>Предварительное выделение флажка. </td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">value</td> 
+                                <td>Задаёт, какой текст будет отправлен на сервер. </td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">autofocus</td> 
+                                <td>Элемент получает фокус после загрузки документа.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">required</td> 
+                                <td>Перед отправкой формы обязательно следует поставить галочку.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Как обычно, флажки нельзя вкладывать внутрь ссылок и кнопок.
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Использование флажков показано в примере 1.
+                    </p>
+                    <p>
+                        Поскольку флажки здесь являются одной группой, то значение атрибута <span class="atr">name</span> у них одинаковое.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 1. Создание флажков</h6>
+                        <p>
+                            <img src="img/08_form-checkbox-img/Screenshot_2.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p>В каких годах произошли самые известные извержения вулкана Кракатау?</p>
+                                <p><input type="checkbox" name="a" value="1417"> 1417</p>
+                                <p><input type="checkbox" name="a" value="1680" checked> 1680</p>
+                                <p><input type="checkbox" name="a" value="1883" checked> 1883</p>
+                                <p><input type="checkbox" name="a" value="1934"> 1934</p>
+                                <p><input type="checkbox" name="a" value="2010"> 2010</p>
+                                <p><input type="submit" value="Отправить"></p>
+                               </form>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>
