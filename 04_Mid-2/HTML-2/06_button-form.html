@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кнопки</title>
+    <link rel="stylesheet" href="css/06_buttons-form.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="forms.html" target="_blank">Формы</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Кнопки</h1>
+                <p>
+                    Кнопки являются одним из самых понятных и интуитивных элементов интерфейса. После того, как пользователь вводит запрашиваемую информацию, кнопки позволяют пользователю пустить эту информацию в дело. По их виду сразу становится понятно, что единственное действие, которое с ними можно производить — это нажимать на них. За счёт этой особенности кнопки часто применяются в формах, особенно при их отправке и очистке.
+                </p>
+                <p>
+                    Кнопки на веб-странице можно создать несколькими способами — с помощью элемента <span class="tag">&lt;input&gt;</span> или элемента <span class="tag">&lt;button&gt;</span>.
+                </p>
+                <section>
+                    <h4 class="tags">&lt;input&gt;</h4>
+                    <p>
+                        Рассмотрим вначале добавление кнопки через <a href="https://webref.ru/html/input" target="_blank"><span class="tag">&lt;input&gt;</span></a> и его синтаксис.
+                    </p>
+                    <p>
+                        <img src="img/06_buttons-form-img/Screenshot_1.png" alt="">
+                    </p>
+                    <p>
+                        Атрибуты кнопки перечислены в табл. 1.
+                    </p>
+                    <table class="data">
+                        <caption>Табл. 1. Атрибуты  &lt;input&gt;</caption>
+                         <tbody>
+                             <tr>
+                                 <th>Атрибут</th> 
+                                 <th>Описание</th>
+                            </tr> 
+                            <tr>
+                                <td class="atr">name</td> 
+                                <td>Имя кнопки, предназначено для того, чтобы обработчик формы мог её идентифицировать.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">disabled</td> 
+                                <td>Блокирует кнопку и не позволяет на неё нажимать.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">form</td> 
+                                <td>Идентификатор формы для связывания  кнопки  с элементом <span class="tag">&lt;form&gt;</span>.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">type</td> 
+                                <td>Для обычной кнопки значением является <span class="mean">button</span>.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">value</td> 
+                                <td>Надпись на кнопке.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">autofocus</td> 
+                                <td>Кнопка получает фокус после загрузки документа.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Создание кнопки показано в примере 1.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 1. Добавление кнопки</h6>
+                        <p>
+                            <img src="img/06_buttons-form-img/Screenshot_2.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p><input type="button" value=" Нажми меня нежно "></p>
+                            </form>
+                        </div>
+                    </div>
+                    <p>
+                        Примите во внимание, что учитываются все пробелы в надписи на кнопке, в отличие от обычного текста HTML, поэтому можно ставить любое количество пробелов, которые в итоге влияют на ширину кнопки. Но правильнее, конечно же, задавать вид кнопки через CSS. 
+                    </p>
+                    <p>
+                        Для таких кнопок есть ряд обязательных правил:
+                    </p>
+                    <ul>
+                        <li><span class="tag">&lt;input&gt;</span> нельзя вкладывать внутрь ссылки <span class="tag">&lt;a&gt;</span>;</li>
+                        <li><span class="tag">&lt;input&gt;</span> нельзя вкладывать внутрь кнопки <span class="tag">&lt;button&gt;</span>;</li>
+                        <li>значение атрибута <span class="atr">value</span> не может быть пустым.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4 class="tags">&lt;button&gt;</h4>
+                    <p>
+                        Второй способ создания кнопки основан на использовании элемента <a href="https://webref.ru/html/button" target="_blank"><span class="tag">&lt;button&gt;</span></a>. Он по своему действию напоминает результат, получаемый с помощью <span class="tag">&lt;input&gt;</span>. Но в отличие от него предлагает расширенные возможности по созданию кнопок. Например, на подобной кнопке можно размещать любые элементы HTML, включая изображения и таблицы. На рис. 2 показаны разные виды кнопок, полученные с помощью <span class="tag">&lt;button&gt;</span>.
+                    </p>
+                    <p>
+                        <img src="img/06_buttons-form-img/Screenshot_3.png" alt="">
+                    </p>
+                    <p>
+                        Синтаксис создания такой кнопки следующий.
+                    </p>
+                    <p>
+                        <img src="img/06_buttons-form-img/Screenshot_4.png" alt="">
+                    </p>
+                    <p>
+                        Атрибуты перечислены в табл. 1, но в отличие от кнопки <span class="tag">&lt;input&gt;</span> атрибут <span class="atr">value</span> определяет только отправляемое на сервер значение, а не надпись на кнопке. Если требуется вывести на кнопке изображение, то элемент <span class="tag">&lt;img&gt;</span> добавляется внутрь <span class="tag">&lt;button&gt;</span>, как показано в примере 2.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 2. Рисунок на кнопке</h6>
+                        <p>
+                            <img src="img/06_buttons-form-img/Screenshot_5.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p>
+                                    <button>Кнопка с текстом</button> 
+                                    <button>
+                                        <img src="img/06_buttons-form-img/umbrella.gif" alt="" style="vertical-align:middle"> Кнопка с рисунком
+                                    </button>
+                                </p>
+                               </form>
+                        </div>
+                    </div>
+                    <p>
+                        В данном примере показано создание обычной кнопки с текстом, а также кнопки с одновременным использованием текста и рисунка. Размер кнопки зависит от содержимого <span class="tag">&lt;button&gt;</span>, но пробелы игнорируются, поэтому простым увеличением их количества, как в случае использования <span class="tag">&lt;input&gt;</span>, ширину кнопки изменить не удастся.
+                    </p>
+                    <p>
+                        Для <span class="tag">&lt;button&gt;</span> также есть ряд ограничений:
+                    </p>
+                    <ul>
+                        <li><span class="tag">&lt;button&gt;</span> нельзя вкладывать внутрь ссылки <span class="tag">&lt;a&gt;</span>;</li>
+                        <li>один <span class="tag">&lt;button&gt;</span> нельзя вкладывать внутрь другого.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4 class="tags">Кнопка <span class="mean1">Submit</span></h4>
+                    <p>
+                        Для отправки данных на сервер предназначена специальная кнопка <span class="mean">Submit</span>. Её вид ничем не отличается от обычных кнопок, но при нажатии на неё происходит переход к обработчику формы по адресу, указанному атрибутом <span class="atr">action</span> элемента <span class="tag">&lt;form&gt;</span>. Программа-обработчик, получает данные, введённые пользователем в полях формы, производит с ними необходимые манипуляции, после чего возвращает результат в виде HTML-документа. Что именно делает обработчик, зависит от автора сайта, например, подобная технология применяется при создании опросов, форумов, тестов и многих других вещей.
+                    </p>
+                    <p>
+                        Синтаксис создания кнопки <span class="mean">Submit</span> зависит от используемого элемента <span class="tag">&lt;input&gt;</span> или <span class="tag">&lt;button&gt;</span>.
+                    </p>
+                    <p>
+                        <img src="img/06_buttons-form-img/Screenshot_6.png" alt="">
+                    </p>
+                    <p>
+                        Атрибуты те же, что и у рядовых кнопок (пример 3).
+                    </p>
+                    <div class="example">
+                        <h6>Пример 3. Отправка данных на сервер</h6>
+                        <p>
+                            <img src="img/06_buttons-form-img/Screenshot_7.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p><input name="login"></p>
+                                <p><input type="submit"></p>
+                            </form>
+                        </div>
+                    </div>
+                    <p>
+                        Атрибут <span class="atr">name</span> для этого типа кнопки можно не писать. Если не указать значение <span class="atr">value</span>, то браузер самостоятельно добавит текст, он различается в зависимости от браузера. Так, Firefox пишет «<i>Отправить запрос</i>», IE — «<i>Подача запроса</i>», Opera и Chrome — «<i>Отправить</i>». Сам текст надписи никак на функционал кнопки не влияет.
+                    </p>
+                </section>
+                <section>
+                    <h4 class="tags">Кнопка <span class="mean1">Reset</span></h4>
+                    <p>
+                        При нажатии на кнопку <span class="mean1">Reset</span> данные формы возвращаются к первоначальным значениям. Как правило, эту кнопку применяют для очистки введённой в полях формы информации. Для больших форм от использования кнопки <span class="mean1">Reset</span> лучше вообще отказаться, чтобы по ошибке на неё не нажать, ведь тогда придётся заполнять форму заново.
+                    </p>
+                    <p>
+                        Синтаксис создания указанной кнопки прост и похож на другие кнопки.
+                    </p>
+                    <p>
+                        <img src="img/06_buttons-form-img/Screenshot_8.png" alt="">
+                    </p>
+                    <p>
+                        В примере 4 показана форма с одним текстовым полем, которое уже содержит предварительно введённый текст с помощью атрибута <span class="atr">value</span> элемента <span class="tag">&lt;input&gt;</span>. После изменения текста и нажатия на кнопку «<i>Очистить</i>», значение поля будет восстановлено и в нём снова появится надпись «<i>Введите текст</i>».
+                    </p>
+                    <div class="example">
+                        <h6>Пример 4. Кнопка для очистки формы</h6>
+                        <p>
+                            <img src="img/06_buttons-form-img/Screenshot_9.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p><input value="Введите текст"></p>
+                                <p><input type="submit" value="Отправить">
+                                   <input type="reset" value="Очистить"></p>
+                               </form>
+                        </div>
+                    </div>
+                    <p>
+                        Значение кнопки <span class="mean">Reset</span> никогда не пересылается на сервер. Если надпись на кнопке не писать, иными словами, не задавать атрибут <span class="atr">value</span>, на кнопке по умолчанию будет добавлен текст «<i>Очистить</i>».
+                    </p>
+                </section>
+                <section>
+                    <h4 class="tags">Цветные кнопки</h4>
+                    <p>
+                        Вид и цвет кнопок зависит от операционной системы и браузера. Тем не менее можно изменить цвет кнопок по своему усмотрению, воспользовавшись стилями. Для этого требуется только добавить к кнопке свойство <span class="atr">background</span>, как показано в примере 5. Дополнительно можно поменять цвет текста и другие параметры. Помните про одну особенность — как только вы меняете цвет фона, кнопка становится приподнятой, поэтому для «плоских» кнопок надо добавить ещё рамку, пусть даже прозрачную.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 5. Вид кнопок</h6>
+                        <p>
+                            <img src="img/06_buttons-form-img/Screenshot_10.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/06_buttons-form-img/Screenshot_11.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p><input type="button" value="Исходная кнопка">
+                                   <input type="button" class="bt" value="Цветная кнопка">
+                                   <input type="button" class="bt btn-flat" value="Плоская кнопка">
+                                   <input type="button" class="bt btn-flat btn-round" value="Кнопка со скруглёнными уголками"></p>
+                               </form>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>
