@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поле со списком</title>
+    <link rel="stylesheet" href="css/09_form-select.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="https://webref.ru/html" target="_blank">Справочник HTML</a> </li>
+                    <li><a href="https://webref.ru/css" target="_blank">Справочник CSS</a> </li>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="forms.html" target="_blank">Формы</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Поле со списком</h1>
+                <section>
+                    <p>
+                        Поле со списком, называемое ещё выпадающее меню, один из гибких и удобных элементов формы. Выпадающие списки являются идеальным способом, чтобы практическим образом предоставить пользователям длинный список вариантов. Длинный столбец переключателей рядом со списком разных вариантов не только визуально непривлекателен, но кроме того сложен и труден для понимания, особенно на мобильном устройстве. Выпадающие списки, с другой стороны, обеспечивают идеальный формат для длинного списка вариантов.
+                    </p>
+                    <p>
+                        В зависимости от настроек в списке можно выбирать одно или несколько значений. Преимущество списка в его компактности и универсальности, список может занимать одну или несколько строк, в нём можно выбирать одно или несколько значений. 
+                    </p>
+                    <p>
+                        Для создания выпадающего списка мы будем применять элементы <a href="https://webref.ru/html/select" target="_blank"><span class="tag">&lt;select&gt;</span></a> и <a href="https://webref.ru/html/option" target="_blank"><span class="tag">&lt;option&gt;</span></a>. Элемент <span class="tag">&lt;select&gt;</span> оборачивает все пункты меню, а каждый пункт меню размечен с помощью элемента <span class="tag">&lt;option&gt;</span>. 
+                    </p>
+                    <p>
+                        <img src="img/09_form-select-img/Screenshot_1.png" alt="">
+                    </p>
+                    <p>
+                        Атрибут <span class="atr">name</span> располагается в элементе <span class="tag">&lt;select&gt;</span>, а атрибут <span class="atr">value</span> располагается в элементах <span class="tag">&lt;option&gt;</span>, вложенных в элемент <span class="tag">&lt;select&gt;</span>. Таким образом, атрибут <span class="atr">value</span> в каждом элементе <span class="tag">&lt;option&gt;</span> связан с атрибутом <span class="atr">name</span> элемента <span class="tag">&lt;select&gt;</span>.
+                    </p>
+                    <p>
+                        Каждый элемент <span class="tag">&lt;option&gt;</span> оборачивает текст (который виден пользователям) отдельного пункта в списке.
+                    </p>
+                    <p>
+                        Подобно логическому атрибуту <span class="atr">checked</span> у переключателей и флажков, для выпадающего меню можно использовать логический атрибут <span class="atr">selected</span>, чтобы предварительно выделить пункт для пользователей.
+                    </p>
+                    <div class="example">
+                        <h6>Демонстрация выпадающего списка</h6>
+                        <p>
+                            <img src="img/09_form-select-img/Screenshot_2.png" alt="">
+                        </p>
+                        <div class="block">
+                            <select name="day">
+                                <option value="Friday" selected>Пятница</option>
+                                <option value="Saturday">Суббота</option>
+                                <option value="Sunday">Воскресенье</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p>
+                        Элемент <span class="tag">&lt;select&gt;</span> выступает контейнером для пунктов списка и определяет его вид — будет ли это раскрывающийся список или же список с одним или множественным выбором. Вид зависит от использования атрибута <span class="atr">size</span> элемента <span class="tag">&lt;select&gt;</span>, который устанавливает высоту списка; ширина списка при этом определяется автоматически исходя из длины текста внутри <span class="tag">&lt;option&gt;</span>. Ниже представлен список множественного выбора, в котором пункты выделяются с помощью клавиши <i>Ctrl</i>  и <i>Shift</i>, и раскрывающийся список.
+                    </p>
+                    <p>
+                        <img src="img/09_form-select-img/Screenshot_3.png" alt="">
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Поскольку список формируется двумя элементами <span class="tag">&lt;select&gt;</span> и <span class="tag">&lt;option&gt;</span>, соответственно, у каждого этого элемента свои атрибуты. 
+                    </p>
+                </section>
+                <section>
+                    <h2>Атрибуты элемента <span class="tags">&lt;select&gt;</span></h2>
+                    <table class="data">
+                        <caption>Табл. 1. Атрибуты &lt;select&gt;</caption>
+                         <tbody>
+                             <tr>
+                                 <th>Атрибут</th> 
+                                 <th>Описание</th>
+                            </tr> 
+                            <tr>
+                                <td class="atr">name</td> 
+                                <td>Имя списка для идентификации поля.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">disabled</td> 
+                                <td>Блокирует список для выбора.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">form</td> 
+                                <td>Идентификатор формы для связывания поля с элементом&nbsp;<span class="tag">&lt;form&gt;</span>.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">size</td> 
+                                <td>Число пунктов списка, показываемых пользователю. </td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">multiple</td> 
+                                <td>Позволяет выбрать несколько пунктов из списка. При наличии этого атрибута вид списка меняется, превращаясь в список множественного выбора.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">autofocus</td> 
+                                <td>Элемент получает фокус после загрузки документа.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">required</td> 
+                                <td>Перед отправкой формы обязательно следует выбрать пункт списка.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Кроме того, есть ряд правил:
+                    </p>
+                    <ul>
+                        <li><span class="tag">&lt;select&gt;</span> нельзя вкладывать внутрь ссылок;</li>
+                        <li><span class="tag">&lt;select&gt;</span> нельзя вкладывать внутрь кнопок <span class="tag">&lt;button&gt;</span>;</li>
+                        <li>внутри <span class="tag">&lt;select&gt;</span> должен быть хотя бы один элемент <span class="tag">&lt;option&gt;</span>.</li>
+                    </ul>
+                    <p>
+                        Рассмотрим подробнее некоторые атрибуты <a href="https://webref.ru/html/select" target="_blank"><span class="tag">&lt;select&gt;</span></a>, с помощью которых можно изменять представление списка.
+                    </p>
+                    <h4>multiple</h4>
+                    <p>
+                        Наличие <span class="atr">multiple</span> сообщает браузеру отображать содержимое элемента <span class="tag">&lt;select&gt;</span>, как список множественного выбора. Конечный вид списка зависит от используемого атрибута <span class="atr">size</span>. Если он отсутствует, то высота списка равна количеству пунктов. Если значение <span class="atr">size</span> меньше числа пунктов, то появляется вертикальная полоса прокрутки.
+                    </p>
+                    <p>
+                        <img src="img/09_form-select-img/Screenshot_4.png" alt="">
+                    </p>
+                    <p>
+                        Для выбора нескольких значений списка применяются клавиши <i>Ctrl</i> и <i>Shift</i> совместно с курсором мыши. Надо понимать, что если вам требуется выделить сразу несколько пунктов списка через атрибут <span class="atr">selected</span>, то для <span class="tag">&lt;select&gt;</span> следует добавить атрибут <span class="atr">multiple</span>, иначе это всё работать не будет.
+                    </p>
+                    <p>
+                        В примере 1 показано создание списка множественного выбора.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 1. Список множественного выбора</h6>
+                        <p>
+                            <img src="img/09_form-select-img/Screenshot_5.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p><select name="select" size="3" multiple>
+                                 <option selected value="s1">Чебурашка</option>
+                                 <option value="s2">Крокодил Гена</option>
+                                 <option value="s3">Шапокляк</option>
+                                 <option value="s4">Крыса Лариса</option>
+                                </select>
+                                <input type="submit" value="Отправить"></p> 
+                               </form>
+                        </div>
+                    </div>
+                    <h4>name</h4>
+                    <p>
+                        Определяет уникальное имя элемента <span class="tag">&lt;select&gt;</span>. Как правило, это имя используется для доступа к данным через скрипты или для получения выбранного значения серверным обработчиком.
+                    </p>
+                    <h4>size</h4>
+                    <p>
+                        Устанавливает высоту списка. Если значение <span class="atr">size</span> равно <span class="mean">единице</span>, то список превращается в раскрывающийся. Значение по умолчанию зависит от атрибута <span class="atr">multiple</span>. Если он присутствует, то размер списка равен числу элементов. Когда <span class="atr">multiple</span> нет, то значение атрибута <span class="atr">size</span> равно <span class="mean">1</span>.
+                    </p>
+                </section>
+                <section>
+                    <h2>Атрибуты элемента <span class="tags">&lt;option&gt;</span></h2>
+                    <table class="data">
+                        <caption>Табл. 2. Атрибуты &lt;option&gt;</caption> 
+                        <tbody>
+                            <tr>
+                                <th>Атрибут</th> 
+                                <th>Описание</th>
+                            </tr> 
+                            <tr>
+                                <td class="atr">disabled</td> 
+                                <td>Блокирует пункт списка для выбора.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">selected</td> 
+                                <td>Позволяет заранее выбрать пункт списка.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">label</td> 
+                                <td>Текст, который отображается в пункте списка.</td>
+                            </tr> 
+                            <tr>
+                                <td class="atr">value</td> 
+                                <td>Значение выбранного пункта списка, отправляемого на сервер.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h4>selected</h4>
+                    <p>
+                        Делает текущий пункт списка выделенным. Если к <span class="tag">&lt;select&gt;</span> добавлен атрибут <span class="atr">multiple</span>, то можно выделять более одного пункта.
+                    </p>
+                    <h4>value</h4>
+                    <p>
+                        Определяет значение пункта списка, которое будет отправлено на сервер в виде пары «<em>имя=значение</em>», где имя задаётся атрибутом <span class="atr">name</span> элемента <span class="tag">&lt;select&gt;</span>, а значение — атрибутом <span class="atr">value</span> выделенных пунктов списка. Значение может как совпадать с текстом пункта, так быть и самостоятельным.
+                    </p>
+                    <h4>label</h4>
+                    <p>
+                        Предназначен для указания метки пункта списка, сокращённой по сравнению с текстом внутри <span class="tag">&lt;option&gt;</span>. Если атрибут <span class="atr">label</span> присутствует, то текст внутри тега <span class="tag">&lt;option&gt;</span> игнорируется и в списке выводится значение <span class="atr">label</span>. Браузер Firefox не поддерживает этот атрибут.
+                    </p>
+                    <p>
+                        Создание списка показано в примере 2.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 2. Использование списка</h6>
+                        <p>
+                            <img src="img/09_form-select-img/Screenshot_6.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p><strong>Выбери персонажа</strong></p>
+                                <p><select name="hero">
+                                 <option value="s1">Чебурашка</option>
+                                 <option value="s2" selected>Крокодил Гена</option>
+                                 <option value="s3">Шапокляк</option>
+                                 <option value="s3" label="Лариса">Крыса Лариса</option>
+                                </select> 
+                                <input type="submit" value="Отправить"></p>
+                               </form>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2>Группирование элементов списка</h2>
+                    <p>
+                        При достаточно обширном списке имеет смысл сгруппировать его элементы по блокам, чтобы обеспечить наглядность списка и удобство работы с ним. Для этой цели применяется элемент <a href="https://webref.ru/html/optgroup" target="_blank"><span class="tag">&lt;optgroup&gt;</span></a>. Он представляет собой контейнер, внутри которого располагаются элементы <span class="tag">&lt;option&gt;</span>, объединённые в одну группу. 
+                    </p>
+                    <p>
+                        Особенностью <span class="tag">&lt;optgroup&gt;</span> является то, что он не выделяется, как обычный элемент списка, выводится жирным начертанием, а все элементы, входящие в этот контейнер, смещаются вправо от своего исходного положения. Для добавления заголовка группы используется атрибут <span class="atr">label</span>, как показано в примере 2.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 2. Группирование элементов списка</h6>
+                        <p>
+                            <img src="img/09_form-select-img/Screenshot_7.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p><select name="food">
+                                 <optgroup label="Русская кухня">
+                                  <option value="r1">Закуска Барская</option>
+                                  <option value="r2">Раки, фаршированные по-царски</option>
+                                  <option value="r3">Биточки в горшочке</option>
+                                 </optgroup>
+                                 <optgroup label="Украинская кухня">
+                                  <option value="u1">Галушки славянские</option>
+                                  <option value="u2">Пампушки украинские</option>
+                                  <option value="u3">Жаркое по-харьковски</option>
+                                 </optgroup>
+                                </select></p>
+                                <p><input type="submit" value="Отправить"></p>
+                               </form>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>

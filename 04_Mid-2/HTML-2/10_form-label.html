@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Элемент label</title>
+    <link rel="stylesheet" href="css/10_form-label.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="https://webref.ru/html" target="_blank">Справочник HTML</a> </li>
+                    <li><a href="https://webref.ru/css" target="_blank">Справочник CSS</a> </li>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="forms.html" target="_blank">Формы</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Элемент label</h1>
+                <section>
+                    <p>
+                        Так как элементы формы сами по себе не очень описательны, им, как правило, предшествует <strong>текстовая метка</strong>.
+                    </p>
+                    <p>
+                        <img src="img/10_form-label-img/Screenshot_1.png" alt="">
+                    </p>
+                    <p>
+                        Элемент <a href="https://webref.ru/html/label" target="_blank"><span class="tag">&lt;label&gt;</span></a> связывает текст с определённым элементом формы. Элемент <span class="tag">&lt;label&gt;</span> содержит подписи или заголовки для управления формой, однозначно связывая их вместе, создавая тем самым доступную форму для всех пользователей и вспомогательных технологий. <span class="tag">&lt;label&gt;</span> должны включать в себя текст, описывающий поля к которым они относятся. Обычно применяется в следующих случаях.
+                    </p>
+                    <ul>
+                        <li>Текст становится активным и при щелчке по нему изменяется значение связанного с текстом переключателя или флажка. Это удобно для пользователя, потому что не приходится целиться курсором в небольшой по размерам элемент.</li>
+                        <li>Стили для <span class="tag">&lt;label&gt;</span> позволяют задать положение текста и другие характеристики оформления.</li>
+                    </ul>
+                    <p>
+                        Хотя вы можете применять короткие абзацы для описания элементов формы, использование <span class="tag">&lt;label&gt;</span> является семантически более правильным, потому что они существуют только в формах. 
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Простой вариант использования заключается в добавлении полей формы прямо внутрь <span class="tag">&lt;label&gt;</span> с желаемым текстом, как показано в примере 1.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 1. Использование &lt;label&gt;</h6>
+                        <p>
+                            <img src="img/10_form-label-img/Screenshot_2.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p>Выберите желаемое состояние:</p>
+                                <p><label><input type="radio" name="psi"> Импритинг</label></p>
+                                <p><label><input type="radio" name="psi"> Реимпритинг</label></p>
+                               </form>
+                        </div>
+                    </div>
+                    <p>
+                        Визуально <span class="tag">&lt;label&gt;</span> себя никак не проявляет, поэтому понять, задействован он или нет, можно только по тексту. Если щелчок по тексту переносит фокус в текстовое поле, ставит галочку в переключателе или ещё как-то активирует близлежащий элемент формы, значит работает <span class="tag">&lt;label&gt;</span>.
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Поля формы и текст для них могут визуально находиться рядом, но в коде документа располагаться внутри разных элементов. Чтобы связать их между собой применяется атрибут <span class="atr">for</span>. Его значение должно быть таким же, как значение атрибута <span class="atr">id</span> у элемента <span class="tag">&lt;input&gt;</span> , с которым связан <span class="tag">&lt;label&gt;</span>. Соответствие значений атрибутов <span class="atr">for</span> и <span class="atr">id</span> связывает два элемента вместе, что позволяет пользователям нажать на <span class="tag">&lt;label&gt;</span> и передать фокус нужному полю формы.
+                    </p>
+                    <p>
+                        Для каждого элемента <span class="tag">&lt;input&gt;</span> задаём свой уникальный идентификатор через атрибут <span class="atr">id</span>, а внутри элемента <span class="tag">&lt;label&gt;</span> указываем этот же идентификатор как значение атрибута <span class="atr">for</span>, как показано в примере 2.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 2. Атрибут for</h6>
+                        <p>
+                            <img src="img/10_form-label-img/Screenshot_3.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <table class="data">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Работа со временем</th>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" value="t1" id="t1"></td>
+                                        <td><label for="t1">Создание пунктуальности 
+                                            (никогда не будете никуда опаздывать).</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" value="t2" id="t2"></td>
+                                        <td><label for="t2">Излечение от пунктуальности 
+                                            (никогда никуда не будете торопиться).</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" value="t3" id="t3"></td>
+                                        <td><label for="t3">Изменение восприятия времени.</label></td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <p>
+                        Также <span class="tag">&lt;label&gt;</span> применяется как один из элементов для вёрстки сложных форм. В примере 3 показана форма авторизации, в которой текст располагается рядом с полями для ввода логина и пароля.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 3. Форма для авторизации</h6>
+                        <p>
+                            <img src="img/10_form-label-img/Screenshot_4.png" alt="">
+                        </p>
+                        <p>
+                            <img src="img/10_form-label-img/Screenshot_5.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form action="#">
+                                <p><label for="textField" class="label">Логин:</label>
+                                   <input maxlength="25" name="login" id="textField"></p>
+                                <p><label for="passField" class="label">Пароль:</label>
+                                   <input type="password" maxlength="25" name="password" id="passField"></p>
+                                <p><input type="submit" value="Войти" class="submitField"></p>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>
