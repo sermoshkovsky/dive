@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автофокус</title>
+    <link rel="stylesheet" href="css/25_form-avtofokus.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="https://webref.ru/html" target="_blank">Справочник HTML</a> </li>
+                    <li><a href="https://webref.ru/css" target="_blank">Справочник CSS</a> </li>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="forms.html" target="_blank">Формы</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Автофокус</h1>
+                <section>
+                    <p>
+                        Фокус - это активность элемента формы, позволяющая производить с ним какие-то действия. Для текстового поля можно вводить текст, для списка выбирать пункт с помощью клавиатуры и др. Автофокус — это автоматически установленный фокус поля формы. К примеру, при открытии <i>google.ru</i> вы можете сразу набирать текст в строке поиска без лишних манипуляций с мышью и клавиатурой.
+                    </p>
+                    <p>
+                        Автофокус создаётся с помощью атрибута <span class="atr">autofocus</span>, который можно добавлять к следующим элементам : <span class="tag">&lt;button&gt;</span>, <span class="tag">&lt;input&gt;</span>, <span class="tag">&lt;select&gt;</span>, <span class="tag">&lt;textarea&gt;</span>. Для текстового поля синтаксис такой.
+                    </p>
+                    <p>
+                        <img src="img/25_form-avtofokus-img/Screenshot_1.png" alt="">
+                    </p>
+                    <p class="accent">
+                        На странице должен быть только один элемент с автофокусом.
+                    </p>
+                    <p>
+                        В примере 1 показано создание формы авторизации с автофокусом.
+                    </p>
+                    <p>
+                        Браузер обычно выделяет поле с фокусом рамкой.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 1. Использование автофокуса</h6>
+                        <p>
+                            <img src="img/25_form-avtofokus-img/Screenshot_2.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <fieldset>
+                                 <legend>Вход на сайт</legend>
+                                 <p><input name="login" autofocus></p>
+                                 <p><input type="password" name="pass"></p>
+                                 <p><input type="submit" value="Вход"></p>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <p>
+                        Поле с фокусом можно изменить через стили воспользовавшись псевдоклассом <span class="atr">:focus</span>, добавляя его к селектору <span class="slc">input</span>. Код HTML останется неизменным, появится только блок со стилями (пример 2).
+                    </p>
+                    <p>
+                        Как только поле получает фокус или, другими словами, в него можно вводить текст, то цвет фона у поля меняется и вокруг появляется голубое свечение. Оно сделано с помощью тени соответствующего цвета через свойство <span class="atr">box-shadow</span>.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 2. Изменение вида поля с фокусом</h6>
+                        <p>
+                            <img src="img/25_form-avtofokus-img/Screenshot_3.png" alt="">
+                            <img src="img/25_form-avtofokus-img/Screenshot_4.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <fieldset>
+                                 <legend>Вход на сайт</legend>
+                                 <p><input name="login" autofocus class="input"></p>
+                                 <p><input type="password" name="pass" class="input"></p>
+                                 <p><input type="submit" value="Вход" class="input"></p>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>

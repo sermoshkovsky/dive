@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адрес электронной почты</title>
+    <link rel="stylesheet" href="css/15_form-email.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="https://webref.ru/html" target="_blank">Справочник HTML</a> </li>
+                    <li><a href="https://webref.ru/css" target="_blank">Справочник CSS</a> </li>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="forms.html" target="_blank">Формы</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Адрес электронной почты</h1>
+                <p>
+                    В формах часто требуется ввод адреса электронной почты, для чего обычно применяется однострочное текстовое поле. Однако в отличие от него специальное поле для ввода адреса почты позволяет проверять корректность записи введённого адреса.
+                </p>
+                <p>
+                    Синтаксис создания поля следующий.
+                </p>
+                <p>
+                    <img src="img/15_form-email-img/Screenshot_1.png" alt="">
+                </p>
+                <p>
+                    Атрибуты по большей части совпадают с текстовым полем и приведены в табл. 1.
+                </p>
+                <table class="data">
+                    <caption>Табл. 1. Атрибуты поля для почтового адреса</caption>
+                    <tbody>
+                        <tr>
+                            <th>Атрибут</th>
+                            <th>Описание</th>
+                        </tr>
+                        <tr>
+                            <td class="atr">maxlength</td>
+                            <td>Устанавливает максимальное число символов, которое может быть введено пользователем в  поле. Когда это количество достигается при наборе, дальнейший ввод становится невозможным. Если этот атрибут опустить, то  можно вводить строку длинее самого поля. </td>
+                        </tr>
+                        <tr>
+                            <td class="atr">multiple</td>
+                            <td>Позволяет указывать несколько адресов через запятую.
+                            <p></p></td>
+                        </tr>
+                        <tr>
+                            <td class="atr">name</td>
+                            <td>Имя поля, предназначено для того, чтобы обработчик формы мог его идентифицировать.</td>
+                        </tr>
+                        <tr>
+                            <td class="atr">size</td>
+                            <td>Ширина  поля, которая определяется числом символов моноширинного шрифта. Иными словами, ширина задается количеством близстоящих букв одинаковой           ширины по горизонтали.</td>
+                        </tr>
+                        <tr>
+                            <td class="atr">value</td>
+                            <td>Начальный почтовый адрес отображаемый в поле.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    По сравнению со значением <span class="mean">text</span>, добавлен атрибут <span class="atr">multiple</span>, который позволяет вводить сразу несколько почтовых адресов.
+                </p>
+                <p>
+                    В примере 1 показано применение значения <span class="mean">email</span> для создания формы авторизации на сайте, где в качестве логина указывается адрес электронной почты.
+                </p>
+                <div class="example">
+                    <h6>Пример 1. Адрес электронной почты</h6>
+                    <p>
+                        <img src="img/15_form-email-img/Screenshot_2.png" alt="">
+                    </p>
+                    <div class="block">
+                        <form action="#">
+                            <p>Вход на сайт</p>
+                            <p>Email: <input type="email" name="login"></p>
+                            <p>Пароль: <input type="password" name="pass"></p>
+                            <p><input type="submit" value="Вход"></p>
+                        </form>
+                    </div>
+                </div>
+                <p>
+                    По своему виду поле для ввода адреса ничем не отличается от текстового поля. Различия проявляются, если указать некорректный адрес, в этом случае браузер выведет замечание об ошибке.
+                </p>
+                <p>
+                    Firefox поле с неверным адресом обозначает красной рамкой и сообщением об ошибке при отправке формы (рис. 1), 
+                </p>
+                <p>
+                    <img src="img/15_form-email-img/Screenshot_3.png" alt="">
+                </p>
+                <p>
+                    Chrome никак сразу не выделяет поле с ошибкой, но выводит сообщение при отправке формы (рис. 2).
+                </p>
+                <p>
+                    <img src="img/15_form-email-img/Screenshot_4.png" alt="">
+                </p>
+                <p>
+                    Аналогично поступает и Opera (рис. 3). Сама форма на сервер не отправляется, пока ошибка не будет исправлена.
+                </p>
+                <p>
+                    <img src="img/15_form-email-img/Screenshot_5.png" alt="">
+                </p>
+                <p>
+                    Другие популярные браузеры (IE, Safari) интерпретируют поле для адреса электронной почты как текстовое.
+                </p>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>

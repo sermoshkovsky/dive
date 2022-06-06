@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ползунок</title>
+    <link rel="stylesheet" href="css/19_form-polzunok.css">
+    <script>
+        function sizePic() {
+         size = document.getElementById("size").value;
+         img = document.getElementById("pic");
+         img.width = 60 + 20*size;
+        }
+    </script>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="https://webref.ru/html" target="_blank">Справочник HTML</a> </li>
+                    <li><a href="https://webref.ru/css" target="_blank">Справочник CSS</a> </li>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="forms.html" target="_blank">Формы</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Ползунок</h1>
+                <section>
+                    <p>
+                        Ползунок предназначен для ввода чисел в указанном диапазоне, но в отличие от поля <span class="tag">&lt;input <span class="atr">type</span>=<span class="mean">"number"</span>&gt;</span> имеет другой интерфейс и применяется в тех случаях, когда не особенно важно указывать точное значение. 
+                    </p>
+                    <p>
+                        Синтаксис создания ползунка следующий.
+                    </p>
+                    <p>
+                        <img src="img/19_form-polzunok-img/Screenshot_2.png" alt="">
+                    </p>
+                    <p>
+                        Здесь <span class="atr">min</span> — минимальное число в диапазоне (по умолчанию <span class="mean">0</span>), <span class="atr">max</span> — максимальное число (по умолчанию <span class="mean">100</span>), <span class="atr">step</span> — шаг изменения чисел (по умолчанию <span class="mean">1</span>), <span class="atr">value</span> — текущее значение. По умолчанию <span class="atr">value</span> вычисляется по формуле:
+                    </p>
+                    <p>
+                        <img src="img/19_form-polzunok-img/Screenshot_3.png" alt="">
+                    </p>
+                    <p>
+                        Если значение <span class="atr">max</span> меньше, чем значение <span class="atr">min</span>, то <span class="atr">value</span> равно <span class="atr">min</span>.
+                    </p>
+                    <p>
+                        Атрибуты не являются обязательными, их можно опустить, в таком случае они принимают значения по умолчанию.
+                    </p>
+                    <p>
+                        Независимо от минимального и максимального числа ширина ползунка остаётся одинаковой.
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Сами ползунки редко применяются в «чистом» виде, поскольку не обеспечивают необходимую обратную связь с пользователем, а вот в сочетании с JavaScript это становится мощным и удобным элементом интерфейса. 
+                    </p>
+                    <p>
+                        В примере 1 с помощью ползунка изменяется размер изображения, такая возможность часто используется в различных фотогалереях.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 1. Использование ползунка</h6>
+                        <p>
+                            <img src="img/19_form-polzunok-img/Screenshot_4.png" alt="">
+                        </p>
+                        <div class="block">
+                            <p>Размер рисунка: <input type="range" min="1" max="5" id="size" 
+                                oninput="sizePic()" value="3"></p>
+                             <p><img src="img/19_form-polzunok-img/puhh.png" alt="" id="pic"></p>
+                        </div>
+                    </div>
+                    <p>
+                        В данном примере при управлении ползунком срабатывает событие <span class="atr">oninput</span>, которое вызывает функцию <span class="mean">sizePic</span>. Эта функция изменяет размер изображения в зависимости от установленного пользователем значения ползунка. Тем самым ширина картинки при желании уменьшается или наоборот, увеличивается. 
+                    </p>
+                    <p>
+                        Старые версии браузеров, которые не поддерживают значение <span class="mean">range</span> для атрибута <span class="atr">type</span>, отображают поле формы как текстовое.
+                    </p>
+                </section>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>

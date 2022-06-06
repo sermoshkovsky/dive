@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь</title>
+    <link rel="stylesheet" href="css/20_form-kalendar.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="https://webref.ru/html" target="_blank">Справочник HTML</a> </li>
+                    <li><a href="https://webref.ru/css" target="_blank">Справочник CSS</a> </li>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="forms.html" target="_blank">Формы</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Календарь</h1>
+                <section>
+                    <p>
+                        Выбор даты применяется на сайтах, торгующих авиа и железнодорожными билетами, ведь посетителя интересует заказ билета на определённый день. Календари также применяются в блогах, где записи систематизируются по дате, и сайтах, связанных с разными событиями, например, спортивными. Так или иначе, календарь востребован и может быть добавлен следующим образом.
+                    </p>
+                    <p>
+                        <img src="img/20_form-kalendar-img/Screenshot_1.png" alt="">
+                    </p>
+                    <p>
+                        На сервер данные передаются в формате ГГГГ-ММ-ДД, например, 1998-08-17, а вид календаря может различаться в зависимости от браузера. Полностью поддерживает календарь только Opera и Chrome (рис. 1).
+                    </p>
+                    <figure>
+                        <img src="img/20_form-kalendar-img/Screenshot_2.png" alt="">
+                        <figcaption>Рис. 1. Календарь в браузере Opera</figcaption>
+                    </figure>
+                    <p>
+                        В примере 1 показано создание календаря для выбора произвольной даты.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 1. Календарь</h6>
+                        <p>
+                            <img src="img/20_form-kalendar-img/Screenshot_3.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p>Выберите дату: <input type="date" name="calendar">
+                                <input type="submit" value="Отправить"></p>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <p>
+                        Допустимо ограничить ввод даты заданным значением через атрибуты <span class="atr">min</span> и <span class="atr">max</span>, они соответственно указывают нижнюю и верхнюю дату. Так, если вам требуется сузить диапазон ввода до ±3 дней от даты 01.06.2017, то код запишется, как в примере 2.
+                    </p>
+                    <p>
+                        Текущая дата, заданная через атрибут <span class="atr">value</span>, подсвечивается фоном, неактивные дни, которые нельзя выбрать — серым цветом. 
+                    </p>
+                    <div class="example">
+                        <h6>Пример 2. Ограничение даты</h6>
+                        <p>
+                            <img src="img/20_form-kalendar-img/Screenshot_5.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p>Выберите дату: 
+                                <input type="date" name="calendar" value="2017-06-01"
+                                 max="2017-06-04" min="2017-05-29">
+                                <input type="submit" value="Отправить"></p>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <p>
+                        Кроме традиционного календаря, в котором можно выбрать дату, месяц и год, существует и календарь только для ввода месяца и недели. Они записываются в таком виде.
+                    </p>
+                    <p>
+                        <img src="img/20_form-kalendar-img/Screenshot_6.png" alt="">
+                    </p>
+                    <p>
+                        Выбор месяца происходит через аналогичный виджет, но в этом случае нельзя указать конкретную дату (рис. 3).
+                    </p>
+                    <figure>
+                        <img src="img/20_form-kalendar-img/Screenshot_7.png" alt="">
+                        <figcaption>Рис. 3 Выбор месяца</figcaption>
+                    </figure>
+                    <p>
+                        На сервер данные поля <span class="atr">type</span>=<span class="mean">"month"</span> пересылаются как ГГГГ-ММ, например, 2017-10.
+                    </p>
+                    <p>
+                        Похожим образом выглядит и виджет для выбора недели (рис. 4), где дополнительно выводится номер недели и выбрать можно только его. На сервер при этом значение отправляется как 2017-W38, где вначале указывается год, затем через дефис W и после него номер недели от начала года.
+                    </p>
+                    <figure>
+                        <img src="img/20_form-kalendar-img/Screenshot_8.png" alt="">
+                        <figcaption>Рис. 4. Выбор недели</figcaption>
+                    </figure>
+                    <p>
+                        В примере 3 показано создание поля для ввода месяца.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 3. Выбор месяца</h6>
+                        <p>
+                            <img src="img/20_form-kalendar-img/Screenshot_9.png" alt=""> 
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p>Укажите месяц: 
+                                <input type="month" name="month">
+                                <input type="submit" value="Отправить"></p>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>

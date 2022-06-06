@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузка файлов</title>
+    <link rel="stylesheet" href="css/14_form-zagruzka-failov.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="https://webref.ru/html" target="_blank">Справочник HTML</a> </li>
+                    <li><a href="https://webref.ru/css" target="_blank">Справочник CSS</a> </li>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="forms.html" target="_blank">Формы</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Загрузка файлов</h1>
+                <section>
+                    <p>
+                        Для того, чтобы можно было загружать на сервер один или несколько файлов, в форме применяется специальное поле. В браузерах Firefox, IE и Opera такой элемент отображается как текстовое поле, рядом с которым располагается кнопка с надписью «<i>Обзор...</i>» (рис. 1). В Safari и Chrome доступна только кнопка «<i>Выберите файл</i>» (рис. 2).
+                    </p>
+                    <p>
+                        <img src="img/14_form-zagruzka-failov-img/Screenshot_1.png" alt="">
+                    </p>
+                    <p>
+                        При нажатии на кнопку открывается окно для выбора файла, где можно указать, какой файл пользователь желает использовать.
+                    </p>
+                    <p>
+                        Синтаксис поля для отправки файла следующий.
+                    </p>
+                    <p>
+                        <img src="img/14_form-zagruzka-failov-img/Screenshot_2.png" alt="">
+                    </p>
+                    <p>
+                        Атрибуты перечислены в табл. 1.
+                    </p>
+                    <table class="data">
+                        <caption>Табл. 1. Атрибуты поля для отправки файла</caption>
+                        <tbody>
+                            <tr>
+                                <th>Атрибут</th>
+                                <th>Описание</th>
+                            </tr>
+                            <tr>
+                                <td class="atr">accept</td>
+                                <td>Устанавливает фильтр на типы файлов, которые вы можете отправить через поле загрузки файлов. </td>
+                            </tr>
+                            <tr>
+                                <td class="atr">size</td>
+                                <td>Ширина текстового поля, которое определяется числом символов моноширинного  шрифта.</td>
+                            </tr>
+                            <tr>
+                                <td class="atr">multiple</td>
+                                <td>Позволяет выбирать и загружать сразу несколько файлов.</td>
+                            </tr>
+                            <tr>
+                                <td class="atr">name</td>
+                                <td>Имя поля, используется для его идентификации обработчиком формы.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Прежде, чем использовать данное поле, в форме необходимо сделать следующее:
+                    </p>
+                    <ol>
+                        <li>задать метод отправки данных POST (<span class="atr">method</span>=<span class="mean">"post"</span>);</li>
+                        <li>установить у атрибута <span class="atr">enctype</span> значение <span class="mean">multipart/form-data</span>.</li>
+                    </ol>
+                    <p>
+                        Форма для загрузки файла продемонстрирована в примере 1.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 1. Создание поля для отправки файла</h6>
+                        <p>
+                            <img src="img/14_form-zagruzka-failov-img/Screenshot_3.png" alt="">  
+                        </p>
+                        <div class="block">
+                            <form enctype="multipart/form-data" method="post">
+                                <p><input type="file" name="f">
+                                <input type="submit" value="Отправить"></p>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <p>
+                        Хотя можно установить ширину поля через атрибут <span class="atr">size</span>, в действительности ширина никак не влияет на результат работы формы. В браузерах Safari и Chrome этот атрибут вообще никакого воздействия не оказывает.
+                    </p>
+                    <p>
+                        Атрибут <span class="atr">multiple</span> более важен, он позволяет не ограничиваться одним файлом для выбора, а указать их сразу несколько для одновременной загрузки.
+                    </p>
+                    <p>
+                        Если атрибут <span class="atr">accept</span> не указывать, тогда добавляются и загружаются файлы любого типа. Наличие <span class="atr">accept</span> позволяет ограничить выбор файла, что особенно важно, когда требуется загрузить только изображение или видео. 
+                    </p>
+                    <p>
+                        В качестве значения выступает <a href="http://htmlbook.ru/html/value/mime" target="_blank">MIME-тип</a>, несколько значений разделяются между собой запятой. Также можно использовать следующие ключевые слова:
+                    </p>
+                    <ul>
+                        <li><span class="mean">audio/*</span> — выбор музыкальных файлов любого типа;</li>
+                        <li><span class="mean">image/*</span> — графические файлы;</li>
+                        <li><span class="mean">video/*</span> — видеофайлы.</li>
+                    </ul>
+                    <p>
+                        В табл. 2 показаны некоторые допустимые значения атрибута <span class="atr">accept</span>.
+                    </p>
+                    <table class="data">
+                        <caption>Табл. 2.  Типы файлов</caption>
+                        <tbody>
+                            <tr>
+                                <th>Значение</th>
+                                <th>Описание</th>
+                            </tr>
+                            <tr>
+                                <td class="mean">image/jpeg</td>
+                                <td>Только файлы в формате JPEG.</td>
+                            </tr>
+                            <tr>
+                                <td class="mean">image/jpeg,image/png</td>
+                                <td>Только файлы в формате JPEG и PNG.</td>
+                            </tr>
+                            <tr>
+                                <td class="mean">image/*</td>
+                                <td>Любые графические файлы.</td>
+                            </tr>
+                            <tr>
+                                <td class="mean">image/*,video/*</td>
+                                <td>Любые графические и видеофайлы.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Использование дополнительных атрибутов показано в примере 2.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 2. Загрузка фотографий</h6>
+                        <p>
+                            <img src="img/14_form-zagruzka-failov-img/Screenshot_4.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form enctype="multipart/form-data" method="post">
+                                <p>Загрузите ваши фотографии на сервер</p>
+                                <p><input type="file" name="photo" multiple accept="image/*,image/jpeg">
+                                <input type="submit" value="Отправить"></p>
+                            </form>
+                        </div>
+                    </div>
+                    <p>
+                        Не все браузеры поддерживают новые атрибуты. IE полностью игнорирует <span class="atr">multiple</span> и <span class="atr">accept</span>, Safari не поддерживает <span class="atr">accept</span>, а Firefox не работает с <em>MIME-типом</em>, только с ключевыми словами. Поэтому в примере выше специально для Firefox установлено значение <span class="mean">image/*,image/jpeg</span>. Также учтите странную ошибку в Опере, она не допускает пробелы после запятой внутри <span class="atr">accept</span>.
+                    </p>
+                </section>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>

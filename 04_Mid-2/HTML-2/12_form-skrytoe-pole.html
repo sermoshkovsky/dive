@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скрытое поле</title>
+    <link rel="stylesheet" href="css/12_form-skrytoe-pole.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="https://webref.ru/html" target="_blank">Справочник HTML</a> </li>
+                    <li><a href="https://webref.ru/css" target="_blank">Справочник CSS</a> </li>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="forms.html" target="_blank">Формы</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Скрытое поле</h1>
+                <p>
+                    Часто возникает ситуация, когда требуется передать в форме некоторые промежуточные данные, которые не должны изменяться пользователем. Более того, такие данные не должны показываться пользователю, поскольку носят технический характер и обычно служат для передачи некоторой информации от страницы к странице.
+                </p>
+                <p>
+                    Для этой цели применяется скрытое поле. Оно не отображается на странице и прячет своё содержимое от пользователя. Посетитель не может в него ничего внести или напечатать.
+                </p>
+                <p>
+                    Синтаксис создания скрытого поля.
+                </p>
+                <p>
+                    <img src="img/12_form-skrytoe-pole-img/Screenshot_1.png" alt="">
+                </p>
+                <p>
+                    Атрибуты перечислены в табл. 1.
+                </p>
+                <table class="data">
+                    <caption>Табл. 1. Атрибуты скрытого поля</caption>
+                    <tbody>
+                        <tr>
+                            <th>Атрибут</th>
+                            <th>Описание</th>
+                        </tr>
+                        <tr>
+                            <td class="atr">name</td>
+                            <td>Имя поля для его идентификации обработчиком формы.</td>
+                        </tr>
+                        <tr>
+                            <td class="atr">value</td>
+                            <td>Значение поля, определяющее, какая информация будет отправлена на сервер.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    Пример использования скрытых полей приведен в примере 1.
+                </p>
+                <div class="example">
+                    <h6>Пример 1. Использование скрытого поля</h6>
+                    <p>
+                        <img src="img/12_form-skrytoe-pole-img/Screenshot_2.png" alt="">
+                    </p>
+                    <div class="block">
+                        <form action="#" method="post">
+                            <p><b>Напишите любимое слово и нажмите кнопку Отправить 
+                            (никакие данные не будут передаваться на сервер!):</b></p>
+                            <p><input size="25" name="word">
+                            <input type="hidden" name="name" value="Vasya">
+                            <input type="hidden" name="password" value="pupkin"></p>
+                            <p><input type="submit" value="Отправить"></p>
+                        </form>
+                    </div>
+                </div>
+                <p>
+                    В данном примере показано создание двух скрытых полей, одно из них носит имя <span class="mean">name</span> и получает значение <span class="mean">Vasya</span>, а второе именуется <span class="mean">password</span> со значением <span class="mean">pupkin</span>. В результате отправки формы обработчику, указанному в атрибуте <span class="atr">action</span>, программа может легко прочитать эти данные и интерпретировать их по усмотрению разработчика.
+                </p>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>

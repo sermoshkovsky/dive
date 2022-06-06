@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Группирование элементов форм</title>
+    <link rel="stylesheet" href="css/11_form-group.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="https://webref.ru/html" target="_blank">Справочник HTML</a> </li>
+                    <li><a href="https://webref.ru/css" target="_blank">Справочник CSS</a> </li>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="forms.html" target="_blank">Формы</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Группирование элементов форм</h1>
+                <p>
+                    При создании сложной формы можно группировать некоторые элементы форм между собой. Такое группирование удобно для пользователя и позволяет визуально отделить один логический блок от другого. 
+                </p>
+                <p>
+                    Для этой цели применяется элемент <a href="http://htmlbook.ru/html/fieldset" target="_blank"><span class="tag">&lt;fieldset&gt;</span></a>, который создаёт рамку в форме с заголовком или без него. Структура кода следующая.
+                </p>
+                <p>
+                    <img src="img/11_form-group-img/Screenshot_1.png" alt="">
+                </p>
+                <p>
+                    Элемент <a href="http://htmlbook.ru/html/legend" target="_blank"><span class="tag">&lt;legend&gt;</span></a>  не обязателен, но если присутствует, должен идти сразу же после тега <span class="tag">&lt;fieldset&gt;</span>. Другие теги или текст перед <span class="tag">&lt;legend&gt;</span> недопустимы. Внутри <span class="tag">&lt;legend&gt;</span> можно использовать теги форматирования вроде <span class="tag">&lt;b&gt;</span>, <span class="tag">&lt;i&gt;</span>, <span class="tag">&lt;sup&gt;</span>, <span class="tag">&lt;sub&gt;</span> и др.
+                </p>
+                <p>
+                    В примере 1 показано использование группирование на практике.
+                </p>
+                <p>
+                    Вид рамки в браузерах в целом одинаков — заголовок располагается в левом верхнем углу, встраиваясь прямо в рамку.
+                </p>
+                <div class="example">
+                    <h6>Пример 1. Создание группы</h6>
+                    <p>
+                        <img src="img/11_form-group-img/Screenshot_2.png" alt="">
+                    </p>
+                    <div class="block">
+                        <form>
+                            <fieldset>
+                             <legend>Вход на сайт</legend>
+                             <p>Логин: <input name="login"></p>
+                             <p>Пароль: <input type="password" name="pass"></p>
+                             <p><input type="submit" value="Вход"></p>
+                            </fieldset>
+                           </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блокирование элементов форм</title>
+    <link rel="stylesheet" href="css/24_form-blokirovanie.css">
+    <script>
+        function agreeForm(f) {
+         // Если поставлен флажок, снимаем блокирование кнопки
+         if (f.agree.checked) f.submit.disabled = 0 
+         // В противном случае вновь блокируем кнопку
+         else f.submit.disabled = 1
+        }
+    </script>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="https://webref.ru/html" target="_blank">Справочник HTML</a> </li>
+                    <li><a href="https://webref.ru/css" target="_blank">Справочник CSS</a> </li>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="forms.html" target="_blank">Формы</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Блокирование элементов форм</h1>
+                <p>
+                    У любого элемента формы есть два состояния, которые ограничивают доступ к элементу или ввод данных, — блокирование (<span class="atr">disabled</span>) и только для чтения (<span class="atr">readonly</span>).
+                </p>
+                <section>
+                    <h2>Блокирование</h2>
+                    <p>
+                        Блокирование элемента не позволяет вообще производить с ним каких-либо действий, в том числе выделять содержимое текстового поля, изменять его или активизировать. К тому же такие поля не отправляются на сервер.
+                    </p>
+                    <p class="accent">
+                        Некоторые браузеры позволяют выделять и копировать содержимое заблокированного текстового поля, но все остальные действия недоступны.
+                    </p>
+                    <p>
+                        На рис. 1 представлены разные элементы форм в заблокированном состоянии.
+                    </p>
+                    <figure>
+                        <img src="img/24_form-blokirovanie-img/Screenshot_1.png" alt="">
+                        <figcaption>Рис. 1. Вид заблокированных элементов в Chrome</figcaption>
+                    </figure>
+                    <p>
+                        Для блокирования элемента формы используется атрибут <span class="atr">disabled</span>. Добавление этого атрибута разрешает отображать элемент формы, но не позволяет изменять его.
+                    </p>
+                    <p>
+                        Блокирование элементов форм обычно используется для того, чтобы динамически с помощью скриптов изменять значение поля. Пользователь не должен в подобном случае иметь доступ к полю, поэтому оно блокируется. В примере 1 показано применение скриптов для изменения блокировки кнопки.
+                    </p>
+                    <p>
+                        В данном примере применяется блокирование кнопки, но оно снимается, как только пользователь поставит флажок возле текста «<em>Я согласен со всеми условиями</em>».
+                    </p>
+                    <div class="example">
+                        <h6>Пример 1. Блокирования поля</h6>
+                        <p>
+                            <img src="img/24_form-blokirovanie-img/Screenshot_2.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p><textarea cols="30" rows="4" disabled>
+                                 Типовой договор
+                                 Отдаю свою душу, а взамен получаю здоровье и бессмертие. 
+                                </textarea></p>
+                                <p><input type="checkbox" name="agree" onclick="agreeForm(this.form)"> 
+                                 Я согласен со всеми условиями</p>
+                                <p><input type="submit" name="submit" value="Далее" disabled></p>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2>Поле только для чтения</h2>
+                    <p>
+                        Поля формы можно не только блокировать, но и переводить их в режим только для чтения. В этом случае доступ к ним сохраняется, но изменять значения заданные по умолчанию нельзя. Разумеется, речь идёт только о полях, где требуется вводить текст. Выделять и копировать текст можно, но изменить не получится.
+                    </p>
+                    <p>
+                        Для установки режима «<em>только для чтения</em>» используется атрибут <span class="atr">readonly</span>, он добавляется к тегу <span class="tag">&lt;input&gt;</span> или <span class="tag">&lt;textarea&gt;</span>. На вид элемента формы это никак не влияет, но как было уже замечено, модифицировать значение поля не удастся.
+                    </p>
+                    <p>
+                        Ниже представлены два поля с многострочным текстом, одно из которых находится в обычном режиме, а второе — «<em>только для чтения</em>».
+                    </p>
+                    <div class="example">
+                        <h6>Пример 2. Использование readonly</h6>
+                        <p>
+                            <img src="img/24_form-blokirovanie-img/Screenshot_4.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p><textarea>Обычное текстовое поле</textarea>
+                                <textarea readonly>Поле только для чтения</textarea></p>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>

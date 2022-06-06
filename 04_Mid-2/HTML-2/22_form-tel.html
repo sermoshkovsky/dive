@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Номер телефона</title>
+    <link rel="stylesheet" href="css/22_form-tel.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="https://webref.ru/html" target="_blank">Справочник HTML</a> </li>
+                    <li><a href="https://webref.ru/css" target="_blank">Справочник CSS</a> </li>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="forms.html" target="_blank">Формы</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Номер телефона</h1>
+                <p>
+                    Чтобы ввести телефонный номер в форме используйте для этого специальное поле, по своему виду и работе оно совпадает с текстовым полем. Синтаксис создания поля для телефона следующий.
+                </p>
+                <p>
+                    <img src="img/22_form-tel-img/Screenshot_1.png" alt="">
+                </p>
+                <p>
+                    Атрибуты полностью совпадают с текстовым полем.
+                </p>
+                <p>
+                    В отличие от веб-адреса или адреса электронной почты, поле для телефона не проверяется на правильность синтаксиса. Это связано с тем, что телефонные номера в разных местах мира могут иметь самые разнообразные формы написания, включать цифры, буквы и другие символы. 
+                </p>
+                <p>
+                    Смысл применения этого поля в настройке шаблона ввода телефона, который используется в определённом городе или стране, а также в некоторых расширенных возможностях по управлению стилями. Кроме того, при вводе номера телефона с планшета или смартфона меняется вид клавиатуры.
+                </p>
+                <p>
+                    Создание поля для телефона показано в примере 1. Требуется ввести телефон в указанном формате, иначе браузер выведет сообщение об ошибке и не станет отправлять форму, пока поле не будет заполнено корректно.
+                </p>
+                <div class="example">
+                    <h6>Пример 1. Поле для телефона</h6>
+                    <p>
+                        <img src="img/22_form-tel-img/Screenshot_2.png" alt="">
+                    </p>
+                    <div class="block">
+                        <form>
+                            <p>Ваше имя: <input name="login"></p>
+                            <p>Телефон в формате 2xxx-xxx: <input type="tel" name="tel" 
+                            pattern="2[0-9]{3}-[0-9]{3}"></p>
+                            <p><input type="submit" value="Отправить"></p>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>

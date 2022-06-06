@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор цвета</title>
+    <link rel="stylesheet" href="css/17_form-color.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="https://webref.ru/html" target="_blank">Справочник HTML</a> </li>
+                    <li><a href="https://webref.ru/css" target="_blank">Справочник CSS</a> </li>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="forms.html" target="_blank">Формы</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Выбор цвета</h1>
+                <p>
+                    Для выбора шестнадцатеричного значения цвета в формы HTML5 включено специальное поле, которое позволяет указать желаемый цвет.
+                </p>
+                <p>
+                    Синтаксис создания такого поля следующий.
+                </p>
+                <p>
+                    <img src="img/17_form-color-img/Screenshot_1.png" alt="">
+                </p>
+                <p>
+                    Атрибут <span class="atr">value</span> необходим для установки исходного цвета и может быть опущен, <span class="atr">name</span> используется для идентификации получаемого значения.
+                </p>
+                <p>
+                    Вид поля для выбора цвета возложен на браузеры и может различаться по своему оформлению. В действительности же пока только Opera и Chrome корректно работает с выбором цвета, остальные браузеры покажут стандартное текстовое поле.
+                </p>
+                <p>
+                    В примере 1 показано, как создать поле для указания желаемого цвета
+                </p>
+                <div class="example">
+                    <h6>Пример 1. Выбор цвета</h6>
+                    <p>
+                        <img src="img/17_form-color-img/Screenshot_2.png" alt="">
+                    </p>
+                    <div class="block">
+                        <form action="#">
+                            <p>Укажите цвет фона: <input type="color" name="bg" value="#ff0000">
+                            <input type="submit" value="Выбрать"></p>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>

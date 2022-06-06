@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ввод чисел</title>
+    <link rel="stylesheet" href="css/18_form-number.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="https://webref.ru/html" target="_blank">Справочник HTML</a> </li>
+                    <li><a href="https://webref.ru/css" target="_blank">Справочник CSS</a> </li>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="forms.html" target="_blank">Формы</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Ввод чисел</h1>
+                <p>
+                    Для ввода чисел предназначено специальное поле, которое допускает ограничения по нижней и верхней границе, а также устанавливает шаг приращения. Само поле для ввода чисел похоже на обычное текстовое поле, но со стрелками, которые позволяют увеличивать и уменьшать значение (рис. 1).
+                </p>
+                <p>
+                    <img src="img/18_form-number-img/Screenshot_1.png" alt="">
+                </p>
+                <p>
+                    Синтаксис создания поля следующий:
+                </p>
+                <p>
+                    <img src="img/18_form-number-img/Screenshot_2.png" alt="">
+                </p>
+                <p>
+                    Допустимые атрибуты перечислены в табл. 1.
+                </p>
+                <table class="data">
+                    <caption>Табл. 1. Атрибуты поля с числом</caption>
+                    <tbody>
+                        <tr>
+                            <th>Атрибут</th>
+                            <th>Описание</th>
+                        </tr>
+                        <tr>
+                            <td class="atr">min</td>
+                            <td>Минимальное значение.</td>
+                        </tr>
+                        <tr>
+                            <td class="atr">max</td>
+                            <td>Максимальное значение.</td>
+                        </tr>
+                        <tr>
+                            <td class="atr">size</td>
+                            <td>Ширина поля.</td>
+                        </tr>
+                        <tr>
+                            <td class="atr">step</td>
+                            <td>Шаг приращения числа. Может быть как целым (2), так и дробным (0.2).</td>
+                        </tr>
+                        <tr>
+                            <td class="atr">name</td>
+                            <td>Имя поля, предназначено для того, чтобы обработчик формы мог его идентифицировать.</td>
+                        </tr>
+                        <tr>
+                            <td class="atr">value</td>
+                            <td>Начальное число, которое выводится в поле.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    Для ограничения введённого числа предназначены атрибуты <span class="atr">min</span> и <span class="atr">max</span> - они могут принимать отрицательное и положительное значение. При достижении верхнего или нижнего порога стрелки в поле в зависимости от браузера блокируются или не дают никакого эффекта (пример 1). 
+                </p>
+                <p>
+                    Несмотря на такие запреты, в любом случае в поле самостоятельно можно вводить любые значения, включая текст. Атрибуты <span class="atr">min</span> и <span class="atr">max</span> работают только при использовании стрелок в поле.
+                </p>
+                <div class="example">
+                    <h6>Пример 1. Ограничение ввода чисел</h6>
+                    <p>
+                        <img src="img/18_form-number-img/Screenshot_3.png" alt="">
+                    </p>
+                    <div class="block">
+                        <form action="#">
+                            <p>Введите число от 1 до 10:</p>
+                            <p><input type="number" size="3" name="num" min="1" max="10" value="1"></p>
+                        </form>
+                    </div>
+                </div>
+                <p>
+                    Если значение <span class="atr">min</span> превышает <span class="atr">max</span>, то атрибут <span class="atr">min</span> игнорируется.
+                </p>
+                <p>
+                    Атрибут <span class="atr">step</span> задаёт шаг приращения и по умолчанию равен 1. В то же время значение может быть и дробным числом, как показано в примере 2.
+                </p>
+                <div class="example">
+                    <h6>Пример 2. Шаг приращения</h6>
+                    <p>
+                        <img src="img/18_form-number-img/Screenshot_4.png" alt="">
+                    </p>
+                    <div class="block">
+                        <form action="#">
+                            <p>Укажите нормальную среднюю температуру человека:</p>
+                            <p><input type="number" name="t" value="35" min="35" max="40" step="0.2"></p>
+                        </form>
+                    </div>
+                </div>
+                <p>
+                    Браузеры плохо поддерживают это поле, пока лишь это делает Chrome и Opera. В остальных браузерах поле для ввода числа приобретает вид обычного текстового поля.
+                </p>
+            </section>
+        </div>
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>
