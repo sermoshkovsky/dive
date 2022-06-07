@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подсказывающий текст</title>
+    <link rel="stylesheet" href="css/26_form-placeholder.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="https://webref.ru/html" target="_blank">Справочник HTML</a> </li>
+                    <li><a href="https://webref.ru/css" target="_blank">Справочник CSS</a> </li>
+                    <li><a href="../../00_Home/index.html" target="_blank">Главная </a> </li>
+                    <li><a href="../../02_Junior/Junior_CSS-1/css-1.html"   target="_blank">CSS-1 </a> </li>
+                    <li><a href="../../02_Junior/html-junior.html" target="_blank">HTML-1 </a> </li>
+                    <li><a href="forms.html" target="_blank">Формы</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h1>Подсказывающий текст</h1>
+                <section>
+                    <p>
+                        В дизайне часто требуется вставить пояснение к текстовому полю, но не всегда для этого имеется место. Решением в таком случае является добавление подсказывающего текста непосредственно внутрь поля, а при получении фокуса или вводе текста подсказка пропадает.
+                    </p>
+                    <p>
+                        Это делается с помощью атрибута <span class="atr">placeholder</span>, значением которого служит любой текст. Подсказка делается для полей <span class="mean">text</span>, <span class="mean">password</span>, <span class="mean">search</span>, <span class="mean">email</span>, <span class="mean">tel</span>, <span class="mean">url</span> и <span class="tag">&lt;textarea&gt;</span>, иными словами, везде, где вводится текст.
+                    </p>
+                    <p>
+                        Подсказывающий текст отображается серым цветом, и в зависимости от браузера исчезает при получении фокуса или вводе текста. Подсказка не появляется при наличии атрибута <span class="atr">value</span> с непустым значением.
+                    </p>
+                    <p>
+                        В примере 1 показано добавление подсказки к полям формы для создания авторизации.
+                    </p>
+                    <div class="example">
+                        <h6>Пример 1. Подсказывающий текст</h6>
+                        <p>
+                            <img src="img/26_form-placeholder-img/Screenshot_1.png" alt="">
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p><input name="login" placeholder="Логин"></p>
+                                <p><input name="pass" type="password" placeholder="Пароль"></p>
+                                <p><input type="submit" value="Вход"></p>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <p>
+                        Серый цвет, используемый по умолчанию, выбран удачно, но не всегда вписывается в дизайн страницы, особенно если меняется цвет фона полей формы. Для изменения цвета текста выводимого через атрибут <span class="atr">placeholder</span> в Firefox применяется псевдоэлемент <span class="atr">::-moz-placeholder</span>.
+                    </p>
+                    <p>
+                        <img src="img/26_form-placeholder-img/Screenshot_2.png" alt="">
+                    </p>
+                    <p>
+                        В Safari, Opera и Chrome стиль текста меняется следующим образом.
+                    </p>
+                    <p>
+                        <img src="img/26_form-placeholder-img/Screenshot_3.png" alt="">
+                    </p>
+                    <p>
+                        В IE используется другой подход.
+                    </p>
+                    <p>
+                        <img src="img/26_form-placeholder-img/Screenshot_4.png" alt="">
+                    </p>
+                    <p>
+                        Соединяя воедино эти стили получим страницу, одинаково работающую во всех современных браузерах (пример 2).
+                    </p>
+                    <div class="example">
+                        <h6>Пример 2. Цвет подсказывающего текста</h6>
+                        <p>
+                            <img src="img/26_form-placeholder-img/Screenshot_5.png" alt="">
+                            <img src="img/26_form-placeholder-img/Screenshot_6.png" alt=""> 
+                        </p>
+                        <div class="block">
+                            <form>
+                                <p><input name="login" placeholder="Логин" class="input"></p>
+                                <p><input name="pass" type="password" placeholder="Пароль" class="input"></p>
+                                <p><button type="submit">Вход</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div> 
+        <a href="#header" class="btn">&#9585;&#9586;</a>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p>&copy; Sergey Moshkovsky </p>
+        </div>
+    </footer>
+</body>
+</html>
