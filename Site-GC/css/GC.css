@@ -1,0 +1,204 @@
+body {
+    background-color: azure;
+    font-family: 'Lucida Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+    font-weight: bold;
+    margin: .3em;
+}
+h1 {
+    font-size: 250%;
+}
+h2 {
+    font-size: 200%;
+}
+h3 {
+    font-size: 150%;
+}
+h4 {
+    font-size: 150%;
+    color:brown;
+    margin: 0 .3em;
+}
+h5 {
+    font-size: 120%;
+    background-color: pink;
+    padding: 5px;
+    color: black;
+}
+h6 {
+    font-size: 110%;
+    display: inline-block;
+    color: black;
+    background-color: pink;
+    padding: 0 5px;
+}
+ul {
+    list-style: disc;
+    padding-left: 30px;
+}
+ol {
+    list-style: decimal;
+    padding-left: 30px;
+}
+dd {
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+.container {
+    width: 1110px;
+    margin: 0 auto;
+}
+.header {
+    padding: 20px;
+    background-color: aqua;
+}
+.footer {
+    background-color: indigo;
+    color: azure;
+    padding: 20px;
+}
+.footer p {
+    padding-left: 120px;
+}
+.btn {
+    border-radius: 100%;
+    border: 2px pink solid;
+    padding: 20px 20px;
+    text-align: center;
+    display: inline-block;
+    margin: 10px 0;
+    text-decoration: none;
+    font-weight: bold;
+    color: pink;
+    position: fixed;
+    top: 80%;
+    left: 1%;
+}
+.tags {
+    font-size: 35px;
+    margin: 0;
+    color: rgb(64, 64, 95);
+    font-weight: 700;
+}
+nav ul {
+    background: #0083ca; /* Цвет фона */
+    list-style: none; /* Убираем маркеры */
+    margin: 0; padding: 0; /* Обнуляем все отступы */
+    overflow: hidden; /* Отменяем обтекание */
+}
+nav li {
+    float: left; /* Выстраиваем по горизонтали */
+}
+nav a {
+    display: block; /* Блочный элемент */
+    padding: 7px 15px; /* Поля вокруг текста */
+    color: brown; /* Цвет текста */
+    text-decoration: none;
+    background: rgb(102, 199, 245);
+    margin: 10px;
+}
+
+/* Теги   
+<span class="tag">&lt;&gt;</span>
+*/
+.tag {
+    color: rgb(73, 73, 150);
+    font-size: 18px;
+}
+/* Селектор 
+<span class="slc"></span>
+*/
+.slc {
+    color: rgb(206, 50, 50);
+    font-size: 18px;
+}
+/* Свойство/Атрибуты 
+<span class="atr"></span>
+*/
+.atr {
+    color: orange;
+    font-size: 18px;
+}
+/* Значение 
+<span class="mean"></span>
+*/
+.mean {
+    color: rgb(4, 190, 4);
+    font-size: 18px;
+}
+.mean1 {
+    color: rgb(4, 190, 4);
+    font-size: 35px;
+}
+.titles {
+    display: flex;
+}
+.titles p {
+    padding-left: 20px;
+}
+.sintacsis {
+    border: 1px solid pink;
+    display: inline-block;
+    padding: 10px;
+    background: #fff;
+}
+.example {
+    border: 3px pink solid;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.block, .block2 {
+    background: aquamarine;
+    padding: 5px;
+}
+.block2 {
+    width: 50%;
+}
+.misk {
+    color: rgb(4, 190, 4);
+}
+.accent {
+    border-left: 5px solid blue;
+    background-color: rgb(208, 243, 231);
+    padding: 20px;
+    width: 94%;
+    margin-left: 20px;
+}
+
+.data {
+    margin: auto auto 1rem;
+    border-spacing: 2px;
+    border-collapse: collapse;
+    width: 100%;
+    display: table;
+    text-indent: initial;
+    border: 1px solid grey;
+}
+caption {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+td, th {
+    border: 1px solid rgba(128, 128, 128, 0.37);
+    padding: 5px;
+}
+th {
+    background: rgba(128, 128, 128, 0.199);
+    padding: 15px;
+}
+
+figcaption {
+    color: brown;
+    font-style: italic;
+}
+
+.tab {
+    border: 2px grey outset;
+    padding: 1px 7px;
+    background-color: rgba(128, 128, 128, 0.26);
+}
+
