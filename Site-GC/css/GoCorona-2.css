@@ -23,15 +23,134 @@ html, body {
     height: 100%; /* Высота занимает весь экран*/
     line-height: 1; /* Для блочных элементов установлена одинарная высота строки*/
 }
+
 /* ---------- */
+
 body {
     font-family: Rubik; /* Семейство шрифтов*/
     font-size: 12px; /* Размер шрифта*/
     color: #616161; /* Цвет шрифта*/
 }
+
 /* ---------- */
-[class*="__container"] { /* Элемент содержит __container */
-    padding: 0px 15px; /* Отступы безопасности*/
-    max-width: 1087px; /* Максимальная ширина 1057px + 30px отступы безопасности*/
+
+.wrapper {
+    overflow: hidden; /* Отображается только область внутри элемента, остальное будет скрыто.*/
+    display: flex; /* Устанавливаем, как блочный элемент, который выкладывает содержимое согласно флекс-модели*/
+    flex-direction: column; /* Прибиваем подвал к низу экрана*/
+    min-height: 100%; /* Минимальная высота элемента*/
+}
+
+.main {
+    flex: 1 1 auto; /* Позволить увеличиваться, чтобы он расширялся и прижал <footer> книзу*/
+ }
+
+ /* ---------------- */
+ [class*="__container"] { /* Элемент содержит __container */
+    max-width: 1087px; /* Максимальная ширина */
     margin: 0px auto; /* Выстраиваем контейнер по центру*/
+    padding: 0px 15px; /* Отступы безопсности*/
+}
+
+  /* PC */
+  @media (max-width: 1087px) {
+    [class*="__container"] {
+        max-width: 970px;
+    }
+  }
+
+
+/* MOBILE */
+@media (max-width: 767.98px) {
+    [class*="__container"] {
+        max-width: none;
+    }
+}
+
+
+ .header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+.header__container {
+    display: flex; 
+    min-height: 114px;
+   align-items: center;
+}
+
+
+.header__logo {
+}
+.header__menu {
+    flex: 1 1 auto;
+}
+.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+.menu__list {
+    display: flex;
+}
+.menu__item {
+    margin-right: 40px;
+}
+
+
+.menu__link {
+    font-family: Raleway;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 1.2;
+    color: #000;
+    letter-spacing: 0.14em;
+}
+.header__button {
+    flex: 0 0 252px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+  /* TABLET */
+  @media (max-width: 991.98px) {
+    [class*="__container"] {
+        max-width: 750px;
+    }
+    .header__container {
+        min-height: 80px;
+    }
+    .menu__item {
+        margin-right: 30px;
+    }
+    .header__button {
+        flex: 0 0 170px; 
+    }
+}
+
+
+.button {
+    display: inline-block;
+    font-family: Raleway;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.14em;
+    color: #FCFDFE;
+    padding: 14px 30px;
+    border-radius: 5px;
+    background-color: #EC5863;
+    transition: background-color 0.3s ease 0s;
+}
+.button:hover {
+    background-color: #a0595e;
+}
+.button-blue {
+    background-color: #4285F4;
+}
+.button-blue:hover {
+    background-color: #5875a5;
 }

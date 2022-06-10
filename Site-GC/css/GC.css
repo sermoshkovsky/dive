@@ -37,15 +37,16 @@ h6 {
     padding: 0 5px;
 }
 ul {
-    list-style: disc;
     padding-left: 30px;
 }
 ol {
-    list-style: decimal;
     padding-left: 30px;
 }
+dl {
+    padding-left: 10px;
+}
 dd {
-    padding-left: 20px;
+    padding-left: 5px;
     margin-bottom: 5px;
 }
 .container {
