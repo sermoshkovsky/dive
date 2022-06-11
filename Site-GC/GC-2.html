@@ -640,348 +640,448 @@
                                 </p>
                             </section>
                             <section>
-                                <h3>/* MOBILE */ @media (max-width: 767.98px)</h3>
+                                <h3>/* MOBILE */ @media (max-width: 767.98px). "Бургер"</h3>
+                                <p>
+                                    Последний <em>breakpoint</em> и здесь нам уже нужно что-то кардинально менять. Сейчас мне нужно придумать - что делать с меню? Как я уже говорил, я не буду здесь использовать java script - соответственно, меню "бургер"  у меня здесь не будет использоваться. В то же время, давайте попробуем сделать меню "бургер", но без java-script
+                                </p>
+                                <p>
+                                    Что мне для этого нужно? Мне нужен сам "бургер". Поэтому я немножко перепишу здесь меню. Вызову свой сниппет 
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/GC-2_img/Screenshot_66.png" alt="">
+                                </p>
+
+                                <!-- <div class="header__menu menu">
+                                    <button type="button" class="menu__icon icon-menu"></button>
+                                    <nav class="menu__body">
+                                        <ul class="menu__list">
+                                            <li class="menu__item"><a href="" class="menu__link"></a></li>
+                                        </ul>
+                                    </nav>
+                                </div> -->
+
+                                <p>
+                                    Потому что мне нужно кнопка бургера, скопируем отсюда строку <em>"button"</em> и добавим ее пока без изменений, в качестве заготовки, в наш <em>html</em> в блок <span class="slc">"header__button"</span>
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/GC-2_img/Screenshot_67.png" alt="">
+                                </p>
+                                <p>
+                                    И, также мне надо <span class="slc">"menu__list"</span> обернуть в <span class="slc">"menu__body"</span> - немножко поменяю  структуру. У нас было 
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/GC-2_img/Screenshot_68.png" alt="">
+                                </p>
+                                <p>
+                                    Теперь оба блока будут собраны таким образом 
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/GC-2_img/Screenshot_69.png" alt="">
+                                </p>
+                                <p>
+                                    Теперь при нажатии на кнопку <span class="slc">"button"</span>, которую мы добавили в <span class="slc">"header__button"</span>, 
+                                    у меня будет открываться ящик <span class="slc">"menu__body"</span>. Я попробую это реализовать без java-script.  
+                                </p>
+                                <p>
+                                    Поэтому, я поменяю <span class="tag">&lt;button&gt;</span> на ссылку <span class="tag">&lt;a&gt;</span> и поставлю <em>хеш</em> <span class="atr">href</span>=<span class="mean">"#menu"</span>. 
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/GC-2_img/Screenshot_70.png" alt="">
+                                </p>
+                                <p>
+                                    Для <span class="tag">&lt;nav&gt;</span> я добавлю <span class="atr">id</span>=<span class="mean">"menu"</span>
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/GC-2_img/Screenshot_71.png" alt="">
+                                </p>
+                                <p>
+                                    Надеюсь, у меня все получится, а для вас будет дополнительная полезность. И сейчас мне нужно сверстать сам "бургер". Поскольку вместо <span class="tag">&lt;button&gt;</span> мы используем ссылку <span class="tag">&lt;a&gt;</span>, то класс <span class="slc">menu__icon</span> мне будет не нужен - уберем его. Также уберем отсюда <span class="atr">type</span>=<span class="mean">"button"</span> и в содержимое ссылки вставим <span class="tag">&lt;span&gt;</span>
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/GC-2_img/Screenshot_72.png" alt="">
+                                </p>
+                                <p>
+                                    Из этого я сейчас буду лепить "бургер" по классу <span class="slc">icon-menu</span>. Мне нужно создать три полоски бургера 
+                                </p>
+                            </section>
+                            <section>
+                                <h3>Создание "бургера"</h3>
+                                <p>
+                                    Начнем с того, что мы имеем родительский блок <span class="slc">header__button</span> с исходным размером 252*40
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_1.png" alt="">
+                                </p>
+                                <p>
+                                    В блоке <span class="slc">header__button</span> мы расположили два братских блока: блок кнопки "DOWNLOAD" <span class="slc">button button-blue</span> размером 130*40 и блок будущего "бургера" <span class="slc">icon-menu</span>, который еще не имеет ширину, а высота определяется высотой родительского блока в 40 пикселей 
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_2.png" alt="">
+                                    <img src="img/GC-img/burger-img/Screenshot_3.png" alt="">
+                                </p>
+                                <p>
+                                    С этого и начнем. Прежде всего, требуется зафиксировать наш "бургер" на месте справа от кнопки. Поэтому, задаем для <span class="slc">icon-menu</span> относительное позиционирование
+                                </p>
+                                <dl>
+                                    <dt><span class="atr">position</span>
+                                        <dd>Устанавливает способ позиционирования элемента относительно окна браузера или других объектов на веб-странице.</dd>
+                                        <dd><span class="mean">relative</span> </dd>
+                                        <dd>Относительное позиционирование. Положение элемента устанавливается относительно его исходного места. Добавление свойств <span class="atr">left</span>, <span class="atr">top</span>, <span class="atr">right</span> и <span class="atr">bottom</span> изменяет позицию элемента и сдвигает его в ту или иную сторону от первоначального расположения.</dd>
+                                    </dt>
+                                </dl>
+                                <p>
+                                    Сразу зададим размеры для <span class="slc">icon-menu</span> - ширину через <span class="atr">flex</span>, высоту через <span class="atr">height</span>
+                                </p>
+                                <dl>
+                                    <dt><span class="atr">flex</span>
+                                        <dd>Сокращённое свойство, которое позволяет указать параметры элемента, чтобы он эффективно заполнял доступное пространство. Элементы могут быть растянуты пропорционально с учётом заданного соотношения или сжаты, чтобы целиком вместить все элементы без переносов в одну строку.</dd>
+                                        <dd class="sintacsis">flex: none | [ flex-grow flex-shrink? || flex-basis ]</dd>
+                                        <dd>Значение по умолчанию
+                                            <dd><span class="atr">flex-grow</span>:<span class="mean">0</span></dd>
+                                            <dd><span class="atr">flex-shrink</span>:<span class="mean">1</span></dd>
+                                            <dd><span class="atr">flex-basis</span>:<span class="mean">auto</span></dd>
+                                        </dd>
+                                    </dt>
+                                </dl>
+                                <dl>
+                                    <dt><span class="atr">flex-grow</span>
+                                        <dd>Определяет, сколько пространства может занимать флекс внутри контейнера. В качестве значения принимаются числа, они задают пропорции каждого флекса. К примеру, если для всех элементов установлено значение 1, то они получатся равного размера. Если какой-то элемент получил значение 2, то его размер будет в два раза больше остальных.</dd>
+                                        <dd>Значение по умолчанию <span class="mean">0</span></dd>
+                                    </dt>
+                                </dl>
+                                <dl>
+                                    <dt><span class="atr">flex-shrink</span>
+                                        <dd>Устанавливает коэффициент сжатия флексов в контейнере и задаёт, насколько элемент будет уменьшаться по отношению к другим флексам, чтобы разместить все элементы в одну строку.</dd>
+                                        <dd>Значение по умолчанию <span class="mean">1</span></dd>
+                                    </dt>
+                                </dl>
+                                <dl>
+                                    <dt><span class="atr">flex-basis</span>
+                                        <dd>Определяет основу флекса, которая является начальным размером элемента. Похоже на свойства <span class="atr">width</span> и <span class="atr">height</span>, к которым добавляется содержимое элемента.</dd>
+                                        <dd>Значение по умолчанию <span class="mean">auto</span></dd>
+                                    </dt>
+                                </dl>
+                                <p>
+                                    Прописываем данные свойства для <span class="slc">icon-menu</span>.  
+                                </p>
+                                <ul>
+                                    <li>Позиционируем его фиксированно относительно его исходного места <span class="atr">position</span>:<span class="mean">relative</span>.</li>
+                                    <li>Флекс внутри контейнера не зависит от размера других флексов <span class="atr">flex-grow</span>:<span class="mean">0</span></li>
+                                    <li>При размещении элементов в одну строку, элемент не будет уменьшаться по отношению к другим флексам <span class="atr">flex-shrink</span>:<span class="mean">0</span></li>
+                                    <li>Ширина флекса будет 30 пикселей <span class="atr">flex-basis</span>:<span class="mean">30px</span></li>
+                                    <li>Высота блока будет 18 пикселей <span class="atr">height</span>:<span class="mean">18px</span></li>
+                                </ul>
+                                <p>
+                                    Проверим, что получилось 
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_4.png" alt="">
+                                    <img src="img/GC-img/burger-img/Screenshot_5.png" alt="">
+                                </p>
+                                <p>
+                                    Отлично, справа от кнопки появился прямоугольник 30*18  блока нашего "бургера" <span class="slc">icon-menu</span>.
+                                </p>
+                                <p>
+                                     Займемся созданием трех полосок. Они, по факту, являются содержимым нашей ссылки бургера. Чтобы можно было работать с этим содержимым, мы заранее поместили в него элемент <span class="tag">&lt;span&gt;</span> и теперь можем к нему обращаться.  Заложим свойства наших будущих полосок для <span class="slc">icon-menu span</span> : толщина 2 пикселя черного цвета 
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_6.png" alt="">
+                                </p>
+                                <p>
+                                    Вернемся к <span class="slc">icon-menu</span> - добавим ему свойства и создадим флекс, который визуализируется в полоску, благодаря свойствам, заданным для <span class="slc">icon-menu span</span> 
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_7.png" alt="">
+                                    <img src="img/GC-img/burger-img/Screenshot_8.png" alt="">
+                                </p>
+                                <dl>
+                                    <dt><span class="atr">display</span>
+                                        <dd>Многоцелевое свойство, которое определяет, как элемент должен быть показан в документе.</dd>
+                                        <dd><span class="mean">flex</span></dd>
+                                        <dd>Элемент ведёт себя, как блочный и выкладывает содержимое согласно флекс-модели.</dd>
+                                    </dt>
+                                </dl>
+                                <dl>
+                                    <dt><span class="atr">flex-direction</span>
+                                        <dd>Задаёт направление основных осей в контейнере и тем самым определяет положение флексов в контейнере.</dd>
+                                        <dd><span class="mean">column</span></dd>
+                                        <dd>Главная ось располагается вертикально и направлена сверху вниз.</dd>
+                                    </dt>
+                                </dl>
+                                <dl>
+                                    <dt><span class="atr">justify-content</span>
+                                        <dd>Определяет, как браузер распределяет пространство вокруг флекс-элементов вдоль главной оси контейнера. Это делается после того, как применяются размеры и автоматические отступы, за исключением ситуации, когда по крайней мере у одного элемента <span class="atr">flex-grow</span> больше нуля. При этом не остаётся никакого свободного пространства для манипулирования.</dd>
+                                        <dd><span class="mean">space-between</span></dd>
+                                        <dd>Флексы равномерно распределяются по всей строке. Первый и последний элемент прижимаются к соответствующим краям контейнера.</dd>
+                                    </dt>
+                                </dl>
+                                <p>
+                                    И дальше будем работать с псевдоэлементами, чтобы вывести еще 2 полоски 
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_9.png" alt="">
+                                </p>
+                                <dl>
+                                    <dt><span class="slc">::before</span>
+                                        <dd>Применяется для отображения контента <em>до содержимого</em> элемента, к которому он добавляется. Работает совместно со свойством <span class="atr">content</span>. По умолчанию <span class="slc">::before</span> создаёт строчный элемент.</dd>
+                                    </dt>
+                                </dl>
+                                <dl>
+                                    <dt><span class="slc">::after</span>
+                                        <dd>Используется для вывода контента <em>после содержимого</em> элемента, к которому он добавляется. Работает совместно со свойством <span class="atr">content</span>. По умолчанию <span class="slc">::after</span> создаёт строчный элемент.</dd>
+                                    </dt>
+                                </dl>
+                                <dl>
+                                    <dt><span class="atr">content</span>
+                                        <dd>Используется с псевдоэлементами <span class="slc">::before</span> и <span class="slc">::after</span> для вставки сгенерированного содержимого. Содержимое при этом должно браться в двойные или одинарные кавычки. </dd>
+                                    </dt>
+                                </dl>
+                                <p>
+                                    Таким образом, мы задали псевдоэлементам свойства сгенерировать полоску идентичную, созданной нами в <span class="slc">icon-menu span</span>. В результате <span class="slc">::before</span> выводит полоску ДО содержимого, которое является такой же полоской, а <span class="slc">::after</span> выводит свою полоску ПОСЛЕ содержимого. 
+                                </p>
+                                <p>
+                                    Теперь у меня есть ссылка в виде трех полосок, которая по клику обращается к объекту с <span class="atr">id</span>=<span class="mean">"menu"</span>.  
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/GC-2_img/Screenshot_73.png" alt="">
+                                </p>
+                                <p>
+                                    Естественно, сейчас доделаем стили, чтобы смотрелось красиво и выровняем наш "бургер" по вертикали - добавим для <span class="slc">header__button</span> свойство <span class="atr">align-items</span>: <span class="mean">center</span>
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_10.png" alt="">
+                                </p>
+                                <p>
+                                    И сделаем левый отступ от иконки <span class="slc">icon-menu</span> через <span class="atr">margin</span>
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_11.png" alt="">
+                                </p>
+                                <p>
+                                    Теперь отлично получилось 
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_12.png" alt="">
+                                </p>
+                                <p>
+                                    Естественно, пока нам нужно "бургер" скрыть. 
+                                </p>
+                            </section>
+                            <section>
+                                <h3>/* MOBILE */ @media (max-width: 767.98px). Адаптив "Бургера"</h3>
+                                <p>
+                                    Для того, чтобы бургер появлялся только на мобилках и был скрыт на ПК и планшетах, мы всю нашу конструкцию переносим в медиа-запрос для <em>breakpoint</em> на устройствах меньше 767.98 пикселей. А в стилях ПК и планшетов убираем <span class="slc">icon-menu</span> через <span class="atr">display</span>: <span class="mean">none</span>
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_13.png" alt="">
+                                </p>
+                                <p>
+                                    Проверяем и видим, что наш "бургер" появляется только при достижении ширины устройства меньше 767.98 пикселей
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_14.png" alt="">
+                                    <img src="img/GC-img/burger-img/Screenshot_15.png" alt="">
+                                </p>
+                                <p>
+                                    Мы видим, что бургер появляется в нужный момент и в этот момент меню нам нужно скрыть. Поэтому нам нужно меню, а именно <span class="slc">menu__body</span>, скрыть на разрешении меньше 768 пикселей. 
+                                </p>
+                                <p>
+                                    Мы его не скрываем, а просто не устанавливаем для верхних разрешений и  фиксим через <span class="atr">position</span>: <span class="mean">fixed</span> на разрешении меньше 768 пикселей. И это логично, т.к. этот класс мы создавали именно под  "бургер"
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_16.png" alt="">
+                                </p>
+                                <dl>
+                                    <dt><span class="atr">position</span>
+                                        <dd>Устанавливает способ позиционирования элемента относительно окна браузера или других объектов на веб-странице.</dd>
+                                        <dd><span class="mean">fixed</span></dd>
+                                        <dd>Фиксированное позиционирование. По своему действию это значение близко к <span class="mean">absolute</span>, но в отличие от него привязывается к указанной свойствами <span class="atr">left</span>, <span class="atr">top</span>, <span class="atr">right</span> и <span class="atr">bottom</span> точке на экране и не меняет своего положения при прокрутке веб-страницы.</dd>
+                                    </dt>
+                                </dl>
+                                <p>
+                                 Зададим координаты с размерами и посмотрим, что у нас получается. У нас меню теперь фиксировано к верху и левому краю, другими объектами не зажимается. Но, сами объекты при меньшем разрешении, все-равно не очень получается уместить      
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_25.png" alt="">
+                                    <img src="img/GC-img/burger-img/Screenshot_17.png" alt="">
+                                </p>
+                                <p>
+                                    Сейчас  мы немного подкорректируем кнопку "DOWNLOAD". Обратимся к <span class="slc">button</span>, который находится внутри <span class="slc">header__button</span> и немного изменим внутренние отступы, которые у нас сейчас по 14 и 30 пикселей и проверим. Все-равно, не очень помещаемся  
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_18.png" alt="">
+                                    <img src="img/GC-img/burger-img/Screenshot_19.png" alt="">
+                                </p>
+                                <p>
+                                    Мы можем уменьшить логотип, но тоже не очень хорошо.
+                                    Поступим следующим образом, пусть это не так нужно сейчас, как хочу показать вам один лайфхак, что в таких ситуациях можно делать. Уберем полностью этот медиа-запрос <span class="slc">@media (max-width:767.98px)</span> , который мы только что создали для  <span class="slc">.header__button .button</span>. 
+                                </p>
+                                <p>
+                                    Когда логотипы состоят  из иконки и надписи, то надпись мы можем скрыть при определенном разрешении. Значит, 40 пикселей у нас логотип
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_20.png" alt="">
+                                </p>
+                                <p>
+                                    Добавляем в медиа-запрос <span class="slc">header__logo</span>, в верхних разрешениях мы его не стилизовали, так там было все, как надо. Здесь задаем ему размер 40 пикселей и делаем логотип независимым от других объектов через <span class="atr">flex</span>. И через <span class="atr">overflow </span> сделаем так, чтобы отображалась только область внутри этого размера, а остальное будет скрыто. И все у нас получилось - все элементы прекрасно помещаются  
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_21.png" alt="">
+                                    <img src="img/GC-img/burger-img/Screenshot_22.png" alt="">
+                                </p>
+                                <p>
+                                    Кнопку "DOWNLOAD" я не советую убирать. Это, судя по всему, самая важная кнопка сайта, поэтому я не советую куда-то прятать ее. Вот такой лайфхак с тем, что мы прячем кусок логотипа, он очень юзабельный
+                                </p>
+                                <p>
+                                    Единственное, что - его можно сделать на еще меньшем разрешении в 479.98 пикселей на маленьких мобилках, т.к. на обычных мобилках у нас еще есть место, а потом мы прячем. Поэтому, используем еще один <em>breakpoint</em>. Подпишем его /* MOBILE SMALL */, т.е. маленькие мобилки 
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_23.png" alt="">
+                                </p>
+                                <p>
+                                    В итоге, все-таки у нас бургер есть и теперь сверстаем само меню. 
+                                </p>
+                            </section>
+                            <section>
+                                <h3>Адаптив меню</h3>
+                                <p>
+                                    Обращаемся к <span class="slc">menu__body</span> на разрешении меньше 767.98 пикселей. Стоит отметить, что мы сейчас все придумываем, т.к. у нас нет макета открывающегося меню и нам нужно думать самим какой-то стиль. 
+                                </p>
+                                <p>
+                                    Давайте фон попробуем сделать розовым - добавим свойство в уже имеющийся медиа-запрос. Сюда же, соответственно, <span class="slc">.menu__link</span> у нас будет белым
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_24.png" alt="">
+                                </p>
+                                <p>
+                                    Для всего списка меню <span class="slc">menu__list</span> главную ось расположим вертикально сверху вниз, флексы выровняем по центру строки и, также, выровняем все флексы вдоль поперечной оси. 
+                                </p>
+                                <p>
+                                    Смотрим, что получилось 
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_27.png" alt="">
+                                    <img src="img/GC-img/burger-img/Screenshot_26.png" alt="">
+                                </p>
+                                <p>
+                                    Теперь отступы. Слева и справа сделаем по 15 пикселей, сверху большой должен быть - сделаем 90 пикселей, снизу - 30 поставим.  
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_28.png" alt="">
+                                    <img src="img/GC-img/burger-img/Screenshot_29.png" alt="">
+                                </p>
+                                <p>
+                                    Дальше, юзабилити - очень увеличиваем размер шрифта. У нас есть место - дайте возможность пользователю удобно пользоваться вашим меню "бургером". Поэтому в <span class="slc">menu__link</span> на этом медиа-запросе сделаем шрифт в 20 пикселей. 
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_30.png" alt="">
+                                    <img src="img/GC-img/burger-img/Screenshot_31.png" alt="">
+                                </p>
+                                <p>
+                                    И, ну естественно какой-то отступ нужен для самих пунктов. Ранее в <span class="slc">menu__item</span> у нас был задан для них только правый <span class="atr">margin</span> в 30 пикселей, т.к. элементы располагались горизонтально. Теперь же, у нас вертикальный список, поэтому боковой отступ убираем, а устанавливаем нижний в 25 пикселей. Таким образом, раздвинем пунты между собой по вертикали
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_33.png" alt="">
+                                    <img src="img/GC-img/burger-img/Screenshot_32.png" alt="">
+                                </p>
+                                <p>
+                                    У последнего элемента можно отступ отобрать через псевдокласс <span class="slc">:last-child</span>
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_34.png" alt="">
+                                    <img src="img/GC-img/burger-img/Screenshot_35.png" alt="">
+                                </p>
+                                <dl>
+                                    <dt><span class="slc">:last-child</span>
+                                        <dd>Псевдокласс задаёт стиль последнего элемента в группе братских элементов (имеющих одного родителя).</dd>
+                                    </dt>
+                                </dl>
+                            </section>
+                            <section>
+                                <h3>Настройка адаптива для логотипа</h3>
+                                <p>
+                                    Итак, меню мы сделали и теперь нам нужно доставать логотип наверх.
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_36.png" alt="">
+                                    <img src="img/GC-img/burger-img/Screenshot_37.png" alt="">
+                                </p>
+                                <p>
+                                    Поскольку логотип такого же цвета, как мы придумали розовый для меню, нам придется отказаться от розового цвета  для выпадающего меню.  
+                                </p>
+                                <p>
+                                    Также, нам нужно достать кнопку "DOWNLOAD", которая <span class="slc">button</span>. В принципе, мы можем весь  <span class="slc">header__button</span>, если добавим ему относительное позиционирование и <span class="atr">z-index</span>, как только добавили для логотипа 
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_38.png" alt="">
+                                    <img src="img/GC-img/burger-img/Screenshot_39.png" alt="">
+                                </p>
+                                <p>
+                                    Осталось с цветом разобраться. Поменяем фон в <span class="slc">menu__body</span> просто на белый, цвет шрифта в <span class="slc">menu__link</span> изменим на черный. Так будет лучше всего, чем долго играться с цветами и потом к этому же и прийти  
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_40.png" alt="">
+                                    <img src="img/GC-img/burger-img/Screenshot_41.png" alt="">
+                                </p>
+                                <p>
+                                    Отлично, меню у нас есть - теперь осталось сделать его открытие-закрытие. 
+                                </p>
+                                <p>
+                                    Напоследок, для анимации, повесим на ссылки  в <span class="slc">menu__link</span> псевдокласс <span class="slc">:hover</span>. Установим для них подчеркнутый текст принаведении во всех расширениях экрана 
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_42.png" alt="">
+                                </p>
+                            </section>
+                            <section>
+                                <h3>Открытие меню</h3>
+                                <p>
+                                    Изначально нам нужно скрыть меню - добавим <span class="atr">display</span>: <span class="mean">none</span> в <span class="slc">menu__body</span>. Это один способ
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_43.png" alt="">
+                                    <img src="img/GC-img/burger-img/Screenshot_44.png" alt="">
+                                </p>
+                                <p>
+                                    Второй способ. Уберем опять <span class="atr">display</span>: <span class="mean">none</span>, который мы только что установили и поработаем с расположением. Сделаем <span class="atr">left</span>: <span class="mean">-100%</span>, т.е. полностью задвинем меню за левый край. В итоге получаем ту же картину. 
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_45.png" alt="">
+                                    <img src="img/GC-img/burger-img/Screenshot_46.png" alt="">
+                                </p>
+                                <p>
+                                    Собственно, в момент, когда мы нажимаем на "бургер" и обращаемся по <span class="atr">id</span> к этому объекту, он получает псевдо-класс <span class="slc">:target</span>. Мало кто про это знает, но так есть. 
+                                </p>
+                                <dl>
+                                    <dt><span class="slc">:target</span>
+                                        <dd>Для перехода к выбранному фрагменту документа, в адресе пишется символ <em> #</em> и указывается имя идентификатора. К примеру, в адресе <i>http://www.w3.org/TR/css3-selectors/#target-pseudo</i> происходит переход к элементу, атрибут <span class="atr">id</span> которого задан, как <span class="mean">target-pseudo</span>. Такая запись адреса называется «<em>целевой элемент</em>». Псевдокласс <span class="slc">:target</span> применяется к целевому элементу. Иными словами, к идентификатору, который указан в адресной строке браузера.</dd>
+                                    </dt>
+                                </dl>
+                                <p>
+                                    По <span class="slc">:target</span> мы можем вернуть наш объект при нажатии на "бургер"
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_47.png" alt="">
+                                    <img src="img/GC-img/burger-img/Screenshot_48.png" alt="">
+                                </p>
+                                <p>
+                                    Проблема заключается в следующем - как нам  теперь закрыть меню? А пока закончим с открытием меню - добавим интерактива. С помощью <span class="atr">transition</span> сделаем, чтобы меню не просто открывалось, а выезжало из-за левого края 
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_49.png" alt="">
+                                </p>
+                                <P>
+                                    Меню у нас выезжает и теперь надо решить, как его закрывать без java-script. Ok, будем выходить из ситуации. 
+                                </P>
+                            </section>
+                            <section>
+                                <h3>Закрытие меню</h3>
                             </section>
                         </section>
                     </section>
                 </section>
             </section>
-            <section class="boxer">  отлично и последний breakpoint вот здесь
-               1:19:19
-               нам уже нужно что-то кардинально менять а так больше жить нельзя нам нужно
-               1:19:25
-               что-то с этим делать во первых на мобилки я уберу наверное этот красный
-               1:19:31
-               декор или же или же нет вы знаете
-               1:19:37
-               посмотрим а с декором мы разберемся когда он будет так будет наглядней пока
-               1:19:42
-               мне нужно придумать что делать с меню как я сказал анонсировала
-               1:19:50
-               я не буду здесь использовать java script соответственно меню бургер у меня здесь
-               1:19:56
-               не будет использоваться я могу конечно там начать лепить что-то и за таргет и так далее не
-               1:20:05
-               уверен что это будет хорошей идеей с другой стороны
-               1:20:11
-               стены можно было бы попробовать но было бы попробовать
-               1:20:17
-               сделать что-то да с помощью таргета ладно хорошо
-               1:20:25
-               давайте я все-таки сделал меню бургер но без java-script конечно
-               1:20:32
-               конечно так себе ok давайте попробуем
-               1:20:40
-               что мне для этого нужно для этого мне нужен сам бургер поэтому я немножко
-               1:20:46
-               перепишу здесь меню я вызову свой сниппет а потому что мне нужно кнопочка
-               1:20:52
-               бургера которая будет находиться где-нибудь тут
-               1:20:58
-               да и а также мне меню лист надо отвернуть в меню body
-               1:21:08
-               немножко поменяю здесь структуру
-               1:21:14
-               вот таким образом теперь при нажатии на кнопку у меня
-               1:21:19
-               будет открываться вот этот вот вот это вот ящичек меню боги в котором будет
-               1:21:25
-               содержаться меню я попробую это реализовать спам без java-script
-               1:21:35
-               поэтому я здесь поменяю на ссылочку и поставлю в атрибут еще в поставлю хэш
-               1:21:43
-               меню а собственно здесь я добавлю айди меню вот таким образом
-               1:21:53
-               ну что ж надеюсь у меня все получится а для вас будет дополнительная полезность
-               1:22:01
-               от этого всего окей посмотрим что у нас тут вышла
-               1:22:07
-               в принципе у нас особо ничего не поменялось
-               1:22:15
-               так меню бургер собственно сам бургер будет располагаться у меня
-               1:22:21
-               рядом с кнопкой дом мод вот здесь в этом месте
-               1:22:26
-               вот и а сейчас мне нужно сверстать сам
-               1:22:32
-               со бургер ребята а если вы хотите поддержать канал
-               1:22:37
-               по ссылке в описании есть patreon сервис patreon q2 где вы можете оформить
-               1:22:43
-               подписку определенного уровня но помните что сервис снимает подписку каждое первое
-               1:22:49
-               число месяца поэтому есть смысл сделать это снова в месяц а вот большое спасибо
-               1:22:55
-               вам за поддержку я рад что вы что мой контент вызывает у вас желание поддержать его создания это собственно и
-               1:23:03
-               провоцирует больше мастер-классов больше уроков спасибо вам большое
-               1:23:09
-               так движемся дальше значит здесь
-               1:23:14
-               здесь здесь здесь это мне не нужен класс да поскольку
-               1:23:21
-               здесь ссылка это мне тоже не нужно вот у меня есть просто ссылка внутри спал из
-               1:23:26
-               этого еще с буду лепить бургер вот по вот этому классу айкон меню
-               1:23:34
-               можно немножечко разделять вот так вот поскольку у нас все в одном файле для
-               1:23:41
-               удобства можно вот так вот блоки разделять тоже вам рекомендую так делать
-               1:23:46
-               удобнее гораздо так что мне здесь нужно позиция рала theft
-               1:23:53
-               ag
-               1:24:02
-               30 пикселей 18 пикселей будет у меня бургер дальше
-               1:24:11
-               дальше у меня backgroundcolor черный
-               1:24:16
-               хайд 2
-               1:24:23
-               до попробую сделать следующим образом дисплеев flex flex direction каллум джес
-               1:24:32
-               твой контент space between и сейчас будем работать с псевдо элементами
-               1:24:41
-               be for в тарту и сейчас я рисую вот эти три
-               1:24:46
-               полоски фактически создаю их
-               1:24:53
-               не планировала этого делать но что-то мне показалось что это будет вам
-               1:24:59
-               полезно лишний раз но это посмотреть так как то так я
-               1:25:05
-               сделал вот у меня есть ссылочка которая по клику значит обращается к объекту
-               1:25:11
-               среди меню да вот естественно сейчас мы немножко здесь
-               1:25:16
-               переоборудует вот этот блок лай на этом с центр
-               1:25:22
-               вот и а сделаем отступ от иконки
-               1:25:31
-               20 вот так естественно 1 пока нам нужно
-               1:25:36
-               бургер скрыть дисплей но ага тут дисплей flex дальше
-               1:25:45
-               [музыка]
-               1:25:50
-               тогда мы сделаем по-другому тогда мы
-               1:25:58
-               768 я делаю запрос мин вы то есть для ос они все правильно макс в 767 98 да и
-               1:26:08
-               тогда я обращаюсь к меню и там добавляю дисплей flex вот так
-               1:26:15
-               в принципе все это можем закрыть в да
-               1:26:21
-               смотрите дисплей но он а вот это вот все мы закрываем в медиазапрос правильно нам
-               1:26:29
-               же все это надо только на устройствах меньше 768 пикселей
-               1:26:34
-               отлично проверим изначально у нас все по макету
-               1:26:42
-               пока ничего не появляется правильно потому что я отсюда удалил дисплей flex
-               1:26:48
-               вот еще раз так
-               1:26:54
-               же не в чем дело айкан меню display flex
-               1:27:04
-               так макс ведь а я пиксели не поставил дурачок все
-               1:27:14
-               тут кто-то спрашивает есть ли а figma взломанных это бесплатный абсолютно
-               1:27:21
-               сервис капец не ребята я против взламывание чего-либо воровства
-               1:27:27
-               чего-либо поэтому к этим вопросом не камни и это абсолютно бесплатно из
-               1:27:34
-               флинн окей мы видим что бургер появляется в нужный момент и в этот же момент меню
-               1:27:41
-               нам нужно что правильно скрыт так этим и займемся
-               1:27:52
-               менталитета это точно
-               1:28:00
-               я уже сталкивался с тем что даже ворует снег зимой знаете даже тот контент
-               1:28:08
-               который бесплатного на канале можно посмотреть этот ворую
-               1:28:16
-               смех окей
-               1:28:21
-               значится что нам нужно нам нужно меню а именно
-               1:28:27
-               меню боде вот эту вот штуку скрыть на
-               1:28:32
-               разрешение 867 ну меньше 768 мы ее не скрываемые
-               1:28:39
-               fixin тот мой лев 0
-               1:28:46
-               быть сто процентов хоть сто процентов так смотрим вот видите у нас меню а теперь
-               1:28:55
-               фиксированная я сразу смотрю что у нас тут по объектам
-               1:29:01
-               получается ли их уместить все равно их не очень получается уместить сейчас мы
-               1:29:07
-               немножечко под корректируем кнопочку
-               1:29:13
-               вот здесь уже конкретно эту до
-               1:29:27
-               обратимся к батон который находится внутри хедер батон и а немножечко
-               1:29:33
-               изменим отступаем
-               1:29:45
-               все равно не помещаемся мы можем уменьшить логотип не очень хорошо
-               1:29:55
-               мы можем мы можем поступить следующим образом
-               1:30:01
-               можем поступить следующим образом заодно пусть это не так нужно сейчас как я хочу
-               1:30:08
-               показать вам один лайфхак до что в таких ситуациях можно делать когда у нас
-               1:30:13
-               логотипа состоят из за нос логотипа состоят из иконки и надпись
-               1:30:21
-               это надпись мы можем скрыть в определенном при определенном разрешение так смотрите
-               1:30:31
-               значит 40 пикселей у нас логотип
-               1:30:37
-               40 overflow федор
-               1:30:42
-               все рам па рам па кнопку я не советую
-               1:30:47
-               убирать это судя по всему самая важная кнопка сайта download да поэтому я не
-               1:30:53
-               советую куда то прятать вот да вот такой лайфхак с тем что мы
-               1:30:59
-               прячем кусок логотипа он очень юзабельны единственное что его можно сделать на
-               1:31:04
-               еще меньшим разрешением 479 98 на маленьких мобилках так как на
-               1:31:13
-               обычных мобилках у нас еще есть место есть место и потом мы прячем вот так и
-               1:31:22
-               раз я использовал этот breakpoint я просто его здесь допишу для вас чтобы он
-               1:31:29
-               у вас был ma bell small маленькие мобилки то есть тут нам
-               1:31:34
-               ничего не нужно уже перестраивать но просто чтобы вас эта сетка была под
-               1:31:40
-               рукой так что используйте этот лайфхак в таких
-               1:31:46
-               логотипах вы серьезно сэкономите место да и смотрится прикольно
-               1:31:52
-               в итоге все таки у нас бургер есть и для начала сверстаем а само меню
-               1:32:00
-               не собирался делать бургер новые такие у меня золотые что их все для вас сделаю
-               1:32:07
-               так значит где у меня вот хедер будет так первым делом мы придумываем у нас
-               1:32:14
-               нету у нас нету макета но мы
-               1:32:20
-               открывающегося меню так что нам нужно думать самим какой-то стиль давайте
-               1:32:25
-               попробуем сделать розовым вот соответственно
-               1:32:30
-               меню link у нас будет белым и явно я очень хочу так в меню лист
-               1:32:43
-               flex direction фай контент-центр лай на
-               1:32:48
-               этом центр центруем все это дело вот таким вот макаром
-               1:32:54
-               да и отступы
-               1:33:00
-               кстати а подступах на 767 я бы еще бы
-               1:33:06
-               паду меньшим шапочку или нет ладно посмотрим
-               1:33:16
-               отступы по 15 слева справа сверху
-               1:33:23
-               большой отступ должен быть снизу можно тридцаточку поставить
-               1:33:30
-               вот дальше юзабилити очень увеличиваем размер шрифта у нас есть место дайте
-               1:33:37
-               возможность пользователю удобно пользоваться вашим меню бургером поэтому
-               1:33:42
-               здесь я прям так солидно на двадцатку бахнул вот ну естественно какой-то
-               1:33:50
-               отступ нужен так уже здесь нам отступ не нужен а вот
-               1:33:58
-               здесь нужен
-               1:34:10
-               даже 25 вот отлично у
-               1:34:17
-               последнего элемента можно отступ отобрать
-               1:34:33
-               not last all тут не очень сработает вот лаз child нормально так тут даже 90 надо
-               1:34:39
-               ставить
-               1:34:46
-               кирилл пав лексу есть целый плейлист на канале с подробнейшим объяснениями с
-               1:34:53
-               практическими примерами так что если ты считаешь что пав лексу не было уроков то
-               1:35:00
-               ты не прав
-               1:35:06
-               так есть меню мы сообразили меня мы сообразили и тут я сейчас
-               1:35:13
-               подумал подумал я что нам нужно доставать логотип
-               1:35:22
-               на верх и поскольку он такого же цвета как мы придумали розовый нам придется от
-               1:35:30
-               розового отказаться давайте попробуем вот такой вот красивый цвет
-               1:35:36
-               сделать для
-               1:35:41
-               выпадающего меню на свете на ваших глазах мы прям дизай ним что-то да
-               1:35:48
-               так себе решение конечно
-               1:36:05
-               так кнопочку тоже нам нужно достать можем принципе весь хэдер батон достать
-               1:36:12
-               и тогда все будет круто вот все равно мне фон не нравится нужно
-               1:36:19
-               что-то еще искать жаль что мы не можем использовать красный
-               1:36:28
-               может просто белый
-               1:36:33
-               или все-таки попробую красный но может каким-то другим оттенком уж больно вам
-               1:36:39
-               не нравится
-               1:36:52
-               не знаю попробовать как-то поярче не что какая-то ерунда получаются
-               1:36:58
-               давайте попробуем просто белый что тут поделаешь
-               1:37:06
-               вот да да отлично меню у нас есть
-               1:37:13
-               теперь осталось сделать его открытие закрытия до
-               1:37:26
-               ну тут можно играться не хочу тратить на это время я думаю суть ясна вот серенький можно какой угодно да не будем
-               1:37:35
-               на это тратить много времени давайте мы пока я не забыл повесим на ссылочки
-               1:37:42
-               хауэр
-               1:37:48
-               просто текст decoration and online на белом фоне лучше все слушаем татьяну
-               1:37:55
-               татьяна плохого не посоветует спасибо
-               1:38:04
-               все теперь что нам нужно нам нужно изначально скрыть это все дело дисплей
-               1:38:11
-               но или даже можно попробовать
-               1:38:18
-               лофт минус сто процентов да и собственно в момент когда мы нажимаем на
-               1:38:27
-               бургер и обращаемся пойди к этому объекту она получает а псевдо-класс
-               1:38:33
-               таргет мало кто про это знает но так есть таргет и соответственно по нему мы
-               1:38:39
-               можем вернуть этот объект лев 0
-               1:38:46
-               тогда проблема заключается в следующем как нам
-               1:38:53
-               меню закрыть как нам его теперь закрыть фото проблема
-               1:39:04
-               [музыка]
-               1:39:17
-               так у нас даже все уже выезжает но фишка в том что мы теперь должны каким-то образом это меню закрывать
-               1:39:26
-               без java-script
-               1:39:32
+            <section class="boxer"> 
                ok будем выходить из ситуации значит айди
                1:39:38
                меню я повешу на
