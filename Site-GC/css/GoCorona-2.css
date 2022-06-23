@@ -682,11 +682,11 @@ body {
 /* ============================= */
 
 .healthcare {
-
+    padding: 80px 0 30px;
 }
-.healthcare__container {
+/* .healthcare__container {
 
-}
+} */
 .healthcare__block-text {
     margin-bottom: 45px;
 }
@@ -695,12 +695,16 @@ body {
     /* gap: 72px; */
 }
 .healthcare__column {
+    position: relative;
     padding: 0 36px;
     flex: 0 1 33.333%;
 }
-.healthcare__item {
-}
+/* .healthcare__item {
+} */
 .item-healthcare {
+    height: 100%;
+    position: relative;
+    z-index: 2;
     background: #FFFFFF;
     box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
     border-radius: 8px;
@@ -724,4 +728,89 @@ body {
 .item-healthcare__text {
     line-height: 138.5%;
     letter-spacing: 0.08em;
+}
+
+.healthcare__column_1::before,
+.healthcare__column_1::after {
+    content: "";
+    position: absolute;
+    background-color: #EC5863;
+    border-radius: 16px;
+}
+.healthcare__column_1::before {
+    width: 65px;
+    height: 65px;
+    bottom: -35px;
+    left: 15px;
+    transform: rotate(-30deg);
+}
+.healthcare__column_1::after {
+    width: 97px;
+    height: 97px;
+    top: 35px;
+    right: -10px;
+    border-radius: 30px;
+    transform: rotate(30deg);
+}
+.healthcare__column_2::after {
+    content: "";
+    position: absolute;
+    background-color: #EC5863;
+    width: 127px;
+    height: 127px;
+    bottom: -35px;
+    right: -35px;
+    border-radius: 30px;
+    transform: rotate(55deg);
+}
+.healthcare__column_3::after {
+    content: "";
+    position: absolute;
+    background-color: #EC5863;
+    width: 65px;
+    height: 65px;
+    top: -25px;
+    right: 10px;
+    border-radius: 16px;
+    transform: rotate(45deg);
+}
+@media (max-width: 1087px) {
+    .healthcare__column {
+        padding: 0 15px;
+    }
+}
+@media (max-width: 991.98px) {
+    .healthcare {
+        padding: 30px 0;
+    }
+    .healthcare__items {
+        flex-direction: column;
+    }
+    .healthcare__column:not(:last-child) {
+        margin-bottom: 25px;
+    }
+}
+
+/* ============================ */
+.footer {
+    padding: 45px 0;
+}
+/* .footer__container {
+} */
+.footer__items {
+    display: flex;
+    column-gap: 50px;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+/* .footer__item {
+} */
+@media (max-width: 500px) {
+    .footer {
+        padding: 30px 0;
+    }
+    .footer__items {
+        flex-direction: column;
+    }
 }
