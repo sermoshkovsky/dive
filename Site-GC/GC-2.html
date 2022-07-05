@@ -16,6 +16,7 @@
                     <li><a href="https://webref.ru/css" target="_blank">Справочник CSS</a> </li>
                     <li><a href="../00_Home/index.html" target="_blank">Главная</a> </li>
                     <li><a href="GC.html" target="_blank">GC пошагово</a> </li>
+                    <li><a href="GC_Header-adaptiv.html" target="_blank">Шапка. Адаптив</a> </li>
                 </ul>
             </nav>
         </div>
@@ -84,10 +85,13 @@
                         <section>
                                 <h3>Оболочка страницы</h3>
                             <p>
-                                Первым шагом создаем оболочку <span class="tag">&lt;div <span class="atr">class</span>=<span class="mean">"wrapper"</span>&gt;</span> в контейнере <span class="tag">&lt;body&gt;</span>. Это очень полезная оболочка - она нужна для очень многих вещей. Добавляем к ней стили: 
+                                Первым шагом создаем оболочку <span class="tag">&lt;div <span class="atr">class</span>=<span class="mean">"wrapper"</span>&gt;</span> в контейнере <span class="tag">&lt;body&gt;</span>. Это очень полезная оболочка - она нужна для очень многих вещей. Она нужна, чтобы у нас не появлялся горизонтальный скролл при каких-то отрицательных отступах или позиционированиях, когда мы можем выдвинуть блок за пределы экрана. В такие моменты может появляться горизонтальный скролл. Добавляем к ней стили: 
                             </p>
                             <p>
                                 <img src="img/GC-img/GC-2_img/Screenshot_5.png" alt="">
+                            </p>
+                            <p>
+                                Мы не можем добавить эти свойства для <span class="tag">&lt;body&gt;</span>, потому что тогда, мы не сможем скроллить сайт. А если мы добавим это для внутренней оболочки <span class="slc">wrapper</span>, то все получается хорошо. Это основное отличие. 
                             </p>
                             <ul>
                                 <li>
@@ -345,7 +349,7 @@
                                     Можно добавить значения этого свойства для ограничивающего контейнера шапки <span class="slc">.header__container</span>
                                 </p>
                                 <p>
-                                    <img src="img/GC-img/GC-2_img/Screenshot_29.png" alt="">
+                                    <img src="img/GC-img/GC-2_img/Screenshot_30.png" alt="">
                                 </p>
                                 <dl>
                                     <dt><span class="atr">align-items</span>
@@ -499,6 +503,12 @@
                                 </p>
                                 <p>
                                     Отступы между самими пунктами мы уже выставили с помощью <span class="atr">margin-right</span> в 40 пикселей. Получилось просто и надежно.  Естественно, в момент адаптива мы будем это все дело как-то менять.  
+                                </p>
+                                <p>
+                                    Напоследок, для анимации, повесим на ссылки  в <span class="slc">menu__link</span> псевдокласс <span class="slc">:hover</span>. Установим для них подчеркнутый текст принаведении во всех расширениях экрана 
+                                </p>
+                                <p>
+                                    <img src="img/GC-img/burger-img/Screenshot_42.png" alt="">
                                 </p>
                                 <p>
                                     В принципе, шапка у нас в ПК-версии, фактически, готова. Дальше под ней мы будем делать декор и у нас все должно будет срастись да с макетом. 
@@ -1023,12 +1033,6 @@
                                 </p>
                                 <p>
                                     Отлично, меню у нас есть - теперь осталось сделать его открытие-закрытие. 
-                                </p>
-                                <p>
-                                    Напоследок, для анимации, повесим на ссылки  в <span class="slc">menu__link</span> псевдокласс <span class="slc">:hover</span>. Установим для них подчеркнутый текст принаведении во всех расширениях экрана 
-                                </p>
-                                <p>
-                                    <img src="img/GC-img/burger-img/Screenshot_42.png" alt="">
                                 </p>
                             </section>
                             <section>
