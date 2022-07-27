@@ -228,19 +228,7 @@ body {
     }
     .header:target .close-icon-menu {
         display: flex;
-    }
-
-    /* .close-icon-menu::before,
-    .close-icon-menu::after  {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        background-color: #000;
-        height: 2px;
-    } */
-    
+    }  
 }
 
 @media (max-width:767.98px) {
@@ -290,7 +278,7 @@ body {
     }
 }
 
-/* ============================================ */
+/* ==================================*/
 
 .get-started {
     background-color: #FAFBFD;
@@ -343,14 +331,13 @@ body {
     display: inline-flex;
     align-items: center;
 }
-.get-started__block-text {
+.block-text {
     max-width: 410px;
 }
-/* =========================== */
-/* .block-text {
-} */
+
 .block-text_center {
     text-align: center;
+    max-width: none;
 }
 .block-text__title {
     font-weight: 700;
@@ -369,6 +356,8 @@ body {
 }
 .block-text__text {
     line-height: 138.5%;
+    letter-spacing: 0.08em;
+    max-width: 375px;
 }
 .block-text__text_mw {
     max-width: 620px;
@@ -377,11 +366,9 @@ body {
 .block-text__text:not(:last-child) {
     margin-bottom: 24px;
 }
-/* .block-text__button {
-} */
-/*===================================== */
-/* .button {
-} */
+
+/*================================= */
+
 @media (max-width: 767.98px) {
     .block-text__title {
         font-size: 34px;
@@ -439,7 +426,7 @@ body {
     }
 }
 
-/* ====================================== */
+/* ================================ */
 .stay-safe {
     padding: 80px 0;
 }
@@ -456,10 +443,7 @@ body {
 .stay-safe__content {
     flex: 0 1 50%;
 }
-/* .stay-safe__block-text {
-}
-.block-text {
-} */
+
 
 .media-stay-safe {
     width: 373px;
@@ -537,16 +521,12 @@ body {
     }
 }
 
-/* ========================================= */
+/* ================================ */
 
 .experts {
     background-color: #FAFBFD;
     padding: 103px 0 116px;
 }
-/* .experts__container {
-}
-.experts__statistics {
-} */
 .experts__block-text {
     max-width: 400px;
 }
@@ -684,23 +664,19 @@ body {
 .healthcare {
     padding: 80px 0 30px;
 }
-/* .healthcare__container {
 
-} */
 .healthcare__block-text {
     margin-bottom: 45px;
 }
 .healthcare__items {
     display: flex;
-    /* gap: 72px; */
 }
 .healthcare__column {
     position: relative;
     padding: 0 36px;
     flex: 0 1 33.333%;
 }
-/* .healthcare__item {
-} */
+
 .item-healthcare {
     height: 100%;
     position: relative;
@@ -795,8 +771,7 @@ body {
 .footer {
     padding: 45px 0;
 }
-/* .footer__container {
-} */
+
 .footer__items {
     display: flex;
     column-gap: 50px;
@@ -804,8 +779,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-/* .footer__item {
-} */
+
 @media (max-width: 500px) {
     .footer {
         padding: 30px 0;
